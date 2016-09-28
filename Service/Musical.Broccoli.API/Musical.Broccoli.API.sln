@@ -12,6 +12,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Musical.Broccoli.API", "src\Musical.Broccoli.API\Musical.Broccoli.API.xproj", "{64EC580C-9297-4BA3-8FAD-D5A57C28583B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Infrastructure", "src\Infrastructure\Infrastructure.xproj", "{4637190E-497A-40D5-8008-8001104760F5}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Business", "src\Business\Business.xproj", "{39A0A9B6-4532-4CFC-9A67-2E39B5DF4C93}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DataAccessLayer", "src\DataAccessLayer\DataAccessLayer.xproj", "{9D2FC525-0762-4915-828C-2354130C3E0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +28,26 @@ Global
 		{64EC580C-9297-4BA3-8FAD-D5A57C28583B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64EC580C-9297-4BA3-8FAD-D5A57C28583B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64EC580C-9297-4BA3-8FAD-D5A57C28583B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4637190E-497A-40D5-8008-8001104760F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4637190E-497A-40D5-8008-8001104760F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4637190E-497A-40D5-8008-8001104760F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4637190E-497A-40D5-8008-8001104760F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A0A9B6-4532-4CFC-9A67-2E39B5DF4C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A0A9B6-4532-4CFC-9A67-2E39B5DF4C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A0A9B6-4532-4CFC-9A67-2E39B5DF4C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A0A9B6-4532-4CFC-9A67-2E39B5DF4C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2FC525-0762-4915-828C-2354130C3E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2FC525-0762-4915-828C-2354130C3E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2FC525-0762-4915-828C-2354130C3E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2FC525-0762-4915-828C-2354130C3E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{64EC580C-9297-4BA3-8FAD-D5A57C28583B} = {EB4008CC-290F-45E1-8280-FF8033F343E9}
+		{4637190E-497A-40D5-8008-8001104760F5} = {EB4008CC-290F-45E1-8280-FF8033F343E9}
+		{39A0A9B6-4532-4CFC-9A67-2E39B5DF4C93} = {EB4008CC-290F-45E1-8280-FF8033F343E9}
+		{9D2FC525-0762-4915-828C-2354130C3E0E} = {EB4008CC-290F-45E1-8280-FF8033F343E9}
 	EndGlobalSection
 EndGlobal
