@@ -1,5 +1,5 @@
-#musical-broccoli
-> This is the final project for Fifht Semester.
+#Tourstop
+> This is the final project for Fifth Semester.
 
 ##What is musical-broccoli about?
 >Musical broccoli is a tour reservation managing app.
