@@ -14,6 +14,7 @@ namespace Common.DTOs
         public bool PaymentStatus { get; set; }
         public int UserId { get; set; }
         public int PaymentId { get; set; }
+        public DateTime DateCreated { get; set; }
 
         public UserDTO User { get; set; }
         public PaymentInfoDTO Payment { get; set; }

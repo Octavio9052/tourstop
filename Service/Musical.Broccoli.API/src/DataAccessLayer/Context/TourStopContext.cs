@@ -52,13 +52,14 @@ namespace DataAccessLayer.Context
             #endregion
 
             #region MessageHasRecieverConfig
-            modelBuilder.Entity<MessageHasReciever>().Property(x => x.MessageId).IsRequired();
-            modelBuilder.Entity<MessageHasReciever>().Property(x => x.RecieverId).IsRequired();
+            modelBuilder.Entity<MessageHasReciever>().HasKey(x => new { x.MessageId, x.RecieverId });
+            modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Message).WithMany(x => x.MessageHasRecievers).HasForeignKey(x=>x.MessageId);
+            modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Reciever).WithMany(x => x.Messages).HasForeignKey(x => x.RecieverId);
             #endregion
 
             #region MovementCondig
             modelBuilder.Entity<Movement>().Property(x => x.ReservationId).IsRequired();
-            modelBuilder.Entity<Movement>().Property(x => x.MovementsType).IsRequired();
+            modelBuilder.Entity<Movement>().Property(x => x.MovementType).IsRequired();
             modelBuilder.Entity<Movement>().Property(x => x.OrderId).IsRequired();
             #endregion
 
@@ -118,7 +119,6 @@ namespace DataAccessLayer.Context
             modelBuilder.Entity<User>().HasMany(x => x.Reservations);
             modelBuilder.Entity<User>().HasMany(x => x.Tours);
             modelBuilder.Entity<User>().HasMany(x => x.Messages);
-            modelBuilder.Entity<User>().HasMany(x => x.MessageHasRecievers);
             #endregion
 
 

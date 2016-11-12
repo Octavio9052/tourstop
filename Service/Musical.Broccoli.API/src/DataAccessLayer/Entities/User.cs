@@ -15,8 +15,7 @@ namespace DataAccessLayer.Entities
         public int AddressId { get; set; }
 
         public Address Address { get; set; }
-        public ICollection<Message> Messages { get; set; }
-        public ICollection<MessageHasReciever> MessageHasRecievers { get; set; }
+        public ICollection<MessageHasReciever> Messages  { get; set; }
         public ICollection<Tour> Tours { get; set; }
         public ICollection<Order> Orders { get; set; }
         public ICollection<Rating> Ratings { get; set; }
