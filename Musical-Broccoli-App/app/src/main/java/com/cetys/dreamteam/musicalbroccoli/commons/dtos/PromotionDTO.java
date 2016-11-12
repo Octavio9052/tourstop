@@ -6,21 +6,14 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType;
  * Created by Octavio on 2016/10/24.
  */
 
-public class PromotionDTO {
+public class PromotionDto {
 
     private int id;
     private String description;
     private int value;          // it may not be intenger? (50%)
     private String PromoCode;
     private PromotionType PromotionType;
-
-    public PromotionDTO(int id, String description, int value, String promoCode, com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType promotionType) {
-        this.id = id;
-        this.description = description;
-        this.value = value;
-        PromoCode = promoCode;
-        PromotionType = promotionType;
-    }
+    private TourDto tour_id;
 
     public int getId() {
         return id;
@@ -54,11 +47,29 @@ public class PromotionDTO {
         PromoCode = promoCode;
     }
 
-    public com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType getPromotionType() {
+    public PromotionType getPromotionType() {
         return PromotionType;
     }
 
-    public void setPromotionType(com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType promotionType) {
+    public void setPromotionType(PromotionType promotionType) {
         PromotionType = promotionType;
+    }
+
+    public TourDto getTour_id() {
+        return tour_id;
+    }
+
+    public void setTour_id(TourDto tour_id) {
+        this.tour_id = tour_id;
+    }
+
+    public PromotionDto(int id, String description, int value, String promoCode, PromotionType promotionType, TourDto tour_id) {
+
+        this.id = id;
+        this.description = description;
+        this.value = value;
+        PromoCode = promoCode;
+        PromotionType = promotionType;
+        this.tour_id = tour_id;
     }
 }

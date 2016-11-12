@@ -1,21 +1,19 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
+import java.util.Date;
+
 /**
  * Created by Octavio on 2016/10/24.
  */
 
-public class ReservationDTO {
+public class ReservationDto {
     private int id;
-    private String dateCreated;
-    private UserDTO userDTO;
-    private TourDTO tourDTO;
-
-    public ReservationDTO(int id, String dateCreated, UserDTO userDTO, TourDTO tourDTO) {
-        this.id = id;
-        this.dateCreated = dateCreated;
-        this.userDTO = userDTO;
-        this.tourDTO = tourDTO;
-    }
+    private String name;
+    private Date date_created;
+    private UserDto user_id;
+    private TourDto tour_id;
+    private OrderDto order_id;
+    private boolean status;
 
     public int getId() {
         return id;
@@ -25,27 +23,62 @@ public class ReservationDTO {
         this.id = id;
     }
 
-    public String getDateCreated() {
-        return dateCreated;
+    public String getName() {
+        return name;
     }
 
-    public void setDateCreated(String dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public UserDTO getUserDTO() {
-        return userDTO;
+    public Date getDate_created() {
+        return date_created;
     }
 
-    public void setUserDTO(UserDTO userDTO) {
-        this.userDTO = userDTO;
+    public void setDate_created(Date date_created) {
+        this.date_created = date_created;
     }
 
-    public TourDTO getTourDTO() {
-        return tourDTO;
+    public UserDto getUser_id() {
+        return user_id;
     }
 
-    public void setTourDTO(TourDTO tourDTO) {
-        this.tourDTO = tourDTO;
+    public void setUser_id(UserDto user_id) {
+        this.user_id = user_id;
+    }
+
+    public TourDto getTour_id() {
+        return tour_id;
+    }
+
+    public void setTour_id(TourDto tour_id) {
+        this.tour_id = tour_id;
+    }
+
+    public OrderDto getOrder_id() {
+        return order_id;
+    }
+
+    public void setOrder_id(OrderDto order_id) {
+        this.order_id = order_id;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public ReservationDto(int id, String name, Date date_created, UserDto user_id, TourDto tour_id, OrderDto order_id, boolean status) {
+
+        this.id = id;
+        this.name = name;
+        this.date_created = date_created;
+        this.user_id = user_id;
+        this.tour_id = tour_id;
+        this.order_id = order_id;
+        this.status = status;
     }
 }

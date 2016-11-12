@@ -1,21 +1,26 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  * Created by Octavio on 2016/10/24.
  */
 
-public class MessageDTO {
+public class MessageDto {
 
-    private int id;
-    private UserDTO userDTOFrom;      // Sender
-    private UserDTO userDTOTo;        // Addressee, Receiver
-    private String dateCreated;
+    private int id;                     // Message_id
+    private UserDto userDtoFrom;        // Sender_id
+    private Date dateCreated;         // Date_Created
+    private List<UserDto> receivers;    // Receivers
+    private String content;             // Content
 
-    public MessageDTO(int id, UserDTO userDTOFrom, UserDTO userDTOTo, String dateCreated) {
+    public MessageDto(int id, UserDto userDtoFrom, Date dateCreated, List<UserDto> receivers, String content) {
         this.id = id;
-        this.userDTOFrom = userDTOFrom;
-        this.userDTOTo = userDTOTo;
+        this.userDtoFrom = userDtoFrom;
         this.dateCreated = dateCreated;
+        this.receivers = receivers;
+        this.content = content;
     }
 
     public int getId() {
@@ -26,27 +31,35 @@ public class MessageDTO {
         this.id = id;
     }
 
-    public UserDTO getUserDTOFrom() {
-        return userDTOFrom;
+    public UserDto getUserDtoFrom() {
+        return userDtoFrom;
     }
 
-    public void setUserDTOFrom(UserDTO userDTOFrom) {
-        this.userDTOFrom = userDTOFrom;
+    public void setUserDtoFrom(UserDto userDtoFrom) {
+        this.userDtoFrom = userDtoFrom;
     }
 
-    public UserDTO getUserDTOTo() {
-        return userDTOTo;
-    }
-
-    public void setUserDTOTo(UserDTO userDTOTo) {
-        this.userDTOTo = userDTOTo;
-    }
-
-    public String getDateCreated() {
+    public Date getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(String dateCreated) {
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
+    }
+
+    public List<UserDto> getReceivers() {
+        return receivers;
+    }
+
+    public void setReceivers(List<UserDto> receivers) {
+        this.receivers = receivers;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

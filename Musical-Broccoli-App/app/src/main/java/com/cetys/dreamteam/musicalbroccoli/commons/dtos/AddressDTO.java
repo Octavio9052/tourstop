@@ -6,8 +6,9 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
  * Created by Octavio on 2016/10/24.
  */
 
-public class AddressDTO {
+public class AddressDto {
     private int id;
+    private String name;
     private String street_1;
     private String street_2;
     private String city;
@@ -15,14 +16,23 @@ public class AddressDTO {
     private String postalCode;
     private CountryCode CountryCode;
 
-    public AddressDTO(int id, String street_1, String street_2, String city, String state, String postalCode, CountryCode CountryCode) {
+    public AddressDto(int id, String name, String street_1, String street_2, String city, String state, String postalCode, CountryCode CountryCode) {
         this.id = id;
+        this.name = name;
         this.street_1 = street_1;
         this.street_2 = street_2;
         this.city = city;
         this.state = state;
         this.postalCode = postalCode;
         this.CountryCode = CountryCode;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setId(int id) {

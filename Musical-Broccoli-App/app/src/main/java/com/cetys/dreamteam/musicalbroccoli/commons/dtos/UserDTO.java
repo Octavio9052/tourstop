@@ -7,24 +7,26 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.LanguageCode;
  * Created by Octavio on 2016/10/24.
  */
 
-public class UserDTO {
+public class UserDto {
 
     private int id;
     private String FirstName;
     private String LastName;
-    private AddressDTO AddressDTO;
+    private AddressDto AddressDto;
     private String Phone;
     private UserType UserType;
     private LanguageCode LanguageCode;
+    private String email;
 
-    public UserDTO(int id, String FirstName, String LastName, AddressDTO AddressDTO, String Phone, UserType UserType, LanguageCode LanguageCode) {
+    public UserDto(int id, String firstName, String lastName, AddressDto addressDto, String phone, UserType userType, LanguageCode languageCode, String email) {
         this.id = id;
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.AddressDTO = AddressDTO;
-        this.Phone = Phone;
-        this.UserType = UserType;
-        this.LanguageCode = LanguageCode;
+        FirstName = firstName;
+        LastName = lastName;
+        AddressDto = addressDto;
+        Phone = phone;
+        UserType = userType;
+        LanguageCode = languageCode;
+        this.email = email;
     }
 
     public int getId() {
@@ -39,49 +41,55 @@ public class UserDTO {
         return FirstName;
     }
 
-    public void setFirstName(String FirstName) {
-        this.FirstName = FirstName;
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
     }
 
     public String getLastName() {
         return LastName;
     }
 
-    public void setLastName(String LastName) {
-        this.LastName = LastName;
+    public void setLastName(String lastName) {
+        LastName = lastName;
     }
 
-    public AddressDTO getAddressDTO() {
-        return AddressDTO;
+    public AddressDto getAddressDto() {
+        return AddressDto;
     }
 
-    public void setAddressDTO(AddressDTO AddressDTO) {
-        this.AddressDTO = AddressDTO;
+    public void setAddressDto(AddressDto addressDto) {
+        AddressDto = addressDto;
     }
 
     public String getPhone() {
         return Phone;
     }
 
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
+    public void setPhone(String phone) {
+        Phone = phone;
     }
 
     public UserType getUserType() {
         return UserType;
     }
 
-    public void setUserType(UserType UserType) {
-        this.UserType = UserType;
+    public void setUserType(UserType userType) {
+        UserType = userType;
     }
 
     public LanguageCode getLanguageCode() {
         return LanguageCode;
     }
 
-    public void setLanguageCode(LanguageCode LanguageCode) {
-        this.LanguageCode = LanguageCode;
+    public void setLanguageCode(LanguageCode languageCode) {
+        LanguageCode = languageCode;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

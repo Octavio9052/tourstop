@@ -1,35 +1,20 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
+import java.util.Date;
+
 /**
  * Created by Octavio on 2016/10/24.
  */
 
-public class TourDTO {
+public class TourDto {
     private int id;
-    private String dateCreated;
-    private String dateModified;
     private String title;
     private String description;
-    private int pricePerReservation;
     private int maxReservations;
-    private AddressDTO departurePlace;
-    private AddressDTO placeVisiting;
-    private AddressDTO finishPlace;
-    private UserDTO userDTO;
-
-    public TourDTO(int id, String dateCreated, String dateModified, String title, String description, int pricePerReservation, int maxReservations, AddressDTO departurePlace, AddressDTO placeVisiting, AddressDTO finishPlace, UserDTO userDTO) {
-        this.id = id;
-        this.dateCreated = dateCreated;
-        this.dateModified = dateModified;
-        this.title = title;
-        this.description = description;
-        this.pricePerReservation = pricePerReservation;
-        this.maxReservations = maxReservations;
-        this.departurePlace = departurePlace;
-        this.placeVisiting = placeVisiting;
-        this.finishPlace = finishPlace;
-        this.userDTO = userDTO;
-    }
+    private int pricePerReservation;
+    private Date dateCreated;
+    private Date dateModified;
+    private UserDto userDto;        // User_id
 
     public int getId() {
         return id;
@@ -37,22 +22,6 @@ public class TourDTO {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(String dateCreated) {
-        this.dateCreated = dateCreated;
-    }
-
-    public String getDateModified() {
-        return dateModified;
-    }
-
-    public void setDateModified(String dateModified) {
-        this.dateModified = dateModified;
     }
 
     public String getTitle() {
@@ -71,14 +40,6 @@ public class TourDTO {
         this.description = description;
     }
 
-    public int getPricePerReservation() {
-        return pricePerReservation;
-    }
-
-    public void setPricePerReservation(int pricePerReservation) {
-        this.pricePerReservation = pricePerReservation;
-    }
-
     public int getMaxReservations() {
         return maxReservations;
     }
@@ -87,35 +48,47 @@ public class TourDTO {
         this.maxReservations = maxReservations;
     }
 
-    public AddressDTO getDeparturePlace() {
-        return departurePlace;
+    public int getPricePerReservation() {
+        return pricePerReservation;
     }
 
-    public void setDeparturePlace(AddressDTO departurePlace) {
-        this.departurePlace = departurePlace;
+    public void setPricePerReservation(int pricePerReservation) {
+        this.pricePerReservation = pricePerReservation;
     }
 
-    public AddressDTO getPlaceVisiting() {
-        return placeVisiting;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setPlaceVisiting(AddressDTO placeVisiting) {
-        this.placeVisiting = placeVisiting;
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
-    public AddressDTO getFinishPlace() {
-        return finishPlace;
+    public Date getDateModified() {
+        return dateModified;
     }
 
-    public void setFinishPlace(AddressDTO finishPlace) {
-        this.finishPlace = finishPlace;
+    public void setDateModified(Date dateModified) {
+        this.dateModified = dateModified;
     }
 
-    public UserDTO getUserDTO() {
-        return userDTO;
+    public UserDto getUserDto() {
+        return userDto;
     }
 
-    public void setUserDTO(UserDTO userDTO) {
-        this.userDTO = userDTO;
+    public void setUserDto(UserDto userDto) {
+        this.userDto = userDto;
+    }
+
+    public TourDto(int id, String title, String description, int maxReservations, int pricePerReservation, Date dateCreated, Date dateModified, UserDto userDto) {
+
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.maxReservations = maxReservations;
+        this.pricePerReservation = pricePerReservation;
+        this.dateCreated = dateCreated;
+        this.dateModified = dateModified;
+        this.userDto = userDto;
     }
 }
