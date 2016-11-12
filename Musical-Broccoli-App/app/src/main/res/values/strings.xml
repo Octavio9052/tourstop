@@ -1,4 +1,21 @@
 <resources>
-    <string name="app_name">MusicalBroccoli</string>
-    <string name="title_activity_main">MainActivity</string>
+    <!-- Enums -->
+    <string name="description_enum_country_mexico">Mexico</string>
+    <string name="description_enum_country_usa">United States</string>
+    <string name="description_enum_country_canada">Canada</string>
+    <string name="description_enum_language_spanish">Spanish</string>
+    <string name="description_enum_language_english">English</string>
+    <string name="description_enum_promo_percentage">Percentage</string>
+    <string name="description_enum_promo_amount">Amount</string>
+    <string name="description_enum_user_customer">Customer</string>
+    <string name="description_enum_user_administrator">Promoter</string>
+    <string name="description_enum_payment_type_credit">Credit Card</string>
+    <string name="description_enum_payment_type_cash">Cash</string>
+    <string name="description_enum_movement_type_submitted">Submitted</string>
+    <string name="description_enum_movement_type_subtraction">Subtraction</string>
+    <string name="description_enum_movement_type_cancellation">Cancellation</string>
+    <!-- Other -->
+    <string name="app_name" translatable="false">MusicalBroccoli</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
 </resources>
+
