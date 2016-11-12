@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer
+namespace DataAccessLayer.Repositories
 {
-    public class Class1
+    public class MovementRepository
     {
-        public Class1()
+        public MovementRepository():base()
         {
+
         }
     }
 }

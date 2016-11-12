@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Common.AppSettings;
+
 
 namespace Musical.Broccoli.API
 {
@@ -27,6 +29,7 @@ namespace Musical.Broccoli.API
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
+
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -38,6 +41,9 @@ namespace Musical.Broccoli.API
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+
+
+            AppSettings.ConnectionString = Configuration.GetConnectionString("TourStopDB");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

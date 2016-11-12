@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Infrastructure
+namespace DataAccessLayer.Repositories
 {
-    public class Class1
+    public class MessageRepository
     {
-        public Class1()
+        public MessageRepository() : base()
         {
+
         }
     }
 }

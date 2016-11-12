@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace DataAccessLayer.Entities
+{
+    public class Tour
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public int MaxReservation { get; set; }
+        public float ReservationPrice { get; set; }
+        public bool Status { get; set; }
+        public DateTime DateModified { get; set; }
+        public DateTime DateCreated { get; set; }
+        public int PromotionId { get; set; }
+        public int UserId { get; set; }
+
+        public Promotion  Promotion { get; set; }
+        public User User { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
+
+    }
+}
