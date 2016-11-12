@@ -33,12 +33,13 @@ namespace Business.Validators
             return All(NameNotEmpty(), MaxReservationIsNotZeroOrLess(), ReservationPriceIsNotNegative());
         }
 
-        public static TourValidator Holds(Predicate<TourDTO> predicate, string message) {
-            return new TourValidator() {
+        public static TourValidator Holds(Predicate<TourDTO> predicate, string message)
+        {
+            return new TourValidator()
+            {
                 Validate = tour => predicate.Invoke(tour) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
-            }; 
+            };
         }
- 
 
         public TourValidator And(TourValidator other) {
             return new TourValidator() {

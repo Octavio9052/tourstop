@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Business
+namespace Business.Connectors
 {
-    public class Class1
+    public class RatingConnector
     {
-        public Class1()
-        {
-        }
     }
 }

@@ -3,6 +3,23 @@
   "version": 2,
   "targets": {
     ".NETStandard,Version=v1.6": {
+      "AutoMapper/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.1",
+          "NETStandard.Library": "1.6.0",
+          "System.Collections.Specialized": "4.0.1",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
       "Google.Protobuf/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -447,7 +464,7 @@
           "lib/netstandard1.6/MySql.Data.dll": {}
         }
       },
-      "MySql.Data.EntityFrameworkCore/7.0.6-ir31": {
+      "MySql.Data.EntityFrameworkCore/7.0.6-IR31": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.0.0",
@@ -770,7 +787,7 @@
           "System.Threading": "4.0.11"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.Specialized.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
@@ -2337,6 +2354,23 @@
     }
   },
   "libraries": {
+    "AutoMapper/5.1.1": {
+      "sha512": "Q3uFSWccBUE1Q9BW88C6RO2Y/iFkPztTKK1ciyx1jhWPdOi5+pvzZ2EwcJKPiV0cr2EXZUWqQOsSpA5jVjfQBg==",
+      "type": "package",
+      "path": "AutoMapper/5.1.1",
+      "files": [
+        "AutoMapper.5.1.1.nupkg.sha512",
+        "AutoMapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml",
+        "lib/portable-net45+win8+wpa81/AutoMapper.dll",
+        "lib/portable-net45+win8+wpa81/AutoMapper.xml"
+      ]
+    },
     "Google.Protobuf/3.0.0": {
       "sha512": "l5CH4IoWys8hIQR53F+nM3RpFOX12Jj9iXVOh30ejoz0TRHApzvAHc+5T5mGnMWa/vCVfYFZkhqStn+IuK8+5g==",
       "type": "package",
@@ -2726,13 +2760,13 @@
         "lib/netstandard1.6/MySql.Data.xml"
       ]
     },
-    "MySql.Data.EntityFrameworkCore/7.0.6-ir31": {
+    "MySql.Data.EntityFrameworkCore/7.0.6-IR31": {
       "sha512": "2G/fGusd3MRLalOqH3uveWUBOWxg8MFooKdGqzux2h4fLpGlVGnGjcRzb1exJUFfMXGzsp3U/6oBFN2E8x8+Hg==",
       "type": "package",
-      "path": "MySql.Data.EntityFrameworkCore/7.0.6-ir31",
+      "path": "MySql.Data.EntityFrameworkCore/7.0.6-IR31",
       "files": [
         "Content/ReleaseNotes.txt",
-        "MySql.Data.EntityFrameworkCore.7.0.6-ir31.nupkg.sha512",
+        "MySql.Data.EntityFrameworkCore.7.0.6-IR31.nupkg.sha512",
         "MySql.Data.EntityFrameworkCore.nuspec",
         "README",
         "lib/net451/MySql.Data.EntityFrameworkCore.dll",
@@ -6967,6 +7001,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "AutoMapper >= 5.1.1",
       "Common >= 1.0.0-*",
       "DataAccessLayer >= 1.0.0-*",
       "NETStandard.Library >= 1.6.0"

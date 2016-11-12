@@ -9,38 +9,37 @@ namespace Business.Validators
     {
         public string Reason { get; set; }
         public bool IsValid { get; }
-
-        public static  ValidationResult Valid() {
+        public static ValidationResult Valid()
+        {
             return ValidationSupport.Valid();
         }
-
-        public static  ValidationResult Invalid(string reason) {
+        public static ValidationResult Invalid(string reason)
+        {
             return new Invalid(reason);
         }
     }
-
-    internal sealed class Invalid : ValidationResult {
-
-        public Invalid(string reason) {
+    internal sealed class Invalid : ValidationResult
+    {
+        public Invalid(string reason)
+        {
             Reason = reason;
         }
-        public bool IsValid {
+        public bool IsValid
+        {
             get { return false; }
         }
-
         public string Reason { get; set; }
     }
-
-    internal sealed class Valid : ValidationResult {
+    internal sealed class Valid : ValidationResult
+    {
         public bool IsValid { get { return true; } }
-
         public string Reason { get { return ""; } set { } }
     }
-
-    internal sealed class ValidationSupport {
+    internal sealed class ValidationSupport
+    {
         private static readonly ValidationResult valid = new Valid();
-
-        internal static ValidationResult Valid() {
+        internal static ValidationResult Valid()
+        {
             return valid;
         }
     }
