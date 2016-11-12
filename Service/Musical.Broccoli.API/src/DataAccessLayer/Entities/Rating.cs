@@ -1,8 +1,8 @@
 ﻿namespace DataAccessLayer.Entities
 {
-    public class Rating
+    public class Rating : BaseEntity
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public int RatingValue { get; set; }
         public string Comment { get; set; }
         public int UserId { get; set; }

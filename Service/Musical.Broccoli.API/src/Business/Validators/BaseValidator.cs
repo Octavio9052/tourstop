@@ -9,5 +9,6 @@ namespace Business.Validators
     public abstract class BaseValidator<TDto> where TDto : BaseDTO
     {
         public abstract Func<TDto,ValidationResult> Validate { get; internal set; }
+
     }
 }

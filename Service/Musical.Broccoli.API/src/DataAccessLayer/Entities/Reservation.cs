@@ -2,9 +2,9 @@
 
 namespace DataAccessLayer.Entities
 {
-    public class Reservation
+    public class Reservation : BaseEntity 
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Name { get; set; }
         public DateTime DateCreated { get; set; }
         public bool Status { get; set; }

@@ -6,7 +6,7 @@ using Common.DTOs;
 
 namespace Business.Contracts
 {
-    public interface IAddressConnector:IBaseConnector<AddressDTO>
+    public interface IAddressConnector : IBaseConnector<AddressDTO>
     {
     }
 }
