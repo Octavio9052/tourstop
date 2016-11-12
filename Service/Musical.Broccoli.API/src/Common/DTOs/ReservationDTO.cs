@@ -2,7 +2,7 @@
 
 namespace Common.DTOs
 {
-    public class ReservationDTO : BaseDTOE
+    public class ReservationDTO : BaseDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
