@@ -2,12 +2,17 @@
 using Common.DTOs;
 using Musical.Broccoli.API.Request;
 using System;
+using Business.Contracts;
+using Business.Connectors;
 
 namespace Musical.Broccoli.API.Controllers
 {
     [Route("api/[controller]")]
     public class UserController : BaseController<UserDTO> {
-        
+        public UserController(IUserConnector connector) : base(connector)
+        {
+        }
+
         [HttpGet]
         public override Request<UserDTO> Get(Request<UserDTO> request) {
             throw new NotImplementedException();

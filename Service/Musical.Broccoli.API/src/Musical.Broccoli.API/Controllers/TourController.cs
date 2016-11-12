@@ -2,11 +2,15 @@
 using Common.DTOs;
 using Musical.Broccoli.API.Request;
 using System;
+using Business.Contracts;
 
 namespace Musical.Broccoli.API.Controllers
 {
     [Route("api/[controller]")]
     public class TourController : BaseController<TourDTO> {
+        public TourController(ITourConnector connector) : base(connector)
+        {
+        }
 
         // GET api/users
         [HttpGet]
