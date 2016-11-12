@@ -9,5 +9,15 @@ namespace Business.Validators
     {
         string reason;
         bool isValid;
+        public ValidationResult(string reason)
+        {
+            this.reason = reason;
+            this.isValid = false;
+        }
+        public ValidationResult()
+        {
+            this.reason = string.Empty;
+            this.isValid=true;
+        }
     }
 }

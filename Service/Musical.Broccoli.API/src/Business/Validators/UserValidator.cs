@@ -12,8 +12,9 @@ namespace Business.Validators
         public UserValidator( UserDTO user)
         {
             this.user = user;
+            
         }
-       // static ValidationResult nameisNotEmpty() { return  }
+        
 
     }
 }
