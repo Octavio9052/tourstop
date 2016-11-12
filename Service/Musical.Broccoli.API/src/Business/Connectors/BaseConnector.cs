@@ -16,7 +16,7 @@ namespace Business.Connectors
         where TDto : BaseDTO where TEntity : BaseEntity
     {
 
-        protected readonly IBaseRepository<TEntity> _repository
+        protected readonly IBaseRepository<TEntity> _repository;
         protected readonly IMapper _mapper;
 
         public BaseConnector(IBaseRepository<TEntity> repository, IMapper mapper)
