@@ -1,9 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Common.DTOs;
+using Business.Contracts;
+
 namespace Musical.Broccoli.API.Controllers
 {
-    public abstract class BaseController<TDto> where TDto:BaseDTO
+    public abstract class BaseController<TDto> where TDto : BaseDTO
     {
+
+        protected readonly IBaseConnector<TDto> _connector;
+
+        public BaseController(IBaseConnector<TDto> connector)
+        {
+            _connector = connector;
+        }
+
         // GET api/TDto
         public abstract Request.Request<TDto> Get(Request.Request<TDto> request);
 

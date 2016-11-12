@@ -5,11 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Musical.Broccoli.API.Request;
+using Business.Contracts;
 
 namespace Musical.Broccoli.API.Controllers
 {
 
     public class OrderController : BaseController<OrderDTO> {
+        public OrderController(IOrderConnector connector) : base(connector)
+        {
+        }
 
         [HttpGet]
         public override Request<OrderDTO> Get(Request<OrderDTO> request) {
