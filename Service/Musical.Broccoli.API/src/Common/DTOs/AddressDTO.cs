@@ -6,7 +6,7 @@ using Common.Enums;
 
 namespace Common.DTOs
 {
-    public class AddressDTO
+    public class AddressDTO : BaseDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }

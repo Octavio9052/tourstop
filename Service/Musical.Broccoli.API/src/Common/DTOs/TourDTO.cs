@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
-    public class TourDTO
+    public class TourDTO : BaseDTO
     {
         public int Id { get; set; }
         public string Title { get; set; }

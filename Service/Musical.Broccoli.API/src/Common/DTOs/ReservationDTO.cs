@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
-    public class ReservationDTO
+    public class ReservationDTO : BaseDTOE
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
-    public class CheckPointDTO
+    public class CheckPointDTO : BaseDTO
     {
         public int Id { get; set; }
         public DateTime StartTime { get; set; }

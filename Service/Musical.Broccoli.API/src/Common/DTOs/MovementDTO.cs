@@ -6,7 +6,7 @@ using Common.Enums;
 
 namespace Common.DTOs
 {
-    public class MovementDTO
+    public class MovementDTO : BaseDTO
     {
         public int Id { get; set; }
         public MovementType MovementType { get; set; }

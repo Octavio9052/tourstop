@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
-    public class PaymentInfoDTO
+    public class PaymentInfoDTO : BaseDTO
     {
         public int Id { get; set; }
         public string CardNumber { get; set; }
