@@ -6,7 +6,7 @@ package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
 public class RatingDto {
     private int id;
-    private int rating_value;
+    private int ratingValue;
     private String comment;
     private int userId;
     private int tourId;
@@ -19,12 +19,12 @@ public class RatingDto {
         this.id = id;
     }
 
-    public int getRating_value() {
-        return rating_value;
+    public int getRatingValue() {
+        return ratingValue;
     }
 
-    public void setRating_value(int rating_value) {
-        this.rating_value = rating_value;
+    public void setRatingValue(int ratingValue) {
+        this.ratingValue = ratingValue;
     }
 
     public String getComment() {
