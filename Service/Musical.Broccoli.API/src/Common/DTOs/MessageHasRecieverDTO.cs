@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
-    public class MessageHasRecieverDTO
+    public class MessageHasRecieverDTO : BaseDTO
     {
         public int MessageId { get; set; }
         public int RecieverId { get; set; }
