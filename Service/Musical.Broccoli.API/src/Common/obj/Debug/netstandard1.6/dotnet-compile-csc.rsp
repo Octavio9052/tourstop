@@ -55,6 +55,7 @@
 -r:"C:\Users\alexc\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 "D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\AppSettings\AppSettings.cs"
 "D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\DTOs\AddressDTO.cs"
+"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\DTOs\BaseDTO.cs"
 "D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\DTOs\CheckPointDTO.cs"
 "D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\DTOs\MessageDTO.cs"
 "D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\DTOs\MessageHasRecieverDTO.cs"
