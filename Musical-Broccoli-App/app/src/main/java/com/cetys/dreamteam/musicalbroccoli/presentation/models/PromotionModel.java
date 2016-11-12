@@ -1,32 +1,34 @@
-package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
+package com.cetys.dreamteam.musicalbroccoli.presentation.models;
+
+import android.databinding.ObservableFloat;
+import android.databinding.ObservableInt;
 
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType;
 
 /**
- * Created by Octavio on 2016/10/24.
+ * Created by Octavio on 2016/11/12.
  */
 
-public class PromotionDto {
-
-    private int id;
-    private float value;
+public class PromotionModel extends BaseModel {
+    private ObservableInt id;
+    private ObservableFloat value;
     private String description;
     private PromotionType promotionType;
     private String promoCode;
 
-    public int getId() {
+    public ObservableInt getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(ObservableInt id) {
         this.id = id;
     }
 
-    public float getValue() {
+    public ObservableFloat getValue() {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(ObservableFloat value) {
         this.value = value;
     }
 

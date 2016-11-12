@@ -1,21 +1,23 @@
-package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
+package com.cetys.dreamteam.musicalbroccoli.presentation.models;
+
+import android.databinding.ObservableInt;
 
 /**
  * Created by Octavio on 2016/11/12.
  */
 
-public class PaymentInfoDto {
-    private int id;
+public class PaymentInfoModel extends BaseModel {
+    private ObservableInt id;
     private String cardNumber;
-    private int typeOfCard; // TODO: temp. May change in the very near future
+    private ObservableInt typeOfCard; // TODO: temp. May change in the very near future
     private String cardHolderName;
-    private int expirationDate; // TODO: ExpirationDate should be Date (datatype)
+    private ObservableInt expirationDate; // TODO: ExpirationDate should be Date (datatype)
 
-    public int getId() {
+    public ObservableInt getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(ObservableInt id) {
         this.id = id;
     }
 
@@ -27,11 +29,11 @@ public class PaymentInfoDto {
         this.cardNumber = cardNumber;
     }
 
-    public int getTypeOfCard() {
+    public ObservableInt getTypeOfCard() {
         return typeOfCard;
     }
 
-    public void setTypeOfCard(int typeOfCard) {
+    public void setTypeOfCard(ObservableInt typeOfCard) {
         this.typeOfCard = typeOfCard;
     }
 
@@ -43,11 +45,11 @@ public class PaymentInfoDto {
         this.cardHolderName = cardHolderName;
     }
 
-    public int getExpirationDate() {
+    public ObservableInt getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(int expirationDate) {
+    public void setExpirationDate(ObservableInt expirationDate) {
         this.expirationDate = expirationDate;
     }
 }

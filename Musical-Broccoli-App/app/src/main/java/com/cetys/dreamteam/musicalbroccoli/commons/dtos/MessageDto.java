@@ -8,7 +8,6 @@ import java.util.List;
  */
 
 public class MessageDto {
-
     private int id;                      // Message_id
     private int senderId;               // Sender_id
     private Date dateCreated;            // Date_Created
@@ -40,14 +39,6 @@ public class MessageDto {
         this.dateCreated = dateCreated;
     }
 
-    public List<UserDto> getReceivers() {
-        return receivers;
-    }
-
-    public void setReceivers(List<UserDto> receivers) {
-        this.receivers = receivers;
-    }
-
     public String getContent() {
         return content;
     }
@@ -56,4 +47,11 @@ public class MessageDto {
         this.content = content;
     }
 
+    public List<UserDto> getReceivers() {
+        return receivers;
+    }
+
+    public void setReceivers(List<UserDto> receivers) {
+        this.receivers = receivers;
+    }
 }
