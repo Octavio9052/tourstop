@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Octavio on 2016/10/24.
  */
 
-public class UserDto2 {
+public class UserDto {
 
     private int id;
     private String firstName;
@@ -20,11 +20,11 @@ public class UserDto2 {
     private UserType userType;
     private int addressId;
 
-    private List<MessageDto2> messages;
-    private List<TourDto2> tours;
-    private List<OrderDto2> orders;
-    private List<RatingDto2> ratings;
-    private List<ReservationDto2> reservations;
+    private List<MessageDto> messages;
+    private List<TourDto> tours;
+    private List<OrderDto> orders;
+    private List<RatingDto> ratings;
+    private List<ReservationDto> reservations;
 
     public int getId() {
         return id;
@@ -90,43 +90,43 @@ public class UserDto2 {
         this.addressId = addressId;
     }
 
-    public List<MessageDto2> getMessages() {
+    public List<MessageDto> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<MessageDto2> messages) {
+    public void setMessages(List<MessageDto> messages) {
         this.messages = messages;
     }
 
-    public List<TourDto2> getTours() {
+    public List<TourDto> getTours() {
         return tours;
     }
 
-    public void setTours(List<TourDto2> tours) {
+    public void setTours(List<TourDto> tours) {
         this.tours = tours;
     }
 
-    public List<OrderDto2> getOrders() {
+    public List<OrderDto> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<OrderDto2> orders) {
+    public void setOrders(List<OrderDto> orders) {
         this.orders = orders;
     }
 
-    public List<RatingDto2> getRatings() {
+    public List<RatingDto> getRatings() {
         return ratings;
     }
 
-    public void setRatings(List<RatingDto2> ratings) {
+    public void setRatings(List<RatingDto> ratings) {
         this.ratings = ratings;
     }
 
-    public List<ReservationDto2> getReservations() {
+    public List<ReservationDto> getReservations() {
         return reservations;
     }
 
-    public void setReservations(List<ReservationDto2> reservations) {
+    public void setReservations(List<ReservationDto> reservations) {
         this.reservations = reservations;
     }
 }

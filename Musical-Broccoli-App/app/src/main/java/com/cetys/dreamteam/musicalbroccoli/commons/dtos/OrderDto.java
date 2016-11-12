@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Octavio on 2016/11/12.
  */
 
-public class OrderDto2 {
+public class OrderDto {
     private int id;
     private Date dateCreated;
     private float totalAmount;
@@ -18,8 +18,8 @@ public class OrderDto2 {
     private int userId;
     private int paymentInfoId;
 
-    private List<ReservationDto2> reservations;
-    private List<MovementDto2> movements;
+    private List<ReservationDto> reservations;
+    private List<MovementDto> movements;
 
     public int getId() {
         return id;
@@ -77,19 +77,19 @@ public class OrderDto2 {
         this.paymentInfoId = paymentInfoId;
     }
 
-    public List<ReservationDto2> getReservations() {
+    public List<ReservationDto> getReservations() {
         return reservations;
     }
 
-    public void setReservations(List<ReservationDto2> reservations) {
+    public void setReservations(List<ReservationDto> reservations) {
         this.reservations = reservations;
     }
 
-    public List<MovementDto2> getMovements() {
+    public List<MovementDto> getMovements() {
         return movements;
     }
 
-    public void setMovements(List<MovementDto2> movements) {
+    public void setMovements(List<MovementDto> movements) {
         this.movements = movements;
     }
 }

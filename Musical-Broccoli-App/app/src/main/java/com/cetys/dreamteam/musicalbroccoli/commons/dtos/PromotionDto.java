@@ -6,7 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType;
  * Created by Octavio on 2016/10/24.
  */
 
-public class PromotionDto2 {
+public class PromotionDto {
 
     private int id;
     private float value;

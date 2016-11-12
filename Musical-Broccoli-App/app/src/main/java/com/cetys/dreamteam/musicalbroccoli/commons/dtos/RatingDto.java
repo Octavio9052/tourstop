@@ -4,7 +4,7 @@ package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
  * Created by Octavio on 2016/11/12.
  */
 
-public class RatingDto2 {
+public class RatingDto {
     private int id;
     private int rating_value;
     private String comment;

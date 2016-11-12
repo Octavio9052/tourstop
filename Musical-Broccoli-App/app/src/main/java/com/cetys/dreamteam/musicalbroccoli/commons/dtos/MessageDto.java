@@ -7,14 +7,14 @@ import java.util.List;
  * Created by Octavio on 2016/10/24.
  */
 
-public class MessageDto2 {
+public class MessageDto {
 
     private int id;                      // Message_id
     private int senderId;               // Sender_id
     private Date dateCreated;            // Date_Created
     private String content;              // Content
 
-    private List<UserDto2> receivers;     // Receivers
+    private List<UserDto> receivers;     // Receivers
 
     public int getId() {
         return id;
@@ -40,11 +40,11 @@ public class MessageDto2 {
         this.dateCreated = dateCreated;
     }
 
-    public List<UserDto2> getReceivers() {
+    public List<UserDto> getReceivers() {
         return receivers;
     }
 
-    public void setReceivers(List<UserDto2> receivers) {
+    public void setReceivers(List<UserDto> receivers) {
         this.receivers = receivers;
     }
 

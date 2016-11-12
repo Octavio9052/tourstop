@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Octavio on 2016/10/24.
  */
 
-public class TourDto2 {
+public class TourDto {
     private int id;
     private String title;
     private int maxReservations;
@@ -18,8 +18,8 @@ public class TourDto2 {
     private int promotionId;
     private int userId;
 
-    private List<ReservationDto2> reservations;
-    private List<RatingDto2> ratings;
+    private List<ReservationDto> reservations;
+    private List<RatingDto> ratings;
 
     public int getId() {
         return id;
@@ -93,19 +93,19 @@ public class TourDto2 {
         this.userId = userId;
     }
 
-    public List<ReservationDto2> getReservations() {
+    public List<ReservationDto> getReservations() {
         return reservations;
     }
 
-    public void setReservations(List<ReservationDto2> reservations) {
+    public void setReservations(List<ReservationDto> reservations) {
         this.reservations = reservations;
     }
 
-    public List<RatingDto2> getRatings() {
+    public List<RatingDto> getRatings() {
         return ratings;
     }
 
-    public void setRatings(List<RatingDto2> ratings) {
+    public void setRatings(List<RatingDto> ratings) {
         this.ratings = ratings;
     }
 }

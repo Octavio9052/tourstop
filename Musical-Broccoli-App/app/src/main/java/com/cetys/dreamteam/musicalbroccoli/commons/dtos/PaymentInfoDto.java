@@ -4,13 +4,13 @@ package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
  * Created by Octavio on 2016/11/12.
  */
 
-public class PaymentInfoDto2 {
+public class PaymentInfoDto {
     private int id;
     private String cardNumber;
     private int typeOfCard; // TODO: temp. May change in the very near future
     private String cardHolderName;
     private int expirationDate; // TODO: ExpirationDate should be Date (datatype)
-    private UserDto2 userId;
+    private UserDto userId;
 
     public int getId() {
         return id;
@@ -52,11 +52,11 @@ public class PaymentInfoDto2 {
         this.expirationDate = expirationDate;
     }
 
-    public UserDto2 getUserId() {
+    public UserDto getUserId() {
         return userId;
     }
 
-    public void setUserId(UserDto2 userId) {
+    public void setUserId(UserDto userId) {
         this.userId = userId;
     }
 }
