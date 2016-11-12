@@ -8,7 +8,7 @@ import java.util.Date;
  * Created by Octavio on 2016/11/12.
  */
 
-public class MovementDto {
+public class MovementDto2 {
     private int id;
     private MovementType movementType;
     private Date dateCreated;

@@ -1,18 +1,16 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
-import java.util.Date;
-
 /**
  * Created by Octavio on 2016/11/12.
  */
 
-public class PaymentInfoDto {
+public class PaymentInfoDto2 {
     private int id;
     private String cardNumber;
     private int typeOfCard; // TODO: temp. May change in the very near future
     private String cardHolderName;
     private int expirationDate; // TODO: ExpirationDate should be Date (datatype)
-    private UserDto userId;
+    private UserDto2 userId;
 
     public int getId() {
         return id;
@@ -54,11 +52,11 @@ public class PaymentInfoDto {
         this.expirationDate = expirationDate;
     }
 
-    public UserDto getUserId() {
+    public UserDto2 getUserId() {
         return userId;
     }
 
-    public void setUserId(UserDto userId) {
+    public void setUserId(UserDto2 userId) {
         this.userId = userId;
     }
 }

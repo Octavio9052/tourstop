@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by Octavio on 2016/10/24.
  */
 
-public class ReservationDto {
+public class ReservationDto2 {
     private int id;
     private String name;
     private Date dateCreated;

@@ -6,7 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
  * Created by Octavio on 2016/10/24.
  */
 
-public class AddressDto {
+public class AddressDto2 {
     private int id;
     private String name;
     private String street1;

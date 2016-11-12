@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by Octavio on 2016/11/12.
  */
 
-public class CheckpointDto {
+public class CheckpointDto2 {
     private int id;
     private Date startTime;
     private Date endTime;

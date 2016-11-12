@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Octavio on 2016/10/24.
  */
 
-public class UserDto {
+public class UserDto2 {
 
     private int id;
     private String firstName;
@@ -20,11 +20,11 @@ public class UserDto {
     private UserType userType;
     private int addressId;
 
-    private List<MessageDto> messages;
-    private List<TourDto> tours;
-    private List<OrderDto> orders;
-    private List<RatingDto> ratings;
-    private List<ReservationDto> reservations;
+    private List<MessageDto2> messages;
+    private List<TourDto2> tours;
+    private List<OrderDto2> orders;
+    private List<RatingDto2> ratings;
+    private List<ReservationDto2> reservations;
 
     public int getId() {
         return id;
@@ -90,43 +90,43 @@ public class UserDto {
         this.addressId = addressId;
     }
 
-    public List<MessageDto> getMessages() {
+    public List<MessageDto2> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<MessageDto> messages) {
+    public void setMessages(List<MessageDto2> messages) {
         this.messages = messages;
     }
 
-    public List<TourDto> getTours() {
+    public List<TourDto2> getTours() {
         return tours;
     }
 
-    public void setTours(List<TourDto> tours) {
+    public void setTours(List<TourDto2> tours) {
         this.tours = tours;
     }
 
-    public List<OrderDto> getOrders() {
+    public List<OrderDto2> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<OrderDto> orders) {
+    public void setOrders(List<OrderDto2> orders) {
         this.orders = orders;
     }
 
-    public List<RatingDto> getRatings() {
+    public List<RatingDto2> getRatings() {
         return ratings;
     }
 
-    public void setRatings(List<RatingDto> ratings) {
+    public void setRatings(List<RatingDto2> ratings) {
         this.ratings = ratings;
     }
 
-    public List<ReservationDto> getReservations() {
+    public List<ReservationDto2> getReservations() {
         return reservations;
     }
 
-    public void setReservations(List<ReservationDto> reservations) {
+    public void setReservations(List<ReservationDto2> reservations) {
         this.reservations = reservations;
     }
 }
