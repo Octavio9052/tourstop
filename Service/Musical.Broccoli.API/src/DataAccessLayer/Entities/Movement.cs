@@ -3,9 +3,9 @@ using Common.Enums;
 
 namespace DataAccessLayer.Entities
 {
-    public class Movement
+    public class Movement : BaseEntity
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public MovementType MovementType { get; set; }
         public DateTime DateCreated { get; set; }
         public int OrderId { get; set; }

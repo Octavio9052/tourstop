@@ -178,4 +178,9 @@
 --resource:"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\obj\Debug\netcoreapp1.0\Musical.Broccoli.APIdotnet-compile.deps.json",Musical.Broccoli.API.deps.json
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Program.cs
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Startup.cs
-D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Controllers\ValuesController.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Controllers\BaseController.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Controllers\MessageController.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Controllers\OrderController.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Controllers\TourController.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Controllers\UserController.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Musical.Broccoli.API\Request\Request.cs
