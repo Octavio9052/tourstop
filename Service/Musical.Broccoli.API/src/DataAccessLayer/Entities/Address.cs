@@ -1,4 +1,5 @@
-﻿namespace DataAccessLayer.Entities
+﻿using Common.Enums;
+namespace DataAccessLayer.Entities
 {
     public class Address
     {
@@ -9,6 +10,6 @@
         public string City { get; set; }
         public string State { get; set; }
         public int PostalCode { get; set; }
-        public int CountryCode { get; set; }
+        public CountryCode CountryCode { get; set; }
     }
 }

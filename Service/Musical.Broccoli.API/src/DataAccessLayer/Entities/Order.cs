@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.Enums;
 
 namespace DataAccessLayer.Entities
 {
@@ -6,7 +7,7 @@ namespace DataAccessLayer.Entities
     {
         public int Id { get; set; }
         public float TotalAmount { get; set; }
-        public int PaymentType { get; set; }
+        public PaymentType PaymentType { get; set; }
         public bool PaymentStatus { get; set; }
         public int UserId { get; set; }
         public int PaymentId { get; set; }

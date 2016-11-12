@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Enums;
 
 namespace Common.DTOs
 {
@@ -14,6 +15,6 @@ namespace Common.DTOs
         public string City { get; set; }
         public string State { get; set; }
         public int PostalCode { get; set; }
-        public int CountryCode { get; set; }
+        public CountryCode CountryCode { get; set; }
     }
 }

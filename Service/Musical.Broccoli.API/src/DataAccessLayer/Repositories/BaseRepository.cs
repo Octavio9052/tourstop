@@ -38,6 +38,7 @@ namespace DataAccessLayer.Repositories
         public void Remove(T entity)
         {
             this.DbSet.Remove(entity);
+            this.Context.SaveChanges();
            
         }
 

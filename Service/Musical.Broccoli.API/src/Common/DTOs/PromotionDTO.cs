@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Enums;
 
 namespace Common.DTOs
 {
@@ -10,7 +11,7 @@ namespace Common.DTOs
         public int Id { get; set; }
         public float Value { get; set; }
         public string Description { get; set; }
-        public int PromoType { get; set; }
+        public PromoType PromoType { get; set; }
         public string PromoCode { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Enums;
 
 namespace Common.DTOs
 {
@@ -9,7 +10,7 @@ namespace Common.DTOs
     {
         public int Id { get; set; }
         public float TotalAmount { get; set; }
-        public int PaymentType { get; set; }
+        public PaymentType PaymentType { get; set; }
         public bool PaymentStatus { get; set; }
         public int UserId { get; set; }
         public int PaymentId { get; set; }
