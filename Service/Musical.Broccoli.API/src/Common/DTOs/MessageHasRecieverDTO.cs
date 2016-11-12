@@ -7,7 +7,6 @@ namespace Common.DTOs
 {
     public class MessageHasRecieverDTO
     {
-        public int Id { get; set; }
         public int MessageId { get; set; }
         public int RecieverId { get; set; }
 
