@@ -18,8 +18,7 @@ namespace Common.DTOs
         public int AddressId { get; set; }
 
         public AddressDTO Address { get; set; }
-        public ICollection<MessageDTO> Messages { get; set; }
-        public ICollection<MessageHasRecieverDTO> MessageHasRecievers { get; set; }
+        public ICollection<MessageHasRecieverDTO> Messages { get; set; }
         public ICollection<TourDTO> Tours { get; set; }
         public ICollection<OrderDTO> Orders { get; set; }
         public ICollection<RatingDTO> Ratings { get; set; }

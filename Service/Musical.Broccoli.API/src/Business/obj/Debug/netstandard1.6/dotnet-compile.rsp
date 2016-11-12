@@ -72,5 +72,5 @@ D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Contract
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Contracts\ITourConnector.cs
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Contracts\IUserConnector.cs
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Properties\AssemblyInfo.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Validators\UserValidator.cs
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Validators\ValidationResult.cs
-D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Validators\Validator.cs
