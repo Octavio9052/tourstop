@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Validators;
+using Business.Contracts;
 
 namespace Business.Connectors
 {
-    public class TourConnector : BaseConnector<TourDTO, Tour>
+    public class TourConnector : BaseConnector<TourDTO, Tour>, ITourConnector
     {
         public TourConnector(ITourRepository repository, IMapper mapper) : base(repository, mapper)
         {
