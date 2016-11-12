@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface ICheckPointRepository : IBaseRepository<CheckPoint>
+    public interface ICheckPointRepository : IBaseRepository<CheckPoint>
     {
     }
 }

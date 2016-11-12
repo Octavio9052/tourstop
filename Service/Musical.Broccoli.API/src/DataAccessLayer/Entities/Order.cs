@@ -4,9 +4,9 @@ using System;
 
 namespace DataAccessLayer.Entities
 {
-    public class Order
+    public class Order : BaseEntity
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public float TotalAmount { get; set; }
         public PaymentType PaymentType { get; set; }
         public bool PaymentStatus { get; set; }

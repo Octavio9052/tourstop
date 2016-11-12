@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IOrderRepository : IBaseRepository<Order>
+    public interface IOrderRepository : IBaseRepository<Order>
     {
     }
 }

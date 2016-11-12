@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IRatingRepository : IBaseRepository<Rating>
+    public interface IRatingRepository : IBaseRepository<Rating>
     {
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Entities
 {
-    public class Tour
+    public class Tour : BaseEntity
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Title { get; set; }
         public int MaxReservation { get; set; }
         public float ReservationPrice { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IMovementRepository : IBaseRepository<Movement>
+    public interface IMovementRepository : IBaseRepository<Movement>
     {
     }
 }

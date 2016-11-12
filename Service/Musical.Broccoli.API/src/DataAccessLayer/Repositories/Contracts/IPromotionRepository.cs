@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IPromotionRepository : IBaseRepository<Promotion>
+    public interface IPromotionRepository : IBaseRepository<Promotion>
     {
     }
 }

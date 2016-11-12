@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface ITourRepository : IBaseRepository<Tour>
+    public interface ITourRepository : IBaseRepository<Tour>
     {
     }
 }

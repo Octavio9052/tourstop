@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace Business.Contracts
 {
-    public interface IBaseConnector<T>
+    public interface IBaseConnector<TDto>
     {
-        T getById(int id);
-        ICollection<T> Search(List<Func<T, bool>> keys);
-        T getByKey(Func<T, bool> key);
-        void Save(T entity);
-        void Update(T entity);
-        void Remove(T entity);
-        ICollection<T> getAll();
+        TDto GetById(int id);
+        ICollection<TDto> Search(List<Func<TDto, bool>> keys);
+        TDto GetByKey(Func<TDto, bool> key);
+        void Save(TDto dto);
+        void Update(TDto dto);
+        void Remove(TDto dto);
+        ICollection<TDto> GetAll();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IMessageRepository : IBaseRepository<Message>
+    public interface IMessageRepository : IBaseRepository<Message>
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IPaymentInfoRepository : IBaseRepository<PaymentInfo>
+    public interface IPaymentInfoRepository : IBaseRepository<PaymentInfo>
     {
     }
 }

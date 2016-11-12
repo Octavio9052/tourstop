@@ -1,8 +1,8 @@
 ﻿namespace DataAccessLayer.Entities
 {
-    public class PaymentInfo
+    public class PaymentInfo : BaseEntity
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string CardNumber  { get; set; }
         public int TypeOfCard { get; set; }
         public string CardHolderName { get; set; }
