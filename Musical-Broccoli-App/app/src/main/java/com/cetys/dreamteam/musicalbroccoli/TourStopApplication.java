@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.AppComponent;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.DaggerAppComponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.UserSubcomponent;
 
 /**
