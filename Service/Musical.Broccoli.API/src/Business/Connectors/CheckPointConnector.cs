@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using DataAccessLayer.Repositories;
+using Business.Validators;
 
 namespace Business.Connectors
 {
@@ -14,6 +15,11 @@ namespace Business.Connectors
     {
         public CheckPointConnector(ICheckPointRepository repository, IMapper mapper) : base(repository, mapper)
         {
+        }
+
+        public override ValidationResult Validate(CheckPointDTO dto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

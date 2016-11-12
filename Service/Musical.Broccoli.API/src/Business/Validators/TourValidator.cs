@@ -20,7 +20,7 @@ namespace Business.Validators
         public static TourValidator ReservationPriceIsNotNegative() {
             return Holds(tour => tour.ReservationPrice >= 0, "Reservation price is negative");
         }
-
+        
         public static TourValidator All(params TourValidator[] tourValidators) {
 
             var validatorsList = tourValidators.ToList();

@@ -10,6 +10,5 @@ namespace Business.Validators
     {
         public abstract Func<TDto,ValidationResult> Validate { get; internal set; }
 
-
     }
 }

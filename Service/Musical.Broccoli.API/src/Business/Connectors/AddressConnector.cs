@@ -9,6 +9,7 @@ using Business.Helpers;
 using DataAccessLayer.Entities;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
+using Business.Validators;
 
 namespace Business.Connectors
 {
@@ -16,5 +17,9 @@ namespace Business.Connectors
     {
         public AddressConnector(IAddressRepository repository, IMapper mapper) : base(repository, mapper) { }
 
+        public override ValidationResult Validate(AddressDTO dto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -16,8 +16,7 @@ namespace Business.Connectors
         where TDto : BaseDTO where TEntity : BaseEntity
     {
 
-        protected readonly IBaseRepository<TEntity> _repository;
-        //protected readonly IValidator<TDto> _validator;
+        protected readonly IBaseRepository<TEntity> _repository
         protected readonly IMapper _mapper;
 
         public BaseConnector(IBaseRepository<TEntity> repository, IMapper mapper)
@@ -67,5 +66,7 @@ namespace Business.Connectors
             var entity = _mapper.Map<TEntity>(dto);
             _repository.Update(entity);
         }
+
+        public abstract ValidationResult Validate(TDto dto);
     }
 }

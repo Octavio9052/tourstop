@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
+using Business.Validators;
 
 namespace Business.Connectors
 {
@@ -13,6 +14,11 @@ namespace Business.Connectors
     {
         public MovementConnector(IMovementRepository repository, IMapper mapper) : base(repository, mapper)
         {
+        }
+
+        public override ValidationResult Validate(MovementDTO dto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

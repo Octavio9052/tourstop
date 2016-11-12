@@ -2,6 +2,8 @@
 using DataAccessLayer.Entities;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
+using Business.Validators;
+using System;
 
 namespace Business.Connectors
 {
@@ -9,6 +11,11 @@ namespace Business.Connectors
     {
         public RatingConnector(IRatingRepository repository, IMapper mapper) : base(repository, mapper)
         {
+        }
+
+        public override ValidationResult Validate(RatingDTO dto)
+        {
+            throw new NotImplementedException();
         }
     }
 }
