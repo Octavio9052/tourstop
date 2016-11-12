@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer
+namespace Common.Enums
 {
-    public class Class1
+    public enum LanguageCode
     {
-        public Class1()
-        {
-        }
+        ES,EN
     }
 }

@@ -1,0 +1,6 @@
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\DataAccessLayer.UnitTesting\bin\Debug\DataAccessLayer.UnitTesting.dll
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\DataAccessLayer.UnitTesting\bin\Debug\DataAccessLayer.UnitTesting.pdb
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\DataAccessLayer.UnitTesting\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\DataAccessLayer.UnitTesting\obj\Debug\DataAccessLayer.UnitTesting.csprojResolveAssemblyReference.cache
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\DataAccessLayer.UnitTesting\obj\Debug\DataAccessLayer.UnitTesting.dll
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\DataAccessLayer.UnitTesting\obj\Debug\DataAccessLayer.UnitTesting.pdb

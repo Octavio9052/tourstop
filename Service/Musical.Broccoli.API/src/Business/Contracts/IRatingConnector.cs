@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.DTOs;
 
-namespace Infrastructure
+namespace Business.Contracts
 {
-    public class Class1
+    public interface IRatingConnector:IBaseConnector<RatingDTO>
     {
-        public Class1()
-        {
-        }
+
     }
 }
