@@ -1,4 +1,6 @@
-#:D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Business.xproj
-D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Business.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj
-D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business\Business.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj
-D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj
+#:C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj|C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj
+#:C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\DAL.Test\DAL.Test.xproj
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\DAL.Test\DAL.Test.xproj|C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\DAL.Test\DAL.Test.xproj|C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj|C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj

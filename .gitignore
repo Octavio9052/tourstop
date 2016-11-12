@@ -39,3 +39,4 @@ captures/
 # Keystore files
 *.jks
 /Service/Musical.Broccoli.API/DataAccessLayer.Test
+/Musical-Broccoli-App/.idea

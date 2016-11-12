@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Common.Enums;
 
 namespace Common.DTOs
 {
-    public class UserDTO
+    public class UserDTO : BaseDTO
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

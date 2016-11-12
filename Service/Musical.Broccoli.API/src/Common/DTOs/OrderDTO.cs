@@ -6,7 +6,7 @@ using Common.Enums;
 
 namespace Common.DTOs
 {
-    public class OrderDTO
+    public class OrderDTO : BaseDTO
     {
         public int Id { get; set; }
         public float TotalAmount { get; set; }
