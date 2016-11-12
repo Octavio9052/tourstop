@@ -12,16 +12,8 @@ public class MovementDto {
     private int id;
     private MovementType movementType;
     private Date dateCreated;
-    private TourDto tour_id;
-    private ReservationDto reservation_id;
-
-    public MovementDto(Date dateCreated, MovementType movementType, int id, TourDto tour_id, ReservationDto reservation_id) {
-        this.dateCreated = dateCreated;
-        this.movementType = movementType;
-        this.id = id;
-        this.tour_id = tour_id;
-        this.reservation_id = reservation_id;
-    }
+    private int tourId;
+    private int reservationId;
 
     public int getId() {
         return id;
@@ -47,19 +39,19 @@ public class MovementDto {
         this.dateCreated = dateCreated;
     }
 
-    public TourDto getTour_id() {
-        return tour_id;
+    public int getTourId() {
+        return tourId;
     }
 
-    public void setTour_id(TourDto tour_id) {
-        this.tour_id = tour_id;
+    public void setTourId(int tourId) {
+        this.tourId = tourId;
     }
 
-    public ReservationDto getReservation_id() {
-        return reservation_id;
+    public int getReservationId() {
+        return reservationId;
     }
 
-    public void setReservation_id(ReservationDto reservation_id) {
-        this.reservation_id = reservation_id;
+    public void setReservationId(int reservationId) {
+        this.reservationId = reservationId;
     }
 }

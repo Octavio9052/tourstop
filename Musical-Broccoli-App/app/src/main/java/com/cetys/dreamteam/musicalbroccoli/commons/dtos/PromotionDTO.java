@@ -9,11 +9,10 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType;
 public class PromotionDto {
 
     private int id;
-    private String description;
-    private int value;          // it may not be intenger? (50%)
-    private String PromoCode;
-    private PromotionType PromotionType;
-    private TourDto tour_id;
+    private float value;
+    private String decription;
+    private PromotionType promotionType;
+    private String promoCode;
 
     public int getId() {
         return id;
@@ -23,53 +22,35 @@ public class PromotionDto {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getValue() {
+    public float getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(float value) {
         this.value = value;
     }
 
-    public String getPromoCode() {
-        return PromoCode;
+    public String getDecription() {
+        return decription;
     }
 
-    public void setPromoCode(String promoCode) {
-        PromoCode = promoCode;
+    public void setDecription(String decription) {
+        this.decription = decription;
     }
 
     public PromotionType getPromotionType() {
-        return PromotionType;
+        return promotionType;
     }
 
     public void setPromotionType(PromotionType promotionType) {
-        PromotionType = promotionType;
+        this.promotionType = promotionType;
     }
 
-    public TourDto getTour_id() {
-        return tour_id;
+    public String getPromoCode() {
+        return promoCode;
     }
 
-    public void setTour_id(TourDto tour_id) {
-        this.tour_id = tour_id;
-    }
-
-    public PromotionDto(int id, String description, int value, String promoCode, PromotionType promotionType, TourDto tour_id) {
-
-        this.id = id;
-        this.description = description;
-        this.value = value;
-        PromoCode = promoCode;
-        PromotionType = promotionType;
-        this.tour_id = tour_id;
+    public void setPromoCode(String promoCode) {
+        this.promoCode = promoCode;
     }
 }

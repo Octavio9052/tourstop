@@ -9,19 +9,10 @@ import java.util.Date;
 public class PaymentInfoDto {
     private int id;
     private String cardNumber;
-    private int type_of_card; // temp. May change in the very near future
-    private String cardHolder_name;
-    private Date expiration_date;
-    private UserDto user_id;
-
-    public PaymentInfoDto(int id, String cardNumber, String cardHolder_name, int type_of_card, Date expiration_date, UserDto user_id) {
-        this.id = id;
-        this.cardNumber = cardNumber;
-        this.cardHolder_name = cardHolder_name;
-        this.type_of_card = type_of_card;
-        this.expiration_date = expiration_date;
-        this.user_id = user_id;
-    }
+    private int typeOfCard; // TODO: temp. May change in the very near future
+    private String cardHolderName;
+    private int expirationDate; // TODO: ExpirationDate should be Date (datatype)
+    private UserDto userId;
 
     public int getId() {
         return id;
@@ -39,35 +30,35 @@ public class PaymentInfoDto {
         this.cardNumber = cardNumber;
     }
 
-    public int getType_of_card() {
-        return type_of_card;
+    public int getTypeOfCard() {
+        return typeOfCard;
     }
 
-    public void setType_of_card(int type_of_card) {
-        this.type_of_card = type_of_card;
+    public void setTypeOfCard(int typeOfCard) {
+        this.typeOfCard = typeOfCard;
     }
 
-    public String getCardHolder_name() {
-        return cardHolder_name;
+    public String getCardHolderName() {
+        return cardHolderName;
     }
 
-    public void setCardHolder_name(String cardHolder_name) {
-        this.cardHolder_name = cardHolder_name;
+    public void setCardHolderName(String cardHolderName) {
+        this.cardHolderName = cardHolderName;
     }
 
-    public Date getExpiration_date() {
-        return expiration_date;
+    public int getExpirationDate() {
+        return expirationDate;
     }
 
-    public void setExpiration_date(Date expiration_date) {
-        this.expiration_date = expiration_date;
+    public void setExpirationDate(int expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
-    public UserDto getUser_id() {
-        return user_id;
+    public UserDto getUserId() {
+        return userId;
     }
 
-    public void setUser_id(UserDto user_id) {
-        this.user_id = user_id;
+    public void setUserId(UserDto userId) {
+        this.userId = userId;
     }
 }

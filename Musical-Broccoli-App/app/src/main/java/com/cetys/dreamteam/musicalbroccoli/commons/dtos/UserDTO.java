@@ -3,6 +3,8 @@ package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.LanguageCode;
 
+import java.util.List;
+
 /**
  * Created by Octavio on 2016/10/24.
  */
@@ -10,24 +12,19 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.LanguageCode;
 public class UserDto {
 
     private int id;
-    private String FirstName;
-    private String LastName;
-    private AddressDto AddressDto;
-    private String Phone;
-    private UserType UserType;
-    private LanguageCode LanguageCode;
+    private String firstName;
+    private String lastName;
     private String email;
+    private String phone;
+    private LanguageCode languageCode;
+    private UserType userType;
+    private int addressId;
 
-    public UserDto(int id, String firstName, String lastName, AddressDto addressDto, String phone, UserType userType, LanguageCode languageCode, String email) {
-        this.id = id;
-        FirstName = firstName;
-        LastName = lastName;
-        AddressDto = addressDto;
-        Phone = phone;
-        UserType = userType;
-        LanguageCode = languageCode;
-        this.email = email;
-    }
+    private List<MessageDto> messages;
+    private List<TourDto> tours;
+    private List<OrderDto> orders;
+    private List<RatingDto> ratings;
+    private List<ReservationDto> reservations;
 
     public int getId() {
         return id;
@@ -38,51 +35,19 @@ public class UserDto {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
-    }
-
-    public AddressDto getAddressDto() {
-        return AddressDto;
-    }
-
-    public void setAddressDto(AddressDto addressDto) {
-        AddressDto = addressDto;
-    }
-
-    public String getPhone() {
-        return Phone;
-    }
-
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
-
-    public UserType getUserType() {
-        return UserType;
-    }
-
-    public void setUserType(UserType userType) {
-        UserType = userType;
-    }
-
-    public LanguageCode getLanguageCode() {
-        return LanguageCode;
-    }
-
-    public void setLanguageCode(LanguageCode languageCode) {
-        LanguageCode = languageCode;
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -91,5 +56,77 @@ public class UserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public LanguageCode getLanguageCode() {
+        return languageCode;
+    }
+
+    public void setLanguageCode(LanguageCode languageCode) {
+        this.languageCode = languageCode;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
+
+    public int getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
+    }
+
+    public List<MessageDto> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<MessageDto> messages) {
+        this.messages = messages;
+    }
+
+    public List<TourDto> getTours() {
+        return tours;
+    }
+
+    public void setTours(List<TourDto> tours) {
+        this.tours = tours;
+    }
+
+    public List<OrderDto> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<OrderDto> orders) {
+        this.orders = orders;
+    }
+
+    public List<RatingDto> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<RatingDto> ratings) {
+        this.ratings = ratings;
+    }
+
+    public List<ReservationDto> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<ReservationDto> reservations) {
+        this.reservations = reservations;
     }
 }

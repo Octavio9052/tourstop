@@ -9,22 +9,19 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
 public class AddressDto {
     private int id;
     private String name;
-    private String street_1;
-    private String street_2;
+    private String street1;
+    private String street2;
     private String city;
     private String state;
-    private String postalCode;
-    private CountryCode CountryCode;
+    private int postalCode;
+    private CountryCode countryCode;
 
-    public AddressDto(int id, String name, String street_1, String street_2, String city, String state, String postalCode, CountryCode CountryCode) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.name = name;
-        this.street_1 = street_1;
-        this.street_2 = street_2;
-        this.city = city;
-        this.state = state;
-        this.postalCode = postalCode;
-        this.CountryCode = CountryCode;
     }
 
     public String getName() {
@@ -35,60 +32,51 @@ public class AddressDto {
         this.name = name;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getStreet1() {
+        return street1;
     }
 
-    public void setStreet_1(String street_1) {
-        this.street_1 = street_1;
+    public void setStreet1(String street1) {
+        this.street1 = street1;
     }
 
-    public void setStreet_2(String street_2) {
-        this.street_2 = street_2;
+    public String getStreet2() {
+        return street2;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
-    public void setCountryCode(CountryCode CountryCode) {
-        this.CountryCode = CountryCode;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getStreet_1() {
-        return street_1;
-    }
-
-    public String getStreet_2() {
-        return street_2;
+    public void setStreet2(String street2) {
+        this.street2 = street2;
     }
 
     public String getCity() {
         return city;
     }
 
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     public String getState() {
         return state;
     }
 
-    public String getPostalCode() {
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public int getPostalCode() {
         return postalCode;
     }
 
-    public CountryCode getCountryCode() {
-        return CountryCode;
+    public void setPostalCode(int postalCode) {
+        this.postalCode = postalCode;
     }
 
+    public CountryCode getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(CountryCode countryCode) {
+        this.countryCode = countryCode;
+    }
 }

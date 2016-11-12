@@ -1,6 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Octavio on 2016/10/24.
@@ -9,12 +10,16 @@ import java.util.Date;
 public class TourDto {
     private int id;
     private String title;
-    private String description;
     private int maxReservations;
-    private int pricePerReservation;
-    private Date dateCreated;
+    private float pricePerReservation;
+    private boolean status;
     private Date dateModified;
-    private UserDto userDto;        // User_id
+    private Date dateCreated;
+    private int promotionId;
+    private int userId;
+
+    private List<ReservationDto> reservations;
+    private List<RatingDto> ratings;
 
     public int getId() {
         return id;
@@ -32,14 +37,6 @@ public class TourDto {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public int getMaxReservations() {
         return maxReservations;
     }
@@ -48,20 +45,20 @@ public class TourDto {
         this.maxReservations = maxReservations;
     }
 
-    public int getPricePerReservation() {
+    public float getPricePerReservation() {
         return pricePerReservation;
     }
 
-    public void setPricePerReservation(int pricePerReservation) {
+    public void setPricePerReservation(float pricePerReservation) {
         this.pricePerReservation = pricePerReservation;
     }
 
-    public Date getDateCreated() {
-        return dateCreated;
+    public boolean isStatus() {
+        return status;
     }
 
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public Date getDateModified() {
@@ -72,23 +69,43 @@ public class TourDto {
         this.dateModified = dateModified;
     }
 
-    public UserDto getUserDto() {
-        return userDto;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setUserDto(UserDto userDto) {
-        this.userDto = userDto;
-    }
-
-    public TourDto(int id, String title, String description, int maxReservations, int pricePerReservation, Date dateCreated, Date dateModified, UserDto userDto) {
-
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.maxReservations = maxReservations;
-        this.pricePerReservation = pricePerReservation;
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
-        this.dateModified = dateModified;
-        this.userDto = userDto;
+    }
+
+    public int getPromotionId() {
+        return promotionId;
+    }
+
+    public void setPromotionId(int promotionId) {
+        this.promotionId = promotionId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public List<ReservationDto> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<ReservationDto> reservations) {
+        this.reservations = reservations;
+    }
+
+    public List<RatingDto> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<RatingDto> ratings) {
+        this.ratings = ratings;
     }
 }

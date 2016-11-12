@@ -8,16 +8,8 @@ public class RatingDto {
     private int id;
     private int rating_value;
     private String comment;
-    private UserDto user_id;
-    private TourDto tour_id;
-
-    public RatingDto(int id, int rating_value, String comment, UserDto user_id, TourDto tour_id) {
-        this.id = id;
-        this.rating_value = rating_value;
-        this.comment = comment;
-        this.user_id = user_id;
-        this.tour_id = tour_id;
-    }
+    private int userId;
+    private int tourId;
 
     public int getId() {
         return id;
@@ -43,19 +35,19 @@ public class RatingDto {
         this.comment = comment;
     }
 
-    public UserDto getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(UserDto user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public TourDto getTour_id() {
-        return tour_id;
+    public int getTourId() {
+        return tourId;
     }
 
-    public void setTour_id(TourDto tour_id) {
-        this.tour_id = tour_id;
+    public void setTourId(int tourId) {
+        this.tourId = tourId;
     }
 }

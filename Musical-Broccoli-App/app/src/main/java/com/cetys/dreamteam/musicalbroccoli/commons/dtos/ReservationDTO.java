@@ -9,10 +9,10 @@ import java.util.Date;
 public class ReservationDto {
     private int id;
     private String name;
-    private Date date_created;
-    private UserDto user_id;
-    private TourDto tour_id;
-    private OrderDto order_id;
+    private Date dateCreated;
+    private int userId;
+    private int tourId;
+    private int orderId;
     private boolean status;
 
     public int getId() {
@@ -31,36 +31,36 @@ public class ReservationDto {
         this.name = name;
     }
 
-    public Date getDate_created() {
-        return date_created;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setDate_created(Date date_created) {
-        this.date_created = date_created;
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
-    public UserDto getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(UserDto user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public TourDto getTour_id() {
-        return tour_id;
+    public int getTourId() {
+        return tourId;
     }
 
-    public void setTour_id(TourDto tour_id) {
-        this.tour_id = tour_id;
+    public void setTourId(int tourId) {
+        this.tourId = tourId;
     }
 
-    public OrderDto getOrder_id() {
-        return order_id;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(OrderDto order_id) {
-        this.order_id = order_id;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
     public boolean isStatus() {
@@ -68,17 +68,6 @@ public class ReservationDto {
     }
 
     public void setStatus(boolean status) {
-        this.status = status;
-    }
-
-    public ReservationDto(int id, String name, Date date_created, UserDto user_id, TourDto tour_id, OrderDto order_id, boolean status) {
-
-        this.id = id;
-        this.name = name;
-        this.date_created = date_created;
-        this.user_id = user_id;
-        this.tour_id = tour_id;
-        this.order_id = order_id;
         this.status = status;
     }
 }

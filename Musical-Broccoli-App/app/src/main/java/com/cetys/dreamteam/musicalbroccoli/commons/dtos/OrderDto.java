@@ -3,6 +3,7 @@ package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.PaymentType;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Octavio on 2016/11/12.
@@ -14,18 +15,11 @@ public class OrderDto {
     private float totalAmount;
     private PaymentType paymentType;
     private boolean paymentStatus;
-    private UserDto user_id;
-    private PaymentInfoDto paymentInfo_id;
+    private int userId;
+    private int paymentInfoId;
 
-    public OrderDto(int id, Date dateCreated, float totalAmount, PaymentType paymentType, boolean paymentStatus, UserDto user_id, PaymentInfoDto paymentInfo_id) {
-        this.id = id;
-        this.dateCreated = dateCreated;
-        this.totalAmount = totalAmount;
-        this.paymentType = paymentType;
-        this.paymentStatus = paymentStatus;
-        this.user_id = user_id;
-        this.paymentInfo_id = paymentInfo_id;
-    }
+    private List<ReservationDto> reservations;
+    private List<MovementDto> movements;
 
     public int getId() {
         return id;
@@ -67,19 +61,35 @@ public class OrderDto {
         this.paymentStatus = paymentStatus;
     }
 
-    public UserDto getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(UserDto user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public PaymentInfoDto getPaymentInfo_id() {
-        return paymentInfo_id;
+    public int getPaymentInfoId() {
+        return paymentInfoId;
     }
 
-    public void setPaymentInfo_id(PaymentInfoDto paymentInfo_id) {
-        this.paymentInfo_id = paymentInfo_id;
+    public void setPaymentInfoId(int paymentInfoId) {
+        this.paymentInfoId = paymentInfoId;
+    }
+
+    public List<ReservationDto> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<ReservationDto> reservations) {
+        this.reservations = reservations;
+    }
+
+    public List<MovementDto> getMovements() {
+        return movements;
+    }
+
+    public void setMovements(List<MovementDto> movements) {
+        this.movements = movements;
     }
 }

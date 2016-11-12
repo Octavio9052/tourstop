@@ -9,19 +9,12 @@ import java.util.List;
 
 public class MessageDto {
 
-    private int id;                     // Message_id
-    private UserDto userDtoFrom;        // Sender_id
-    private Date dateCreated;         // Date_Created
-    private List<UserDto> receivers;    // Receivers
-    private String content;             // Content
+    private int id;                      // Message_id
+    private int senderId;               // Sender_id
+    private Date dateCreated;            // Date_Created
+    private String content;              // Content
 
-    public MessageDto(int id, UserDto userDtoFrom, Date dateCreated, List<UserDto> receivers, String content) {
-        this.id = id;
-        this.userDtoFrom = userDtoFrom;
-        this.dateCreated = dateCreated;
-        this.receivers = receivers;
-        this.content = content;
-    }
+    private List<UserDto> receivers;     // Receivers
 
     public int getId() {
         return id;
@@ -31,12 +24,12 @@ public class MessageDto {
         this.id = id;
     }
 
-    public UserDto getUserDtoFrom() {
-        return userDtoFrom;
+    public int getSenderId() {
+        return senderId;
     }
 
-    public void setUserDtoFrom(UserDto userDtoFrom) {
-        this.userDtoFrom = userDtoFrom;
+    public void setSenderId(int senderId) {
+        this.senderId = senderId;
     }
 
     public Date getDateCreated() {
@@ -62,4 +55,5 @@ public class MessageDto {
     public void setContent(String content) {
         this.content = content;
     }
+
 }

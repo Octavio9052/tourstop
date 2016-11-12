@@ -8,10 +8,10 @@ import java.util.Date;
 
 public class CheckpointDto {
     private int id;
-    private Date start_time;
-    private Date end_time;
-    private AddressDto address_id;
-    private TourDto tour_id;
+    private Date startTime;
+    private Date endTime;
+    private int addressId;
+    private int tourId;
 
     public int getId() {
         return id;
@@ -21,44 +21,35 @@ public class CheckpointDto {
         this.id = id;
     }
 
-    public Date getStart_time() {
-        return start_time;
+    public Date getStartTime() {
+        return startTime;
     }
 
-    public void setStart_time(Date start_time) {
-        this.start_time = start_time;
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
     }
 
-    public Date getEnd_time() {
-        return end_time;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setEnd_time(Date end_time) {
-        this.end_time = end_time;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
-    public AddressDto getAddress_id() {
-        return address_id;
+    public int getAddressId() {
+        return addressId;
     }
 
-    public void setAddress_id(AddressDto address_id) {
-        this.address_id = address_id;
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
-    public TourDto getTour_id() {
-        return tour_id;
+    public int getTourId() {
+        return tourId;
     }
 
-    public void setTour_id(TourDto tour_id) {
-        this.tour_id = tour_id;
-    }
-
-    public CheckpointDto(int id, Date start_time, Date end_time, AddressDto address_id, TourDto tour_id) {
-        this.id = id;
-        this.start_time = start_time;
-        this.end_time = end_time;
-
-        this.address_id = address_id;
-        this.tour_id = tour_id;
+    public void setTourId(int tourId) {
+        this.tourId = tourId;
     }
 }
