@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Validators;
+using Business.Contracts;
 
 namespace Business.Connectors
 {
-    public class MovementConnector : BaseConnector<MovementDTO, Movement>
+    public class MovementConnector : BaseConnector<MovementDTO, Movement>, IMovementConnector
     {
         public MovementConnector(IMovementRepository repository, IMapper mapper) : base(repository, mapper)
         {

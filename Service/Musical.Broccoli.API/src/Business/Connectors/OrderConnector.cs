@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Validators;
+using Business.Contracts;
 
 namespace Business.Connectors
 {
-    public class OrderConnector : BaseConnector<OrderDTO, Order>
+    public class OrderConnector : BaseConnector<OrderDTO, Order>, IOrderConnector
     {
         public OrderConnector(IOrderRepository repository, IMapper mapper) : base(repository, mapper)
         {

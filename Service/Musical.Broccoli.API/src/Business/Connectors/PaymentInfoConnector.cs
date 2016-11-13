@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Validators;
+using Business.Contracts;
 
 namespace Business.Connectors
 {
-    public class PaymentInfoConnector : BaseConnector<PaymentInfoDTO, PaymentInfo>
+    public class PaymentInfoConnector : BaseConnector<PaymentInfoDTO, PaymentInfo>, IPaymentInfoConnector
     {
         public PaymentInfoConnector(IPaymentInfoRepository repository, IMapper mapper) : base(repository, mapper)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Validators
 {
-    public class MessageValidator: BaseValidator<MessageDTO>
+    public class MessageValidator : BaseValidator<MessageDTO>
     {
         public override Func<MessageDTO, ValidationResult> Validate { get; internal set; }
         public static MessageValidator Holds(Predicate<MessageDTO> predicate, string message)
@@ -20,7 +20,8 @@ namespace Business.Validators
         {
             return new MessageValidator()
             {
-                Validate = x => {
+                Validate = x =>
+                {
                     ValidationResult result = Validate.Invoke(x);
                     return result.IsValid ? other.Validate.Invoke(x) : result;
                 }
@@ -28,7 +29,7 @@ namespace Business.Validators
         }
         public static MessageValidator ContentNotEmty()
         {
-            return Holds(x => string.IsNullOrEmpty(x.Content) , "Content is null or empty");
+            return Holds(x => string.IsNullOrEmpty(x.Content), "Content is null or empty");
         }
         public static MessageValidator UserisValid()
         {

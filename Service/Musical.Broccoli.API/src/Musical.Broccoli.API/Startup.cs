@@ -8,7 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Common.AppSettings;
-
+using Business.Connectors;
+using Business.Contracts;
+using DataAccessLayer.Repositories;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Musical.Broccoli.API
 {
@@ -41,6 +44,30 @@ namespace Musical.Broccoli.API
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+
+            #region Dependency Injection
+            //Connectors
+            services.AddTransient<IAddressConnector, AddressConnector>();
+            services.AddTransient<ICheckPointConnector, CheckPointConnector>();
+            services.AddTransient<IMessageConnector, MessageConnector>();
+            services.AddTransient<IMovementConnector,MovementConnector>();
+            services.AddTransient<IOrderConnector, OrderConnector>();
+            services.AddTransient<IPaymentInfoConnector, PaymentInfoConnector>();
+            services.AddTransient<IRatingConnector, RatingConnector>();
+            services.AddTransient<ITourConnector, TourConnector>();
+            services.AddTransient<IUserConnector, UserConnector>();
+
+            //Repositories
+            services.AddScoped<IAddressRepository, AddressRepository>();
+            services.AddScoped<ICheckPointRepository, CheckPointRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<IMovementRepository, MovementRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IPaymentInfoRepository, PaymentInfoRepository>();
+            services.AddScoped<IRatingRepository, RatingRepository>();
+            services.AddScoped<ITourRepository, TourRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            #endregion
 
 
             AppSettings.ConnectionString = Configuration.GetConnectionString("TourStopDB");

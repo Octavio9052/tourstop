@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Validators;
+using Business.Contracts;
 
 namespace Business.Connectors
 {
-    public class UserConnector : BaseConnector<UserDTO, User>
+    public class UserConnector : BaseConnector<UserDTO, User>, IUserConnector
     {
         public UserConnector(IUserRepository repository, IMapper mapper) : base(repository, mapper)
         {

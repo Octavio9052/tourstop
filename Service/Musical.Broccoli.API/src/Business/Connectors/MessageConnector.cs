@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Validators;
+using Business.Contracts;
 
 namespace Business.Connectors
 {
-    public class MessageConnector : BaseConnector<MessageDTO, Message>
+    public class MessageConnector : BaseConnector<MessageDTO, Message>, IMessageConnector
     {
         public MessageConnector(IMessageRepository repository, IMapper mapper) : base(repository, mapper)
         {
