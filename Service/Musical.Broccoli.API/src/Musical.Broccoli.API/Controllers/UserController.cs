@@ -14,22 +14,22 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpGet]
-        public override Request<UserDTO> Get(Request<UserDTO> request) {
+        public override BaseRequest<UserDTO> Get(BaseRequest<UserDTO> request) {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public override Request<UserDTO> Post([FromBody] Request<UserDTO> request) {
+        public override BaseRequest<UserDTO> Post([FromBody] BaseRequest<UserDTO> request) {
             throw new NotImplementedException();
         }
 
         [HttpPut]
-        public override void Put([FromBody] Request<UserDTO> request) {
+        public override void Put([FromBody] BaseRequest<UserDTO> request) {
             throw new NotImplementedException();
         }
 
         [HttpDelete]
-        public override void Delete([FromBody] Request<UserDTO> request) {
+        public override void Delete([FromBody] BaseRequest<UserDTO> request) {
             throw new NotImplementedException();
         }
 

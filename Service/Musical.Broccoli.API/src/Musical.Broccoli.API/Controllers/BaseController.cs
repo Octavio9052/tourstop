@@ -15,15 +15,15 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         // GET api/TDto
-        public abstract Request.Request<TDto> Get(Request.Request<TDto> request);
+        public abstract Request.BaseRequest<TDto> Get(Request.BaseRequest<TDto> request);
 
         // POST api/TDto
-        public abstract Request.Request<TDto> Post([FromBody] Request.Request<TDto> request);
+        public abstract Request.BaseRequest<TDto> Post([FromBody] Request.BaseRequest<TDto> request);
 
         // PUT api/TDto
-        public abstract void Put([FromBody] Request.Request<TDto> request);
+        public abstract void Put([FromBody] Request.BaseRequest<TDto> request);
 
         // DELETE api/TDto
-        public abstract void Delete([FromBody] Request.Request<TDto> request);
+        public abstract void Delete([FromBody] Request.BaseRequest<TDto> request);
     }
 }

@@ -3,7 +3,6 @@ using Business.Contracts;
 using Common.DTOs;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
-using DataAccessLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
