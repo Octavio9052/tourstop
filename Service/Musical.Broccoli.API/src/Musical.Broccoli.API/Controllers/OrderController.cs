@@ -10,30 +10,30 @@ using Business.Contracts;
 namespace Musical.Broccoli.API.Controllers
 {
 
-    public class OrderController : BaseController<OrderDTO> {
-        public OrderController(IOrderConnector connector) : base(connector)
+    public class OrderController : BaseController<OrderDTO>
+    {
+        public OrderController(IBaseConnector<OrderDTO> connector) : base(connector)
         {
         }
 
-        [HttpGet]
-        public override BaseRequest<OrderDTO> Get(BaseRequest<OrderDTO> request) {
+        public override BaseRequest<OrderDTO> Get([FromBody] FilteredRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPost]
-        public override BaseRequest<OrderDTO> Post([FromBody] BaseRequest<OrderDTO> request) {
+        public override BaseRequest<OrderDTO> Post([FromBody] DataRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public override void Put([FromBody] BaseRequest<OrderDTO> request) {
+        public override void Put([FromBody] DataRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpDelete]
-        public override void Delete([FromBody] BaseRequest<OrderDTO> request) {
+        public override void Delete([FromBody] FilteredRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
-
     }
 }

@@ -14,16 +14,17 @@ namespace Musical.Broccoli.API.Controllers
             _connector = connector;
         }
 
+        [HttpGet]
         // GET api/TDto
-        public abstract Request.BaseRequest<TDto> Get(Request.BaseRequest<TDto> request);
-
+        public abstract Request.BaseRequest<TDto> Get([FromBody] Request.FilteredRequest<TDto> request);
+        [HttpPost]
         // POST api/TDto
-        public abstract Request.BaseRequest<TDto> Post([FromBody] Request.BaseRequest<TDto> request);
-
+        public abstract Request.BaseRequest<TDto> Post([FromBody] Request.DataRequest<TDto> request);
+        [HttpPut]
         // PUT api/TDto
-        public abstract void Put([FromBody] Request.BaseRequest<TDto> request);
-
+        public abstract void Put([FromBody] Request.DataRequest<TDto> request);
+        [HttpDelete]
         // DELETE api/TDto
-        public abstract void Delete([FromBody] Request.BaseRequest<TDto> request);
+        public abstract void Delete([FromBody] Request.FilteredRequest<TDto> request);
     }
 }

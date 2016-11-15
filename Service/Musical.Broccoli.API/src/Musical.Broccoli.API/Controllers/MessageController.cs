@@ -10,29 +10,31 @@ using Business.Contracts;
 namespace Musical.Broccoli.API.Controllers
 {
     [Route("api/[controller]")]
-    public class MessageController : BaseController<MessageDTO> {
-        public MessageController(IMessageConnector connector) : base(connector)
+    public class MessageController : BaseController<MessageDTO>
+    {
+        public MessageController(IBaseConnector<MessageDTO> connector) : base(connector)
         {
         }
 
-        [HttpGet]
-        public override BaseRequest<MessageDTO> Get(BaseRequest<MessageDTO> request) {
+        public override BaseRequest<MessageDTO> Get([FromBody] FilteredRequest<MessageDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPost]
-        public override BaseRequest<MessageDTO> Post([FromBody] BaseRequest<MessageDTO> request) {
+        public override BaseRequest<MessageDTO> Post([FromBody] DataRequest<MessageDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public override void Put([FromBody] BaseRequest<MessageDTO> request) {
+        public override void Put([FromBody] DataRequest<MessageDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpDelete]
-        public override void Delete([FromBody] BaseRequest<MessageDTO> request) {
+        public override void Delete([FromBody] FilteredRequest<MessageDTO> request)
+        {
             throw new NotImplementedException();
         }
+
     }
 }
