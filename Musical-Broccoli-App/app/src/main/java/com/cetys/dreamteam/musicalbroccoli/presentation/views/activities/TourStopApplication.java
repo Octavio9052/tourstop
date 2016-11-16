@@ -1,4 +1,4 @@
-package com.cetys.dreamteam.musicalbroccoli;
+package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
 import android.app.Application;
 import android.content.Context;

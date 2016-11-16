@@ -1,6 +1,5 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.models;
 
-import android.databinding.ObservableArrayList;
 import android.databinding.ObservableInt;
 
 import java.util.Date;
