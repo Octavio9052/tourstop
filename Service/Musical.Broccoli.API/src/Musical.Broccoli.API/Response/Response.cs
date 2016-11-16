@@ -9,6 +9,5 @@ namespace Musical.Broccoli.API.Response
     public class Response<TDto> where TDto : BaseDTO
     {
         public ICollection<TDto> Data { get; set; }
-
     }
 }

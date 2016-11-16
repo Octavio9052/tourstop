@@ -4,6 +4,7 @@ using Musical.Broccoli.API.Request;
 using System;
 using Business.Contracts;
 using Business.Connectors;
+using Musical.Broccoli.API.Response;
 
 namespace Musical.Broccoli.API.Controllers
 {
@@ -14,25 +15,24 @@ namespace Musical.Broccoli.API.Controllers
         {
         }
 
-        public override BaseRequest<UserDTO> Get([FromBody] FilteredRequest<UserDTO> request)
+        public override IActionResult Delete([FromBody] FilteredRequest<UserDTO> request)
         {
             throw new NotImplementedException();
         }
 
-        public override BaseRequest<UserDTO> Post([FromBody] DataRequest<UserDTO> request)
+        public override IActionResult Get([FromBody] FilteredRequest<UserDTO> request)
         {
             throw new NotImplementedException();
         }
 
-        public override void Put([FromBody] DataRequest<UserDTO> request)
+        public override IActionResult Post([FromBody] DataRequest<UserDTO> request)
         {
             throw new NotImplementedException();
         }
 
-        public override void Delete([FromBody] FilteredRequest<UserDTO> request)
+        public override IActionResult Put([FromBody] DataRequest<UserDTO> request)
         {
             throw new NotImplementedException();
         }
-
     }
 }

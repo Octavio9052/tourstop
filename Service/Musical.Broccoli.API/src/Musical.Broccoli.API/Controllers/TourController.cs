@@ -12,25 +12,24 @@ namespace Musical.Broccoli.API.Controllers
         {
         }
 
-        public override BaseRequest<TourDTO> Get([FromBody] FilteredRequest<TourDTO> request)
+        public override IActionResult Delete([FromBody] FilteredRequest<TourDTO> request)
         {
             throw new NotImplementedException();
         }
 
-        public override BaseRequest<TourDTO> Post([FromBody] DataRequest<TourDTO> request)
+        public override IActionResult Get([FromBody] FilteredRequest<TourDTO> request)
         {
             throw new NotImplementedException();
         }
 
-        public override void Put([FromBody] DataRequest<TourDTO> request)
+        public override IActionResult Post([FromBody] DataRequest<TourDTO> request)
         {
             throw new NotImplementedException();
         }
 
-        public override void Delete([FromBody] FilteredRequest<TourDTO> request)
+        public override IActionResult Put([FromBody] DataRequest<TourDTO> request)
         {
             throw new NotImplementedException();
         }
-
     }
 }
