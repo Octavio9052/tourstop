@@ -18,10 +18,8 @@
  - EntityFramework
  - Unity
  
- ###Architecture
- The mobile app will use the architecture proposed at http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/
+ ##Architecture
+ The mobile app will use the MVVM pattern combined with the architecture proposed at http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/
 
- ###Branching Model
+ ##Branching Model
  Musical-broccoli will follow the branching model pruposed on http://nvie.com/posts/a-successful-git-branching-model/
- 
- 
