@@ -1,10 +1,12 @@
-package com.cetys.dreamteam.musicalbroccoli;
+package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
 import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
 import android.app.Activity;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
 
 
 public class SearchActivity extends Activity {
