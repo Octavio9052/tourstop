@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Business.Validators
 {
-    public abstract class BaseValidator<TDto> where TDto : BaseDTO
+    public abstract class BaseValidator<T>
     {
-        public abstract Func<TDto,ValidationResult> Validate { get; internal set; }
+        public abstract Func<T,ValidationResult> Validate { get; internal set; }
 
     }
 }
