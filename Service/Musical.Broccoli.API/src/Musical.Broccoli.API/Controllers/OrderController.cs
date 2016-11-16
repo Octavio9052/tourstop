@@ -13,7 +13,7 @@ namespace Musical.Broccoli.API.Controllers
 
     public class OrderController : BaseController<OrderDTO>
     {
-        public OrderController(IBaseConnector<OrderDTO> connector) : base(connector)
+        public OrderController(IOrderConnector connector) : base(connector)
         {
         }
 
