@@ -6,34 +6,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Musical.Broccoli.API.Request;
 using Business.Contracts;
+using Musical.Broccoli.API.Response;
 
 namespace Musical.Broccoli.API.Controllers
 {
 
-    public class OrderController : BaseController<OrderDTO> {
+    public class OrderController : BaseController<OrderDTO>
+    {
         public OrderController(IOrderConnector connector) : base(connector)
         {
         }
 
-        [HttpGet]
-        public override Request<OrderDTO> Get(Request<OrderDTO> request) {
+        public override IActionResult Delete([FromBody] FilteredRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPost]
-        public override Request<OrderDTO> Post([FromBody] Request<OrderDTO> request) {
+        public override IActionResult Get([FromBody] FilteredRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public override void Put([FromBody] Request<OrderDTO> request) {
+        public override IActionResult Post([FromBody] DataRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpDelete]
-        public override void Delete([FromBody] Request<OrderDTO> request) {
+        public override IActionResult Put([FromBody] DataRequest<OrderDTO> request)
+        {
             throw new NotImplementedException();
         }
-
     }
 }

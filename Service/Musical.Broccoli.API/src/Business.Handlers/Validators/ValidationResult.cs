@@ -24,16 +24,16 @@ namespace Business.Validators
         {
             Reason = reason;
         }
-        public bool IsValid
+        public new bool IsValid
         {
             get { return false; }
         }
-        public string Reason { get; set; }
+        public new string Reason { get; set; }
     }
     internal sealed class Valid : ValidationResult
     {
-        public bool IsValid { get { return true; } }
-        public string Reason { get { return ""; } set { } }
+        public new bool IsValid { get { return true; } }
+        public new string Reason { get { return ""; } set { } }
     }
     internal sealed class ValidationSupport
     {

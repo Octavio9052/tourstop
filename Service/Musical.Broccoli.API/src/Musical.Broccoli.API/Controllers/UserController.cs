@@ -4,34 +4,35 @@ using Musical.Broccoli.API.Request;
 using System;
 using Business.Contracts;
 using Business.Connectors;
+using Musical.Broccoli.API.Response;
 
 namespace Musical.Broccoli.API.Controllers
 {
     [Route("api/[controller]")]
-    public class UserController : BaseController<UserDTO> {
+    public class UserController : BaseController<UserDTO>
+    {
         public UserController(IUserConnector connector) : base(connector)
         {
         }
 
-        [HttpGet]
-        public override Request<UserDTO> Get(Request<UserDTO> request) {
+        public override IActionResult Delete([FromBody] FilteredRequest<UserDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPost]
-        public override Request<UserDTO> Post([FromBody] Request<UserDTO> request) {
+        public override IActionResult Get([FromBody] FilteredRequest<UserDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpPut]
-        public override void Put([FromBody] Request<UserDTO> request) {
+        public override IActionResult Post([FromBody] DataRequest<UserDTO> request)
+        {
             throw new NotImplementedException();
         }
 
-        [HttpDelete]
-        public override void Delete([FromBody] Request<UserDTO> request) {
+        public override IActionResult Put([FromBody] DataRequest<UserDTO> request)
+        {
             throw new NotImplementedException();
         }
-
     }
 }

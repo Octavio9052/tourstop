@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Common.DTOs;
 using Business.Contracts;
+using Musical.Broccoli.API.Response;
 
 namespace Musical.Broccoli.API.Controllers
 {
@@ -14,16 +15,17 @@ namespace Musical.Broccoli.API.Controllers
             _connector = connector;
         }
 
+        [HttpGet]
         // GET api/TDto
-        public abstract Request.Request<TDto> Get(Request.Request<TDto> request);
-
+        public abstract IActionResult Get([FromBody] Request.FilteredRequest<TDto> request);
+        [HttpPost]
         // POST api/TDto
-        public abstract Request.Request<TDto> Post([FromBody] Request.Request<TDto> request);
-
+        public abstract IActionResult Post([FromBody] Request.DataRequest<TDto> request);
+        [HttpPut]
         // PUT api/TDto
-        public abstract void Put([FromBody] Request.Request<TDto> request);
-
+        public abstract IActionResult Put([FromBody] Request.DataRequest<TDto> request);
+        [HttpDelete]
         // DELETE api/TDto
-        public abstract void Delete([FromBody] Request.Request<TDto> request);
+        public abstract IActionResult Delete([FromBody] Request.FilteredRequest<TDto> request);
     }
 }

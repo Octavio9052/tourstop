@@ -6,24 +6,26 @@ using System.Threading.Tasks;
 
 namespace Business.Validators
 {
-    public class MessageHasRecieverValidator:BaseValidator<MessageHasRecieverDTO>
+    public class MessageHasRecieverValidator : BaseValidator<MessageHasRecieverDTO>
     {
         public override Func<MessageHasRecieverDTO, ValidationResult> Validate { get; internal set; }
+        public MessageHasRecieverValidator And(MessageHasRecieverValidator other)
+        {
+            return new MessageHasRecieverValidator()
+            {
+                Validate = x =>
+                {
+                    ValidationResult result = Validate.Invoke(x);
+                    return result.IsValid ? other.Validate.Invoke(x) : result;
+                }
+            };
+        }
+
         public static MessageHasRecieverValidator Holds(Predicate<MessageHasRecieverDTO> predicate, string message)
         {
             return new MessageHasRecieverValidator()
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
-            };
-        }
-        public MessageHasRecieverValidator And(MessageHasRecieverValidator other)
-        {
-            return new MessageHasRecieverValidator()
-            {
-                Validate = x => {
-                    ValidationResult result = Validate.Invoke(x);
-                    return result.IsValid ? other.Validate.Invoke(x) : result;
-                }
             };
         }
         public static MessageHasRecieverValidator MessageisValid()
