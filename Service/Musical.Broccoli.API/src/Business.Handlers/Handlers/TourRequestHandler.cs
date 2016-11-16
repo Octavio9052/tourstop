@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Business.Handlers.Handlers.contracts;
 
 namespace Business.Handlers.Handlers
 {
-    public class TourRequestHandler : BaseRequestHandler<TourDTO>
+    public class TourRequestHandler : BaseRequestHandler<TourDTO>, ITourRequestHandler
     {
         public TourRequestHandler(ITourConnector connector) : base(connector)
         {

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using Business.Contracts;
 using Musical.Broccoli.API.Request;
 using Musical.Broccoli.API.Response;
+using Business.Handlers.Handlers.contracts;
 
 namespace Business.Handlers.Handlers
 {
-    public class UserRequestHandler : BaseRequestHandler<UserDTO>
+    public class UserRequestHandler : BaseRequestHandler<UserDTO>, IUserRequestHandler
     {
         public UserRequestHandler(IUserConnector connector) : base(connector)
         {

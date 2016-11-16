@@ -8,7 +8,7 @@ namespace Business.Handlers.Validation
     public class ValidationResult
     {
         public string Reason { get; set; }
-        public bool IsValid { get; internal set; }
+        public bool IsValid { get; private set; }
         public static ValidationResult Valid()
         {
             return ValidationSupport.Valid();
@@ -17,7 +17,6 @@ namespace Business.Handlers.Validation
         {
             return new Invalid(reason);
         }
-
         public static ValidationResult operator +(ValidationResult r1, ValidationResult r2)
         {
             return new ValidationResult()

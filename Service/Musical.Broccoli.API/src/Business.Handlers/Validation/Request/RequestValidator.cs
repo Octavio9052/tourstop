@@ -1,21 +1,11 @@
 ﻿using Common.DTOs;
 using System;
+using Musical.Broccoli.API.Request;
 
 namespace Business.Handlers.Validation.Request
 {
-    public class RequestValidato<TDto> : BaseValidator<Musical.Broccoli.API.Request.FilteredRequest<TDto>> where TDto : BaseDTO
+    public class RequestValidato<TDto> : BaseValidator<FilteredRequest<TDto>> where TDto : BaseDTO
     {
-        public override Func<Musical.Broccoli.API.Request.FilteredRequest<TDto>, ValidationResult> Validate
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            internal set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public override Func<FilteredRequest<TDto>, ValidationResult> Validate { get; internal set; }
     }
 }
