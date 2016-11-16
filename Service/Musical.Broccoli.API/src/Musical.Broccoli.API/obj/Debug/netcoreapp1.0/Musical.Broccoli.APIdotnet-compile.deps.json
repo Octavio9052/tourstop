@@ -29,7 +29,8 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Common": "1.0.0",
-          "Business": "1.0.0"
+          "Business": "1.0.0",
+          "Business.Handlers": "1.0.0"
         },
         "compile": {
           "Musical.Broccoli.API.dll": {}
@@ -2880,6 +2881,15 @@
           "Business.dll": {}
         }
       },
+      "Business.Handlers/1.0.0": {
+        "dependencies": {
+          "Business": "1.0.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "Business.Handlers.dll": {}
+        }
+      },
       "Common/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -2918,7 +2928,8 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Common": "1.0.0",
-          "Business": "1.0.0"
+          "Business": "1.0.0",
+          "Business.Handlers": "1.0.0"
         },
         "runtime": {
           "Musical.Broccoli.API.dll": {}
@@ -5637,6 +5648,15 @@
           "Business.dll": {}
         }
       },
+      "Business.Handlers/1.0.0": {
+        "dependencies": {
+          "Business": "1.0.0",
+          "NETStandard.Library": "1.6.0"
+        },
+        "runtime": {
+          "Business.Handlers.dll": {}
+        }
+      },
       "Common/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -6697,6 +6717,11 @@
       "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q=="
     },
     "Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Business.Handlers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

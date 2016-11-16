@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Business.Validators
+namespace Business.Handlers.Validation
 {
     public class CheckPointValidator : BaseValidator<CheckPointDTO>
     {
         public override Func<CheckPointDTO, ValidationResult> Validate { get; internal set; }
+        public CheckPointValidator And(CheckPointValidator other)
+        {
+            return new CheckPointValidator()
+            {
+                Validate = x => this.Validate( x ) + other.Validate( x )
+            };
+        }
+
         public static CheckPointValidator Holds(Predicate<CheckPointDTO> predicate, string message)
         {
             return new CheckPointValidator()
@@ -16,36 +24,25 @@ namespace Business.Validators
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
-        public CheckPointValidator And(CheckPointValidator other)
-        {
-            return new CheckPointValidator()
-            {
-                Validate = x => {
-                    ValidationResult result = Validate.Invoke(x);
-                    return result.IsValid ? other.Validate.Invoke(x) : result;
-                }
-            };
-        }
-        public static CheckPointValidator AddressIdisValid()
+
+        #region Validators
+        public static CheckPointValidator AddressIdIsValid()
         {
             return Holds(x => x.AddressId == 0, "Invalid Address");
         }
-        public static CheckPointValidator TourIdisValid()
+        public static CheckPointValidator TourIdIsValid()
         {
             return Holds(x => x.TourId == 0, "Invalid Tour");
         }
+        #endregion
+
         public static CheckPointValidator All()
         {
-            return All(AddressIdisValid(), TourIdisValid());
+            return All(AddressIdIsValid(), TourIdIsValid());
         }
         public static CheckPointValidator All(params CheckPointValidator[] validators)
         {
-
-            var validatorsList = validators.ToList();
-
-            return validatorsList.Aggregate((x, y) => x.And(y));
-
+            return validators.Aggregate((x, y) => x.And(y));
         }
-
     }
 }

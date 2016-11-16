@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Business.Validators
+namespace Business.Handlers.Validation
 {
     public class OrderValidator : BaseValidator<OrderDTO>
     {
         public override Func<OrderDTO, ValidationResult> Validate { get; internal set; }
+        public OrderValidator And(OrderValidator other)
+        {
+            return new OrderValidator()
+            {
+                Validate = x => this.Validate( x ) + other.Validate( x )
+            };
+        }
+
         public static OrderValidator Holds(Predicate<OrderDTO> predicate, string message)
         {
             return new OrderValidator()
@@ -16,26 +24,17 @@ namespace Business.Validators
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
-        public OrderValidator And(OrderValidator other)
-        {
-            return new OrderValidator()
-            {
-                Validate = x =>
-                {
-                    ValidationResult result = Validate.Invoke(x);
-                    return result.IsValid ? other.Validate.Invoke(x) : result;
-                }
-            };
-        }
-        public static OrderValidator UserisValid()
+
+        #region Validator
+        public static OrderValidator UserIsValid()
         {
             return Holds(x => x.UserId == 0, "Invalid User");
         }
-        public static OrderValidator PaymentTypeisValid()
+        public static OrderValidator PaymentTypeIsValid()
         {
             return Holds(x => x.PaymentType == 0, "Invalid PaymentType");
         }
-        public static OrderValidator TotalAmountisValid()
+        public static OrderValidator TotalAmountIsValid()
         {
             return Holds(x => x.TotalAmount < 0, "Invalid TotalAmount");
         }
@@ -43,17 +42,15 @@ namespace Business.Validators
         {
             return Holds(x => x.Reservations.Count == 0, "Invalid TotalAmount");
         }
+        #endregion
+
         public static OrderValidator All()
         {
-            return All(UserisValid(), PaymentTypeisValid(), TotalAmountisValid(), ReservationsAreNotEmpty());
+            return All(UserIsValid(), PaymentTypeIsValid(), TotalAmountIsValid(), ReservationsAreNotEmpty());
         }
         public static OrderValidator All(params OrderValidator[] validators)
         {
-
-            var validatorsList = validators.ToList();
-
-            return validatorsList.Aggregate((x, y) => x.And(y));
-
+            return validators.Aggregate((x, y) => x.And(y));
         }
     }
 }

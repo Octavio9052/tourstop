@@ -2,7 +2,6 @@
 using DataAccessLayer.Entities;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
-using Business.Validators;
 using System;
 using Business.Contracts;
 
@@ -14,9 +13,5 @@ namespace Business.Connectors
         {
         }
 
-        public override ValidationResult Validate(RatingDTO dto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

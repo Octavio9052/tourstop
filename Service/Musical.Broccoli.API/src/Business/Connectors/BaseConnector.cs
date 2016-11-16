@@ -5,9 +5,6 @@ using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Validators;
 
 namespace Business.Connectors
 {
@@ -66,6 +63,5 @@ namespace Business.Connectors
             _repository.Update(entity);
         }
 
-        public abstract ValidationResult Validate(TDto dto);
     }
 }

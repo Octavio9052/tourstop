@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Business.Validators
+namespace Business.Handlers.Validation
 {
     public class MovementValidator:BaseValidator<MovementDTO>
     {
         public override Func<MovementDTO, ValidationResult> Validate { get; internal set; }
+        public MovementValidator And(MovementValidator other)
+        {
+            return new MovementValidator()
+            {
+                Validate = x => this.Validate( x ) + other.Validate( x )
+            };
+        }
+
         public static MovementValidator Holds(Predicate<MovementDTO> predicate, string message)
         {
             return new MovementValidator()
@@ -16,39 +24,29 @@ namespace Business.Validators
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
-        public MovementValidator And(MovementValidator other)
-        {
-            return new MovementValidator()
-            {
-                Validate = x => {
-                    ValidationResult result = Validate.Invoke(x);
-                    return result.IsValid ? other.Validate.Invoke(x) : result;
-                }
-            };
-        }
-        public static MovementValidator MovementTypeisValid()
+
+        #region Validators
+        public static MovementValidator MovementTypeIsValid()
         {
             return Holds(x => x.MovementType == 0, "Invalid MovementType");
         }
-        public static MovementValidator ReservationIdisValid()
+        public static MovementValidator ReservationIdIsValid()
         {
             return Holds(x => x.ReservationId == 0, "Invalid Reservation");
         }
-        public static MovementValidator TourIdisValid()
+        public static MovementValidator TourIdIsValid()
         {
             return Holds(x => x.TourId == 0, "Invalid Tour");
         }
+        #endregion
+
         public static MovementValidator All()
         {
-            return All(MovementTypeisValid(), ReservationIdisValid(), TourIdisValid());
+            return All(MovementTypeIsValid(), ReservationIdIsValid(), TourIdIsValid());
         }
         public static MovementValidator All(params MovementValidator[] validators)
         {
-
-            var validatorsList = validators.ToList();
-
-            return validatorsList.Aggregate((x, y) => x.And(y));
-
+            return validators.Aggregate((x, y) => x.And(y));
         }
 
     }

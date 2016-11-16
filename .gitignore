@@ -40,3 +40,4 @@ captures/
 *.jks
 /Service/Musical.Broccoli.API/DataAccessLayer.Test
 /Musical-Broccoli-App/.idea
+/Service/Musical.Broccoli.API/.vs/Musical.Broccoli.API/v15

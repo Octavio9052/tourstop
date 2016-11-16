@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Business.Validators
+namespace Business.Handlers.Validation
 {
     public class PromotionValidator:BaseValidator<PromotionDTO>
     {
         public override Func<PromotionDTO, ValidationResult> Validate { get; internal set; }
+        public PromotionValidator And(PromotionValidator other)
+        {
+            return new PromotionValidator()
+            {
+                Validate = x => this.Validate( x ) + other.Validate( x )
+            };
+        }
+
         public static PromotionValidator Holds(Predicate<PromotionDTO> predicate, string message)
         {
             return new PromotionValidator()
@@ -16,16 +24,8 @@ namespace Business.Validators
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
-        public PromotionValidator And(PromotionValidator other)
-        {
-            return new PromotionValidator()
-            {
-                Validate = x => {
-                    ValidationResult result = Validate.Invoke(x);
-                    return result.IsValid ? other.Validate.Invoke(x) : result;
-                }
-            };
-        }
+
+        #region Validator
         public static PromotionValidator PromoCodeNotEmpty()
         {
             return Holds(x => string.IsNullOrEmpty(x.PromoCode) , "PromoCode is null or empty");
@@ -38,16 +38,15 @@ namespace Business.Validators
         {
             return Holds(x => x.Value == 0, "Invalid Value");
         }
+        #endregion
+        
         public static PromotionValidator All()
         {
             return All(PromoCodeNotEmpty(), PromoTypeisValid(), ValueisValid());
         }
         public static PromotionValidator All(params PromotionValidator[] validators)
         {
-
-            var validatorsList = validators.ToList();
-            return validatorsList.Aggregate((x, y) => x.And(y));
-
+            return validators.Aggregate((x, y) => x.And(y));
         }
 
 

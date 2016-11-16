@@ -6,7 +6,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
-using Business.Validators;
 using Business.Contracts;
 
 namespace Business.Connectors
@@ -15,11 +14,6 @@ namespace Business.Connectors
     {
         public PaymentInfoConnector(IPaymentInfoRepository repository, IMapper mapper) : base(repository, mapper)
         {
-        }
-
-        public override ValidationResult Validate(PaymentInfoDTO dto)
-        {
-            throw new NotImplementedException();
         }
     }
 }
