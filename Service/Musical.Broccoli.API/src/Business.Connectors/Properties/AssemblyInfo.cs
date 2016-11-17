@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Toshiba")]
-[assembly: AssemblyProduct("DAL")]
+[assembly: AssemblyProduct("Business.Connectors")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -16,4 +16,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cb17ebfc-f818-4de4-b0f3-311f2716eb82")]
+[assembly: Guid("39a0a9b6-4532-4cfc-9a67-2e39b5df4c93")]

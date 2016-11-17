@@ -1,5 +1,6 @@
 ﻿using Business.Connectors;
 using Business.Contracts;
+using Common.AppSettings;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
