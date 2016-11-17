@@ -1,4 +1,4 @@
-package com.cetys.dreamteam.musicalbroccoli;
+package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -28,6 +28,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
 
 import java.util.ArrayList;
 import java.util.List;
