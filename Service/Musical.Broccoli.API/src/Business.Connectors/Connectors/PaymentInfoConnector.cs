@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Contracts;
+using Business.Controllers.Petition;
 
 namespace Business.Connectors
 {
@@ -14,6 +15,11 @@ namespace Business.Connectors
     {
         public PaymentInfoConnector(IPaymentInfoRepository repository, IMapper mapper) : base(repository, mapper)
         {
+        }
+
+        protected override bool ValidatePetition( BusinessPetition<PaymentInfoDTO> petition )
+        {
+            throw new NotImplementedException();
         }
     }
 }

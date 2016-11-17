@@ -117,7 +117,7 @@
 --reference:C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\bin\Debug\netstandard1.6\Business.Connectors.dll
 --reference:C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Common\bin\Debug\netstandard1.6\Common.dll
 --reference:C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\bin\Debug\netstandard1.6\DataAccessLayer.dll
-C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\RequestParser.cs
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Exceptions\InvalidRequestException.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Handlers\BaseRequestHandler.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Handlers\MessageRequestHandler.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Handlers\OrderRequestHandler.cs
@@ -128,10 +128,8 @@ C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broc
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Handlers\contracts\ITourRequestHandler.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Handlers\contracts\IUserRequestHandler.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Properties\AssemblyInfo.cs
-C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\BaseRequest.cs
-C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\DataRequest.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\Filter.cs
-C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\FilteredRequest.cs
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\Request.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Response\Response.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\BaseValidator.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\ValidationResult.cs
@@ -145,4 +143,3 @@ C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broc
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Dto\ReservationValidator.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Dto\TourValidator.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Dto\UserValidator.cs
-C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Request\RequestValidator.cs

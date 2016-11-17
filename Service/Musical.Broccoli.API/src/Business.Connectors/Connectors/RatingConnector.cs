@@ -4,6 +4,7 @@ using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using System;
 using Business.Contracts;
+using Business.Controllers.Petition;
 
 namespace Business.Connectors
 {
@@ -13,5 +14,9 @@ namespace Business.Connectors
         {
         }
 
+        protected override bool ValidatePetition( BusinessPetition<RatingDTO> petition )
+        {
+            throw new NotImplementedException();
+        }
     }
 }

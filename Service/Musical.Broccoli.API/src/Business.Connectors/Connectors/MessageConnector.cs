@@ -1,12 +1,10 @@
 ﻿using Common.DTOs;
 using DataAccessLayer.Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Contracts;
+using Business.Controllers.Petition;
 
 namespace Business.Connectors
 {
@@ -14,6 +12,11 @@ namespace Business.Connectors
     {
         public MessageConnector(IMessageRepository repository, IMapper mapper) : base(repository, mapper)
         {
+        }
+
+        protected override bool ValidatePetition( BusinessPetition<MessageDTO> petition )
+        {
+            throw new NotImplementedException();
         }
     }
 }

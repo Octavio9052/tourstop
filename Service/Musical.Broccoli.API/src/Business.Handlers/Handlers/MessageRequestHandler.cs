@@ -4,6 +4,8 @@ using Business.Contracts;
 using Business.Handlers.Handlers.contracts;
 using Business.Handlers.Request;
 using Business.Handlers.Response;
+using Business.Controllers.Petition;
+using Business.Controllers.Response;
 
 namespace Business.Handlers.Handlers
 {
@@ -13,13 +15,11 @@ namespace Business.Handlers.Handlers
         {
         }
 
-        public override Response<MessageDTO> HandleFilteredRequest( DataRequest<MessageDTO> request )
+        public override Response<MessageDTO> HandleRequest( Request<MessageDTO> request )
         {
-            throw new NotImplementedException();
-        }
-
-        public override Response<MessageDTO> HandleFilteredRequest( FilteredRequest request )
-        {
+            var petition = (BusinessPetition<MessageDTO>) request;
+            var response =  _connector.Processors[petition.Action](petition);
+            //TODO: Cast Operator BusinessResponse => Response
             throw new NotImplementedException();
         }
     }

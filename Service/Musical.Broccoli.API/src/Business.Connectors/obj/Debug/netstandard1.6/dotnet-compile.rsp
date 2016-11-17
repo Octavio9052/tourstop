@@ -142,5 +142,7 @@ C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broc
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Connectors\Contracts\IUserConnector.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Helpers\AutoMapperConfiguration.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Helpers\AutoMapperFactory.cs
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Petition\BusinessPetition.cs
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Petition\PetitionAction.cs
 C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Properties\AssemblyInfo.cs
-C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Request\Request.cs
+C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Response\BusinessResponse.cs

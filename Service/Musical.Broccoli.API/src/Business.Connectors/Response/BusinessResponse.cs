@@ -8,6 +8,6 @@ namespace Business.Controllers.Response
     {
         public bool IsSuccessful { get; set; }
         public List<TDto> Data { get; set; }
-        public List<Exception> Exceptions { get; set; 
+        public List<Exception> Exceptions { get; set; }
     }
 }

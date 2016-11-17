@@ -13,12 +13,7 @@ namespace Business.Handlers.Handlers
         {
         }
 
-        public override Response<UserDTO> HandleFilteredRequest( DataRequest<UserDTO> request )
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Response<UserDTO> HandleFilteredRequest( FilteredRequest request )
+        public override Response<UserDTO> HandleRequest( Request<UserDTO> request )
         {
             throw new NotImplementedException();
         }

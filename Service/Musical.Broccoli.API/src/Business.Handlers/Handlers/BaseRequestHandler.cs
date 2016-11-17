@@ -7,14 +7,13 @@ namespace Business.Handlers.Handlers
 {
     public abstract class BaseRequestHandler<TDto> where TDto : BaseDTO
     {
-        private readonly IBaseConnector<TDto> _connector;
+        protected readonly IBaseConnector<TDto> _connector;
 
         public BaseRequestHandler(IBaseConnector<TDto> connector)
         {
             _connector = connector;
         }
 
-        public abstract Response<TDto> HandleFilteredRequest(FilteredRequest request);
-        public abstract Response<TDto> HandleFilteredRequest(DataRequest<TDto> request);
+        public abstract Response<TDto> HandleRequest(Request<TDto> request);
     }
 }

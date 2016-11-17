@@ -54,5 +54,10 @@ namespace DataAccessLayer.Repositories
             entryToUpdate.State = EntityState.Modified;
             this.Context.SaveChanges();
         }
+
+        public IQueryable<T> GetQueryable()
+        {
+            return  DbSet;
+        }
     }
 }
