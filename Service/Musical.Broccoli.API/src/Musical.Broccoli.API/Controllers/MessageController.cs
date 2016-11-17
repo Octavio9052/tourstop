@@ -13,9 +13,7 @@ namespace Musical.Broccoli.API.Controllers
         {
         }
 
-
-
-        public override IActionResult Get( [FromBody] FilteredRequest<MessageDTO> request )
+        public override IActionResult Get( [FromBody] FilteredRequest request )
         {
             throw new NotImplementedException();
         }
@@ -30,7 +28,7 @@ namespace Musical.Broccoli.API.Controllers
             throw new NotImplementedException();
         }
 
-        public override IActionResult Delete( [FromBody] FilteredRequest<MessageDTO> request )
+        public override IActionResult Delete( [FromBody] FilteredRequest request )
         {
             throw new NotImplementedException();
         }

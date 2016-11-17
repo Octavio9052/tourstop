@@ -2753,6 +2753,29 @@
           "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
+      "System.Linq.Dynamic.Core/1.0.6.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections.Concurrent": "4.0.12",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Linq.Dynamic.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Linq.Dynamic.Core.dll": {}
+        }
+      },
       "System.Linq.Expressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4015,7 +4038,8 @@
           "AutoMapper": "5.1.1",
           "Common": "1.0.0",
           "DataAccessLayer": "1.0.0",
-          "NETStandard.Library": "1.6.1"
+          "NETStandard.Library": "1.6.1",
+          "System.Linq.Dynamic.Core": "1.0.6.8"
         },
         "compile": {
           "netstandard1.6/Business.Connectors.dll": {}
@@ -7529,6 +7553,41 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "System.Linq.Dynamic.Core/1.0.6.8": {
+      "sha512": "u1DrK0pBff/hoZddYGeQoStOf05TVfQx4W0PSTVvLPRm12qZ2Vp4EXby9NbigHNIPuQN2SytweFSVyEsf/HlPQ==",
+      "type": "package",
+      "path": "System.Linq.Dynamic.Core/1.0.6.8",
+      "files": [
+        "System.Linq.Dynamic.Core.1.0.6.8.nupkg.sha512",
+        "System.Linq.Dynamic.Core.nuspec",
+        "lib/net35/System.Linq.Dynamic.Core.dll",
+        "lib/net35/System.Linq.Dynamic.Core.xml",
+        "lib/net40/System.Linq.Dynamic.Core.dll",
+        "lib/net40/System.Linq.Dynamic.Core.xml",
+        "lib/net45/System.Linq.Dynamic.Core.dll",
+        "lib/net45/System.Linq.Dynamic.Core.xml",
+        "lib/net451/System.Linq.Dynamic.Core.dll",
+        "lib/net451/System.Linq.Dynamic.Core.xml",
+        "lib/net452/System.Linq.Dynamic.Core.dll",
+        "lib/net452/System.Linq.Dynamic.Core.xml",
+        "lib/net46/System.Linq.Dynamic.Core.dll",
+        "lib/net46/System.Linq.Dynamic.Core.xml",
+        "lib/net461/System.Linq.Dynamic.Core.dll",
+        "lib/net461/System.Linq.Dynamic.Core.xml",
+        "lib/netcore45/System.Linq.Dynamic.Core.dll",
+        "lib/netcore45/System.Linq.Dynamic.Core.xml",
+        "lib/netcore451/System.Linq.Dynamic.Core.dll",
+        "lib/netcore451/System.Linq.Dynamic.Core.xml",
+        "lib/netcore50/System.Linq.Dynamic.Core.dll",
+        "lib/netcore50/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.xml",
+        "lib/sl50/System.Linq.Dynamic.Core.dll",
+        "lib/sl50/System.Linq.Dynamic.Core.xml",
+        "lib/uap10.0/System.Linq.Dynamic.Core.dll",
+        "lib/uap10.0/System.Linq.Dynamic.Core.xml"
       ]
     },
     "System.Linq.Expressions/4.3.0": {

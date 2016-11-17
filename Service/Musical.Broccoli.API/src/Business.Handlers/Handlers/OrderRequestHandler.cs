@@ -18,7 +18,7 @@ namespace Business.Handlers.Handlers
             throw new NotImplementedException();
         }
 
-        public override Response<OrderDTO> HandleFilteredRequest( FilteredRequest<OrderDTO> request )
+        public override Response<OrderDTO> HandleFilteredRequest( FilteredRequest request )
         {
             throw new NotImplementedException();
         }

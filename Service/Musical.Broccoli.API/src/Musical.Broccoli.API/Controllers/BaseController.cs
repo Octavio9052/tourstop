@@ -15,7 +15,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpGet]
-        public abstract IActionResult Get( [FromBody] FilteredRequest<TDto> request );
+        public abstract IActionResult Get( [FromBody] FilteredRequest request );
 
         [HttpPost]
         public abstract IActionResult Post( [FromBody] DataRequest<TDto> request );
@@ -24,7 +24,7 @@ namespace Musical.Broccoli.API.Controllers
         public abstract IActionResult Put( [FromBody] DataRequest<TDto> request );
 
         [HttpDelete]
-        public abstract IActionResult Delete( [FromBody] FilteredRequest<TDto> request );
+        public abstract IActionResult Delete( [FromBody] FilteredRequest request );
 
     }
 }

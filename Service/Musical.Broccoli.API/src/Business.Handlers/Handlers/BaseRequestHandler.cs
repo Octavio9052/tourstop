@@ -14,7 +14,7 @@ namespace Business.Handlers.Handlers
             _connector = connector;
         }
 
-        public abstract Response<TDto> HandleFilteredRequest(FilteredRequest<TDto> request);
+        public abstract Response<TDto> HandleFilteredRequest(FilteredRequest request);
         public abstract Response<TDto> HandleFilteredRequest(DataRequest<TDto> request);
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Business.Handlers.Handlers.contracts
 {
-    interface IMessageRequestHandler
+    public interface IMessageRequestHandler
     {
     }
 }

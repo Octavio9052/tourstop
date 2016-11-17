@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Business.Handlers.Handlers.contracts
 {
-    interface ITourRequestHandler
+    public interface ITourRequestHandler
     {
     }
 }
