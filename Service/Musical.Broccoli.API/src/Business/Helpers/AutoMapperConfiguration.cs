@@ -7,7 +7,7 @@ using Common.DTOs;
 using DataAccessLayer.Entities;
 
 
-namespace Business.Helpers
+namespace Business.Connectors.Helpers
 {
     public class AutoMapperConfiguration:Profile
     {

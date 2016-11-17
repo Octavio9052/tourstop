@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Musical.Broccoli.API.Request
+namespace Business.Handlers.Request
 {
     public class FilteredRequest<TDto> : BaseRequest<TDto> where TDto : BaseDTO
     {

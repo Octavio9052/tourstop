@@ -1,6 +1,6 @@
 ﻿using Common.DTOs;
 
-namespace Musical.Broccoli.API.Request
+namespace Business.Handlers.Request
 {
     public abstract class BaseRequest<TDto> where TDto : BaseDTO
     {

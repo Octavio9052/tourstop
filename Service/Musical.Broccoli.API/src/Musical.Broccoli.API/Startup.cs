@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Common.AppSettings;
-using Business.Connectors;
-using Business.Contracts;
-using DataAccessLayer.Repositories;
-using DataAccessLayer.Repositories.Contracts;
 
 namespace Musical.Broccoli.API
 {

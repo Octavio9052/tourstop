@@ -1,10 +1,7 @@
 ﻿using Business.Contracts;
 using Common.DTOs;
-using Musical.Broccoli.API.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Business.Handlers.Response;
+using Business.Handlers.Request;
 
 namespace Business.Handlers.Handlers
 {
@@ -17,7 +14,7 @@ namespace Business.Handlers.Handlers
             _connector = connector;
         }
 
-        public abstract Response<TDto> HandleFilteredRequest(Musical.Broccoli.API.Request.FilteredRequest<TDto> request);
-        public abstract Response<TDto> HandleFilteredRequest(Musical.Broccoli.API.Request.DataRequest<TDto> request);
+        public abstract Response<TDto> HandleFilteredRequest(FilteredRequest<TDto> request);
+        public abstract Response<TDto> HandleFilteredRequest(DataRequest<TDto> request);
     }
 }

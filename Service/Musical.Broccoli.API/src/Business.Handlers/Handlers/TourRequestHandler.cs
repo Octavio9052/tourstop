@@ -1,10 +1,9 @@
 ﻿using Business.Contracts;
 using Common.DTOs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Business.Handlers.Handlers.contracts;
+using Business.Handlers.Request;
+using Business.Handlers.Response;
 
 namespace Business.Handlers.Handlers
 {
@@ -14,12 +13,12 @@ namespace Business.Handlers.Handlers
         {
         }
 
-        public override Musical.Broccoli.API.Response.Response<TourDTO> HandleFilteredRequest(Musical.Broccoli.API.Request.DataRequest<TourDTO> request)
+        public override Response<TourDTO> HandleFilteredRequest( DataRequest<TourDTO> request )
         {
             throw new NotImplementedException();
         }
 
-        public override Musical.Broccoli.API.Response.Response<TourDTO> HandleFilteredRequest(Musical.Broccoli.API.Request.FilteredRequest<TourDTO> request)
+        public override Response<TourDTO> HandleFilteredRequest( FilteredRequest<TourDTO> request )
         {
             throw new NotImplementedException();
         }

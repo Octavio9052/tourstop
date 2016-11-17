@@ -1,12 +1,9 @@
 ﻿using Common.DTOs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Business.Contracts;
-using Musical.Broccoli.API.Request;
-using Musical.Broccoli.API.Response;
 using Business.Handlers.Handlers.contracts;
+using Business.Handlers.Request;
+using Business.Handlers.Response;
 
 namespace Business.Handlers.Handlers
 {
@@ -16,12 +13,12 @@ namespace Business.Handlers.Handlers
         {
         }
 
-        public override Response<MessageDTO> HandleFilteredRequest(DataRequest<MessageDTO> request)
+        public override Response<MessageDTO> HandleFilteredRequest( DataRequest<MessageDTO> request )
         {
             throw new NotImplementedException();
         }
 
-        public override Response<MessageDTO> HandleFilteredRequest(FilteredRequest<MessageDTO> request)
+        public override Response<MessageDTO> HandleFilteredRequest( FilteredRequest<MessageDTO> request )
         {
             throw new NotImplementedException();
         }
