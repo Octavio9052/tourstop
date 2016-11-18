@@ -19,10 +19,12 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".presentation.views.activities.UserProfileActivity" />
-        <activity android:name=".presentation.views.activities.SearchActivity"/>
+        <activity android:name=".presentation.views.activities.SearchActivity" />
         <activity
             android:name=".presentation.views.activities.LoginActivity"
-            android:label="@string/title_activity_login"/>
+            android:label="@string/title_activity_login" />
+        <activity android:name=".presentation.views.activities.CreateTourActivity" />
+        <activity android:name=".presentation.views.activities.EditProfileActivity"></activity>
     </application>
 
 </manifest>
