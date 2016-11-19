@@ -11,6 +11,7 @@ import java.util.List;
 
 public class UserDto {
     private int id;
+    private String password;
     private String firstName;
     private String lastName;
     private String email;
@@ -127,5 +128,13 @@ public class UserDto {
 
     public void setReservations(List<ReservationDto> reservations) {
         this.reservations = reservations;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

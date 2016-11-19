@@ -1,5 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.models;
 
+import android.databinding.ObservableField;
 import android.databinding.ObservableFloat;
 import android.databinding.ObservableInt;
 
@@ -12,33 +13,9 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.PromotionType;
 public class PromotionModel extends BaseModel {
     private ObservableInt id;
     private ObservableFloat value;
-    private String description;
+    private ObservableField<String> description;
     private PromotionType promotionType;
-    private String promoCode;
-
-    public ObservableInt getId() {
-        return id;
-    }
-
-    public void setId(ObservableInt id) {
-        this.id = id;
-    }
-
-    public ObservableFloat getValue() {
-        return value;
-    }
-
-    public void setValue(ObservableFloat value) {
-        this.value = value;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    private ObservableField<String> promoCode;
 
     public PromotionType getPromotionType() {
         return promotionType;
@@ -48,11 +25,47 @@ public class PromotionModel extends BaseModel {
         this.promotionType = promotionType;
     }
 
-    public String getPromoCode() {
-        return promoCode;
+    public int getId(){
+        return id.get();
     }
 
-    public void setPromoCode(String promoCode) {
-        this.promoCode = promoCode;
+    public void setId(int id){
+        if(this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
+    }
+
+    public float getValue(){
+        return value.get();
+    }
+
+    public void setValue(float value){
+        if(this.value == null)
+            this.value = new ObservableFloat(value);
+        else
+            this.value.set(value);
+    }
+
+    public String getDescription(){
+        return description.get();
+    }
+
+    public void setDescription(String description){
+        if(this.description == null)
+            this.description = new ObservableField<>(description);
+        else
+            this.description.set(description);
+    }
+
+    public String getPromoCode(){
+        return promoCode.get();
+    }
+
+    public void setPromoCode(String promoCode){
+        if(this.promoCode == null)
+            this.promoCode = new ObservableField<>(promoCode);
+        else
+            this.promoCode.set(promoCode);
     }
 }

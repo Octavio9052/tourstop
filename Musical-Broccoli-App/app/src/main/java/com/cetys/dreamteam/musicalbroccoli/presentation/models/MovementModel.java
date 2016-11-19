@@ -17,14 +17,6 @@ public class MovementModel extends BaseModel {
     private ObservableInt tourId;
     private ObservableInt reservationId;
 
-    public ObservableInt getId() {
-        return id;
-    }
-
-    public void setId(ObservableInt id) {
-        this.id = id;
-    }
-
     public MovementType getMovementType() {
         return movementType;
     }
@@ -41,19 +33,37 @@ public class MovementModel extends BaseModel {
         this.dateCreated = dateCreated;
     }
 
-    public ObservableInt getTourId() {
-        return tourId;
+    public int getId(){
+        return id.get();
     }
 
-    public void setTourId(ObservableInt tourId) {
-        this.tourId = tourId;
+    public void setId(int id){
+        if(this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
     }
 
-    public ObservableInt getReservationId() {
-        return reservationId;
+    public int getTourId(){
+        return tourId.get();
     }
 
-    public void setReservationId(ObservableInt reservationId) {
-        this.reservationId = reservationId;
+    public void setTourId(int tourId){
+        if(this.tourId == null)
+            this.tourId = new ObservableInt(tourId);
+        else
+            this.tourId.set(tourId);
     }
+
+    public int getReservationId(){
+        return reservationId.get();
+    }
+
+    public void setReservationId(int reservationId){
+        if(this.reservationId == null)
+            this.reservationId = new ObservableInt(reservationId);
+        else
+            this.reservationId.set(reservationId);
+    }
+
 }

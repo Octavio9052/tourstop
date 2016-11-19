@@ -25,28 +25,12 @@ public class OrderModel extends BaseModel {
     private ObservableArrayList<ReservationModel> reservations;
     private ObservableArrayList<MovementModel> movements;
 
-    public ObservableInt getId() {
-        return id;
-    }
-
-    public void setId(ObservableInt id) {
-        this.id = id;
-    }
-
     public Date getDateCreated() {
         return dateCreated;
     }
 
     public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
-    }
-
-    public ObservableFloat getFloatAmount() {
-        return floatAmount;
-    }
-
-    public void setFloatAmount(ObservableFloat floatAmount) {
-        this.floatAmount = floatAmount;
     }
 
     public PaymentType getPaymentType() {
@@ -57,28 +41,69 @@ public class OrderModel extends BaseModel {
         this.paymentType = paymentType;
     }
 
-    public ObservableBoolean getPaymentStatus() {
-        return paymentStatus;
+    public int getId(){
+        return id.get();
     }
 
-    public void setPaymentStatus(ObservableBoolean paymentStatus) {
-        this.paymentStatus = paymentStatus;
+    public void setId(int id){
+        if(this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
     }
 
-    public ObservableInt getUserId() {
-        return userId;
+    public float getFloatAmount(){
+        return floatAmount.get();
     }
 
-    public void setUserId(ObservableInt userId) {
-        this.userId = userId;
+    public void setFloatAmount(float floatAmount){
+        if(this.floatAmount == null)
+            this.floatAmount = new ObservableFloat(floatAmount);
+        else
+            this.floatAmount.set(floatAmount);
     }
 
-    public ObservableInt getPaymentInfoId() {
-        return paymentInfoId;
+    public boolean getPaymentStatus(){
+        return paymentStatus.get();
     }
 
-    public void setPaymentInfoId(ObservableInt paymentInfoId) {
-        this.paymentInfoId = paymentInfoId;
+    public void setPaymentStatus(boolean paymentStatus){
+        if(this.paymentStatus == null)
+            this.paymentStatus = new ObservableBoolean(paymentStatus);
+        else
+            this.paymentStatus.set(paymentStatus);
+    }
+
+    public int getUserId(){
+        return userId.get();
+    }
+
+    public void setUserId(int userId){
+        if(this.userId == null)
+            this.userId = new ObservableInt(userId);
+        else
+            this.userId.set(userId);
+    }
+
+    public int getPaymentInfoId(){
+        return paymentInfoId.get();
+    }
+
+    public void setPaymentInfoId(int paymentInfoId){
+        if(this.paymentInfoId == null)
+            this.paymentInfoId = new ObservableInt(paymentInfoId);
+        else
+            this.paymentInfoId.set(paymentInfoId);
+    }
+
+    //
+
+    public ObservableArrayList<MovementModel> getMovements() {
+        return movements;
+    }
+
+    public void setMovements(ObservableArrayList<MovementModel> movements) {
+        this.movements = movements;
     }
 
     public ObservableArrayList<ReservationModel> getReservations() {
@@ -87,13 +112,5 @@ public class OrderModel extends BaseModel {
 
     public void setReservations(ObservableArrayList<ReservationModel> reservations) {
         this.reservations = reservations;
-    }
-
-    public ObservableArrayList<MovementModel> getMovements() {
-        return movements;
-    }
-
-    public void setMovements(ObservableArrayList<MovementModel> movements) {
-        this.movements = movements;
     }
 }

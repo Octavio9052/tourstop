@@ -15,14 +15,6 @@ public class CheckpointModel extends BaseModel {
     private ObservableInt addressId;
     private ObservableInt tourId;
 
-    public ObservableInt getId() {
-        return id;
-    }
-
-    public void setId(ObservableInt id) {
-        this.id = id;
-    }
-
     public Date getStartTime() {
         return startTime;
     }
@@ -39,19 +31,36 @@ public class CheckpointModel extends BaseModel {
         this.endTime = endTime;
     }
 
-    public ObservableInt getAddressId() {
-        return addressId;
+    public void setId(int id){
+        if(this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
     }
 
-    public void setAddressId(ObservableInt addressId) {
-        this.addressId = addressId;
+    public int getId(){
+        return id.get();
     }
 
-    public ObservableInt getTourId() {
-        return tourId;
+    public void setAddressId(int addressId){
+        if(this.addressId == null)
+            this.addressId = new ObservableInt(addressId);
+        else
+            this.addressId.set(addressId);
     }
 
-    public void setTourId(ObservableInt tourId) {
-        this.tourId = tourId;
+    public int getAddressId(){
+        return addressId.get();
+    }
+
+    public void setTourId(int tourId){
+        if(this.tourId == null)
+            this.tourId = new ObservableInt(tourId);
+        else
+            this.tourId.set(tourId);
+    }
+
+    public int getTourId(){
+        return tourId.get();
     }
 }
