@@ -1,5 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.models;
 
+import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 
 /**
@@ -9,47 +10,62 @@ import android.databinding.ObservableInt;
 public class RatingModel extends BaseModel {
     private ObservableInt id;
     private ObservableInt ratingValue;
-    private String comment;
+    private ObservableField<String> comment;
     private ObservableInt userId;
     private ObservableInt tourId;
 
-    public ObservableInt getId() {
-        return id;
+    public void setId(int id){
+        if(this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
     }
 
-    public void setId(ObservableInt id) {
-        this.id = id;
+    public int getId(){
+        return id.get();
     }
 
-    public ObservableInt getRatingValue() {
-        return ratingValue;
+    public void setRatingValue(int ratingValue){
+        if(this.ratingValue == null)
+            this.ratingValue = new ObservableInt(ratingValue);
+        else
+            this.ratingValue.set(ratingValue);
     }
 
-    public void setRatingValue(ObservableInt ratingValue) {
-        this.ratingValue = ratingValue;
+    public int getRatingValue(){
+        return ratingValue.get();
     }
 
-    public String getComment() {
-        return comment;
+    public void setComment(String comment){
+        if(this.comment == null)
+            this.comment = new ObservableField<>(comment);
+        else
+            this.comment.set(comment);
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public String getComment(){
+        return comment.get();
     }
 
-    public ObservableInt getUserId() {
-        return userId;
+    public void setUserId(int userId){
+        if(this.userId == null)
+            this.userId = new ObservableInt(userId);
+        else
+            this.userId.set(userId);
     }
 
-    public void setUserId(ObservableInt userId) {
-        this.userId = userId;
+    public int getUserId(){
+        return userId.get();
     }
 
-    public ObservableInt getTourId() {
-        return tourId;
+    public void setTourId(int tourId){
+        if(this.tourId == null)
+            this.tourId = new ObservableInt(tourId);
+        else
+            this.tourId.set(tourId);
     }
 
-    public void setTourId(ObservableInt tourId) {
-        this.tourId = tourId;
+    public int getTourId(){
+        return tourId.get();
     }
 }
