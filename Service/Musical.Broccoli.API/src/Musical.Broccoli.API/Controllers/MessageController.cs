@@ -1,38 +1,34 @@
-﻿using Common.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using Business.Handlers.Handlers;
+using Business.Handlers.Request;
+using Common.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using Musical.Broccoli.API.Request;
-using Business.Contracts;
-using Musical.Broccoli.API.Response;
 
 namespace Musical.Broccoli.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route( "api/[controller]" )]
     public class MessageController : BaseController<MessageDTO>
     {
-        public MessageController(IBaseConnector<MessageDTO> connector) : base(connector)
+        public MessageController( BaseRequestHandler<MessageDTO> requestHandler ) : base( requestHandler )
         {
         }
 
-        public override IActionResult Delete([FromBody] FilteredRequest<MessageDTO> request)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override IActionResult Get([FromBody] FilteredRequest<MessageDTO> request)
+        public override IActionResult Get( [FromBody] Request<MessageDTO> request )
         {
             throw new NotImplementedException();
         }
 
-        public override IActionResult Post([FromBody] DataRequest<MessageDTO> request)
+        public override IActionResult Post( [FromBody] Request<MessageDTO> request )
         {
             throw new NotImplementedException();
         }
 
-        public override IActionResult Put([FromBody] DataRequest<MessageDTO> request)
+        public override IActionResult Put( [FromBody] Request<MessageDTO> request )
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IActionResult Delete( [FromBody] Request<MessageDTO> request )
         {
             throw new NotImplementedException();
         }

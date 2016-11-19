@@ -1,23 +1,19 @@
 ﻿using Business.Contracts;
+using Common.DTOs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Business.Handlers.Handlers.contracts;
+using Business.Handlers.Request;
+using Business.Handlers.Response;
 
 namespace Business.Handlers.Handlers
 {
-    public class TourRequestHandler : BaseRequestHandler<TourDTO>
+    public class TourRequestHandler : BaseRequestHandler<TourDTO>, ITourRequestHandler
     {
         public TourRequestHandler(ITourConnector connector) : base(connector)
         {
         }
 
-        public override Musical.Broccoli.API.Response.Response<TourDTO> HandleFilteredRequest(Musical.Broccoli.API.Request.DataRequest<TourDTO> request)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Musical.Broccoli.API.Response.Response<TourDTO> HandleFilteredRequest(Musical.Broccoli.API.Request.FilteredRequest<TourDTO> request)
+        public override Response<TourDTO> HandleRequest( Request<TourDTO> request )
         {
             throw new NotImplementedException();
         }

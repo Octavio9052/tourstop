@@ -10,6 +10,7 @@ namespace DataAccessLayer.Repositories.Contracts
         T GetbyKey(Func<T,bool> predicate);
         ICollection<T> Search(Func<T,bool> predicate);
         ICollection<T> GetAll();
+        IQueryable<T> GetQueryable();
         void Add(T entity);
         void Remove(T entity);
         void Update(T entity);

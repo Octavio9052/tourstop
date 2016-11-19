@@ -1,31 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Common.DTOs;
-using Business.Contracts;
-using Musical.Broccoli.API.Response;
+﻿using Common.DTOs;
+using Business.Handlers.Handlers;
+using Microsoft.AspNetCore.Mvc;
+using Business.Handlers.Request;
 
 namespace Musical.Broccoli.API.Controllers
 {
     public abstract class BaseController<TDto> where TDto : BaseDTO
     {
+        private readonly BaseRequestHandler<TDto> _requestHandler;
 
-        protected readonly IBaseConnector<TDto> _connector;
-
-        public BaseController(IBaseConnector<TDto> connector)
+        public BaseController(BaseRequestHandler<TDto> requestHandler )
         {
-            _connector = connector;
+            _requestHandler = requestHandler;
         }
 
         [HttpGet]
-        // GET api/TDto
-        public abstract IActionResult Get([FromBody] Request.FilteredRequest<TDto> request);
+        public abstract IActionResult Get( [FromBody] Request<TDto> request );
+
         [HttpPost]
-        // POST api/TDto
-        public abstract IActionResult Post([FromBody] Request.DataRequest<TDto> request);
+        public abstract IActionResult Post( [FromBody] Request<TDto> request );
+
         [HttpPut]
-        // PUT api/TDto
-        public abstract IActionResult Put([FromBody] Request.DataRequest<TDto> request);
+        public abstract IActionResult Put( [FromBody] Request<TDto> request );
+
         [HttpDelete]
-        // DELETE api/TDto
-        public abstract IActionResult Delete([FromBody] Request.FilteredRequest<TDto> request);
+        public abstract IActionResult Delete( [FromBody] Request<TDto> request );
+
     }
 }

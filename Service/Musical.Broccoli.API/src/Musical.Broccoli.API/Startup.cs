@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Business.Connectors;
+using Business.Contracts;
+using Business.Handlers.Handlers;
+using Business.Handlers.Handlers.contracts;
+using Common.AppSettings;
+using DataAccessLayer.Repositories;
+using DataAccessLayer.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Common.AppSettings;
-using Business.Connectors;
-using Business.Contracts;
-using DataAccessLayer.Repositories;
-using DataAccessLayer.Repositories.Contracts;
 
 namespace Musical.Broccoli.API
 {
@@ -46,6 +44,12 @@ namespace Musical.Broccoli.API
             services.AddMvc();
 
             #region Dependency Injection
+            //RequestHandlers
+            services.AddScoped<IMessageRequestHandler, MessageRequestHandler>();
+            services.AddScoped<IOrderRequestHandler, OrderRequestHandler>();
+            services.AddScoped<ITourRequestHandler, TourRequestHandler>();
+            services.AddScoped<IUserRequestHandler, UserRequestHandler>();
+
             //Connectors
             services.AddTransient<IAddressConnector, AddressConnector>();
             services.AddTransient<ICheckPointConnector, CheckPointConnector>();
@@ -68,7 +72,6 @@ namespace Musical.Broccoli.API
             services.AddScoped<ITourRepository, TourRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             #endregion
-
 
             AppSettings.ConnectionString = Configuration.GetConnectionString("TourStopDB");
         }
