@@ -22,9 +22,21 @@ public class TourModel extends BaseModel {
     private Date dateCreated;
     private ObservableInt promotionId;
     private ObservableInt userId;
+    private ObservableField<String> description;
 
     private ObservableArrayList<ReservationModel> reservations;
     private ObservableArrayList<RatingModel> ratings;
+
+    public void setDescription(String description){
+        if(this.description == null)
+            this.description = new ObservableField<>(description);
+        else
+            this.description.set(description);
+    }
+
+    public String getDescription(){
+        return description.get();
+    }
 
     public void setId(int id){
         if(this.id == null)

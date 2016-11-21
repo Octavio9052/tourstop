@@ -3,22 +3,22 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 import android.os.Bundle;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
-import com.cetys.dreamteam.musicalbroccoli.databinding.CreateTourActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
+import com.cetys.dreamteam.musicalbroccoli.databinding.EditUserActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 
 import javax.inject.Inject;
 
-public class CreateTourActivity extends BaseActivity {
+public class EditUserActivity extends BaseActivity {
 
     @Inject
-    CreateTourActivityBinding binding;
+    EditUserActivityBinding binding;
     @Inject
-    CreateTourViewModel viewModel;
+    EditUserViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_tour_activity);
+        setContentView(R.layout.edit_user_activity);
 
         initActivityComponent();
         initBinding();
@@ -26,6 +26,7 @@ public class CreateTourActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
+
     }
 
     @Override
