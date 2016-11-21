@@ -25,7 +25,7 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".presentation.views.activities.EditProfileActivity" />
+        <activity android:name=".presentation.views.activities.EditUserActivity" />
         <activity android:name=".presentation.views.activities.ChangePasswordActivity" />
         <activity android:name=".presentation.views.activities.MessagesActivity" />
         <activity android:name=".presentation.views.activities.MyToursActivity" />
