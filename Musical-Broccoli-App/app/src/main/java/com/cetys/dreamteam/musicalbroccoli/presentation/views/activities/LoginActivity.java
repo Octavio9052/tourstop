@@ -29,7 +29,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.LoginActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
@@ -102,11 +104,13 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+
     }
 
     @Override
     protected void initActivityComponent() {
-
+        TourStopApplication.get(this).getAppComponent().plus(new LoginActivityModule(this)).inject(this);
     }
 
     @Override

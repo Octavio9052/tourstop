@@ -1,5 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
+import android.content.Context;
+
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
@@ -10,6 +12,10 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Log
 public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel {
 
     private UserModel user;
+
+    public LoginViewModelImpl(Context context) {
+        super(context);
+    }
 
     @Override
     public UserModel getUser() {
