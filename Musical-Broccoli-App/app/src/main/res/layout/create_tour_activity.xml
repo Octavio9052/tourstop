@@ -4,9 +4,9 @@
 <!-- WTF with these values
 name = title
 price = pricePerReservation
-destiny =
-stops =
-description =
+destination = ????
+stops = ???
+description = String
 seats available = maxReservations
 promotions =
 promoter name =
