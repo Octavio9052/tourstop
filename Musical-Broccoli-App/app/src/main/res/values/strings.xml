@@ -31,5 +31,17 @@
     <string name="app_name" translatable="false">MusicalBroccoli</string>
     <string name="title_activity_main" translatable="false">MainActivity</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="app_name1">TestScroll</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="destination">Destination</string>
+    <string name="stops">Stops</string>
+    <string name="description">Description</string>
+    <string name="seats_available">Seats available</string>
+    <string name="discount">Discount</string>
+    <string name="company">Company</string>
+    <string name="special_requirements">Special requirements</string>
+
+
 </resources>
 

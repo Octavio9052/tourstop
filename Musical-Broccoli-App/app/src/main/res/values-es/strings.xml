@@ -14,4 +14,7 @@
     <string name="description_enum_movement_type_subtraction">Reembolso</string>
     <string name="description_enum_payment_type_cash">Efectivo</string>
     <string name="description_enum_payment_type_credit">Tarjeta de crédito</string>
+
+
+
 </resources>
