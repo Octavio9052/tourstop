@@ -18,7 +18,7 @@ public class EditProfileActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_profile_activity);
+        setContentView(R.layout.edit_user_activity);
 
         initActivityComponent();
         initBinding();
