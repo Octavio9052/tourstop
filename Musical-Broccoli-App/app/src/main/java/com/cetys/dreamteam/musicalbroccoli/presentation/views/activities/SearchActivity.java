@@ -4,12 +4,11 @@ import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
-import android.app.Activity;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 
 
-public class SearchActivity extends Activity {
+public class SearchActivity extends BaseActivity {
 
     CalendarView calendar;
 
@@ -22,6 +21,17 @@ public class SearchActivity extends Activity {
 
         //initializes the calendarview
         initializeCalendar();
+    }
+
+
+    @Override
+    protected void initActivityComponent() {
+
+    }
+
+    @Override
+    protected void initBinding() {
+
     }
 
     public void initializeCalendar() {

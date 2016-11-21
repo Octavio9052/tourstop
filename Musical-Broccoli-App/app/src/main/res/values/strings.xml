@@ -3,7 +3,6 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password </string>
     <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="sign_up">Not a member? Sign up</string>
@@ -30,6 +29,48 @@
     <!-- Other -->
     <string name="app_name" translatable="false">MusicalBroccoli</string>
     <string name="title_activity_main" translatable="false">MainActivity</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="action_create_new_tour">Create New Tour</string>
+    <string name="cta_header_description" translatable="false">temp</string>
+    <string name="field_name">Name: *</string>
+    <string name="hint_enter_name">Enter Name</string>
+    <string name="field_price">Price: *</string>
+    <string name="hint_price">Enter Price</string>
+    <string name="field_destination">Destination: *</string>
+    <string name="hint_destination">Enter Destination</string>
+    <string name="field_stops">Stops:</string>
+    <string name="hint_stops">Enter Stops</string>
+    <string name="field_description">Description: *</string>
+    <string name="hint_description">Enter Description</string>
+    <string name="field_max_seats">Seats Available: *</string>
+    <string name="hint_max_seats">Enter Number of Seats</string>
+    <string name="field_promotion">Promotion:</string>
+    <string name="hint_promotion">Enter Promotion</string>
+    <string name="field_promoter_name">Promoter Name: *</string>
+    <string name="hint_promoter_name">Enter Promoter Name</string>
+    <string name="field_requirements">Requirements: *</string>
+    <string name="hint_requirements">Enter Requirements</string>
+    <string name="statement_mandatory">All fields marked with * are mandatory</string>
+    <string name="field_username">User Name</string>
+    <string name="field_email">E-mail: *</string>
+    <string name="hint_email">Enter E-Mail</string>
+    <string name="field_phone">Cell Phone:</string>
+    <string name="hint_phone">Enter Cell Phone</string>
+    <string name="field_change_password">Change Password</string>
+    <string name="hint_change_password">Change Payment Method</string>
+    <string name="action_save_changes">Save Changes</string>
+    <string name="field_current_password">Current Password: *</string>
+    <string name="hint_current_password">Enter Current Password</string>
+    <string name="field_new_password">New Password: *</string>
+    <string name="hint_new_password">Enter New Password</string>
+    <string name="field_confirm_new_password">Confirm New Password: *</string>
+    <string name="action_search_tour">Search Tour</string>
+    <string name="field_date">Date:</string>
+    <string name="field_date_range">Date Range:</string>
+    <string name="field_to">To</string>
+    <string name="action_search">Search</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="messages">Messages</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="my_tours">My Tours</string>
 </resources>
 
