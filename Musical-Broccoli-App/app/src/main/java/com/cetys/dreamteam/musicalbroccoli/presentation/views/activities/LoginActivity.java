@@ -29,9 +29,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -39,6 +43,11 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
+
+    @Inject
+    LoginActivityBinding binding;
+    @Inject
+    LoginViewModel viewModel;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -102,7 +111,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
     @Override
     protected void initBinding() {
-
+        binding.setViewModel(viewModel);
     }
 
     private void populateAutoComplete() {

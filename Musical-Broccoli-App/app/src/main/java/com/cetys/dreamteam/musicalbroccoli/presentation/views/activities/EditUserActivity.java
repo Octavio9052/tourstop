@@ -3,17 +3,17 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 import android.os.Bundle;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
-import com.cetys.dreamteam.musicalbroccoli.databinding.EditProfileActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditProfileViewModel;
+import com.cetys.dreamteam.musicalbroccoli.databinding.EditUserActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 
 import javax.inject.Inject;
 
-public class EditProfileActivity extends BaseActivity {
+public class EditUserActivity extends BaseActivity {
 
     @Inject
-    EditProfileActivityBinding binding;
+    EditUserActivityBinding binding;
     @Inject
-    EditProfileViewModel viewModel;
+    EditUserViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
