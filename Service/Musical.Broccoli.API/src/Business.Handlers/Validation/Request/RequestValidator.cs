@@ -16,8 +16,8 @@ namespace Handlers.Validation.Request
             return new RequestValidationResult()
             {
                 ValidationResult = ValidateFilters( request.Filters ) + ValidateData( request
-                .Data, validator ),
-                UserDTO = Authenticate(request.AuthToken)
+                .Data, validator )
+                //UserDTO = Authenticate(request.AuthToken)
             };
 
         }
@@ -39,11 +39,6 @@ namespace Handlers.Validation.Request
         private ValidationResult ValidateData<T>( List<T> data, BaseValidator<T> validator ) where T : BaseDTO
         {
             return data.Select( x => validator.Validate( x ) ).Aggregate( ( x, y ) => x + y );
-        }
-
-        private UserDTO Authenticate( string authToken )
-        {
-            throw new NotImplementedException();
         }
 
     }

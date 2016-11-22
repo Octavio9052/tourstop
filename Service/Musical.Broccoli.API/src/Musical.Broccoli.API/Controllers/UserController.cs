@@ -9,12 +9,17 @@ using Business.Handlers.Response;
 namespace Musical.Broccoli.API.Controllers
 {
     [Route( "api/[controller]" )]
-    public class UserController : BaseController<UserDTO>
+    public class UserController : Controller
     {
-        public UserController( BaseRequestHandler<UserDTO> requestHandler ) : base( requestHandler )
+        private readonly UserRequestHandler _requestHandler;
+        public UserController(UserRequestHandler requestHandler )
         {
+            //TODO: Inject Request Handler
+            _requestHandler = requestHandler;
         }
-        public override IActionResult Get( [FromBody] Request<UserDTO> request )
+
+        [HttpGet]
+        public IActionResult Get( [FromBody] Request<UserDTO> request )
         {
             Response<UserDTO> result;
             try
@@ -35,9 +40,11 @@ namespace Musical.Broccoli.API.Controllers
                 return new NotFoundObjectResult( result );
             }
             return new OkObjectResult( result );
+            
         }
-
-        public override IActionResult Post( [FromBody] Request<UserDTO> request )
+        
+        [HttpPost]
+        public  IActionResult Post( [FromBody] Request<UserDTO> request )
         {
             Response<UserDTO> result;
 
@@ -57,7 +64,8 @@ namespace Musical.Broccoli.API.Controllers
             return new CreatedResult( "", result );
         }
 
-        public override IActionResult Put( [FromBody] Request<UserDTO> request )
+        [HttpPut]
+        public  IActionResult Put( [FromBody] Request<UserDTO> request )
         {
             Response<UserDTO> result;
             try
@@ -77,7 +85,8 @@ namespace Musical.Broccoli.API.Controllers
 
         }
 
-        public override IActionResult Delete( [FromBody] Request<UserDTO> request )
+        [HttpDelete]
+        public  IActionResult Delete( [FromBody] Request<UserDTO> request )
         {
             Response<UserDTO> result;
             try
@@ -95,5 +104,6 @@ namespace Musical.Broccoli.API.Controllers
 
             return new NoContentResult();
         }
+        
     }
 }

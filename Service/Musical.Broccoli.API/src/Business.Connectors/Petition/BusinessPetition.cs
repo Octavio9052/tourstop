@@ -11,7 +11,6 @@ namespace Business.Controllers.Petition
         public PetitionAction Action { get; set; }
         public List<TDto> Data { get; set; }
         public List<string> FilterStrings { get; set; }
-        public object[] FilterValues { get; set; }
         public UserDTO RequestingUser { get; set; }
     }
 }

@@ -28,11 +28,6 @@ namespace Business.Connectors.Helpers
             CreateMap<TourDTO,Message>().ForMember(x => x.Id, y => y.Ignore());
             #endregion
 
-            #region MessageHasReciever
-            CreateMap<MessageHasReciever, MessageHasRecieverDTO>();
-            CreateMap<MessageHasRecieverDTO, MessageHasReciever>();
-            #endregion
-
             #region Movement
             CreateMap<Movement, MovementDTO>();
             CreateMap<MovementDTO, Movement>().ForMember(x => x.Id, y => y.Ignore());

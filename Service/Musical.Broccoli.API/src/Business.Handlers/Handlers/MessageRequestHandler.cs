@@ -9,15 +9,15 @@ using Business.Controllers.Response;
 
 namespace Business.Handlers.Handlers
 {
-    public class MessageRequestHandler : BaseRequestHandler<TourDTO>, IMessageRequestHandler
+    public class MessageRequestHandler : BaseRequestHandler<MessageDTO>, IMessageRequestHandler
     {
         public MessageRequestHandler(IMessageConnector connector) : base(connector)
         {
         }
 
-        public override Response<TourDTO> HandleRequest( Request<TourDTO> request )
+        public override Response<MessageDTO> HandleRequest( Request<MessageDTO> request )
         {
-            var petition = (BusinessPetition<TourDTO>) request;
+            var petition = (BusinessPetition<MessageDTO>) request;
             var response =  _connector.Processors[petition.Action](petition);
             //TODO: Cast Operator BusinessResponse => Response
             throw new NotImplementedException();

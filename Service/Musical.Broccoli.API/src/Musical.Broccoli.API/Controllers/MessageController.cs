@@ -9,15 +9,16 @@ using Microsoft.AspNetCore.Mvc;
 namespace Musical.Broccoli.API.Controllers
 {
     [Route( "api/[controller]" )]
-    public class MessageController : BaseController<TourDTO>
+    public class MessageController : BaseController<MessageDTO>
     {
-        public MessageController( BaseRequestHandler<TourDTO> requestHandler ) : base( requestHandler )
+        public MessageController( BaseRequestHandler<MessageDTO> requestHandler ) : base( requestHandler )
         {
         }
 
-        public override IActionResult Get( [FromBody] Request<TourDTO> request )
+        [HttpGet]
+        public override IActionResult Get( [FromBody] Request<MessageDTO> request )
         {
-            Response<TourDTO> result;
+            Response<MessageDTO> result;
             try
             {
                 result = _requestHandler.HandleRequest( request );
@@ -38,9 +39,10 @@ namespace Musical.Broccoli.API.Controllers
             return new OkObjectResult( result );
         }
 
-        public override IActionResult Post( [FromBody] Request<TourDTO> request )
+        [HttpPost]
+        public override IActionResult Post( [FromBody] Request<MessageDTO> request )
         {
-            Response<TourDTO> result;
+            Response<MessageDTO> result;
 
             try
             {
@@ -58,9 +60,10 @@ namespace Musical.Broccoli.API.Controllers
             return new CreatedResult( "", result );
         }
 
-        public override IActionResult Put( [FromBody] Request<TourDTO> request )
+        [HttpPut]
+        public override IActionResult Put( [FromBody] Request<MessageDTO> request )
         {
-            Response<TourDTO> result;
+            Response<MessageDTO> result;
             try
             {
                 result = _requestHandler.HandleRequest( request );
@@ -78,9 +81,10 @@ namespace Musical.Broccoli.API.Controllers
 
         }
 
-        public override IActionResult Delete( [FromBody] Request<TourDTO> request )
+        [HttpDelete]
+        public override IActionResult Delete( [FromBody] Request<MessageDTO> request )
         {
-            Response<TourDTO> result;
+            Response<MessageDTO> result;
             try
             {
                 result = _requestHandler.HandleRequest( request );
