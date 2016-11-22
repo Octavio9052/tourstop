@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\bin\Debug\netcoreapp1.0\Testing.dll"
+"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\bin\Debug\netcoreapp1.0\Testing.dll"
 -r:"C:\Users\alexc\.nuget\packages\Google.Protobuf\3.0.0\lib\netstandard1.0\Google.Protobuf.dll"
 -r:"C:\Users\alexc\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll"
 -r:"C:\Users\alexc\.nuget\packages\Microsoft.EntityFrameworkCore\1.1.0\lib\netstandard1.3\Microsoft.EntityFrameworkCore.dll"
@@ -118,7 +118,7 @@
 -r:"C:\Users\alexc\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\alexc\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\alexc\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll"
--r:"D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\src\Common\bin\Debug\netstandard1.6\Common.dll"
--r:"D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\src\DataAccessLayer\bin\Debug\netstandard1.6\DataAccessLayer.dll"
-"D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\Program.cs"
-"D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\Properties\AssemblyInfo.cs"
+-r:"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\bin\Debug\netstandard1.6\Common.dll"
+-r:"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\bin\Debug\netstandard1.6\DataAccessLayer.dll"
+"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\Program.cs"
+"D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\Properties\AssemblyInfo.cs"

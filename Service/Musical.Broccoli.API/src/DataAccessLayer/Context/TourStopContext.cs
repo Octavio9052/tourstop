@@ -1,6 +1,6 @@
 ﻿using DataAccessLayer.Entities;
 using Microsoft.EntityFrameworkCore;
-using MySQL.Data.EntityFrameworkCore.Extensions;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace DataAccessLayer.Context
     {
         public TourStopContext(DbContextOptions<TourStopContext> options) : base(options)
         {
-
+            
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<CheckPoint> CheckPoints { get; set; }
@@ -27,6 +27,12 @@ namespace DataAccessLayer.Context
         public DbSet<Tour> Tours { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Session> Sessions { get; set; }
+
+        public override int SaveChanges()
+        {
+            ChangeTracker.DetectChanges();
+            return base.SaveChanges();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -76,16 +82,14 @@ namespace DataAccessLayer.Context
             modelBuilder.Entity<User>().HasMany(x => x.Ratings);
             modelBuilder.Entity<User>().HasMany(x => x.Reservations);
             modelBuilder.Entity<User>().HasMany(x => x.Tours);
-            modelBuilder.Entity<User>().HasMany(x => x.Messages);
+            modelBuilder.Entity<User>().HasMany(x => x.Messages).WithOne(x=>x.Reciever);
+            modelBuilder.Entity<User>().HasAlternateKey(x => x.Email);
             #endregion
 
             #region SessionConfig
             modelBuilder.Entity<Session>().HasAlternateKey(x => x.AuthorizationToken);
             #endregion
-
-
-
-
+            
         }
 
 

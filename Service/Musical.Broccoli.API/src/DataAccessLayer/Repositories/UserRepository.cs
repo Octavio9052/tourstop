@@ -10,7 +10,7 @@ namespace DataAccessLayer.Repositories
 {
     public class UserRepository:BaseRepository<User>, IUserRepository
     {
-        public UserRepository():base()
+        public UserRepository(TourStopContext context) : base(context)
         {
 
         }

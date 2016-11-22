@@ -6,7 +6,8 @@
     "DataAccessLayer": "1.0.0-*",
     "AutoMapper": "5.1.1",
     "NETStandard.Library": "1.6.1",
-    "System.Linq.Dynamic.Core": "1.0.6.8"
+    "System.Linq.Dynamic.Core": "1.0.6.8",
+    "System.Net.Security": "4.3.0"
   },
 
   "frameworks": {

@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Entities;
+﻿using DataAccessLayer.Context;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace DataAccessLayer.Repositories
 {
     public class SessionRepository: BaseRepository<Session>, ISessionRepository
     {
-        public SessionRepository():base()
+        public SessionRepository(TourStopContext context) : base(context)
         {
 
         }

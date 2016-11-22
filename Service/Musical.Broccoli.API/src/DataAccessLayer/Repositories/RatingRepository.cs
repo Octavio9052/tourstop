@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Entities;
+﻿using DataAccessLayer.Context;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace DataAccessLayer.Repositories
 {
     public class RatingRepository : BaseRepository<Rating>, IRatingRepository
     {
-        public RatingRepository():base()
+        public RatingRepository(TourStopContext context) : base(context)
         {
 
         }

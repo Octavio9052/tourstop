@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Entities;
+﻿using DataAccessLayer.Context;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,8 @@ namespace DataAccessLayer.Repositories
 {
     public class OrderRepository : BaseRepository<Order>, IOrderRepository
     {
-        public OrderRepository():base()
-        {
-
+        public OrderRepository(TourStopContext context) : base(context)
+        { 
         }
     }
 }

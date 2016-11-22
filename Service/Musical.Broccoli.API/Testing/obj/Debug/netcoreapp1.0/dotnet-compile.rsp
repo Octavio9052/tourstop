@@ -1,5 +1,5 @@
---temp-output:D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\obj\Debug\netcoreapp1.0\
---out:D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\bin\Debug\netcoreapp1.0\Testing.dll
+--temp-output:D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\obj\Debug\netcoreapp1.0\
+--out:D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\bin\Debug\netcoreapp1.0\Testing.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -122,7 +122,7 @@
 --reference:C:\Users\alexc\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\alexc\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\alexc\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
---reference:D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\src\Common\bin\Debug\netstandard1.6\Common.dll
---reference:D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\src\DataAccessLayer\bin\Debug\netstandard1.6\DataAccessLayer.dll
-D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\Program.cs
-D:\TFS-LocalVersions\tourStop\Service\Musical.Broccoli.API\Testing\Properties\AssemblyInfo.cs
+--reference:D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\bin\Debug\netstandard1.6\Common.dll
+--reference:D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\bin\Debug\netstandard1.6\DataAccessLayer.dll
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\Program.cs
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\Testing\Properties\AssemblyInfo.cs

@@ -14,20 +14,20 @@ namespace DataAccessLayer.Repositories
     {
         protected readonly DbContext Context;
         protected DbSet<T> DbSet;
-        public BaseRepository()
+        public BaseRepository(TourStopContext context)
         {
-            this.Context = TourStopContextFactory.Create();
+            this.Context = context;
             this.DbSet = this.Context.Set<T>();
         }
-        public void Add(T entity)
+        public void Add(ICollection<T> entities)
         {
-            this.DbSet.Add(entity);
+            this.DbSet.AddRange(entities);
             this.Context.SaveChanges();
         }
 
         public ICollection<T> GetAll()
         {
-            return DbSet.ToList();
+            return this.Context.Set<T>().ToList();
         }
 
         public T GetbyKey(Func<T, bool> predicate)
@@ -35,9 +35,9 @@ namespace DataAccessLayer.Repositories
             return DbSet.FirstOrDefault(predicate);
         }
 
-        public void Remove(T entity)
+        public void Remove(ICollection<T> entities)
         {
-            this.DbSet.Remove(entity);
+            this.DbSet.RemoveRange(entities);
             this.Context.SaveChanges();
            
         }
@@ -47,12 +47,13 @@ namespace DataAccessLayer.Repositories
             return this.DbSet.Where(predicate).ToList();
         }
 
-        public void Update(T entity)
+        public void Update(ICollection<T> entities)
         {
-            var entryToUpdate = this.Context.Entry(entity);
-            DbSet.Attach(entity);
-            entryToUpdate.State = EntityState.Modified;
-            this.Context.SaveChanges();
+ 
+                this.DbSet.UpdateRange(entities);
+                this.Context.SaveChanges();
+            
+            
         }
 
         public IQueryable<T> GetQueryable()

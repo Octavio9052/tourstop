@@ -3,6 +3,7 @@ using Business.Contracts;
 using Business.Handlers.Handlers;
 using Business.Handlers.Handlers.contracts;
 using Common.AppSettings;
+using DataAccessLayer.Context;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
@@ -73,7 +74,8 @@ namespace Musical.Broccoli.API
             services.AddScoped<IUserRepository, UserRepository>();
             #endregion
 
-            AppSettings.ConnectionString = Configuration.GetConnectionString("TourStopDB");
+           
+           // services.AddDbContext<TourStopContext>(x=>x.UseMySQL(Configuration.GetConnectionString("TourStopDB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
