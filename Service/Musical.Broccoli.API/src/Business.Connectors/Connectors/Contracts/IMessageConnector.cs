@@ -6,7 +6,7 @@ using Common.DTOs;
 
 namespace Business.Contracts
 {
-    public interface IMessageConnector:IBaseConnector<MessageDTO>
+    public interface IMessageConnector:IBaseConnector<TourDTO>
     {
     }
 }

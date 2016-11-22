@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Business.Handlers.Validation
 {
-    public class MessageValidator : BaseValidator<MessageDTO>
+    public class MessageValidator : BaseValidator<TourDTO>
     {
-        public override Func<MessageDTO, ValidationResult> Validate { get; internal set; }
+        public override Func<TourDTO, ValidationResult> Validate { get; internal set; }
         public MessageValidator And( MessageValidator other )
         {
             return new MessageValidator()
@@ -16,7 +16,7 @@ namespace Business.Handlers.Validation
                 Validate = x => this.Validate( x ) + other.Validate( x )
             };
         }
-        public static MessageValidator Holds( Predicate<MessageDTO> predicate, string message )
+        public static MessageValidator Holds( Predicate<TourDTO> predicate, string message )
         {
             return new MessageValidator()
             {

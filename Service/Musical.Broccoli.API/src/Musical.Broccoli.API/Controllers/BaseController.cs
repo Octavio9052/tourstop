@@ -2,12 +2,13 @@
 using Business.Handlers.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Business.Handlers.Request;
+using System;
 
 namespace Musical.Broccoli.API.Controllers
 {
     public abstract class BaseController<TDto> where TDto : BaseDTO
     {
-        private readonly BaseRequestHandler<TDto> _requestHandler;
+        protected readonly BaseRequestHandler<TDto> _requestHandler;
 
         public BaseController(BaseRequestHandler<TDto> requestHandler )
         {
@@ -25,6 +26,11 @@ namespace Musical.Broccoli.API.Controllers
 
         [HttpDelete]
         public abstract IActionResult Delete( [FromBody] Request<TDto> request );
+
+        protected void HandleException(Exception ex )
+        {
+            
+        }
 
     }
 }
