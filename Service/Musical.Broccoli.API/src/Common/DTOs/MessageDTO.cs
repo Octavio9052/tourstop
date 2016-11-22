@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
@@ -14,6 +12,6 @@ namespace Common.DTOs
         public int SenderId { get; set; }
 
         public UserDTO Sender { get; set; }
-        public ICollection<MessageHasRecieverDTO> MessageHasRecievers { get; set; }
+        public ICollection<UserDTO> Receivers { get; set; }
     }
 }
