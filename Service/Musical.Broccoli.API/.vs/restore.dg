@@ -24,3 +24,6 @@ D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\D
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Business.Connectors.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Business.Connectors\Business.Connectors.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj
 D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj
+#:D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\TestApi\TestApi.xproj
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\TestApi\TestApi.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj
+D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\DataAccessLayer.xproj|D:\TFS-LocalVersions\tourstop\Service\Musical.Broccoli.API\src\Common\Common.xproj

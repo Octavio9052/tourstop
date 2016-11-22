@@ -12,12 +12,11 @@ namespace DataAccessLayer.Context
     {
         public TourStopContext(DbContextOptions<TourStopContext> options) : base(options)
         {
-            
+            Database.EnsureCreated();
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<CheckPoint> CheckPoints { get; set; }
         public DbSet<Message> Messages { get; set; }
-        public DbSet<MessageHasReciever> MessageHasReciever { get; set; }
         public DbSet<Movement> Movements { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<PaymentInfo> PaymentInfos { get; set; }
@@ -48,7 +47,7 @@ namespace DataAccessLayer.Context
 
             #region MessageHasRecieverConfig
             modelBuilder.Entity<MessageHasReciever>().HasKey(x => new { x.MessageId, x.RecieverId });
-            modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Message).WithMany(x => x.MessageHasRecievers).HasForeignKey(x=>x.MessageId);
+            modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Message).WithMany(x => x.MessageHasRecievers).HasForeignKey(x => x.MessageId);
             modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Reciever).WithMany(x => x.Messages).HasForeignKey(x => x.RecieverId);
             #endregion
 
@@ -82,7 +81,7 @@ namespace DataAccessLayer.Context
             modelBuilder.Entity<User>().HasMany(x => x.Ratings);
             modelBuilder.Entity<User>().HasMany(x => x.Reservations);
             modelBuilder.Entity<User>().HasMany(x => x.Tours);
-            modelBuilder.Entity<User>().HasMany(x => x.Messages).WithOne(x=>x.Reciever);
+            modelBuilder.Entity<User>().HasMany(x => x.Messages).WithOne(x => x.Reciever);
             modelBuilder.Entity<User>().HasAlternateKey(x => x.Email);
             #endregion
 

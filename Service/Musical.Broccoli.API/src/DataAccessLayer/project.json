@@ -4,10 +4,11 @@
   "dependencies": {
     "MySql.Data.EntityFrameworkCore": "7.0.6-IR31",
     "MySql.Data": "7.0.6-IR31",
-    //"Microsoft.EntityFrameworkCore.Relational": "1.1.0",
+    "Microsoft.EntityFrameworkCore.Relational": "1.0.1",
     //"Microsoft.EntityFrameworkCore.Relational.Design": "1.1.0",
     "Common": "1.0.0-*",
-    "Microsoft.EntityFrameworkCore": "1.1.0",
+    "Microsoft.EntityFrameworkCore": "1.0.1",
+    //"Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
     "NETStandard.Library": "1.6.1"
   },
 

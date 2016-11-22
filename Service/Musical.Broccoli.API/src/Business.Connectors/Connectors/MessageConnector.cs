@@ -16,6 +16,7 @@ namespace Business.Connectors
         public MessageConnector(IMessageRepository repository, IMapper mapper) : base(repository, mapper)
         {
         }
+
         protected override BusinessResponse<MessageDTO> Get(BusinessPetition<MessageDTO> petition)
         {
             if (!Validate(petition, new MessageGetValidation())) throw new AuthenticationException();
