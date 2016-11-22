@@ -1,7 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
 import android.databinding.DataBindingUtil;
-import android.view.LayoutInflater;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;

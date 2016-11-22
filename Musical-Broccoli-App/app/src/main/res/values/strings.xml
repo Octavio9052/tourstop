@@ -56,7 +56,7 @@
     <string name="field_phone">Cell Phone:</string>
     <string name="hint_phone">Enter Cell Phone</string>
     <string name="field_change_password">Change Password</string>
-    <string name="hint_change_password">Change Payment Method</string>
+    <string name="field_change_payment">Change Payment Method</string>
     <string name="action_save_changes">Save Changes</string>
     <string name="field_current_password">Current Password: *</string>
     <string name="hint_current_password">Enter Current Password</string>
