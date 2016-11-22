@@ -10,7 +10,6 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Edi
  */
 
 public class EditUserViewModelImpl extends BaseViewModel implements EditUserViewModel {
-
     private UserModel user;
 
     public EditUserViewModelImpl(Context context) {

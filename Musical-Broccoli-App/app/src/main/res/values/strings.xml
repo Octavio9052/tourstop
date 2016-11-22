@@ -72,5 +72,8 @@
     <string name="messages">Messages</string>
     <string name="wishlist">Wishlist</string>
     <string name="my_tours">My Tours</string>
+    <string name="hint_last_name">Enter last name</string>
+    <string name="field_date">Date:</string>
+    <string name="field_date_range">To date:</string>
 </resources>
 

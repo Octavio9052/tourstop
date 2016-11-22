@@ -65,4 +65,7 @@
     <string name="permission_rationale">\"Se requieren permisos de contactos para proveer autocompletado de emails\"</string>
     <string name="statement_mandatory">Todos los campos marcados con * son obligatorios</string>
     <string name="wishlist">Lista de deseos</string>
+    <string name="from_field_date">Desde:</string>
+    <string name="to_field_date">A:</string>
+    <string name="hint_last_name">Ingresar apellido</string>
 </resources>
