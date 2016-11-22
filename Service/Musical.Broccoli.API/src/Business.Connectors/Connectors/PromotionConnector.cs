@@ -8,6 +8,9 @@ using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Contracts;
 using Business.Controllers.Petition;
+using Business.Controllers.PetitionValidators;
+using Business.Controllers.Response;
+using System.Security.Authentication;
 
 namespace Business.Connectors
 {
@@ -15,11 +18,51 @@ namespace Business.Connectors
     {
         public PromotionConnector(IPromotionRepository repository, IMapper mapper) : base(repository, mapper)
         {
-        }
 
-        protected override bool ValidatePetition( BusinessPetition<PromotionDTO> petition )
+        }
+        protected override BusinessResponse<PromotionDTO> Get(BusinessPetition<PromotionDTO> petition)
         {
-            throw new NotImplementedException();
+            if (!Validate(petition, new PromotionGetValidation())) throw new AuthenticationException();
+            return base.Get(petition);
+        }
+        protected override BusinessResponse<PromotionDTO> Save(BusinessPetition<PromotionDTO> petition)
+        {
+            if (!Validate(petition, new PromotionSaveValidation())) throw new AuthenticationException();
+            return base.Save(petition);
+        }
+        protected override BusinessResponse<PromotionDTO> Delete(BusinessPetition<PromotionDTO> petition)
+        {
+            if (!Validate(petition, new PromotionDeleteAndUpdateValidation())) throw new AuthenticationException();
+            return base.Delete(petition);
+        }
+        protected override BusinessResponse<PromotionDTO> Update(BusinessPetition<PromotionDTO> petition)
+        {
+            if (!Validate(petition, new PromotionDeleteAndUpdateValidation())) throw new AuthenticationException();
+            return base.Update(petition);
         }
     }
+        
+        internal sealed class PromotionDeleteAndUpdateValidation : PetitionValidation<PromotionDTO>
+        {
+            public override bool Validate(BusinessPetition<PromotionDTO> petition)
+            {
+                return true;
+            }
+        }
+        internal sealed class PromotionGetValidation : PetitionValidation<PromotionDTO>
+        {
+            public override bool Validate(BusinessPetition<PromotionDTO> petition)
+            {
+                return petition.RequestingUser != null;
+            }
+        }
+        internal sealed class PromotionSaveValidation : PetitionValidation<PromotionDTO>
+        {
+            public override bool Validate(BusinessPetition<PromotionDTO> petition)
+            {
+                return true;
+            }
+        }
+
+    
 }

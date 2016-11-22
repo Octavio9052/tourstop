@@ -9,6 +9,7 @@ using Business.Controllers.Petition;
 using Business.Controllers.Response;
 using DataAccessLayer.Repositories;
 using System.Collections.Generic;
+using Business.Controllers.PetitionValidators;
 
 namespace Business.Connectors
 {
@@ -66,7 +67,11 @@ namespace Business.Connectors
         #endregion
 
         #region Validation Methods
-        protected abstract bool ValidatePetition( BusinessPetition<TDto> petition );
+        protected bool Validate(BusinessPetition<TDto> petition, PetitionValidation<TDto> petitionValidation)
+        {
+            return petitionValidation.Validate(petition);
+        }
+
 
         #endregion
 
