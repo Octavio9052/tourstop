@@ -28,7 +28,8 @@
         <activity android:name=".presentation.views.activities.ChangePasswordActivity" />
         <activity android:name=".presentation.views.activities.MessagesActivity" />
         <activity android:name=".presentation.views.activities.MyToursActivity" />
-        <activity android:name=".presentation.views.activities.WishlistActivity"></activity>
+        <activity android:name=".presentation.views.activities.WishlistActivity" />
+        <activity android:name=".presentation.views.activities.CheckpointActivity"></activity>
     </application>
 
 </manifest>

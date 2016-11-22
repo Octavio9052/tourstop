@@ -124,34 +124,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stops:"
-                android:id="@+id/textView10"
-                android:textSize="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="28dp"
-                android:layout_below="@+id/editText4"
-                android:layout_alignParentStart="true" />
-
-            <EditText
-                android:layout_width="340dp"
-                android:layout_height="35dp"
-                android:hint="  Enter Stops"
-                android:id="@+id/editText5"
-                android:background="@drawable/textfields"
-                android:layout_below="@+id/textView10"
-                android:layout_alignStart="@+id/textView9"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Description:  *"
                 android:id="@+id/textView11"
                 android:textSize="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="28dp"
-                android:layout_below="@+id/editText5"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editText4" />
 
             <EditText
                 android:layout_width="340dp"
@@ -252,8 +231,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Create Tour"
-                android:id="@+id/button2"
-                android:layout_marginTop="50dp"
+                android:id="@+id/button1"
+                android:layout_marginTop="119dp"
                 android:layout_below="@+id/editText10"
                 android:layout_alignEnd="@+id/editText10" />
 
@@ -264,9 +243,19 @@
                 android:id="@+id/textView16"
                 android:textSize="10sp"
                 android:textAlignment="center"
-                android:layout_marginTop="6dp"
-                android:layout_alignTop="@+id/button2"
-                android:layout_alignEnd="@+id/textView13" />
+                android:layout_alignBottom="@+id/button1"
+                android:layout_alignEnd="@+id/textView9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Assign Checkpoints"
+                android:textColor="@color/darkblue"
+                android:id="@+id/textView17"
+                android:layout_marginTop="51dp"
+                android:layout_below="@+id/editText10"
+                android:layout_alignStart="@+id/textView16" />
 
         </RelativeLayout>
 
