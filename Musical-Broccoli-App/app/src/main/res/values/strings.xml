@@ -64,8 +64,8 @@
     <string name="hint_new_password">Enter New Password</string>
     <string name="field_confirm_new_password">Confirm New Password: *</string>
     <string name="action_search_tour">Search Tour</string>
-    <string name="field_date">Date:</string>
-    <string name="field_date_range">Date Range:</string>
+    <string name="from_field_date">From date:</string>
+    <string name="to_field_date">To Date:</string>
     <string name="field_to">To</string>
     <string name="action_search">Search</string>
     <string name="action_edit_profile">Edit Profile</string>
