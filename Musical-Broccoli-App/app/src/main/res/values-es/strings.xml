@@ -46,7 +46,7 @@
     <string name="field_requirements">Requisitos: *</string>
     <string name="field_to">A</string>
     <string name="field_username">Nombre de usuario</string>
-    <string name="hint_change_password">Cambio método de pago</string>
+    <string name="field_change_payment">Cambio método de pago</string>
     <string name="hint_current_password">Ingresar contraseña actual</string>
     <string name="hint_description">Ingresar descripción</string>
     <string name="hint_destination">Ingresar destino</string>
@@ -65,4 +65,7 @@
     <string name="permission_rationale">\"Se requieren permisos de contactos para proveer autocompletado de emails\"</string>
     <string name="statement_mandatory">Todos los campos marcados con * son obligatorios</string>
     <string name="wishlist">Lista de deseos</string>
+    <string name="from_field_date">Desde:</string>
+    <string name="to_field_date">A:</string>
+    <string name="hint_last_name">Ingresar apellido</string>
 </resources>

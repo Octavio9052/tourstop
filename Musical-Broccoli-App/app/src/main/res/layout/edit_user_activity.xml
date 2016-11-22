@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="user" type="com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel"/>
+        <variable name="viewModel" type="com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel"/>
     </data>
     <ScrollView
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                     android:layout_width="340dp"
                     android:layout_height="35dp"
                     android:hint="@string/hint_enter_name"
-                    android:text="@{user.lastName}"
+                    android:text="@{viewModel.user.firstName}"
                     android:id="@+id/editText2"
                     android:background="@drawable/textfields"
                     android:layout_below="@+id/textView7"
@@ -92,8 +92,8 @@
                 <EditText
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_enter_name"
-                    android:text="@{user.lastName}"
+                    android:hint="@string/hint_last_name"
+                    android:text="@{viewModel.user.lastName}"
                     android:id="@+id/editText9"
                     android:background="@drawable/textfields"
                     android:layout_marginStart="10dp"
@@ -124,7 +124,7 @@
                     android:layout_below="@+id/textView8"
                     android:layout_alignStart="@+id/textView8"
                     android:hint="@string/hint_email"
-                    android:text="@{user.email}"
+                    android:text="@{viewModel.user.email}"
                     android:layout_marginTop="10dp" />
 
                 <TextView
@@ -145,7 +145,7 @@
                     android:inputType="phone"
                     android:ems="10"
                     android:hint="@string/hint_phone"
-                    android:text="@{user.phone}"
+                    android:text="@{viewModel.user.phone}"
                     android:background="@drawable/textfields"
                     android:id="@+id/editText11"
                     android:layout_below="@+id/textView9"
@@ -167,7 +167,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="@string/hint_change_password"
+                    android:text="@string/field_change_payment"
                     android:textColor="@color/darkblue"
                     android:id="@+id/textView11"
                     android:layout_marginTop="47dp"
