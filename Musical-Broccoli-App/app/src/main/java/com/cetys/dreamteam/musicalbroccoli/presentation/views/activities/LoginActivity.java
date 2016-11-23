@@ -3,6 +3,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -323,6 +324,10 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             try {
                 // Simulate network access.
                 Thread.sleep(2000);
+                // TODO: Temp stuff below
+                Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);
+                LoginActivity.this.startActivity(intent);
+                // TODO: Temp stuff above
             } catch (InterruptedException e) {
                 return false;
             }
