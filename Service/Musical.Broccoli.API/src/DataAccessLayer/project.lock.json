@@ -403,7 +403,7 @@
           "lib/netstandard1.6/MySql.Data.dll": {}
         }
       },
-      "MySql.Data.EntityFrameworkCore/7.0.6-IR31": {
+      "MySql.Data.EntityFrameworkCore/7.0.6-ir31": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "1.0.0",
