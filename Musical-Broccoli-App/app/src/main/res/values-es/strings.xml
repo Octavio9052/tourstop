@@ -46,7 +46,7 @@
     <string name="field_requirements">Requisitos: *</string>
     <string name="field_to">A</string>
     <string name="field_username">Nombre de usuario</string>
-    <string name="hint_change_password">Cambio método de pago</string>
+    <string name="field_change_payment">Cambio método de pago</string>
     <string name="hint_current_password">Ingresar contraseña actual</string>
     <string name="hint_description">Ingresar descripción</string>
     <string name="hint_destination">Ingresar destino</string>
@@ -65,4 +65,19 @@
     <string name="permission_rationale">\"Se requieren permisos de contactos para proveer autocompletado de emails\"</string>
     <string name="statement_mandatory">Todos los campos marcados con * son obligatorios</string>
     <string name="wishlist">Lista de deseos</string>
+    <string name="from_field_date">Desde:</string>
+    <string name="to_field_date">A:</string>
+    <string name="hint_last_name">Ingresar apellido</string>
+    <string name="card_holder">Nombre</string>
+    <string name="card_number">Número de tarjeta</string>
+    <string name="card_security_code">Número de seguridad (CVC)</string>
+    <string name="company">Compañia</string>
+    <string name="description">Descripción</string>
+    <string name="destination">Destino</string>
+    <string name="discount">Descuento</string>
+    <string name="price">Precio</string>
+    <string name="seats_available">Asientos disponibles</string>
+    <string name="special_requirements">Requerimientos especiales</string>
+    <string name="stops">Paradas</string>
+    <string name="title_activity_login">Iniciar sesión</string>
 </resources>

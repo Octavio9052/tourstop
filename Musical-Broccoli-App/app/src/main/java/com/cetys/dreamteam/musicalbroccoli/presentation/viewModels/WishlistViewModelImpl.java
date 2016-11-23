@@ -1,5 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
+import android.content.Context;
+
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.WishlistViewModel;
 
 /**
@@ -7,4 +9,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Wis
  */
 
 public class WishlistViewModelImpl extends BaseViewModel implements WishlistViewModel {
+    public WishlistViewModelImpl(Context context) {
+        super(context);
+    }
 }

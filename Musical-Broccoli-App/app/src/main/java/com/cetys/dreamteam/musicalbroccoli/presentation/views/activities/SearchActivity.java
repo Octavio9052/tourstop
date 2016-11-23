@@ -4,11 +4,12 @@ import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
+import android.app.Activity;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 
 
-public class SearchActivity extends BaseActivity {
+public class SearchActivity extends Activity {
 
     CalendarView calendar;
 
@@ -23,20 +24,10 @@ public class SearchActivity extends BaseActivity {
         initializeCalendar();
     }
 
-
-    @Override
-    protected void initActivityComponent() {
-
-    }
-
-    @Override
-    protected void initBinding() {
-
-    }
-
+    // TODO: FIX THIS ACTIVITY pls
     public void initializeCalendar() {
 
-        calendar = (CalendarView) findViewById(R.id.calendar);
+        //  calendar = (CalendarView) findViewById(R.id.calendar);
 
         // sets whether to show the week number.
         calendar.setShowWeekNumber(false);
@@ -60,11 +51,11 @@ public class SearchActivity extends BaseActivity {
         //sets the listener to be notified upon selected date change.
         calendar.setOnDateChangeListener(new OnDateChangeListener() {
 
-        //show the selected date as a toast
-        @Override
+            //show the selected date as a toast
+            @Override
 
-        public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-            Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
+                Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
             }
         });
     }

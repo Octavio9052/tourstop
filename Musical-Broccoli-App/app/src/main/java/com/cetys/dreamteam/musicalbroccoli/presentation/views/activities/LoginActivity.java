@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
 import android.content.CursorLoader;
@@ -29,13 +30,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
-import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.inject.Inject;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -43,11 +40,6 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
-
-    @Inject
-    LoginActivityBinding binding;
-    @Inject
-    LoginViewModel viewModel;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -102,16 +94,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-    }
-
-    @Override
-    protected void initActivityComponent() {
-
-    }
-
-    @Override
-    protected void initBinding() {
-        binding.setViewModel(viewModel);
     }
 
     private void populateAutoComplete() {
@@ -299,6 +281,16 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         mEmailView.setAdapter(adapter);
     }
 
+    @Override
+    protected void initActivityComponent() {
+
+    }
+
+    @Override
+    protected void initBinding() {
+
+    }
+
 
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -367,4 +359,3 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         }
     }
 }
-

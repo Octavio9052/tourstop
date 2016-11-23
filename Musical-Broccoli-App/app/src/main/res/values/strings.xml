@@ -26,9 +26,27 @@
     <string name="description_enum_movement_type_subtraction">Subtraction</string>
     <string name="description_enum_movement_type_cancellation">Cancellation</string>
 
-    <!-- Other -->
+    <!-- Strings related to tour profile -->
     <string name="app_name" translatable="false">MusicalBroccoli</string>
     <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="app_name1" translatable="false">TestScroll</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="destination">Destination</string>
+    <string name="stops">Stops</string>
+    <string name="description">Description</string>
+    <string name="seats_available">Seats available</string>
+    <string name="discount">Discount</string>
+    <string name="company">Company</string>
+    <string name="special_requirements">Special requirements</string>
+
+    <!-- Strings related to card payment -->
+    <string name="card_number">Card number</string>
+    <string name="card_holder">Card holder</string>
+    <string name="card_security_code">Security code (CVC)</string>
+
+    <!-- Other -->
     <string name="action_create_new_tour">Create New Tour</string>
     <string name="cta_header_description" translatable="false">temp</string>
     <string name="field_name">Name: *</string>
@@ -56,7 +74,7 @@
     <string name="field_phone">Cell Phone:</string>
     <string name="hint_phone">Enter Cell Phone</string>
     <string name="field_change_password">Change Password</string>
-    <string name="hint_change_password">Change Payment Method</string>
+    <string name="field_change_payment">Change Payment Method</string>
     <string name="action_save_changes">Save Changes</string>
     <string name="field_current_password">Current Password: *</string>
     <string name="hint_current_password">Enter Current Password</string>
@@ -64,13 +82,16 @@
     <string name="hint_new_password">Enter New Password</string>
     <string name="field_confirm_new_password">Confirm New Password: *</string>
     <string name="action_search_tour">Search Tour</string>
-    <string name="field_date">Date:</string>
-    <string name="field_date_range">Date Range:</string>
+    <string name="from_field_date">From date:</string>
+    <string name="to_field_date">To Date:</string>
     <string name="field_to">To</string>
     <string name="action_search">Search</string>
     <string name="action_edit_profile">Edit Profile</string>
     <string name="messages">Messages</string>
     <string name="wishlist">Wishlist</string>
     <string name="my_tours">My Tours</string>
+    <string name="hint_last_name">Enter last name</string>
+    <string name="field_date">Date:</string>
+    <string name="field_date_range">To date:</string>
 </resources>
 

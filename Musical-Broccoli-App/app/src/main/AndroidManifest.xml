@@ -21,15 +21,16 @@
             android:label="@string/action_sign_in" />
         <activity android:name=".presentation.views.activities.CreateTourActivity" >
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".presentation.views.activities.EditUserActivity" />
         <activity android:name=".presentation.views.activities.ChangePasswordActivity" />
         <activity android:name=".presentation.views.activities.MessagesActivity" />
         <activity android:name=".presentation.views.activities.MyToursActivity" />
-        <activity android:name=".presentation.views.activities.WishlistActivity"/>
+        <activity android:name=".presentation.views.activities.WishlistActivity" />
+        <activity android:name=".presentation.views.activities.CheckpointActivity"/>
     </application>
 
 </manifest>

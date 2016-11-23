@@ -1,5 +1,8 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
+import android.content.Context;
+
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
 
 /**
@@ -7,4 +10,19 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Use
  */
 
 public class UserProfileViewModelImpl extends BaseViewModel implements UserProfileViewModel{
+    private UserModel user;
+
+    public UserProfileViewModelImpl(Context context) {
+        super(context);
+    }
+
+    @Override
+    public UserModel getUser() {
+        return this.user;
+    }
+
+    @Override
+    public void setUser(UserModel user) {
+        this.user = user;
+    }
 }
