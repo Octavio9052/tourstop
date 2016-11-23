@@ -9,9 +9,8 @@ import dagger.Subcomponent;
 /**
  * Created by Octavio on 2016/11/22.
  */
-
 @ActivityScope
-@Subcomponent(modules = UserProfileActivityModule.class)
+@Subcomponent( modules = UserProfileActivityModule.class )
 public interface UserProfileActivitySubcomponent {
-    void inject(UserProfileActivity userProfileActivity);
+    void inject( UserProfileActivity userProfileActivity );
 }

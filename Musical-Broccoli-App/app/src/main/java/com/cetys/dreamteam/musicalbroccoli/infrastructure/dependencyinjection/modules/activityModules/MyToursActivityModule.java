@@ -1,5 +1,9 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
+import android.databinding.DataBindingUtil;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.databinding.MyToursActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.MyToursViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MyToursViewModel;
@@ -30,5 +34,11 @@ public class MyToursActivityModule {
     @Provides
     MyToursViewModel providesMyToursViewModel() {
         return new MyToursViewModelImpl( this.myToursActivity );
+    }
+
+    @ActivityScope
+    @Provides
+    MyToursActivityBinding providesMyToursActivityBinding() {
+        return DataBindingUtil.setContentView( this.myToursActivity, R.layout.my_tours_activity );
     }
 }

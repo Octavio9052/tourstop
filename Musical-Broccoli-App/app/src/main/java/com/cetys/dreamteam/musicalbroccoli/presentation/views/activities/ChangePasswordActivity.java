@@ -21,26 +21,30 @@ public class ChangePasswordActivity extends BaseActivity {
     ChangePasswordActivityBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.change_password_activity);
+    protected void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.change_password_activity );
+
+        initActivityComponent();
+        initBinding();
     }
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new ChangePasswordActivityModule(this)).inject(this);
+        TourStopApplication.get( this ).getAppComponent()
+                .plus( new ChangePasswordActivityModule( this ) ).inject( this );
     }
 
     @Override
     protected void initBinding() {
-        binding.setViewModel(viewModel);
+        binding.setViewModel( viewModel );
     }
 
     // TODO: BORRAR/CAMBIAR ESTO
-    public void doTemporalToastThing(View view) {
-        Toast.makeText(ChangePasswordActivity.this, "Your password has been changed successfully",
-                Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(ChangePasswordActivity.this, UserProfileActivity.class);
-        ChangePasswordActivity.this.startActivity(intent);
+    public void doTemporalToastThing( View view ) {
+        Toast.makeText( ChangePasswordActivity.this, "Your password has been changed successfully",
+                Toast.LENGTH_LONG ).show();
+        Intent intent = new Intent( ChangePasswordActivity.this, UserProfileActivity.class );
+        ChangePasswordActivity.this.startActivity( intent );
     }
 }

@@ -1,5 +1,9 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
+import android.databinding.DataBindingUtil;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.databinding.CheckpointActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CheckpointViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CheckpointViewModel;
@@ -30,5 +34,12 @@ public class CheckpointActivityModule {
     @Provides
     CheckpointViewModel providesCheckpointViewModel() {
         return new CheckpointViewModelImpl( this.checkpointActivity );
+    }
+
+    @ActivityScope
+    @Provides
+    CheckpointActivityBinding providesCheckpointActivityBinding() {
+        return DataBindingUtil
+                .setContentView( this.checkpointActivity, R.layout.checkpoint_activity );
     }
 }

@@ -1,5 +1,9 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
+import android.databinding.DataBindingUtil;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.databinding.WishlistActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.WishlistViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.WishlistViewModel;
@@ -30,5 +34,11 @@ public class WishlistActivityModule {
     @Provides
     WishlistViewModel providesWishlistViewModel() {
         return new WishlistViewModelImpl( this.wishlistActivity );
+    }
+
+    @ActivityScope
+    @Provides
+    WishlistActivityBinding providesWishlistActivityBinding() {
+        return DataBindingUtil.setContentView( this.wishlistActivity, R.layout.wishlist_activity );
     }
 }

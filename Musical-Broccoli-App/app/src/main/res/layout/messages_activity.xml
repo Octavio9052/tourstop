@@ -1,152 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
+    <data>
+
+        <variable name="viewModel"
+                  type="com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MessagesViewModel"/>
+    </data>
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/header_cover_image"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/messages" />
-
-        <ImageButton
-            android:id="@+id/user_profile_photo"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_below="@+id/header_cover_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="-60dp"
-            android:background="@drawable/profile_circular_border_imageview"
-            android:backgroundTint="#ffffff"
-            android:elevation="5dp"
-            android:padding="20dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/logotourstop" />
-
         <RelativeLayout
-            android:id="@+id/profile_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/header_cover_image"
-            android:background="#0033cc"
-            android:elevation="4dp"
-            android:paddingBottom="24dp">
+            android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/messages"/>
 
-            <TextView
-                android:id="@+id/user_profile_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:id="@+id/user_profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/header_cover_image"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="76dp"
-                android:text="@string/messages"
-                android:textColor="#fff"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="-60dp"
+                android:background="@drawable/profile_circular_border_imageview"
+                android:backgroundTint="#ffffff"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logotourstop"/>
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_cover_image"
+                android:background="#0033cc"
+                android:elevation="4dp"
+                android:paddingBottom="24dp">
+
+
+                <TextView
+                    android:id="@+id/user_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="76dp"
+                    android:text="@string/messages"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="673dp"
+                android:layout_marginTop="328dp"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentStart="true"/>
+
+                <TextClock
+                    android:id="@+id/textClock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginTop="25dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textClock"
+                    android:layout_below="@+id/textClock"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textClock2"
+                    android:layout_below="@+id/textClock2"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textClock3"
+                    android:layout_below="@+id/textClock3"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textClock4"
+                    android:layout_below="@+id/textClock4"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textClock5"
+                    android:layout_below="@+id/textClock5"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textClock6"
+                    android:layout_below="@+id/textClock6"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/textClock7"
+                    android:layout_below="@+id/textClock7"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textClock8"
+                    android:layout_below="@+id/textClock8"
+                    android:layout_marginTop="48dp"/>
+
+                <TextClock
+                    android:id="@+id/textClock10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/textClock9"
+                    android:layout_marginBottom="48dp"/>
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="673dp"
-            android:layout_marginTop="328dp"
-            android:orientation="vertical"
-            android:id="@+id/relativeLayout">
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/listView"
-            android:layout_alignParentStart="true" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="13dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock2"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock"
-                android:layout_alignStart="@+id/textClock" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock3"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock2"
-                android:layout_alignStart="@+id/textClock2" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock4"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock3"
-                android:layout_alignEnd="@+id/textClock3" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock5"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock4"
-                android:layout_alignEnd="@+id/textClock4" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock6"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock5"
-                android:layout_alignEnd="@+id/textClock5" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock7"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock6"
-                android:layout_alignEnd="@+id/textClock6" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock8"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock7"
-                android:layout_alignEnd="@+id/textClock7" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock9"
-                android:layout_marginTop="48dp"
-                android:layout_below="@+id/textClock8"
-                android:layout_alignStart="@+id/textClock8" />
-
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textClock10"
-                android:layout_marginBottom="48dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/textClock9" />
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-</ScrollView>
+    </ScrollView>
+</layout>

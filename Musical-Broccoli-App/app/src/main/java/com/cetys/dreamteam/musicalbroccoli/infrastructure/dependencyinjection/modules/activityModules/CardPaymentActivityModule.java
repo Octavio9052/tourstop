@@ -1,5 +1,9 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
+import android.databinding.DataBindingUtil;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.databinding.CardPaymentActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CardPaymentViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CardPaymentViewModel;
@@ -31,5 +35,12 @@ public class CardPaymentActivityModule {
     @Provides
     CardPaymentViewModel providesCardPaymentViewModel() {
         return new CardPaymentViewModelImpl( this.cardPaymentActivity );
+    }
+
+    @ActivityScope
+    @Provides
+    CardPaymentActivityBinding providesCardPaymentActivityBinding() {
+        return DataBindingUtil
+                .setContentView( this.cardPaymentActivity, R.layout.card_payment_activity );
     }
 }
