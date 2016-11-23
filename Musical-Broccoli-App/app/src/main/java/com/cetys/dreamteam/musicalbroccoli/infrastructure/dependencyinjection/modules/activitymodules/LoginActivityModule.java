@@ -1,4 +1,4 @@
-package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activityModules;
+package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
 import android.databinding.DataBindingUtil;
 
