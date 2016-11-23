@@ -18,15 +18,16 @@ public class SearchActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         //sets the main layout of the activity
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.search_activity);
 
         //initializes the calendarview
         initializeCalendar();
     }
 
+    // TODO: FIX THIS ACTIVITY pls
     public void initializeCalendar() {
 
-        calendar = (CalendarView) findViewById(R.id.calendar);
+        //  calendar = (CalendarView) findViewById(R.id.calendar);
 
         // sets whether to show the week number.
         calendar.setShowWeekNumber(false);

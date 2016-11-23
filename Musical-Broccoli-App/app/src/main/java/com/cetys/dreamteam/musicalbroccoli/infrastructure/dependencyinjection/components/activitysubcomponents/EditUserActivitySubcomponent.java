@@ -9,6 +9,7 @@ import dagger.Subcomponent;
 /**
  * Created by Octavio on 2016/11/21.
  */
+
 @ActivityScope
 @Subcomponent(modules = EditUserActivityModule.class)
 public interface EditUserActivitySubcomponent {
