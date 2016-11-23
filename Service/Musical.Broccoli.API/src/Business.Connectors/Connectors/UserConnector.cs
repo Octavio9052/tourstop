@@ -44,7 +44,7 @@ namespace Business.Connectors
     {
         public override bool Validate(BusinessPetition<UserDTO> petition)
         {
-            return true;
+            return petition.Data.All(x=>x.Id==petition.RequestingUser.Id);
         }
     }
     internal sealed class GetUserValidation : PetitionValidation<UserDTO>
