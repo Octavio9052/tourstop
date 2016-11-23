@@ -39,7 +39,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -279,6 +279,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
         mEmailView.setAdapter(adapter);
+    }
+
+    @Override
+    protected void initActivityComponent() {
+
+    }
+
+    @Override
+    protected void initBinding() {
+
     }
 
 

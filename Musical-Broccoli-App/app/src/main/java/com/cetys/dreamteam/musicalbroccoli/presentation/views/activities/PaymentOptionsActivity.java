@@ -5,11 +5,21 @@ import android.os.Bundle;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 
-public class PaymentOptionsActivity extends AppCompatActivity {
+public class PaymentOptionsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_options_activity);
+    }
+
+    @Override
+    protected void initActivityComponent() {
+
+    }
+
+    @Override
+    protected void initBinding() {
+
     }
 }
