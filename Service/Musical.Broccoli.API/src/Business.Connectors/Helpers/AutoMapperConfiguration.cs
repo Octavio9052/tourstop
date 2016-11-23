@@ -24,13 +24,8 @@ namespace Business.Connectors.Helpers
             #endregion
 
             #region Message
-            CreateMap<Message, MessageDTO>();
-            CreateMap<MessageDTO,Message>().ForMember(x => x.Id, y => y.Ignore());
-            #endregion
-
-            #region MessageHasReciever
-            CreateMap<MessageHasReciever, MessageHasRecieverDTO>();
-            CreateMap<MessageHasRecieverDTO, MessageHasReciever>();
+            CreateMap<Message, TourDTO>();
+            CreateMap<TourDTO,Message>().ForMember(x => x.Id, y => y.Ignore());
             #endregion
 
             #region Movement

@@ -34,15 +34,15 @@ namespace Business.Handlers.Validation
         {
             return Holds(x => x.ReservationId == 0, "Invalid Reservation");
         }
-        public static MovementValidator TourIdIsValid()
+        public static MovementValidator OrderIdIsValid()
         {
-            return Holds(x => x.TourId == 0, "Invalid Tour");
+            return Holds(x => x.OrderId == 0, "Invalid Order");
         }
         #endregion
 
         public static MovementValidator All()
         {
-            return All(MovementTypeIsValid(), ReservationIdIsValid(), TourIdIsValid());
+            return All(MovementTypeIsValid(), ReservationIdIsValid(), OrderIdIsValid());
         }
         public static MovementValidator All(params MovementValidator[] validators)
         {

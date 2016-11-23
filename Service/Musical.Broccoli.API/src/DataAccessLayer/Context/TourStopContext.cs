@@ -1,6 +1,6 @@
 ﻿using DataAccessLayer.Entities;
 using Microsoft.EntityFrameworkCore;
-using MySQL.Data.EntityFrameworkCore.Extensions;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +12,11 @@ namespace DataAccessLayer.Context
     {
         public TourStopContext(DbContextOptions<TourStopContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<CheckPoint> CheckPoints { get; set; }
         public DbSet<Message> Messages { get; set; }
-        public DbSet<MessageHasReciever> MessageHasReciever { get; set; }
         public DbSet<Movement> Movements { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<PaymentInfo> PaymentInfos { get; set; }
@@ -27,6 +26,12 @@ namespace DataAccessLayer.Context
         public DbSet<Tour> Tours { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Session> Sessions { get; set; }
+
+        public override int SaveChanges()
+        {
+            ChangeTracker.DetectChanges();
+            return base.SaveChanges();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -42,7 +47,7 @@ namespace DataAccessLayer.Context
 
             #region MessageHasRecieverConfig
             modelBuilder.Entity<MessageHasReciever>().HasKey(x => new { x.MessageId, x.RecieverId });
-            modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Message).WithMany(x => x.MessageHasRecievers).HasForeignKey(x=>x.MessageId);
+            modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Message).WithMany(x => x.MessageHasRecievers).HasForeignKey(x => x.MessageId);
             modelBuilder.Entity<MessageHasReciever>().HasOne(x => x.Reciever).WithMany(x => x.Messages).HasForeignKey(x => x.RecieverId);
             #endregion
 
@@ -76,16 +81,14 @@ namespace DataAccessLayer.Context
             modelBuilder.Entity<User>().HasMany(x => x.Ratings);
             modelBuilder.Entity<User>().HasMany(x => x.Reservations);
             modelBuilder.Entity<User>().HasMany(x => x.Tours);
-            modelBuilder.Entity<User>().HasMany(x => x.Messages);
+            modelBuilder.Entity<User>().HasMany(x => x.Messages).WithOne(x => x.Reciever);
+            modelBuilder.Entity<User>().HasAlternateKey(x => x.Email);
             #endregion
 
             #region SessionConfig
             modelBuilder.Entity<Session>().HasAlternateKey(x => x.AuthorizationToken);
             #endregion
-
-
-
-
+            
         }
 
 

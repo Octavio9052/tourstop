@@ -1,33 +1,30 @@
-﻿using DataAccessLayer.Context;
-using DataAccessLayer.Factories;
-using DataAccessLayer.Repositories.Contracts;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-
+using DataAccessLayer.Context;
+using DataAccessLayer.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        protected readonly DbContext Context;
+        protected readonly TourStopContext Context;
         protected DbSet<T> DbSet;
-        public BaseRepository()
+        public BaseRepository(TourStopContext context)
         {
-            this.Context = TourStopContextFactory.Create();
-            this.DbSet = this.Context.Set<T>();
+            Context = context;
+            DbSet = Context.Set<T>();
         }
-        public void Add(T entity)
+        public void Add(ICollection<T> entities)
         {
-            this.DbSet.Add(entity);
-            this.Context.SaveChanges();
+            DbSet.AddRange(entities);
+            Context.SaveChanges();
         }
 
         public ICollection<T> GetAll()
         {
-            return DbSet.ToList();
+            return Context.Set<T>().ToList();
         }
 
         public T GetbyKey(Func<T, bool> predicate)
@@ -35,24 +32,25 @@ namespace DataAccessLayer.Repositories
             return DbSet.FirstOrDefault(predicate);
         }
 
-        public void Remove(T entity)
+        public void Remove(ICollection<T> entities)
         {
-            this.DbSet.Remove(entity);
-            this.Context.SaveChanges();
+            DbSet.RemoveRange(entities);
+            Context.SaveChanges();
            
         }
 
         public ICollection<T> Search(Func<T, bool> predicate)
         {
-            return this.DbSet.Where(predicate).ToList();
+            return DbSet.Where(predicate).ToList();
         }
 
-        public void Update(T entity)
+        public void Update(ICollection<T> entities)
         {
-            var entryToUpdate = this.Context.Entry(entity);
-            DbSet.Attach(entity);
-            entryToUpdate.State = EntityState.Modified;
-            this.Context.SaveChanges();
+ 
+                DbSet.UpdateRange(entities);
+                Context.SaveChanges();
+            
+            
         }
 
         public IQueryable<T> GetQueryable()

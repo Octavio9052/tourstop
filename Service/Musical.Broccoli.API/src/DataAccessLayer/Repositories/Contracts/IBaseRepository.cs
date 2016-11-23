@@ -11,9 +11,9 @@ namespace DataAccessLayer.Repositories.Contracts
         ICollection<T> Search(Func<T,bool> predicate);
         ICollection<T> GetAll();
         IQueryable<T> GetQueryable();
-        void Add(T entity);
-        void Remove(T entity);
-        void Update(T entity);
+        void Add(ICollection<T> entities);
+        void Remove(ICollection<T> entities);
+        void Update(ICollection<T> entities);
 
     }
 }

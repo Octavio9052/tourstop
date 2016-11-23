@@ -9,6 +9,9 @@ using Business.Controllers.Petition;
 using Business.Controllers.Response;
 using DataAccessLayer.Repositories;
 using System.Collections.Generic;
+using Business.Controllers.PetitionValidators;
+using System.Security.Authentication;
+using Business.Controllers.Exceptions;
 
 namespace Business.Connectors
 {
@@ -46,27 +49,79 @@ namespace Business.Connectors
         #region Petition Processing
         protected virtual BusinessResponse<TDto> Get( BusinessPetition<TDto> petition )
         {
-            throw new NotImplementedException();
+            var businessResponse = new BusinessResponse<TDto>();
+           try
+            {
+                var data = _repository.GetQueryable().Where(petition.FilterStrings.ToString());
+                businessResponse.Data=_mapper.Map<List<TDto>>(data);
+                businessResponse.IsSuccessful = true;
+            }
+            catch(Exception ex)
+            {
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
+            }
+            return businessResponse;
         }
 
         protected virtual BusinessResponse<TDto> Save( BusinessPetition<TDto> petition )
         {
-            throw new NotImplementedException();
+            var businessResponse = new BusinessResponse<TDto>();
+            try
+            {
+                var data = _mapper.Map<List<TEntity>>(petition.Data);
+                _repository.Add(data);
+                businessResponse.IsSuccessful = true;
+            }
+            catch (Exception ex)
+            {
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
+            }
+            return businessResponse;
         }
 
         protected virtual BusinessResponse<TDto> Update( BusinessPetition<TDto> petition )
         {
-            throw new NotImplementedException();
+            var businessResponse = new BusinessResponse<TDto>();
+            try
+            {
+                var data = _mapper.Map<List<TEntity>>(petition.Data);
+                _repository.Update(data);
+                businessResponse.IsSuccessful = true;
+            }
+            catch (Exception ex)
+            {
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
+            }
+            return businessResponse;
         }
 
         protected virtual BusinessResponse<TDto> Delete( BusinessPetition<TDto> petition )
         {
-            throw new NotImplementedException();
+            var businessResponse = new BusinessResponse<TDto>();
+            try
+            {
+                var data = _mapper.Map<List<TEntity>>(petition.Data);
+                _repository.Remove(data);
+                businessResponse.IsSuccessful = true;
+            }
+            catch (Exception ex)
+            {
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
+            }
+            return businessResponse;
         }
         #endregion
 
         #region Validation Methods
-        protected abstract bool ValidatePetition( BusinessPetition<TDto> petition );
+        protected bool Validate(BusinessPetition<TDto> petition, PetitionValidation<TDto> petitionValidation)
+        {
+            return petitionValidation.Validate(petition);
+        }
+
 
         #endregion
 

@@ -5,14 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories
 {
     public class UserRepository:BaseRepository<User>, IUserRepository
     {
-        public UserRepository():base()
+        public UserRepository(TourStopContext context) : base(context)
         {
-
         }
     }
 }

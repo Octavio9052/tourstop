@@ -1,36 +1,105 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Common.DTOs;
-using Business.Handlers.Handlers;
 using Business.Handlers.Request;
 using System;
+using Business.Handlers.Handlers.contracts;
+using Handlers.Exceptions;
+using Business.Handlers.Response;
 
 namespace Musical.Broccoli.API.Controllers
 {
-    [Route( "api/[controller]" )]
-    public class UserController : BaseController<UserDTO>
+    [Route("api/[controller]")]
+    public class UserController : Controller
     {
-        public UserController( BaseRequestHandler<UserDTO> requestHandler ) : base( requestHandler )
+        private readonly IUserRequestHandler _requestHandler;
+
+        public UserController(IUserRequestHandler requestHandler)
         {
+            _requestHandler = requestHandler;
         }
 
-        public override IActionResult Get( [FromBody] Request<UserDTO> request )
+        [HttpGet]
+        public IActionResult Get([FromBody] Request<UserDTO> request)
         {
-            throw new NotImplementedException();
+            
+            Response<UserDTO> result;
+            try
+            {
+                result = _requestHandler.HandleRequest(request);
+
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return new UnauthorizedResult();
+            }
+            catch (InvalidRequestException)
+            {
+                return new BadRequestResult();
+            }
+
+            if (result.Data.Count <= 0)
+            {
+                return new NotFoundObjectResult(result);
+            }
+            return new OkObjectResult(result);
         }
 
-        public override IActionResult Post( [FromBody] Request<UserDTO> request )
+        [HttpPost]
+        public IActionResult Post([FromBody] Request<UserDTO> request)
         {
-            throw new NotImplementedException();
+            Response<UserDTO> result;
+
+            try
+            {
+                result = _requestHandler.HandleRequest(request);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return new UnauthorizedResult();
+            }
+            catch (InvalidRequestException)
+            {
+                return new BadRequestResult();
+            }
+
+            return new CreatedResult("", result);
         }
 
-        public override IActionResult Put( [FromBody] Request<UserDTO> request )
+        [HttpPut]
+        public IActionResult Put([FromBody] Request<UserDTO> request)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _requestHandler.HandleRequest(request);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return new UnauthorizedResult();
+            }
+            catch (InvalidRequestException)
+            {
+                return new BadRequestResult();
+            }
+
+            return new NoContentResult();
         }
 
-        public override IActionResult Delete( [FromBody] Request<UserDTO> request )
+        [HttpDelete]
+        public IActionResult Delete([FromBody] Request<UserDTO> request)
         {
-            throw new NotImplementedException();
+            try
+            {
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return new UnauthorizedResult();
+            }
+            catch (InvalidRequestException)
+            {
+                return new BadRequestResult();
+            }
+
+            return new NoContentResult();
         }
     }
 }

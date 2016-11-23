@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿    using Business.Handlers.Request;
+using Business.Handlers.Response;
+using Common.DTOs;
 
 namespace Business.Handlers.Handlers.contracts
 {
     public interface IUserRequestHandler
     {
+        Response<UserDTO> HandleRequest(Request<UserDTO> request);
     }
 }
