@@ -1,6 +1,8 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
@@ -32,5 +34,25 @@ public class UserProfileActivity extends BaseActivity {
     @Override
     protected void initBinding() {
         binding.setViewModel(viewModel);
+    }
+
+    public void goToEditUserActivity(View view) {
+        Intent intent = new Intent(UserProfileActivity.this, EditUserActivity.class);
+        UserProfileActivity.this.startActivity(intent);
+    }
+
+    public void goToMyToursActivity(View view) {
+        Intent intent = new Intent(UserProfileActivity.this, MyToursActivity.class);
+        UserProfileActivity.this.startActivity(intent);
+    }
+
+    public void goToWishlistActivity(View view){
+        Intent intent = new Intent(UserProfileActivity.this, WishlistActivity.class);
+        UserProfileActivity.this.startActivity(intent);
+    }
+
+    public void goToMessagesActivity(View view){
+        Intent intent = new Intent(UserProfileActivity.this, MessagesActivity.class);
+        UserProfileActivity.this.startActivity(intent);
     }
 }
