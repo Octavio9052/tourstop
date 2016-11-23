@@ -6,7 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
  * Created by Octavio on 2016/11/20.
  */
 
-public interface MyTourViewModel {
+public interface MyToursViewModel {
     TourModel getTour();
     void setTour(TourModel tour);
 }
