@@ -111,6 +111,7 @@
         android:layout_marginTop="195dp" />
 
     <LinearLayout
+        android:id="@+id/linear_layout_temp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
@@ -157,6 +158,18 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:background="@android:drawable/toast_frame"
+        android:id="@+id/button_temp_save"
+        android:layout_below="@id/payment_security_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:onClick="doToast"
+        android:layout_marginTop="10dp"
+        android:text="@string/action_save_changes"/>
 
 
 </RelativeLayout>
