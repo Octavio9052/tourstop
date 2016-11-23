@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/header_cover_image"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="76dp"
-                android:text="Search Tour"
+                android:text="@string/action_search_tour"
                 android:textColor="#fff"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -55,16 +55,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="550dp"
+            android:orientation="vertical"
             android:layout_below="@+id/profile_layout"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical">
+            android:layout_alignParentStart="true">
 
             <TextView
                 android:layout_width="105dp"
                 android:layout_height="30dp"
                 android:background="#fff"
                 android:clickable="false"
-                android:text="Destiny:"
+                android:text="@string/field_destination"
                 android:textSize="20sp"
                 android:textAlignment="gravity"
                 android:id="@+id/textView"
@@ -80,86 +80,58 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="35dp"
-                android:hint="  Enter Destiny"
+                android:hint="@string/hint_destination"
                 android:background="@drawable/textfields"/>
 
+
+            <Button
+                android:background="@android:drawable/toast_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_search"
+                android:id="@+id/button"
+                android:layout_below="@+id/editText"
+                android:layout_alignParentEnd="true" />
             <TextView
-                android:layout_width="65dp"
+                android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:background="#fff"
                 android:clickable="false"
-                android:text="Date:"
+                android:text="@string/from_field_date"
                 android:textSize="20sp"
                 android:textAlignment="gravity"
                 android:id="@+id/textView2"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="100dp" />
-
-            <CalendarView
-                android:id="@+id/calendar"
-                android:layout_width="300dp"
-                android:layout_height="180dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="135dp"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@id/button" />
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:id="@+id/datePicker1"
+                android:datePickerMode="spinner"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentEnd="true"
+                android:layout_height="200dp" />
 
             <TextView
                 android:layout_width="115dp"
                 android:layout_height="30dp"
                 android:background="#fff"
                 android:clickable="false"
-                android:text="Date Range:"
+                android:text="@string/to_field_date"
                 android:textSize="20sp"
                 android:textAlignment="gravity"
                 android:id="@+id/textView5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="50dp"
-                android:layout_below="@+id/calendar" />
+                android:layout_below="@+id/datePicker1"
+                android:layout_alignStart="@+id/datePicker1" />
 
             <DatePicker
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/datePicker"
-                android:layout_above="@+id/button"
-                android:layout_alignEnd="@+id/textView" />
-
-            <DatePicker
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:id="@+id/datePicker2"
-                android:layout_marginEnd="34dp"
-                android:layout_above="@+id/button"
-                android:layout_alignEnd="@+id/calendar" />
+                android:datePickerMode="spinner"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
 
-            <TextView
-                android:layout_width="25dp"
-                android:layout_height="20dp"
-                android:background="#fff"
-                android:clickable="false"
-                android:text="To"
-                android:textSize="20sp"
-                android:textAlignment="gravity"
-                android:id="@+id/textView6"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_below="@+id/textView5"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="18dp" />
-
-            <Button
-                android:background="@android:drawable/toast_frame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search"
-                android:id="@+id/button"
-                android:layout_below="@+id/textView6"
-                android:layout_alignEnd="@+id/calendar"
-                android:layout_marginTop="45dp" />
 
         </RelativeLayout>
 

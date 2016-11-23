@@ -10,6 +10,7 @@ import java.util.List;
 public class TourDto {
     private int id;
     private String title;
+    private String description;
     private int maxReservations;
     private float pricePerReservation;
     private boolean status;
@@ -20,6 +21,14 @@ public class TourDto {
 
     private List<ReservationDto> reservations;
     private List<RatingDto> ratings;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public int getId() {
         return id;

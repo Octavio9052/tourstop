@@ -1,6 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.models;
 
 import android.databinding.ObservableBoolean;
+import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 
 import java.util.Date;
@@ -11,28 +12,12 @@ import java.util.Date;
 
 public class ReservationModel extends BaseModel {
     private ObservableInt id;
-    private String name;
+    private ObservableField<String> name;
     private Date dateCreated;
     private ObservableInt userId;
     private ObservableInt tourId;
     private ObservableInt orderId;
     private ObservableBoolean status;
-
-    public ObservableInt getId() {
-        return id;
-    }
-
-    public void setId(ObservableInt id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Date getDateCreated() {
         return dateCreated;
@@ -42,35 +27,69 @@ public class ReservationModel extends BaseModel {
         this.dateCreated = dateCreated;
     }
 
-    public ObservableInt getUserId() {
-        return userId;
+    public int getInt(){
+        return id.get();
     }
 
-    public void setUserId(ObservableInt userId) {
-        this.userId = userId;
+    public void setId(int id) {
+        if (this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
     }
 
-    public ObservableInt getTourId() {
-        return tourId;
+    public String getName(){
+        return name.get();
     }
 
-    public void setTourId(ObservableInt tourId) {
-        this.tourId = tourId;
+    public void setName(String name){
+        if(this.name == null)
+            this.name = new ObservableField<>(name);
+        else
+            this.name.set(name);
     }
 
-    public ObservableInt getOrderId() {
-        return orderId;
+    public int getUserId(){
+        return id.get();
     }
 
-    public void setOrderId(ObservableInt orderId) {
-        this.orderId = orderId;
+    public void setUserId(int userId){
+        if(this.userId == null)
+            this.userId = new ObservableInt(userId);
+        else
+            this.userId.set(userId);
     }
 
-    public ObservableBoolean getStatus() {
-        return status;
+    public int getTourId(){
+        return tourId.get();
     }
 
-    public void setStatus(ObservableBoolean status) {
-        this.status = status;
+    public void setTourId(int tourId){
+        if(this.tourId == null)
+            this.tourId = new ObservableInt(tourId);
+        else
+            this.tourId.set(tourId);
+    }
+
+    public int getOrderId(){
+        return orderId.get();
+    }
+
+    public void setOrderId(int orderId){
+        if(this.orderId == null)
+            this.orderId = new ObservableInt(orderId);
+        else
+            this.orderId.set(orderId);
+    }
+
+    public boolean getStatus(){
+        return status.get();
+    }
+
+    public void setStatus(boolean status){
+        if(this.status == null)
+            this.status = new ObservableBoolean(status);
+        else
+            this.status.set(status);
     }
 }

@@ -2,6 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.models;
 
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableBoolean;
+import android.databinding.ObservableField;
 import android.databinding.ObservableFloat;
 import android.databinding.ObservableInt;
 
@@ -13,7 +14,7 @@ import java.util.Date;
 
 public class TourModel extends BaseModel {
     private ObservableInt id;
-    private String title;
+    private ObservableField<String> title;
     private ObservableInt maxReservations;
     private ObservableFloat pricePerReservation;
     private ObservableBoolean status;
@@ -21,56 +22,97 @@ public class TourModel extends BaseModel {
     private Date dateCreated;
     private ObservableInt promotionId;
     private ObservableInt userId;
+    private ObservableField<String> description;
 
     private ObservableArrayList<ReservationModel> reservations;
     private ObservableArrayList<RatingModel> ratings;
 
-    public ObservableInt getId() {
-        return id;
+    public void setDescription(String description){
+        if(this.description == null)
+            this.description = new ObservableField<>(description);
+        else
+            this.description.set(description);
     }
 
-    public void setId(ObservableInt id) {
-        this.id = id;
+    public String getDescription(){
+        return description.get();
     }
 
-    public String getTitle() {
-        return title;
+    public void setId(int id){
+        if(this.id == null)
+            this.id = new ObservableInt(id);
+        else
+            this.id.set(id);
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int getId(){
+        return id.get();
     }
 
-    public ObservableInt getMaxReservations() {
-        return maxReservations;
+    public void setTitle(String title){
+        if(this.title == null)
+            this.title = new ObservableField<>(title);
+        else
+            this.title.set(title);
     }
 
-    public void setMaxReservations(ObservableInt maxReservations) {
-        this.maxReservations = maxReservations;
+    public String getTitle(){
+        return title.get();
     }
 
-    public ObservableFloat getPricePerReservation() {
-        return pricePerReservation;
+    public void setMaxReservations(int maxReservations){
+        if(this.maxReservations == null)
+            this.maxReservations = new ObservableInt(maxReservations);
+        else
+            this.maxReservations.set(maxReservations);
     }
 
-    public void setPricePerReservation(ObservableFloat pricePerReservation) {
-        this.pricePerReservation = pricePerReservation;
+    public int getMaxReservations(){
+        return maxReservations.get();
     }
 
-    public ObservableBoolean getStatus() {
-        return status;
+    public void setPricePerReservation(float pricePerReservation){
+        if(this.pricePerReservation == null)
+            this.pricePerReservation = new ObservableFloat(pricePerReservation);
+        else
+            this.pricePerReservation.set(pricePerReservation);
     }
 
-    public void setStatus(ObservableBoolean status) {
-        this.status = status;
+    public float getPricePerReservation(){
+        return pricePerReservation.get();
     }
 
-    public Date getDateModified() {
-        return dateModified;
+    public void setStatus(boolean status){
+        if(this.status == null)
+            this.status = new ObservableBoolean(status);
+        else
+            this.status.set(status);
     }
 
-    public void setDateModified(Date dateModified) {
-        this.dateModified = dateModified;
+    public boolean getStatus(){
+        return status.get();
+    }
+
+    public void setPromotionId(int promotionId){
+        if(this.promotionId == null)
+            this.promotionId = new ObservableInt(promotionId);
+        else
+            this.promotionId.set(promotionId);
+    }
+
+    public int getPromotionId(){
+        return promotionId.get();
+    }
+
+    public void setUserId(int userId){
+        if(this.userId == null)
+            this.userId = new ObservableInt(userId);
+        else
+            this.userId.set(userId);
+    }
+
+    public int getUserId(){
+        return userId.get();
     }
 
     public Date getDateCreated() {
@@ -81,20 +123,22 @@ public class TourModel extends BaseModel {
         this.dateCreated = dateCreated;
     }
 
-    public ObservableInt getPromotionId() {
-        return promotionId;
+    public Date getDateModified() {
+        return dateModified;
     }
 
-    public void setPromotionId(ObservableInt promotionId) {
-        this.promotionId = promotionId;
+    public void setDateModified(Date dateModified) {
+        this.dateModified = dateModified;
     }
 
-    public ObservableInt getUserId() {
-        return userId;
+    //
+
+    public ObservableArrayList<RatingModel> getRatings() {
+        return ratings;
     }
 
-    public void setUserId(ObservableInt userId) {
-        this.userId = userId;
+    public void setRatings(ObservableArrayList<RatingModel> ratings) {
+        this.ratings = ratings;
     }
 
     public ObservableArrayList<ReservationModel> getReservations() {
@@ -103,13 +147,5 @@ public class TourModel extends BaseModel {
 
     public void setReservations(ObservableArrayList<ReservationModel> reservations) {
         this.reservations = reservations;
-    }
-
-    public ObservableArrayList<RatingModel> getRatings() {
-        return ratings;
-    }
-
-    public void setRatings(ObservableArrayList<RatingModel> ratings) {
-        this.ratings = ratings;
     }
 }
