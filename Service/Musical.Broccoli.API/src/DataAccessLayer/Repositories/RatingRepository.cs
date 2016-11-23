@@ -4,14 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessLayer.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories
 {
     public class RatingRepository : BaseRepository<Rating>, IRatingRepository
     {
-        public RatingRepository():base()
+        public RatingRepository(TourStopContext context) : base(context)
         {
-
         }
     }
 }

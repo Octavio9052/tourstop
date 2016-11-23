@@ -31,8 +31,8 @@ namespace Testing
             };
             var connectionString = @"server=localhost;userid=root;pwd=3585;port=3306;database=DBTourStop;";
             Common.AppSettings.AppSettings.ConnectionString = connectionString;
-            var userRepo = new UserRepository();
-            userRepo.Add(user);
+
+
 
             Console.WriteLine("Paso");
             Console.ReadLine();

@@ -4,14 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessLayer.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories
 {
     public class CheckPointRepository : BaseRepository<CheckPoint>, ICheckPointRepository
     {
-        public CheckPointRepository():base()
+        public CheckPointRepository(TourStopContext context) : base(context)
         {
-
         }
     }
 }

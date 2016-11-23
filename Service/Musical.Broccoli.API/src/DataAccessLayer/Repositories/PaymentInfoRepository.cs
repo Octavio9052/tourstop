@@ -4,14 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessLayer.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories
 {
     public class PaymentInfoRepository : BaseRepository<PaymentInfo>, IPaymentInfoRepository 
     {
-        public PaymentInfoRepository() : base()
+        public PaymentInfoRepository(TourStopContext context) : base(context)
         {
-
         }
     }
 }

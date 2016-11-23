@@ -1,8 +1,12 @@
-﻿using Business.Connectors;
+﻿using System.Security.Cryptography.X509Certificates;
+using AutoMapper;
+using Business.Connectors;
+using Business.Connectors.Helpers;
 using Business.Contracts;
 using Business.Handlers.Handlers;
 using Business.Handlers.Handlers.contracts;
 using Common.AppSettings;
+using DataAccessLayer.Context;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
@@ -10,11 +14,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MySQL.Data.EntityFrameworkCore.Extensions;
 
 namespace Musical.Broccoli.API
 {
     public class Startup
     {
+        private readonly MapperConfiguration _mapperConfiguration;
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -31,6 +38,7 @@ namespace Musical.Broccoli.API
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
 
+            _mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -44,6 +52,7 @@ namespace Musical.Broccoli.API
             services.AddMvc();
 
             #region Dependency Injection
+
             //RequestHandlers
             services.AddScoped<IMessageRequestHandler, MessageRequestHandler>();
             services.AddScoped<IOrderRequestHandler, OrderRequestHandler>();
@@ -54,7 +63,7 @@ namespace Musical.Broccoli.API
             services.AddTransient<IAddressConnector, AddressConnector>();
             services.AddTransient<ICheckPointConnector, CheckPointConnector>();
             services.AddTransient<IMessageConnector, MessageConnector>();
-            services.AddTransient<IMovementConnector,MovementConnector>();
+            services.AddTransient<IMovementConnector, MovementConnector>();
             services.AddTransient<IOrderConnector, OrderConnector>();
             services.AddTransient<IPaymentInfoConnector, PaymentInfoConnector>();
             services.AddTransient<IRatingConnector, RatingConnector>();
@@ -62,18 +71,26 @@ namespace Musical.Broccoli.API
             services.AddTransient<IUserConnector, UserConnector>();
 
             //Repositories
-            services.AddScoped<IAddressRepository, AddressRepository>();
-            services.AddScoped<ICheckPointRepository, CheckPointRepository>();
-            services.AddScoped<IMessageRepository, MessageRepository>();
-            services.AddScoped<IMovementRepository, MovementRepository>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
-            services.AddScoped<IPaymentInfoRepository, PaymentInfoRepository>();
-            services.AddScoped<IRatingRepository, RatingRepository>();
-            services.AddScoped<ITourRepository, TourRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddSingleton<IAddressRepository, AddressRepository>();
+            services.AddSingleton<ICheckPointRepository, CheckPointRepository>();
+            services.AddSingleton<IMessageRepository, MessageRepository>();
+            services.AddSingleton<IMovementRepository, MovementRepository>();
+            services.AddSingleton<IOrderRepository, OrderRepository>();
+            services.AddSingleton<IPaymentInfoRepository, PaymentInfoRepository>();
+            services.AddSingleton<IPromotionRepository, PromotionRepository>();
+            services.AddSingleton<IReservationRepository, ReservationRepository>();
+            services.AddSingleton<IRatingRepository, RatingRepository>();
+            services.AddSingleton<ISessionRepository, SessionRepository>();
+            services.AddSingleton<ITourRepository, TourRepository>();
+            services.AddSingleton<IUserRepository, UserRepository>();
+
+            //AutoMapper
+            services.AddSingleton(x => _mapperConfiguration.CreateMapper());
+
             #endregion
 
-            AppSettings.ConnectionString = Configuration.GetConnectionString("TourStopDB");
+            var connectionString = @"server=localhost;userid=root;pwd=3585;port=3306;database=DBTourStop2;";
+            services.AddDbContext<TourStopContext>(options => options.UseMySQL(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

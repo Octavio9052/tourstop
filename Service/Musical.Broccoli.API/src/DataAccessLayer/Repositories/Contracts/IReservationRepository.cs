@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
-    interface IReservationRepository : IBaseRepository<Reservation>
+    public interface IReservationRepository : IBaseRepository<Reservation>
     {
     }
 }
