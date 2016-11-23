@@ -2,80 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd10812e-26ae-4f65-b606-51d1c0407007" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/Repositories/AddressRepository_Tests.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/Repositories/Repository_Tests.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/Tests.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/project.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/project.lock.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/Business.Test.xproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/Business.Test.xproj.user" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/Class1.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/Properties/AssemblyInfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/obj/Debug/netstandard1.6/.IncrementalCache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/obj/Debug/netstandard1.6/.SDKVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/obj/Debug/netstandard1.6/dotnet-compile.assemblyinfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/project.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Business.Test/project.lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/DAL.Test.xproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/DAL.Test.xproj.user" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/Program.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/Properties/AssemblyInfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/obj/Debug/netcoreapp1.0/.SDKVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/obj/Debug/netcoreapp1.0/dotnet-compile.assemblyinfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/project.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DAL.Test/project.lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/DataAccessLayer.UnitTesting.csproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/Properties/AssemblyInfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/UnitTest1.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/DataAccessLayer.UnitTesting.csproj.FileListAbsolute.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/DataAccessLayer.UnitTesting.csprojResolveAssemblyReference.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/DataAccessLayer.UnitTesting.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/DataAccessLayer.UnitTesting.pdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DataAccessLayer.UnitTesting/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/Controllers/ValuesController.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/Program.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/Project_Readme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/Properties/launchSettings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/Startup.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/TestApi.xproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/TestApi.xproj.user" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/appsettings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/obj/Debug/netcoreapp1.0/.SDKVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/obj/Debug/netcoreapp1.0/TestApidotnet-compile.deps.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/obj/Debug/netcoreapp1.0/dotnet-compile.assemblyinfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/project.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/project.lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../TestApi/web.config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/Program.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/Properties/AssemblyInfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/Testing.xproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/Testing.xproj.user" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/obj/Debug/netcoreapp1.0/.SDKVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/obj/Debug/netcoreapp1.0/dotnet-compile.assemblyinfo.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/project.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Testing/project.lock.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/project.lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Musical.Broccoli.API.sln" afterPath="$PROJECT_DIR$/../../Musical.Broccoli.API.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/project.json" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/project.lock.json" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/appsettings.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/appsettings.json" />
     </list>
     <ignored path="Musical.Broccoli.API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,38 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Repository_Tests.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/Repositories/Repository_Tests.cs">
+      <file leaf-file-name="Tests.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../test/TourStop.API.Tests/Tests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-              <folding>
-                <marker date="1479899301314" expanded="false" signature="6:368" ph="..." />
-                <marker date="1479899301314" expanded="true" signature="409:7318" ph="{...}" />
-                <marker date="1479899301314" expanded="true" signature="445:7316" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="544:801" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="853:1645" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="908:1515" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="1086:1333" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="1700:2576" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="1755:2365" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="1936:2183" ph="{...}" />
-                <marker date="1479899301314" expanded="true" signature="2640:4364" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="2782:4240" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="2825:3504" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="3027:3302" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="3547:4226" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="3749:4024" ph="{...}" />
-                <marker date="1479899301314" expanded="true" signature="4419:4814" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="4886:7310" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="4948:7104" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="4991:5662" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="5185:5460" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="5705:6376" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="5899:6174" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="6419:7090" ph="{...}" />
-                <marker date="1479899301314" expanded="false" signature="6613:6888" ph="{...}" />
-              </folding>
+            <state relative-caret-position="160">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -221,7 +124,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (7 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -235,29 +138,15 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (7 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (7 projects)" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataAccessLayer" />
+              <option name="myItemId" value="DataAccess.Tests" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,7 +156,25 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (7 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business.Handlers.Tests" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +238,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8356000" />
+    <option name="totallyTimeSpent" value="8604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,28 +251,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1360" height="768" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5029412" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.4970588" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48161766" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -402,14 +309,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IUserRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/517C39DA-87FC-4079-B42C-A18DB5614B72/e8/f3e7f3b4/ServiceCollectionServiceExtensions.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -925,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/Repositories/Repository_Tests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+        <state relative-caret-position="432">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
             <marker date="1479899301314" expanded="false" signature="6:368" ph="..." />
             <marker date="1479899301314" expanded="true" signature="409:7318" ph="{...}" />
@@ -954,6 +853,30 @@
             <marker date="1479899301314" expanded="false" signature="6419:7090" ph="{...}" />
             <marker date="1479899301314" expanded="false" signature="6613:6888" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/TourStop.API.Tests/Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
