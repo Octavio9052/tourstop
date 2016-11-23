@@ -9,6 +9,7 @@ import dagger.Subcomponent;
 /**
  * Created by Octavio on 2016/11/22.
  */
+
 @ActivityScope
 @Subcomponent(modules = ChangePasswordActivityModule.class)
 public interface ChangePasswordActivitySubcomponent {

@@ -4,18 +4,20 @@ import android.databinding.DataBindingUtil;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.UserProfileActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.UserProfileViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserProfileActivity;
 
 import javax.inject.Inject;
 
+import dagger.Module;
 import dagger.Provides;
 
 /**
  * Created by Octavio on 2016/11/22.
  */
-
+@Module
 public class UserProfileActivityModule {
     private UserProfileActivity activity;
 
@@ -23,20 +25,20 @@ public class UserProfileActivityModule {
         this.activity = activity;
     }
 
+    @ActivityScope
     @Provides
-    @Inject
     UserProfileActivity providesUserProfileActivity(){
         return this.activity;
     }
 
+    @ActivityScope
     @Provides
-    @Inject
     UserProfileViewModel providesUserProfileViewModel(){
         return new UserProfileViewModelImpl(this.activity);
     }
 
+    @ActivityScope
     @Provides
-    @Inject
     UserProfileActivityBinding providesUserProfileActivityBinding(){
         return DataBindingUtil.setContentView(this.activity, R.layout.user_profile_activity);
     }
