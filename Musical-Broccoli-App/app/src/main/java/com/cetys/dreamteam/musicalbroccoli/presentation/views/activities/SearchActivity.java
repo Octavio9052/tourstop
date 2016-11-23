@@ -50,11 +50,11 @@ public class SearchActivity extends Activity {
         //sets the listener to be notified upon selected date change.
         calendar.setOnDateChangeListener(new OnDateChangeListener() {
 
-        //show the selected date as a toast
-        @Override
+            //show the selected date as a toast
+            @Override
 
-        public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-            Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
+                Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
             }
         });
     }
