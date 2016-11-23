@@ -1,4 +1,4 @@
-package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activityModules;
+package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
 
 import android.databinding.DataBindingUtil;
 
@@ -8,8 +8,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.sc
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.EditUserViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
-
-import javax.inject.Inject;
 
 import dagger.Module;
 import dagger.Provides;
