@@ -5,7 +5,6 @@
     <item name="blue" type="color">#3366ff</item>
     <item name="darkblue" type="color">#003399</item>
     <item name="lightblue" type="color">#66d9ff</item>
-
     <item name="colorPrimary" type="color">#3F51B5</item>
     <item name="colorAccent" type="color">#303F9F</item>
     <item name="colorPrimaryDark" type="color">#FF4081</item>
