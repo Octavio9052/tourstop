@@ -89,8 +89,8 @@ namespace Musical.Broccoli.API
 
             #endregion
 
-            var connectionString = @"server=localhost;userid=root;pwd=3585;port=3306;database=DBTourStop2;";
-            services.AddDbContext<TourStopContext>(options => options.UseMySQL(connectionString));
+            services.AddDbContext<TourStopContext>(
+                options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
