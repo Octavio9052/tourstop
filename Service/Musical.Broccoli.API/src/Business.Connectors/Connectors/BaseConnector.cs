@@ -58,6 +58,7 @@ namespace Business.Connectors
             }
             catch(Exception ex)
             {
+                businessResponse.Exceptions = new List<Exception>();
                 businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
                 businessResponse.IsSuccessful = false;
             }
@@ -75,6 +76,7 @@ namespace Business.Connectors
             }
             catch (Exception ex)
             {
+                businessResponse.Exceptions = new List<Exception>();
                 businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
                 businessResponse.IsSuccessful = false;
             }
@@ -92,6 +94,7 @@ namespace Business.Connectors
             }
             catch (Exception ex)
             {
+                businessResponse.Exceptions = new List<Exception>();
                 businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
                 businessResponse.IsSuccessful = false;
             }
@@ -109,6 +112,7 @@ namespace Business.Connectors
             }
             catch (Exception ex)
             {
+                businessResponse.Exceptions = new List<Exception>();
                 businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
                 businessResponse.IsSuccessful = false;
             }
