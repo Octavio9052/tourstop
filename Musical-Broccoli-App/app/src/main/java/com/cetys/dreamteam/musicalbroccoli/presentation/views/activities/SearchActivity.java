@@ -75,7 +75,7 @@ public class SearchActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getUserSubcomponent()
+        TourStopApplication.get( this ).getAppComponent()
                 .plus( new SearchActivityModule( this ) ).inject( this );
     }
 

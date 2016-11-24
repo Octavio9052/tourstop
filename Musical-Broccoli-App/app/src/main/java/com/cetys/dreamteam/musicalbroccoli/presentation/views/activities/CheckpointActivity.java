@@ -28,7 +28,7 @@ public class CheckpointActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getUserSubcomponent()
+        TourStopApplication.get( this ).getAppComponent()
                 .plus( new CheckpointActivityModule( this ) ).inject( this );
     }
 
