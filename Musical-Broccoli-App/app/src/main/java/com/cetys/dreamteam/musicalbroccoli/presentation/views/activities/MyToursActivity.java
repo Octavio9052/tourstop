@@ -28,7 +28,7 @@ public class MyToursActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getUserSubcomponent()
+        TourStopApplication.get( this ).getAppComponent()
                 .plus( new MyToursActivityModule( this ) ).inject( this );
     }
 

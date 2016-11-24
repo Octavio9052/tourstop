@@ -31,8 +31,7 @@ public class CardPaymentActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getUserSubcomponent()
-                .plus( new CardPaymentActivityModule( this ) ).inject( this );
+        TourStopApplication.get(this).getAppComponent().plus(new CardPaymentActivityModule(this)).inject(this);
     }
 
     @Override
