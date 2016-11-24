@@ -45,7 +45,7 @@ namespace Business.Connectors
     {
         public override bool Validate(BusinessPetition<PaymentInfoDTO> petition)
         {
-            return true;
+            return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id)) || (String.IsNullOrEmpty(petition.FilterString));
         }
     }
     internal sealed class PaymentInfoGetValidation : PetitionValidation<PaymentInfoDTO>

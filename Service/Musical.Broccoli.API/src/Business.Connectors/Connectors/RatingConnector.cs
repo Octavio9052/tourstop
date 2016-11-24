@@ -8,6 +8,7 @@ using Business.Controllers.Petition;
 using Business.Controllers.PetitionValidators;
 using Business.Controllers.Response;
 using System.Security.Authentication;
+using System.Linq;
 
 namespace Business.Connectors
 {
@@ -42,8 +43,8 @@ namespace Business.Connectors
         {
             public override bool Validate(BusinessPetition<RatingDTO> petition)
             {
-                return true;
-            }
+                return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id)) || (String.IsNullOrEmpty(petition.FilterString));
+        }
         }
         internal sealed class RatingGetValidation : PetitionValidation<RatingDTO>
         {
