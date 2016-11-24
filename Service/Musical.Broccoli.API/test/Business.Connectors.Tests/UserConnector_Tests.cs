@@ -3,6 +3,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Security.Authentication;
 using AutoMapper;
 using Business.Connectors.Helpers;
+using Business.Connectors.Petition;
 using Business.Contracts;
 using Business.Controllers.Petition;
 using Common.DTOs;
@@ -223,10 +224,7 @@ namespace Business.Connectors.Tests
             var petition = new BusinessPetition<UserDTO>
             {
                 Action = PetitionAction.Delete,
-                FilterStrings = new List<string>
-                {
-                    "phone = 6461235896"
-                }
+                FilterString = "phone = 6461235896"
             };
 
             Assert.Throws<AuthenticationException>(() => _connector.Processors[petition.Action](petition));
@@ -238,10 +236,7 @@ namespace Business.Connectors.Tests
             var petition = new BusinessPetition<UserDTO>
             {
                 Action = PetitionAction.Get,
-                FilterStrings = new List<string>
-                {
-                    "email = foo1@bar.com"
-                },
+                FilterString = "email = foo1@bar.com",
                 RequestingUser = new UserDTO
                 {
                     Id = 1

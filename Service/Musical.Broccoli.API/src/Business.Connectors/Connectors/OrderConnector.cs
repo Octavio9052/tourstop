@@ -10,6 +10,7 @@ using Business.Contracts;
 using Business.Controllers.Petition;
 using Business.Controllers.PetitionValidators;
 using System.Security.Authentication;
+using Business.Connectors.Petition;
 using Business.Controllers.Response;
 
 namespace Business.Connectors

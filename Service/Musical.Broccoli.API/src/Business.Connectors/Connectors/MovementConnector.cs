@@ -9,6 +9,7 @@ using Business.Controllers.Response;
 using System.Security.Authentication;
 using Business.Controllers.PetitionValidators;
 using System.Linq;
+using Business.Connectors.Petition;
 
 namespace Business.Connectors
 {

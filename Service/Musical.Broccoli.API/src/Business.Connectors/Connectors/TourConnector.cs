@@ -12,6 +12,7 @@ using Business.Controllers.Petition;
 using Business.Controllers.PetitionValidators;
 using Business.Controllers.Response;
 using System.Security.Authentication;
+using Business.Connectors.Petition;
 
 namespace Business.Connectors
 {

@@ -7,6 +7,7 @@ using Business.Controllers.Petition;
 using System;
 using Business.Controllers.Response;
 using System.Security.Authentication;
+using Business.Connectors.Petition;
 using Business.Controllers.PetitionValidators;
 
 namespace Business.Connectors

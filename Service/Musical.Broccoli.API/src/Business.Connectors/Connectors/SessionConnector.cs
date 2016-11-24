@@ -11,6 +11,7 @@ using Business.Contracts;
 using Business.Controllers.Response;
 using Business.Controllers.PetitionValidators;
 using System.Security.Authentication;
+using Business.Connectors.Petition;
 
 namespace Business.Connectors
 {

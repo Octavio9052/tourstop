@@ -11,6 +11,7 @@ using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Controllers.Petition;
 using System.Security.Authentication;
+using Business.Connectors.Petition;
 using Business.Controllers.PetitionValidators;
 using Business.Controllers.Response;
 
