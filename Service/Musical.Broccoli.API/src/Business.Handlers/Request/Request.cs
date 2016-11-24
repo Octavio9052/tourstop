@@ -13,12 +13,10 @@ namespace Business.Handlers.Request
 
         public static explicit operator BusinessPetition<TDto>( Request<TDto> request )
         {
-
             return new BusinessPetition<TDto>()
             {
                 Data = request.Data,
-                request.Filters.ForEach(x => FilterString += x.ExpressionString)
-
+                FilterStrings = request.Filters.Select( x => x.ExpressionString ).ToList()
             };
 
         }

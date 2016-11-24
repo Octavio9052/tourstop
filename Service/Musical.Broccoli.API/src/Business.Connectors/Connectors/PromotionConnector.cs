@@ -46,7 +46,7 @@ namespace Business.Connectors
         {
             public override bool Validate(BusinessPetition<PromotionDTO> petition)
             {
-                return (petition.Data != null && petition.Data.All(x => x.Id == petition.RequestingUser.Id)) || (String.IsNullOrEmpty(petition.FilterString.ToString())); ;
+                return true;
             }
         }
         internal sealed class PromotionGetValidation : PetitionValidation<PromotionDTO>

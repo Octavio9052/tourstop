@@ -52,13 +52,15 @@ namespace Business.Connectors
             var businessResponse = new BusinessResponse<TDto>();
            try
             {
-                var data = _repository.GetQueryable().Where(petition.FilterString);
+                var data = _repository.GetQueryable().Where(petition.FilterStrings.ToString());
                 businessResponse.Data=_mapper.Map<List<TDto>>(data);
                 businessResponse.IsSuccessful = true;
             }
             catch(Exception ex)
             {
-                SetException(businessResponse, ex);
+                businessResponse.Exceptions = new List<Exception>();
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
             }
             return businessResponse;
         }
@@ -74,7 +76,9 @@ namespace Business.Connectors
             }
             catch (Exception ex)
             {
-                SetException(businessResponse, ex);
+                businessResponse.Exceptions = new List<Exception>();
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
             }
             return businessResponse;
         }
@@ -84,14 +88,15 @@ namespace Business.Connectors
             var businessResponse = new BusinessResponse<TDto>();
             try
             {
-
-                var data = getData(petition);
+                var data = _mapper.Map<List<TEntity>>(petition.Data);
                 _repository.Update(data);
                 businessResponse.IsSuccessful = true;
             }
             catch (Exception ex)
             {
-                SetException(businessResponse, ex);
+                businessResponse.Exceptions = new List<Exception>();
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
             }
             return businessResponse;
         }
@@ -101,36 +106,18 @@ namespace Business.Connectors
             var businessResponse = new BusinessResponse<TDto>();
             try
             {
-                var data = getData(petition);
+                var data = _mapper.Map<List<TEntity>>(petition.Data);
                 _repository.Remove(data);
                 businessResponse.IsSuccessful = true;
             }
             catch (Exception ex)
             {
-                SetException(businessResponse, ex);
+                businessResponse.Exceptions = new List<Exception>();
+                businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
+                businessResponse.IsSuccessful = false;
             }
             return businessResponse;
         }
-
-        private ICollection<TEntity> getData(BusinessPetition<TDto> petition)
-        {
-            if (petition.Data != null)
-            {
-                return _mapper.Map<List<TEntity>>(petition.Data);
-            }
-            else
-            {
-                return _repository.GetQueryable().Where(petition.FilterString).ToDynamicList<TEntity>();
-            }
-        }
-
-        private static void SetException(BusinessResponse<TDto> businessResponse, Exception ex)
-        {
-            businessResponse.Exceptions = new List<Exception>();
-            businessResponse.Exceptions.Add(new InternalServerException(ex.Message));
-            businessResponse.IsSuccessful = false;
-        }
-
         #endregion
 
         #region Validation Methods
