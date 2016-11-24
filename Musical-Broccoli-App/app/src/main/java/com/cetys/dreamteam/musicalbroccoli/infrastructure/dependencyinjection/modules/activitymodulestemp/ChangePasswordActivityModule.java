@@ -1,4 +1,4 @@
-package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules;
+package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp;
 
 import android.databinding.DataBindingUtil;
 
@@ -8,8 +8,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.sc
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.ChangePasswordViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.ChangePasswordViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
-
-import javax.inject.Inject;
 
 import dagger.Module;
 import dagger.Provides;
