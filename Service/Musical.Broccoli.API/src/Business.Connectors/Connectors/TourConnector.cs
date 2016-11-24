@@ -46,8 +46,8 @@ internal sealed class DeleteAndUpdateTourValidation : PetitionValidation<TourDTO
 {
     public override bool Validate(BusinessPetition<TourDTO> petition)
     {
-        return petition.Data.All(x => x.User.Id == petition.RequestingUser.Id);
-    }
+        return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id)) || (String.IsNullOrEmpty(petition.FilterString));
+        }
 }
 internal sealed class GetTourValidation : PetitionValidation<TourDTO>
 {
