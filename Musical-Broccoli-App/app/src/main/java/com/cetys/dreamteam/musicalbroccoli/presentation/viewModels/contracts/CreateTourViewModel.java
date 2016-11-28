@@ -1,5 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
+import android.view.View;
+
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 
 /**
@@ -8,5 +10,8 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 
 public interface CreateTourViewModel {
     TourModel getTour();
-    void setTour(TourModel tour);
+
+    void setTour( TourModel tour );
+
+    void onSaveClick( View view );
 }

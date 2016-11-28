@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Octavio on 2016/10/24.
  */
 
-public class TourDto {
+public class TourDto extends BaseDto {
     private int id;
     private String title;
     private String description;

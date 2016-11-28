@@ -13,9 +13,13 @@ promoter name =
 enter requirements = -->
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    >
+
     <data>
-        <variable name="viewModel" type="com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel"/>
+
+        <variable
+            name="viewModel"
+            type="com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel"/>
     </data>
 
     <ScrollView
@@ -28,10 +32,10 @@ enter requirements = -->
 
             <!-- Tour Banner -->
             <ImageView
-                android:contentDescription="@string/cta_header_description"
                 android:id="@+id/header_cover_image"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:contentDescription="@string/cta_header_description"
                 android:scaleType="centerCrop"
                 android:src="@drawable/newtourcover"/>
 
@@ -47,7 +51,7 @@ enter requirements = -->
                 android:elevation="5dp"
                 android:padding="20dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/logotourstop" />
+                android:src="@drawable/logotourstop"/>
             <!-- End Tour Banner -->
 
             <RelativeLayout
@@ -69,7 +73,7 @@ enter requirements = -->
                     android:text="@string/action_create_new_tour"
                     android:textColor="#fff"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
             </RelativeLayout>
 
@@ -82,227 +86,227 @@ enter requirements = -->
 
 
                 <TextView
+                    android:id="@+id/firstName_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_name"
-                    android:id="@+id/firstName_textView"
-                    android:textSize="20sp"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:text="@string/field_name"
+                    android:textSize="20sp"/>
 
                 <!-- Name of tour -->
                 <EditText
+                    android:id="@+id/firstName_editText"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_enter_name"
-                    android:text="@{viewModel.tour.title}"
-                    android:id="@+id/firstName_editText"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/firstName_textView"
                     android:layout_alignStart="@+id/firstName_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/firstName_textView"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_enter_name"
+                    android:text="@{viewModel.tour.title}"/>
 
                 <TextView
+                    android:id="@+id/email_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_price"
-                    android:id="@+id/email_textView"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/firstName_editText"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/firstName_editText"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_price"
+                    android:textSize="20sp"/>
 
                 <!-- Price of tour (per Reservation)-->
                 <EditText
+                    android:id="@+id/email_editText"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_price"
-                    android:text="@{Float.toString(viewModel.tour.pricePerReservation)}"
-                    android:id="@+id/email_editText"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/email_textView"
                     android:layout_alignStart="@+id/email_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/email_textView"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_price"
+                    android:text="@{Float.toString(viewModel.tour.pricePerReservation)}"/>
 
                 <TextView
+                    android:id="@+id/phone_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_destination"
-                    android:id="@+id/phone_textView"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/email_editText"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/email_editText"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_destination"
+                    android:textSize="20sp"/>
 
                 <!-- Destination of tour -->
                 <EditText
+                    android:id="@+id/editText4"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_destination"
-                    android:id="@+id/editText4"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/phone_textView"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/phone_textView"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_destination"/>
 
                 <TextView
+                    android:id="@+id/changePassword_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_stops"
-                    android:id="@+id/changePassword_textView"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText4"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/editText4"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_stops"
+                    android:textSize="20sp"/>
 
                 <!-- Stops? of tour -->
                 <EditText
+                    android:id="@+id/editText5"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_stops"
-                    android:id="@+id/editText5"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/changePassword_textView"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/changePassword_textView"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_stops"/>
 
                 <TextView
+                    android:id="@+id/changePayment_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_description"
-                    android:id="@+id/changePayment_textView"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText5"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/editText5"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_description"
+                    android:textSize="20sp"/>
 
                 <!-- Description? of tour -->
                 <EditText
+                    android:id="@+id/editText6"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_description"
-                    android:id="@+id/editText6"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/changePayment_textView"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/changePayment_textView"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_description"/>
 
                 <TextView
+                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_max_seats"
-                    android:id="@+id/textView12"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText6"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/editText6"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_max_seats"
+                    android:textSize="20sp"/>
 
                 <!-- Seats available for the tour -->
                 <EditText
+                    android:id="@+id/editText7"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_max_seats"
-                    android:text="@{viewModel.tour.maxReservations}"
-                    android:id="@+id/editText7"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/textView12"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/textView12"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_max_seats"
+                    android:text="@{viewModel.tour.maxReservations}"/>
 
                 <TextView
+                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_promotion"
-                    android:id="@+id/textView13"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText7"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/editText7"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_promotion"
+                    android:textSize="20sp"/>
 
                 <!-- Promotions of tour -->
                 <EditText
+                    android:id="@+id/editText8"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_promotion"
-                    android:id="@+id/editText8"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/textView13"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/textView13"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_promotion"/>
 
                 <TextView
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_promoter_name"
-                    android:id="@+id/textView14"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText8"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/editText8"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_promoter_name"
+                    android:textSize="20sp"/>
 
                 <!-- Promoter name of tour -->
                 <EditText
+                    android:id="@+id/editText9"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_promoter_name"
-                    android:id="@+id/editText9"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/textView14"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/textView14"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_promoter_name"/>
 
                 <TextView
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/field_requirements"
-                    android:id="@+id/textView15"
-                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editText9"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
-                    android:layout_below="@+id/editText9"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/field_requirements"
+                    android:textSize="20sp"/>
 
                 <!-- Requirements? of tour -->
                 <EditText
+                    android:id="@+id/editText10"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
-                    android:hint="@string/hint_requirements"
-                    android:id="@+id/editText10"
-                    android:background="@drawable/textfields"
-                    android:layout_below="@+id/textView15"
                     android:layout_alignStart="@+id/phone_textView"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/textView15"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textfields"
+                    android:hint="@string/hint_requirements"/>
 
                 <Button
-                    android:background="@android:drawable/toast_frame"
+                    android:id="@+id/saveChanges_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/action_create_new_tour"
-                    android:id="@+id/saveChanges_button"
-                    android:onClick="doTemporalToastThing"
-                    android:layout_marginTop="50dp"
+                    android:layout_alignEnd="@+id/editText10"
                     android:layout_below="@+id/editText10"
-                    android:layout_alignEnd="@+id/editText10" />
+                    android:layout_marginTop="50dp"
+                    android:background="@android:drawable/toast_frame"
+                    android:onClick="@{viewModel.onSaveClick}"
+                    android:text="@string/action_create_new_tour"/>
 
                 <TextView
+                    android:id="@+id/textView16"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/statement_mandatory"
-                    android:id="@+id/textView16"
-                    android:textSize="12sp"
-                    android:textAlignment="center"
-                    android:layout_marginTop="6dp"
+                    android:layout_alignEnd="@+id/textView13"
                     android:layout_alignTop="@+id/saveChanges_button"
-                    android:layout_alignEnd="@+id/textView13" />
+                    android:layout_marginTop="6dp"
+                    android:text="@string/statement_mandatory"
+                    android:textAlignment="center"
+                    android:textSize="12sp"/>
 
             </RelativeLayout>
 
