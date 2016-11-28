@@ -6,120 +6,141 @@ import android.databinding.ObservableField;
 import android.databinding.ObservableFloat;
 import android.databinding.ObservableInt;
 
+import com.cetys.dreamteam.musicalbroccoli.commons.dtos.TourDto;
+import com.mobandme.android.transformer.compiler.Mappable;
+import com.mobandme.android.transformer.compiler.Mapped;
+
 import java.util.Date;
 
 /**
  * Created by Octavio on 2016/11/12.
  */
-
+@Mappable( with = TourDto.class )
 public class TourModel extends BaseModel {
+
+    //<editor-fold desc="Instance Properties" defaulstate="collapsed">
+    @Mapped
     private ObservableInt id;
-    private ObservableField<String> title;
+    @Mapped
+    private ObservableField< String > title;
+    @Mapped
     private ObservableInt maxReservations;
+    @Mapped
     private ObservableFloat pricePerReservation;
+    @Mapped
     private ObservableBoolean status;
+    @Mapped
     private Date dateModified;
+    @Mapped
     private Date dateCreated;
+    @Mapped
     private ObservableInt promotionId;
+    @Mapped
     private ObservableInt userId;
-    private ObservableField<String> description;
+    @Mapped
+    private ObservableField< String > description;
 
-    private ObservableArrayList<ReservationModel> reservations;
-    private ObservableArrayList<RatingModel> ratings;
+    @Mapped
+    private ObservableArrayList< ReservationModel > reservations;
+    @Mapped
+    private ObservableArrayList< RatingModel > ratings;
 
-    public void setDescription(String description){
-        if(this.description == null)
-            this.description = new ObservableField<>(description);
-        else
-            this.description.set(description);
-    }
+    //</editor-fold>
 
-    public String getDescription(){
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
+    public String getDescription() {
         return description.get();
     }
 
-    public void setId(int id){
-        if(this.id == null)
-            this.id = new ObservableInt(id);
+    public void setDescription( String description ) {
+        if ( this.description == null )
+            this.description = new ObservableField<>( description );
         else
-            this.id.set(id);
+            this.description.set( description );
     }
 
-    public int getId(){
+    public int getId() {
         return id.get();
     }
 
-    public void setTitle(String title){
-        if(this.title == null)
-            this.title = new ObservableField<>(title);
+    public void setId( int id ) {
+        if ( this.id == null )
+            this.id = new ObservableInt( id );
         else
-            this.title.set(title);
+            this.id.set( id );
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title.get();
     }
 
-    public void setMaxReservations(int maxReservations){
-        if(this.maxReservations == null)
-            this.maxReservations = new ObservableInt(maxReservations);
+    public void setTitle( String title ) {
+        if ( this.title == null )
+            this.title = new ObservableField<>( title );
         else
-            this.maxReservations.set(maxReservations);
+            this.title.set( title );
     }
 
-    public int getMaxReservations(){
+    public int getMaxReservations() {
         return maxReservations.get();
     }
 
-    public void setPricePerReservation(float pricePerReservation){
-        if(this.pricePerReservation == null)
-            this.pricePerReservation = new ObservableFloat(pricePerReservation);
+    public void setMaxReservations( int maxReservations ) {
+        if ( this.maxReservations == null )
+            this.maxReservations = new ObservableInt( maxReservations );
         else
-            this.pricePerReservation.set(pricePerReservation);
+            this.maxReservations.set( maxReservations );
     }
 
-    public float getPricePerReservation(){
+    public float getPricePerReservation() {
         return pricePerReservation.get();
     }
 
-    public void setStatus(boolean status){
-        if(this.status == null)
-            this.status = new ObservableBoolean(status);
+    public void setPricePerReservation( float pricePerReservation ) {
+        if ( this.pricePerReservation == null )
+            this.pricePerReservation = new ObservableFloat( pricePerReservation );
         else
-            this.status.set(status);
+            this.pricePerReservation.set( pricePerReservation );
     }
 
-    public boolean getStatus(){
+    public boolean getStatus() {
         return status.get();
     }
 
-    public void setPromotionId(int promotionId){
-        if(this.promotionId == null)
-            this.promotionId = new ObservableInt(promotionId);
+    public void setStatus( boolean status ) {
+        if ( this.status == null )
+            this.status = new ObservableBoolean( status );
         else
-            this.promotionId.set(promotionId);
+            this.status.set( status );
     }
 
-    public int getPromotionId(){
+    public int getPromotionId() {
         return promotionId.get();
     }
 
-    public void setUserId(int userId){
-        if(this.userId == null)
-            this.userId = new ObservableInt(userId);
+    public void setPromotionId( int promotionId ) {
+        if ( this.promotionId == null )
+            this.promotionId = new ObservableInt( promotionId );
         else
-            this.userId.set(userId);
+            this.promotionId.set( promotionId );
     }
 
-    public int getUserId(){
+    public int getUserId() {
         return userId.get();
+    }
+
+    public void setUserId( int userId ) {
+        if ( this.userId == null )
+            this.userId = new ObservableInt( userId );
+        else
+            this.userId.set( userId );
     }
 
     public Date getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
+    public void setDateCreated( Date dateCreated ) {
         this.dateCreated = dateCreated;
     }
 
@@ -127,25 +148,24 @@ public class TourModel extends BaseModel {
         return dateModified;
     }
 
-    public void setDateModified(Date dateModified) {
+    public void setDateModified( Date dateModified ) {
         this.dateModified = dateModified;
     }
 
-    //
-
-    public ObservableArrayList<RatingModel> getRatings() {
+    public ObservableArrayList< RatingModel > getRatings() {
         return ratings;
     }
 
-    public void setRatings(ObservableArrayList<RatingModel> ratings) {
+    public void setRatings( ObservableArrayList< RatingModel > ratings ) {
         this.ratings = ratings;
     }
 
-    public ObservableArrayList<ReservationModel> getReservations() {
+    public ObservableArrayList< ReservationModel > getReservations() {
         return reservations;
     }
 
-    public void setReservations(ObservableArrayList<ReservationModel> reservations) {
+    public void setReservations( ObservableArrayList< ReservationModel > reservations ) {
         this.reservations = reservations;
     }
+    //</editor-fold>
 }

@@ -1,7 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
-import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.LanguageCode;
+import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
 
 import java.util.List;
 
@@ -10,6 +10,8 @@ import java.util.List;
  */
 
 public class UserDto extends BaseDto {
+
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;
     private String password;
     private String firstName;
@@ -20,17 +22,19 @@ public class UserDto extends BaseDto {
     private UserType userType;
     private int addressId;
 
-    private List<MessageDto> messages;
-    private List<TourDto> tours;
-    private List<OrderDto> orders;
-    private List<RatingDto> ratings;
-    private List<ReservationDto> reservations;
+    private List< MessageDto > messages;
+    private List< TourDto > tours;
+    private List< OrderDto > orders;
+    private List< RatingDto > ratings;
+    private List< ReservationDto > reservations;
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId( int id ) {
         this.id = id;
     }
 
@@ -38,7 +42,7 @@ public class UserDto extends BaseDto {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName( String firstName ) {
         this.firstName = firstName;
     }
 
@@ -46,7 +50,7 @@ public class UserDto extends BaseDto {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName( String lastName ) {
         this.lastName = lastName;
     }
 
@@ -54,7 +58,7 @@ public class UserDto extends BaseDto {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail( String email ) {
         this.email = email;
     }
 
@@ -62,7 +66,7 @@ public class UserDto extends BaseDto {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone( String phone ) {
         this.phone = phone;
     }
 
@@ -70,7 +74,7 @@ public class UserDto extends BaseDto {
         return languageCode;
     }
 
-    public void setLanguageCode(LanguageCode languageCode) {
+    public void setLanguageCode( LanguageCode languageCode ) {
         this.languageCode = languageCode;
     }
 
@@ -78,7 +82,7 @@ public class UserDto extends BaseDto {
         return userType;
     }
 
-    public void setUserType(UserType userType) {
+    public void setUserType( UserType userType ) {
         this.userType = userType;
     }
 
@@ -86,47 +90,47 @@ public class UserDto extends BaseDto {
         return addressId;
     }
 
-    public void setAddressId(int addressId) {
+    public void setAddressId( int addressId ) {
         this.addressId = addressId;
     }
 
-    public List<MessageDto> getMessages() {
+    public List< MessageDto > getMessages() {
         return messages;
     }
 
-    public void setMessages(List<MessageDto> messages) {
+    public void setMessages( List< MessageDto > messages ) {
         this.messages = messages;
     }
 
-    public List<TourDto> getTours() {
+    public List< TourDto > getTours() {
         return tours;
     }
 
-    public void setTours(List<TourDto> tours) {
+    public void setTours( List< TourDto > tours ) {
         this.tours = tours;
     }
 
-    public List<OrderDto> getOrders() {
+    public List< OrderDto > getOrders() {
         return orders;
     }
 
-    public void setOrders(List<OrderDto> orders) {
+    public void setOrders( List< OrderDto > orders ) {
         this.orders = orders;
     }
 
-    public List<RatingDto> getRatings() {
+    public List< RatingDto > getRatings() {
         return ratings;
     }
 
-    public void setRatings(List<RatingDto> ratings) {
+    public void setRatings( List< RatingDto > ratings ) {
         this.ratings = ratings;
     }
 
-    public List<ReservationDto> getReservations() {
+    public List< ReservationDto > getReservations() {
         return reservations;
     }
 
-    public void setReservations(List<ReservationDto> reservations) {
+    public void setReservations( List< ReservationDto > reservations ) {
         this.reservations = reservations;
     }
 
@@ -134,7 +138,9 @@ public class UserDto extends BaseDto {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword( String password ) {
         this.password = password;
     }
+    //</editor-fold>
+
 }

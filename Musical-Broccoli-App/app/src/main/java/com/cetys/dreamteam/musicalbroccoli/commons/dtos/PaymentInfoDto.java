@@ -5,17 +5,21 @@ package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
  */
 
 public class PaymentInfoDto {
+
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;
     private String cardNumber;
     private int typeOfCard; // TODO: temp. May change in the very near future
     private String cardHolderName;
     private int expirationDate; // TODO: ExpirationDate should be Date (datatype)
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors".
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId( int id ) {
         this.id = id;
     }
 
@@ -23,7 +27,7 @@ public class PaymentInfoDto {
         return cardNumber;
     }
 
-    public void setCardNumber(String cardNumber) {
+    public void setCardNumber( String cardNumber ) {
         this.cardNumber = cardNumber;
     }
 
@@ -31,7 +35,7 @@ public class PaymentInfoDto {
         return typeOfCard;
     }
 
-    public void setTypeOfCard(int typeOfCard) {
+    public void setTypeOfCard( int typeOfCard ) {
         this.typeOfCard = typeOfCard;
     }
 
@@ -39,7 +43,7 @@ public class PaymentInfoDto {
         return cardHolderName;
     }
 
-    public void setCardHolderName(String cardHolderName) {
+    public void setCardHolderName( String cardHolderName ) {
         this.cardHolderName = cardHolderName;
     }
 
@@ -47,7 +51,9 @@ public class PaymentInfoDto {
         return expirationDate;
     }
 
-    public void setExpirationDate(int expirationDate) {
+    public void setExpirationDate( int expirationDate ) {
         this.expirationDate = expirationDate;
     }
+    //</editor-fold>
+
 }

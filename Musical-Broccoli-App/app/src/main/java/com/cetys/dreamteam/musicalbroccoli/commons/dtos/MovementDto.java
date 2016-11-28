@@ -9,17 +9,21 @@ import java.util.Date;
  */
 
 public class MovementDto {
+
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;
     private MovementType movementType;
     private Date dateCreated;
     private int tourId;
     private int reservationId;
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId( int id ) {
         this.id = id;
     }
 
@@ -27,7 +31,7 @@ public class MovementDto {
         return movementType;
     }
 
-    public void setMovementType(MovementType movementType) {
+    public void setMovementType( MovementType movementType ) {
         this.movementType = movementType;
     }
 
@@ -35,7 +39,7 @@ public class MovementDto {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
+    public void setDateCreated( Date dateCreated ) {
         this.dateCreated = dateCreated;
     }
 
@@ -43,7 +47,7 @@ public class MovementDto {
         return tourId;
     }
 
-    public void setTourId(int tourId) {
+    public void setTourId( int tourId ) {
         this.tourId = tourId;
     }
 
@@ -51,7 +55,9 @@ public class MovementDto {
         return reservationId;
     }
 
-    public void setReservationId(int reservationId) {
+    public void setReservationId( int reservationId ) {
         this.reservationId = reservationId;
     }
+    //</editor-fold>
+
 }

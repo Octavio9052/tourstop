@@ -7,18 +7,21 @@ import java.util.Date;
 /**
  * Created by Octavio on 2016/11/12.
  */
-
 public class MessageModel extends BaseModel {
+
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;
     private ObservableInt senderId;
     private Date dateCreated;
     private String content;
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public ObservableInt getId() {
         return id;
     }
 
-    public void setId(ObservableInt id) {
+    public void setId( ObservableInt id ) {
         this.id = id;
     }
 
@@ -26,7 +29,7 @@ public class MessageModel extends BaseModel {
         return senderId;
     }
 
-    public void setSenderId(ObservableInt senderId) {
+    public void setSenderId( ObservableInt senderId ) {
         this.senderId = senderId;
     }
 
@@ -34,7 +37,7 @@ public class MessageModel extends BaseModel {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
+    public void setDateCreated( Date dateCreated ) {
         this.dateCreated = dateCreated;
     }
 
@@ -42,7 +45,9 @@ public class MessageModel extends BaseModel {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent( String content ) {
         this.content = content;
     }
+    //</editor-fold>
+
 }

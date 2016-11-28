@@ -7,17 +7,21 @@ import java.util.Date;
  */
 
 public class CheckpointDto {
+
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;
     private Date startTime;
     private Date endTime;
     private int addressId;
     private int tourId;
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId( int id ) {
         this.id = id;
     }
 
@@ -25,7 +29,7 @@ public class CheckpointDto {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime( Date startTime ) {
         this.startTime = startTime;
     }
 
@@ -33,7 +37,7 @@ public class CheckpointDto {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime( Date endTime ) {
         this.endTime = endTime;
     }
 
@@ -41,7 +45,7 @@ public class CheckpointDto {
         return addressId;
     }
 
-    public void setAddressId(int addressId) {
+    public void setAddressId( int addressId ) {
         this.addressId = addressId;
     }
 
@@ -49,7 +53,9 @@ public class CheckpointDto {
         return tourId;
     }
 
-    public void setTourId(int tourId) {
+    public void setTourId( int tourId ) {
         this.tourId = tourId;
     }
+    //</editor-fold>
+
 }

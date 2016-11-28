@@ -8,65 +8,71 @@ import android.databinding.ObservableInt;
  */
 
 public class PaymentInfoModel extends BaseModel {
-    private ObservableInt id;
-    private ObservableField<String> cardNumber;
-    private ObservableInt typeOfCard; // TODO: temp. May change in the very near future
-    private ObservableField<String> cardHolderName;
-    private ObservableInt expirationDate; // TODO: ExpirationDate should be Date (datatype)
 
-    public int getId(){
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
+    private ObservableInt id;
+    private ObservableField< String > cardNumber;
+    private ObservableInt typeOfCard; // TODO: temp. May change in the very near future
+    private ObservableField< String > cardHolderName;
+    private ObservableInt expirationDate; // TODO: ExpirationDate should be Date (datatype)
+    //</editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
+    public int getId() {
         return id.get();
     }
 
-    public void setId(int id){
-        if(this.id == null)
-            this.id = new ObservableInt(id);
+    public void setId( int id ) {
+        if ( this.id == null )
+            this.id = new ObservableInt( id );
         else
-            this.id.set(id);
+            this.id.set( id );
     }
 
-    public String getCardNumber(){
+    public String getCardNumber() {
         return cardNumber.get();
     }
 
-    public void setCardNumber(String cardNumber){
-        if(this.cardNumber == null)
-            this.cardNumber = new ObservableField<>(cardNumber);
+    public void setCardNumber( String cardNumber ) {
+        if ( this.cardNumber == null )
+            this.cardNumber = new ObservableField<>( cardNumber );
         else
-            this.cardNumber.set(cardNumber);
+            this.cardNumber.set( cardNumber );
     }
 
-    public int getTypeOfCard(){
+    public int getTypeOfCard() {
         return typeOfCard.get();
     }
 
-    public void setTypeOfCard(int typeOfCard){
-        if(this.typeOfCard == null)
-            this.typeOfCard = new ObservableInt(typeOfCard);
+    public void setTypeOfCard( int typeOfCard ) {
+        if ( this.typeOfCard == null )
+            this.typeOfCard = new ObservableInt( typeOfCard );
         else
-            this.typeOfCard.set(typeOfCard);
+            this.typeOfCard.set( typeOfCard );
 
     }
 
-    public String getCardHolderName(){
+    public String getCardHolderName() {
         return cardHolderName.get();
     }
 
-    public void setCardHolderName(String cardHolderName){
-        if(this.cardHolderName == null)
-            this.cardHolderName = new ObservableField<>(cardHolderName);
+    public void setCardHolderName( String cardHolderName ) {
+        if ( this.cardHolderName == null )
+            this.cardHolderName = new ObservableField<>( cardHolderName );
         else
-            this.cardHolderName.set(cardHolderName);
+            this.cardHolderName.set( cardHolderName );
     }
 
-    public int getExpirationDate(){
+    public int getExpirationDate() {
         return expirationDate.get();
     }
 
-    public void setExpirationDate(int expirationDate){
-        if(this.expirationDate == null)
-            this.expirationDate = new ObservableInt(expirationDate);
+    public void setExpirationDate( int expirationDate ) {
+        if ( this.expirationDate == null )
+            this.expirationDate = new ObservableInt( expirationDate );
         else
-            this.expirationDate.set(expirationDate);
+            this.expirationDate.set( expirationDate );
     }
+    //</editor-fold>
+
 }

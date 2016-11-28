@@ -8,6 +8,8 @@ import java.util.List;
  */
 
 public class TourDto extends BaseDto {
+
+    //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;
     private String title;
     private String description;
@@ -19,14 +21,16 @@ public class TourDto extends BaseDto {
     private int promotionId;
     private int userId;
 
-    private List<ReservationDto> reservations;
-    private List<RatingDto> ratings;
+    private List< ReservationDto > reservations;
+    private List< RatingDto > ratings;
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription( String description ) {
         this.description = description;
     }
 
@@ -34,7 +38,7 @@ public class TourDto extends BaseDto {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId( int id ) {
         this.id = id;
     }
 
@@ -42,7 +46,7 @@ public class TourDto extends BaseDto {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle( String title ) {
         this.title = title;
     }
 
@@ -50,7 +54,7 @@ public class TourDto extends BaseDto {
         return maxReservations;
     }
 
-    public void setMaxReservations(int maxReservations) {
+    public void setMaxReservations( int maxReservations ) {
         this.maxReservations = maxReservations;
     }
 
@@ -58,7 +62,7 @@ public class TourDto extends BaseDto {
         return pricePerReservation;
     }
 
-    public void setPricePerReservation(float pricePerReservation) {
+    public void setPricePerReservation( float pricePerReservation ) {
         this.pricePerReservation = pricePerReservation;
     }
 
@@ -66,7 +70,7 @@ public class TourDto extends BaseDto {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus( boolean status ) {
         this.status = status;
     }
 
@@ -74,7 +78,7 @@ public class TourDto extends BaseDto {
         return dateModified;
     }
 
-    public void setDateModified(Date dateModified) {
+    public void setDateModified( Date dateModified ) {
         this.dateModified = dateModified;
     }
 
@@ -82,7 +86,7 @@ public class TourDto extends BaseDto {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
+    public void setDateCreated( Date dateCreated ) {
         this.dateCreated = dateCreated;
     }
 
@@ -90,7 +94,7 @@ public class TourDto extends BaseDto {
         return promotionId;
     }
 
-    public void setPromotionId(int promotionId) {
+    public void setPromotionId( int promotionId ) {
         this.promotionId = promotionId;
     }
 
@@ -98,23 +102,25 @@ public class TourDto extends BaseDto {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId( int userId ) {
         this.userId = userId;
     }
 
-    public List<ReservationDto> getReservations() {
+    public List< ReservationDto > getReservations() {
         return reservations;
     }
 
-    public void setReservations(List<ReservationDto> reservations) {
+    public void setReservations( List< ReservationDto > reservations ) {
         this.reservations = reservations;
     }
 
-    public List<RatingDto> getRatings() {
+    public List< RatingDto > getRatings() {
         return ratings;
     }
 
-    public void setRatings(List<RatingDto> ratings) {
+    public void setRatings( List< RatingDto > ratings ) {
         this.ratings = ratings;
     }
+    //</editor-fold>
+
 }
