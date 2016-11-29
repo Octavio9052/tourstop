@@ -3,16 +3,19 @@ using Business.Contracts;
 using Common.DTOs;
 using Business.Handlers.Response;
 using Business.Handlers.Request;
+using Business.Handlers.Validation;
 
 namespace Business.Handlers.Handlers
 {
     public abstract class BaseRequestHandler<T> where T : BaseDTO
     {
-        protected readonly IBaseConnector<T> Connector;
+        private readonly IBaseConnector<T> _connector;
+        private readonly BaseValidator<T> _validator;
 
-        protected BaseRequestHandler(IBaseConnector<T> connector)
+        protected BaseRequestHandler(IBaseConnector<T> connector, BaseValidator<T> validator)
         {
-            Connector = connector;
+            _connector = connector;
+            _validator = validator;
         }
 
         public Response<T> HandleReadRequest(ReadRequest request)

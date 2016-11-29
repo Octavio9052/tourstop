@@ -5,6 +5,5 @@ namespace Business.Handlers.Handlers.contracts
 {
     public interface IBaseRequestHandler<TDto> where TDto : BaseDTO
     {
-        Response<TDto> HandleRequest( Request.Request request );
     }
 }

@@ -7,15 +7,15 @@ using Business.Handlers.Request;
 using Business.Handlers.Response;
 using Business.Controllers.Petition;
 using Business.Controllers.Response;
+using Business.Handlers.Validation;
 
 namespace Business.Handlers.Handlers
 {
     public class MessageRequestHandler : BaseRequestHandler<MessageDTO>, IMessageRequestHandler
     {
-        public MessageRequestHandler(IMessageConnector connector) : base(connector)
+        public MessageRequestHandler(IMessageConnector connector, MessageValidator validator)
+            : base(connector, validator)
         {
         }
-
-
     }
 }
