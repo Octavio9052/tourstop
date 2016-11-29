@@ -40,9 +40,9 @@ public class TourModel extends BaseModel {
     @Mapped
     private ObservableField< String > description;
 
-    @Mapped
+
     private ObservableArrayList< ReservationModel > reservations;
-    @Mapped
+
     private ObservableArrayList< RatingModel > ratings;
 
     //</editor-fold>

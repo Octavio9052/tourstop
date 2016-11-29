@@ -34,7 +34,7 @@ import dagger.Subcomponent;
  */
 @Subcomponent( modules = { UserModule.class, ServiceModule.class } )
 public interface UserSubcomponent {
-    //FIXME: LoginActivitySubcomponent plus(LoginActivityModule module); -- .getUserSubcomponent.plus -> Las Anotaciones del Mochis
+
     CardPaymentActivitySubcomponent plus( CardPaymentActivityModule module );
 
     ChangePasswordActivitySubcomponent plus( ChangePasswordActivityModule module );

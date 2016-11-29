@@ -66,7 +66,7 @@ public class TourDto extends BaseDto {
         this.pricePerReservation = pricePerReservation;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

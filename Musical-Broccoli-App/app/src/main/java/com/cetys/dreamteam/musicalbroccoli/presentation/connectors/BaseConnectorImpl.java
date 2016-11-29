@@ -6,6 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.commons.dtos.BaseDto;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.contracts.BaseService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.contracts.BaseConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.BaseModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.transformer.Transformer;
 
 /**
  * @Author J. Pichardo on 11/11/2016.
@@ -14,12 +15,15 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.BaseModel;
 public abstract class BaseConnectorImpl< TModel extends BaseModel, TDto extends BaseDto, TService >
         implements BaseConnector< TModel > {
 
-    protected BaseService< TDto > service;
+    protected final BaseService< TDto > service;
 
-    public BaseConnectorImpl(
-            BaseService< TDto > service ) {
+    protected final Transformer transformer;
+
+    protected BaseConnectorImpl( BaseService< TDto > service, Transformer transformer ) {
         this.service = service;
+        this.transformer = transformer;
     }
+
 
     @Override
 
