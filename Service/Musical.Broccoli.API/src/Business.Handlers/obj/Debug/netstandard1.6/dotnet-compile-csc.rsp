@@ -143,5 +143,6 @@
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Dto\ReservationValidator.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Dto\TourValidator.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Dto\UserValidator.cs"
-"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Request\RequestValidationResult.cs"
-"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Request\RequestValidator.cs"
+"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Request\FilterValidator.cs"
+"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Request\ReadRequestValidator.cs"
+"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\Request\ReadWriteRequestValidator.cs"
