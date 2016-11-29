@@ -19,7 +19,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get([FromBody] Request<UserDTO> request)
+        public IActionResult Get([FromBody] Request request)
         {
             
             Response<UserDTO> result;
@@ -45,7 +45,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Request<UserDTO> request)
+        public IActionResult Post([FromBody] Request request)
         {
             Response<UserDTO> result;
 
@@ -66,7 +66,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] Request<UserDTO> request)
+        public IActionResult Put([FromBody] Request request)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete([FromBody] Request<UserDTO> request)
+        public IActionResult Delete([FromBody] Request request)
         {
             try
             {

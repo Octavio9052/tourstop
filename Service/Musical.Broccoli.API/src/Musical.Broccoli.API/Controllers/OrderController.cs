@@ -17,7 +17,7 @@ namespace Musical.Broccoli.API.Controllers
 
 
         [HttpGet]
-        public override IActionResult Get( [FromBody] Request<OrderDTO> request )
+        public override IActionResult Get( [FromBody] Request request )
         {
             Response<OrderDTO> result;
             try
@@ -41,7 +41,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpPost]
-        public override IActionResult Post( [FromBody] Request<OrderDTO> request )
+        public override IActionResult Post( [FromBody] Request request )
         {
             Response<OrderDTO> result;
 
@@ -62,7 +62,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpPut]
-        public override IActionResult Put( [FromBody] Request<OrderDTO> request )
+        public override IActionResult Put( [FromBody] Request request )
         {
             Response<OrderDTO> result;
             try
@@ -83,7 +83,7 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpDelete]
-        public override IActionResult Delete( [FromBody] Request<OrderDTO> request )
+        public override IActionResult Delete( [FromBody] Request request )
         {
             Response<OrderDTO> result;
             try

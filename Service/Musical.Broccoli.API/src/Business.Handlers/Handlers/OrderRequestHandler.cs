@@ -2,7 +2,6 @@
 using System;
 using Business.Contracts;
 using Business.Handlers.Handlers.contracts;
-using Business.Handlers.Request;
 using Business.Handlers.Response;
 
 namespace Business.Handlers.Handlers
@@ -13,7 +12,7 @@ namespace Business.Handlers.Handlers
         {
         }
 
-        public override Response<OrderDTO> HandleRequest( Request<OrderDTO> request )
+        public override Response<OrderDTO> HandleRequest( Request.Request request )
         {
             throw new NotImplementedException();
         }

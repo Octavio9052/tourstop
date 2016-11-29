@@ -11,7 +11,7 @@ namespace Handlers.Validation.Request
     public class RequestValidator
     {
 
-        public RequestValidationResult Validate<T>( Request<T> request, BaseValidator<T> validator ) where T : BaseDTO
+        public RequestValidationResult Validate<T>( Business.Handlers.Request.Request request, BaseValidator<T> validator ) where T : BaseDTO
         {
             return new RequestValidationResult()
             {

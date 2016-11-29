@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using DataAccessLayer.Context;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace DataAccessLayer.Repositories
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : class
+    public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         protected readonly TourStopContext Context;
         protected DbSet<T> DbSet;
+
         public BaseRepository(TourStopContext context)
         {
             Context = context;
             DbSet = Context.Set<T>();
         }
-        public void Add(ICollection<T> entities)
+
+        #region Read
+
+        public IQueryable<T> GetQueryable()
         {
-            DbSet.AddRange(entities);
-            Context.SaveChanges();
+            return DbSet;
         }
 
         public ICollection<T> GetAll()
@@ -32,30 +37,30 @@ namespace DataAccessLayer.Repositories
             return DbSet.FirstOrDefault(predicate);
         }
 
-        public void Remove(ICollection<T> entities)
-        {
-            DbSet.RemoveRange(entities);
-            Context.SaveChanges();
-           
-        }
-
         public ICollection<T> Search(Func<T, bool> predicate)
         {
             return DbSet.Where(predicate).ToList();
         }
 
-        public void Update(ICollection<T> entities)
+        #endregion
+
+        #region Write
+
+        public void AddOrUpdate(T entity)
         {
- 
-                DbSet.UpdateRange(entities);
-                Context.SaveChanges();
-            
-            
+            Context.Entry(entity).State = entity.Id == 0 ? EntityState.Added : EntityState.Modified;
         }
 
-        public IQueryable<T> GetQueryable()
+        public void Remove(T entity)
         {
-            return  DbSet;
+            DbSet.Remove(entity);
         }
+
+        public void SaveChanges()
+        {
+            Context.SaveChanges();
+        }
+
+        #endregion
     }
 }

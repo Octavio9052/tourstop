@@ -127,6 +127,8 @@
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Handlers\contracts\IUserRequestHandler.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Properties\AssemblyInfo.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\Filter.cs"
+"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\ReadRequest.cs"
+"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\ReadWriteRequest.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Request\Request.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Response\Response.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Business.Handlers\Validation\BaseValidator.cs"

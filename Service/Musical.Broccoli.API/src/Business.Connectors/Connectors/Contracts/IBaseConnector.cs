@@ -1,13 +1,16 @@
-﻿using System.Collections.Generic;
-using Business.Connectors;
+﻿using System;
+using System.Collections.Generic;
+using Business.Connectors.Petition;
 using Business.Controllers.Petition;
 using Business.Controllers.Response;
 using Common.DTOs;
 
-namespace Business.Contracts
+namespace Business.Connectors.Contracts
 {
-    public interface IBaseConnector<TDto> where TDto : BaseDTO
+    public interface IBaseConnector<T> where T : BaseDTO
     {
-        Dictionary<PetitionAction, BusinessPetitionProcessor<TDto>> Processors { get; }
+        Func<ReadBusinessPetition, BusinessResponse<T>> Get { get; }
+        Func<ReadWriteBusinessPetition<T>, BusinessResponse<T>> Save { get; }
+        Func<ReadWriteBusinessPetition<T>, BusinessResponse<T>> Delete { get; }
     }
 }

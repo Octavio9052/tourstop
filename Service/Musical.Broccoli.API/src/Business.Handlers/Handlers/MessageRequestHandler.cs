@@ -16,12 +16,6 @@ namespace Business.Handlers.Handlers
         {
         }
 
-        public override Response<MessageDTO> HandleRequest( Request<MessageDTO> request )
-        {
-            var petition = (BusinessPetition<MessageDTO>) request;
-            var response =  _connector.Processors[petition.Action](petition);
-            //TODO: Cast Operator BusinessResponse => Response
-            throw new NotImplementedException();
-        }
+
     }
 }

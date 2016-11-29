@@ -2,12 +2,7 @@
 using DataAccessLayer.Entities;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
-using System;
 using Business.Contracts;
-using Business.Controllers.Petition;
-using Business.Controllers.PetitionValidators;
-using Business.Controllers.Response;
-using System.Security.Authentication;
 using Business.Connectors.Petition;
 
 namespace Business.Connectors
@@ -17,48 +12,24 @@ namespace Business.Connectors
         public RatingConnector(IRatingRepository repository, IMapper mapper) : base(repository, mapper)
         {
         }
-            protected override BusinessResponse<RatingDTO> Save(BusinessPetition<RatingDTO> petition)
-        {
-            if (!Validate(petition, new RatingSaveValidation())) throw new AuthenticationException();
-            return base.Save(petition);
-        }
-        protected override BusinessResponse<RatingDTO> Get(BusinessPetition<RatingDTO> petition)
-        {
-            if (!Validate(petition, new RatingGetValidation())) throw new AuthenticationException();
-            return base.Get(petition);
-        }
-        protected override BusinessResponse<RatingDTO> Delete(BusinessPetition<RatingDTO> petition)
-        {
-            if (!Validate(petition, new RatingDeleteAndUpdateValidation())) throw new AuthenticationException();
-            return base.Delete(petition);
-        }
-        protected override BusinessResponse<RatingDTO> Update(BusinessPetition<RatingDTO> petition)
-        {
-            if (!Validate(petition, new RatingDeleteAndUpdateValidation())) throw new AuthenticationException();
-            return base.Update(petition);
-        }
-    }
 
-        internal sealed class RatingDeleteAndUpdateValidation : PetitionValidation<RatingDTO>
-        {
-            public override bool Validate(BusinessPetition<RatingDTO> petition)
-            {
-                return true;
-            }
-        }
-        internal sealed class RatingGetValidation : PetitionValidation<RatingDTO>
-        {
-            public override bool Validate(BusinessPetition<RatingDTO> petition)
-            {
-                return petition.RequestingUser != null;
-            }
-        }
-        internal sealed class RatingSaveValidation : PetitionValidation<RatingDTO>
-        {
-            public override bool Validate(BusinessPetition<RatingDTO> petition)
-            {
-                return true;
-            }
-        }
-    }
+        #region Validate Methods
 
+        protected override bool ValidateGet(ReadBusinessPetition petition)
+        {
+            return petition.RequestingUser != null;
+        }
+
+        protected override bool ValidateSave(ReadWriteBusinessPetition<RatingDTO> petition)
+        {
+            return true;
+        }
+
+        protected override bool ValidateDelete(ReadWriteBusinessPetition<RatingDTO> petition)
+        {
+            return true; //TODO: Think! Can ratings be deleted?
+        }
+
+        #endregion
+    }
+}

@@ -49,7 +49,7 @@ namespace DataAccess.Tests.Repositories
                 UserType = UserType.Promotor
             };
 
-            _userRepository.Add(new List<User> {user});
+            _userRepository.AddOrUpdate(user);
 
             Assert.Contains(user, _userRepository.GetAll());
         }
@@ -77,8 +77,8 @@ namespace DataAccess.Tests.Repositories
                 UserType = UserType.Promotor
             };
 
-            _userRepository.Add(new List<User> {user});
-            _userRepository.Remove(new List<User> {user});
+            _userRepository.AddOrUpdate(user);
+            _userRepository.Remove(user);
 
             Assert.DoesNotContain(user,
                 _userRepository.GetAll());
@@ -87,7 +87,7 @@ namespace DataAccess.Tests.Repositories
         [Fact]
         public void GetAll_User_TwoRegistries()
         {
-            _userRepository.Remove(_userRepository.GetAll()); //Clear Database
+            _userRepository.GetAll().ToList().ForEach(x => _userRepository.Remove(x)); //Clear Database
 
             var users = new List<User>
             {
@@ -131,7 +131,7 @@ namespace DataAccess.Tests.Repositories
                 }
             };
 
-            _userRepository.Add(users);
+            users.ForEach(x => _userRepository.AddOrUpdate(x));
             Assert.True(_userRepository.GetAll().Count == users.Count);
         }
 
@@ -142,7 +142,7 @@ namespace DataAccess.Tests.Repositories
 
             users.ForEach(x => x.FirstName = "NewUpdatedName");
 
-            _userRepository.Update(users);
+            users.ForEach(x => _userRepository.AddOrUpdate(x));
 
             var updatedUsers = _userRepository.GetQueryable().Where(x => x.Id % 2 == 0).ToList();
 
@@ -213,7 +213,7 @@ namespace DataAccess.Tests.Repositories
                 }
             };
 
-            _userRepository.Add(users);
+            users.ForEach(x => _userRepository.AddOrUpdate(x));
             var result = _userRepository.GetQueryable().Where(x => x.FirstName == "Foo");
             Assert.True(result.All(x => x.FirstName == "Foo"));
         }

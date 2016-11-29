@@ -16,16 +16,16 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpGet]
-        public abstract IActionResult Get( [FromBody] Request<TDto> request );
+        public abstract IActionResult Get( [FromBody] Request request );
 
         [HttpPost]
-        public abstract IActionResult Post( [FromBody] Request<TDto> request );
+        public abstract IActionResult Post( [FromBody] Request request );
 
         [HttpPut]
-        public abstract IActionResult Put( [FromBody] Request<TDto> request );
+        public abstract IActionResult Put( [FromBody] Request request );
 
         [HttpDelete]
-        public abstract IActionResult Delete( [FromBody] Request<TDto> request );
+        public abstract IActionResult Delete( [FromBody] Request request );
 
         protected void HandleException(Exception ex )
         {
