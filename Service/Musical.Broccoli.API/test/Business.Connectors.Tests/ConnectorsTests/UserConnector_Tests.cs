@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using System.Security.Authentication;
 using AutoMapper;
 using Business.Connectors.Helpers;
@@ -15,8 +14,16 @@ using DataAccessLayer.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
-namespace Business.Connectors.Tests
+namespace Business.Connectors.Tests.ConnectorsTests
 {
+    /*
+    TODO: Every method should be tested in the following ways:
+        - NoFilter
+        - NoUser
+        - NoData
+        Each with it's valid counterpart and combine them
+    */
+
     public class UserConnector_Tests
     {
         private readonly IUserRepository _repository;
@@ -218,17 +225,6 @@ namespace Business.Connectors.Tests
             Assert.Throws<AuthenticationException>(() => _connector.Processors[petition.Action](petition));
         }
 
-        [Fact]
-        public void Delete_FilteredNoUser_ThrowAuthenticationException()
-        {
-            var petition = new BusinessPetition<UserDTO>
-            {
-                Action = PetitionAction.Delete,
-                FilterString = "phone = 6461235896"
-            };
-
-            Assert.Throws<AuthenticationException>(() => _connector.Processors[petition.Action](petition));
-        }
 
         [Fact]
         public void Get_FilteredValidUser_FilteredUsers()
@@ -286,8 +282,22 @@ namespace Business.Connectors.Tests
             _connector.Processors[petition.Action](petition);
         }
 
+        #region Delete
+
         [Fact]
-        public void Delete_validDataValidUser_NoException()
+        public void Delete_FilteredNoUser_ThrowAuthenticationException()
+        {
+            var petition = new BusinessPetition<UserDTO>
+            {
+                Action = PetitionAction.Delete,
+                FilterString = "phone = 6461235896"
+            };
+
+            Assert.Throws<AuthenticationException>(() => _connector.Processors[petition.Action](petition));
+        }
+
+        [Fact]
+        public void Delete_ValidDataValidUser_NoException()
         {
             var petition = new BusinessPetition<UserDTO>
             {
@@ -327,5 +337,63 @@ namespace Business.Connectors.Tests
 
             Assert.All(allRegistries, x => Assert.NotEqual(x.Id, 2));
         }
+
+        [Fact]
+        public void Delete_ValidDataNoCorrespondingUser_ThrowsAuthenticationException()
+        {
+            var petition = new BusinessPetition<UserDTO>
+            {
+                Action = PetitionAction.Delete,
+                Data = new List<UserDTO>
+                {
+                    new UserDTO
+                    {
+                        Id = 2,
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooUpdateValid@bar.com",
+                        Address = new AddressDTO
+                        {
+                            Street1 = "St1",
+                            City = "City",
+                            CountryCode = CountryCode.MX,
+                            PostalCode = 2284,
+                            State = "State",
+                            Name = ""
+                        },
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promotor
+                    }
+                },
+                RequestingUser = new UserDTO
+                {
+                    Id = 3
+                }
+            };
+
+            Assert.Throws<AuthenticationException>(() => _connector.Processors[petition.Action](petition));
+        }
+
+        [Fact]
+        public void Delete_ValidFilters
+
+        [Fact]
+        public void Delete_NoFiltersNoDataValidUser_ThrowsAuthenticationException()
+        {
+            var petition = new BusinessPetition<UserDTO>
+            {
+                Action = PetitionAction.Delete,
+                RequestingUser = new UserDTO
+                {
+                    Id = 2
+                }
+            };
+
+            Assert.Throws<AuthenticationException>(() => _connector.Processors[petition.Action](petition));
+        }
+
+        #endregion
     }
 }
