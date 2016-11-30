@@ -4,8 +4,12 @@ using Common.DTOs;
 
 namespace Business.Handlers.Handlers.contracts
 {
-    public interface IBaseRequestHandler<TDto> where TDto : BaseDTO
+    public interface IBaseRequestHandler<T> where T : BaseDTO
     {
-        Response<TDto> HandleRequest( Request<TDto> request );
+        Response<T> HandleReadRequest(ReadRequest request);
+
+        Response<T> HandleReadWriteRequest(ReadWriteRequest<T> request);
+
+        Response<T> HandleDeleteRequest(ReadWriteRequest<T> request);
     }
 }

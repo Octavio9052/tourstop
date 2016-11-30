@@ -1,26 +1,15 @@
 ﻿using Common.DTOs;
-using System;
 using Business.Contracts;
 using Business.Handlers.Handlers.contracts;
-using Business.Handlers.Request;
-using Business.Handlers.Response;
-using Business.Controllers.Petition;
-using Business.Controllers.Response;
+using Business.Handlers.Validation;
 
 namespace Business.Handlers.Handlers
 {
     public class MessageRequestHandler : BaseRequestHandler<MessageDTO>, IMessageRequestHandler
     {
-        public MessageRequestHandler(IMessageConnector connector) : base(connector)
+        public MessageRequestHandler(IMessageConnector connector, MessageValidator validator)
+            : base(connector, validator)
         {
-        }
-
-        public override Response<MessageDTO> HandleRequest( Request<MessageDTO> request )
-        {
-            var petition = (BusinessPetition<MessageDTO>) request;
-            var response =  _connector.Processors[petition.Action](petition);
-            //TODO: Cast Operator BusinessResponse => Response
-            throw new NotImplementedException();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using Business.Handlers.Handlers;
+using Business.Handlers.Handlers.contracts;
 using Business.Handlers.Request;
 using Business.Handlers.Response;
 using Common.DTOs;
@@ -8,21 +8,23 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Musical.Broccoli.API.Controllers
 {
-
-    public class OrderController : BaseController<OrderDTO>
+    public class OrderController : Controller, IBaseController<OrderDTO>
     {
-        public OrderController( BaseRequestHandler<OrderDTO> requestHandler ) : base( requestHandler )
+        private readonly IOrderRequestHandler _requestHandler;
+
+        public OrderController(IOrderRequestHandler requestHandler)
         {
+            _requestHandler = requestHandler;
         }
 
 
         [HttpGet]
-        public override IActionResult Get( [FromBody] Request<OrderDTO> request )
+        public IActionResult Get([FromBody] ReadRequest request)
         {
             Response<OrderDTO> result;
             try
             {
-                result = _requestHandler.HandleRequest( request );
+                result = _requestHandler.HandleReadRequest(request);
             }
             catch (UnauthorizedAccessException)
             {
@@ -35,19 +37,19 @@ namespace Musical.Broccoli.API.Controllers
 
             if (result.Data.Count <= 0)
             {
-                return new NotFoundObjectResult( result );
+                return new NotFoundObjectResult(result);
             }
-            return new OkObjectResult( result );
+            return new OkObjectResult(result);
         }
 
         [HttpPost]
-        public override IActionResult Post( [FromBody] Request<OrderDTO> request )
+        public IActionResult Post([FromBody] ReadWriteRequest<OrderDTO> request)
         {
             Response<OrderDTO> result;
 
             try
             {
-                result = _requestHandler.HandleRequest( request );
+                result = _requestHandler.HandleReadWriteRequest(request);
             }
             catch (UnauthorizedAccessException)
             {
@@ -58,16 +60,15 @@ namespace Musical.Broccoli.API.Controllers
                 return new BadRequestResult();
             }
 
-            return new CreatedResult( "", result );
+            return new CreatedResult("", result);
         }
 
         [HttpPut]
-        public override IActionResult Put( [FromBody] Request<OrderDTO> request )
+        public IActionResult Put([FromBody] ReadWriteRequest<OrderDTO> request)
         {
-            Response<OrderDTO> result;
             try
             {
-                result = _requestHandler.HandleRequest( request );
+                _requestHandler.HandleReadWriteRequest(request);
             }
             catch (UnauthorizedAccessException)
             {
@@ -79,16 +80,14 @@ namespace Musical.Broccoli.API.Controllers
             }
 
             return new NoContentResult();
-
         }
 
         [HttpDelete]
-        public override IActionResult Delete( [FromBody] Request<OrderDTO> request )
+        public IActionResult Delete([FromBody] ReadWriteRequest<OrderDTO> request)
         {
-            Response<OrderDTO> result;
             try
             {
-                result = _requestHandler.HandleRequest( request );
+                _requestHandler.HandleDeleteRequest(request);
             }
             catch (UnauthorizedAccessException)
             {

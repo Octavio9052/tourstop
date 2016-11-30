@@ -9,7 +9,7 @@ using Business.Handlers.Response;
 namespace Musical.Broccoli.API.Controllers
 {
     [Route("api/[controller]")]
-    public class UserController : Controller
+    public class UserController : Controller, IBaseController<UserDTO>
     {
         private readonly IUserRequestHandler _requestHandler;
 
@@ -19,14 +19,12 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get([FromBody] Request<UserDTO> request)
+        public IActionResult Get([FromBody] ReadRequest request)
         {
-            
             Response<UserDTO> result;
             try
             {
-                result = _requestHandler.HandleRequest(request);
-
+                result = _requestHandler.HandleReadRequest(request);
             }
             catch (UnauthorizedAccessException)
             {
@@ -45,13 +43,13 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Request<UserDTO> request)
+        public IActionResult Post([FromBody] ReadWriteRequest<UserDTO> request)
         {
             Response<UserDTO> result;
 
             try
             {
-                result = _requestHandler.HandleRequest(request);
+                result = _requestHandler.HandleReadWriteRequest(request);
             }
             catch (UnauthorizedAccessException)
             {
@@ -66,11 +64,11 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] Request<UserDTO> request)
+        public IActionResult Put([FromBody] ReadWriteRequest<UserDTO> request)
         {
             try
             {
-                _requestHandler.HandleRequest(request);
+                _requestHandler.HandleReadWriteRequest(request);
             }
             catch (UnauthorizedAccessException)
             {
@@ -85,10 +83,11 @@ namespace Musical.Broccoli.API.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete([FromBody] Request<UserDTO> request)
+        public IActionResult Delete([FromBody] ReadWriteRequest<UserDTO> request)
         {
             try
             {
+                _requestHandler.HandleDeleteRequest(request);
             }
             catch (UnauthorizedAccessException)
             {

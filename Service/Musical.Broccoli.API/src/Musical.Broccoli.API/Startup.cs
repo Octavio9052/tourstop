@@ -5,6 +5,7 @@ using Business.Connectors.Helpers;
 using Business.Contracts;
 using Business.Handlers.Handlers;
 using Business.Handlers.Handlers.contracts;
+using Business.Handlers.Validation;
 using Common.AppSettings;
 using DataAccessLayer.Context;
 using DataAccessLayer.Repositories;
@@ -53,13 +54,26 @@ namespace Musical.Broccoli.API
 
             #region Dependency Injection
 
-            //RequestHandlers
+            #region Request Handlers
+
             services.AddScoped<IMessageRequestHandler, MessageRequestHandler>();
             services.AddScoped<IOrderRequestHandler, OrderRequestHandler>();
             services.AddScoped<ITourRequestHandler, TourRequestHandler>();
             services.AddScoped<IUserRequestHandler, UserRequestHandler>();
 
-            //Connectors
+            #endregion
+
+            #region Validators
+
+            services.AddScoped(x => MessageValidator.All());
+            services.AddScoped(x => OrderValidator.All());
+            services.AddScoped(x => TourValidator.All());
+            services.AddScoped(x => UserValidator.All());
+
+            #endregion
+
+            #region Connectors
+
             services.AddTransient<IAddressConnector, AddressConnector>();
             services.AddTransient<ICheckPointConnector, CheckPointConnector>();
             services.AddTransient<IMessageConnector, MessageConnector>();
@@ -70,7 +84,10 @@ namespace Musical.Broccoli.API
             services.AddTransient<ITourConnector, TourConnector>();
             services.AddTransient<IUserConnector, UserConnector>();
 
-            //Repositories
+            #endregion
+
+            #region Repositories
+
             services.AddSingleton<IAddressRepository, AddressRepository>();
             services.AddSingleton<ICheckPointRepository, CheckPointRepository>();
             services.AddSingleton<IMessageRepository, MessageRepository>();
@@ -83,6 +100,8 @@ namespace Musical.Broccoli.API
             services.AddSingleton<ISessionRepository, SessionRepository>();
             services.AddSingleton<ITourRepository, TourRepository>();
             services.AddSingleton<IUserRepository, UserRepository>();
+
+            #endregion
 
             //AutoMapper
             services.AddSingleton(x => _mapperConfiguration.CreateMapper());

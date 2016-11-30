@@ -2,20 +2,15 @@
 using System;
 using Business.Contracts;
 using Business.Handlers.Handlers.contracts;
-using Business.Handlers.Request;
 using Business.Handlers.Response;
+using Business.Handlers.Validation;
 
 namespace Business.Handlers.Handlers
 {
     public class OrderRequestHandler : BaseRequestHandler<OrderDTO>, IOrderRequestHandler
     {
-        public OrderRequestHandler( IOrderConnector connector ) : base( connector )
+        public OrderRequestHandler(IOrderConnector connector, OrderValidator validator) : base(connector, validator)
         {
-        }
-
-        public override Response<OrderDTO> HandleRequest( Request<OrderDTO> request )
-        {
-            throw new NotImplementedException();
         }
     }
 }

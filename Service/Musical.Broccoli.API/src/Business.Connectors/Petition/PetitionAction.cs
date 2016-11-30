@@ -7,6 +7,8 @@ namespace Business.Controllers.Petition
 {
     public enum PetitionAction
     {
-        Save, Update, Delete, Get
+        ReadWrite,
+        Read,
+        Delete
     }
 }
