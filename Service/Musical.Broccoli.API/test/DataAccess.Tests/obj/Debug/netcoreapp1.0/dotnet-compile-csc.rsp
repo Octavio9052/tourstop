@@ -150,7 +150,7 @@
 -r:"C:\Users\lucia.beltran\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll"
 -r:"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\Common\bin\Debug\netstandard1.6\Common.dll"
 -r:"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\src\DataAccessLayer\bin\Debug\netstandard1.6\DataAccessLayer.dll"
+"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\DataAccess.Tests\Repository_Tests.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\DataAccess.Tests\Tests.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\DataAccess.Tests\Properties\AssemblyInfo.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\DataAccess.Tests\Repositories\AddressRepository_Tests.cs"
-"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\DataAccess.Tests\Repositories\Repository_Tests.cs"

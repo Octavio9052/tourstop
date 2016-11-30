@@ -6,31 +6,14 @@ using System;
 
 namespace Musical.Broccoli.API.Controllers
 {
-    public abstract class BaseController<TDto> where TDto : BaseDTO
+    public interface IBaseController<T> where T : BaseDTO
     {
-        protected readonly BaseRequestHandler<TDto> _requestHandler;
+        IActionResult Get([FromBody] ReadRequest request);
 
-        public BaseController(BaseRequestHandler<TDto> requestHandler )
-        {
-            _requestHandler = requestHandler;
-        }
+        IActionResult Post([FromBody] ReadWriteRequest<T> request);
 
-        [HttpGet]
-        public abstract IActionResult Get( [FromBody] Request<TDto> request );
+        IActionResult Put([FromBody] ReadWriteRequest<T> request);
 
-        [HttpPost]
-        public abstract IActionResult Post( [FromBody] Request<TDto> request );
-
-        [HttpPut]
-        public abstract IActionResult Put( [FromBody] Request<TDto> request );
-
-        [HttpDelete]
-        public abstract IActionResult Delete( [FromBody] Request<TDto> request );
-
-        protected void HandleException(Exception ex )
-        {
-            
-        }
-
+        IActionResult Delete([FromBody] ReadWriteRequest<T> request);
     }
 }

@@ -3,11 +3,7 @@ using DataAccessLayer.Entities;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Contracts;
-using Business.Controllers.Petition;
-using System;
-using Business.Controllers.Response;
-using System.Security.Authentication;
-using Business.Controllers.PetitionValidators;
+using Business.Connectors.Petition;
 
 namespace Business.Connectors
 {
@@ -16,46 +12,24 @@ namespace Business.Connectors
         public CheckPointConnector(ICheckPointRepository repository, IMapper mapper) : base(repository, mapper)
         {
         }
-        protected override BusinessResponse<CheckPointDTO> Get(BusinessPetition<CheckPointDTO> petition)
+
+        #region Validate Methods
+
+        protected override bool ValidateGet(ReadBusinessPetition petition)
         {
-            if (!Validate(petition, new CheckPointGetValidation())) throw new AuthenticationException();
-            return base.Get(petition);
+            return petition.RequestingUser != null;
         }
-        protected override BusinessResponse<CheckPointDTO> Save(BusinessPetition<CheckPointDTO> petition)
+
+        protected override bool ValidateSave(ReadWriteBusinessPetition<CheckPointDTO> petition)
         {
-            if (!Validate(petition, new CheckPointSaveValidation())) throw new AuthenticationException();
-            return base.Save(petition);
+            return petition.RequestingUser != null;
         }
-        protected override BusinessResponse<CheckPointDTO> Delete(BusinessPetition<CheckPointDTO> petition)
-        {
-            if (!Validate(petition, new CheckPointDeleteAndUpdateValidation())) throw new AuthenticationException();
-            return base.Delete(petition);
-        }
-        protected override BusinessResponse<CheckPointDTO> Update(BusinessPetition<CheckPointDTO> petition)
-        {
-            if (!Validate(petition, new CheckPointDeleteAndUpdateValidation())) throw new AuthenticationException();
-            return base.Update(petition);
-        }
-    }
-    internal sealed class CheckPointDeleteAndUpdateValidation : PetitionValidation<CheckPointDTO>
-    {
-        public override bool Validate(BusinessPetition<CheckPointDTO> petition)
+
+        protected override bool ValidateDelete(ReadWriteBusinessPetition<CheckPointDTO> petition)
         {
             return false;
         }
-    }
-    internal sealed class CheckPointGetValidation : PetitionValidation<CheckPointDTO>
-    {
-        public override bool Validate(BusinessPetition<CheckPointDTO> petition)
-        {
-            return petition.RequestingUser != null;
-        }
-    }
-    internal sealed class CheckPointSaveValidation : PetitionValidation<CheckPointDTO>
-    {
-        public override bool Validate(BusinessPetition<CheckPointDTO> petition)
-        {
-            return petition.RequestingUser != null;
-        }
+
+        #endregion
     }
 }

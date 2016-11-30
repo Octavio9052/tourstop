@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Common.DTOs;
 
 namespace Business.Handlers.Handlers.contracts
 {
-    public interface ITourRequestHandler
+    public interface ITourRequestHandler : IBaseRequestHandler<TourDTO>
     {
     }
 }

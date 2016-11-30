@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1/",
-    "signature": "6a0596a1fd5c7dee12d17ace96858eca0f978cb3"
+    "signature": "dfe14980ea30e8cbc5b871727e2ef32e87467ea7"
   },
   "compilationOptions": {
     "defines": [
@@ -689,17 +689,20 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/1.1.0": {
+      "Microsoft.EntityFrameworkCore/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "1.1.0",
           "Microsoft.Extensions.DependencyInjection": "1.1.0",
           "Microsoft.Extensions.Logging": "1.1.0",
-          "NETStandard.Library": "1.6.1",
           "Remotion.Linq": "2.1.1",
+          "System.Collections.Concurrent": "4.3.0",
           "System.Collections.Immutable": "1.3.0",
           "System.ComponentModel.Annotations": "4.3.0",
           "System.Interactive.Async": "3.0.0",
-          "System.Linq.Queryable": "4.3.0"
+          "System.Linq.Queryable": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
@@ -708,7 +711,7 @@
       "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
-          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0",
           "System.Data.Common": "4.1.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0"
@@ -1167,9 +1170,9 @@
           "lib/netstandard1.6/MySql.Data.dll": {}
         }
       },
-      "MySql.Data.EntityFrameworkCore/7.0.6-ir31": {
+      "MySql.Data.EntityFrameworkCore/7.0.6-IR31": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "1.0.0",
           "Microsoft.Extensions.Caching.Memory": "1.1.0",
           "Microsoft.Extensions.DependencyInjection": "1.1.0",
@@ -2839,7 +2842,8 @@
           "DataAccessLayer": "1.0.0",
           "AutoMapper": "5.1.1",
           "NETStandard.Library": "1.6.1",
-          "System.Linq.Dynamic.Core": "1.0.6.8"
+          "System.Linq.Dynamic.Core": "1.0.6.8",
+          "System.Net.Security": "4.3.0"
         },
         "compile": {
           "Business.Connectors.dll": {}
@@ -2865,10 +2869,8 @@
       },
       "DataAccessLayer/1.0.0": {
         "dependencies": {
-          "MySql.Data.EntityFrameworkCore": "7.0.6-ir31",
-          "MySql.Data": "7.0.6-ir31",
+          "MySql.Data.EntityFrameworkCore": "7.0.6-IR31",
           "Common": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "1.1.0",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -3552,17 +3554,20 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/1.1.0": {
+      "Microsoft.EntityFrameworkCore/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "1.1.0",
           "Microsoft.Extensions.DependencyInjection": "1.1.0",
           "Microsoft.Extensions.Logging": "1.1.0",
-          "NETStandard.Library": "1.6.1",
           "Remotion.Linq": "2.1.1",
+          "System.Collections.Concurrent": "4.3.0",
           "System.Collections.Immutable": "1.3.0",
           "System.ComponentModel.Annotations": "4.3.0",
           "System.Interactive.Async": "3.0.0",
-          "System.Linq.Queryable": "4.3.0"
+          "System.Linq.Queryable": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
@@ -3571,7 +3576,7 @@
       "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
-          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0",
           "System.Data.Common": "4.1.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0"
@@ -4021,9 +4026,9 @@
           "lib/netstandard1.6/MySql.Data.dll": {}
         }
       },
-      "MySql.Data.EntityFrameworkCore/7.0.6-ir31": {
+      "MySql.Data.EntityFrameworkCore/7.0.6-IR31": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "1.1.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "1.0.0",
           "Microsoft.Extensions.Caching.Memory": "1.1.0",
           "Microsoft.Extensions.DependencyInjection": "1.1.0",
@@ -5573,7 +5578,8 @@
           "DataAccessLayer": "1.0.0",
           "AutoMapper": "5.1.1",
           "NETStandard.Library": "1.6.1",
-          "System.Linq.Dynamic.Core": "1.0.6.8"
+          "System.Linq.Dynamic.Core": "1.0.6.8",
+          "System.Net.Security": "4.3.0"
         },
         "runtime": {
           "Business.Connectors.dll": {}
@@ -5599,10 +5605,8 @@
       },
       "DataAccessLayer/1.0.0": {
         "dependencies": {
-          "MySql.Data.EntityFrameworkCore": "7.0.6-ir31",
-          "MySql.Data": "7.0.6-ir31",
+          "MySql.Data.EntityFrameworkCore": "7.0.6-IR31",
           "Common": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "1.1.0",
           "NETStandard.Library": "1.6.1"
         },
         "runtime": {
@@ -5867,10 +5871,10 @@
       "serviceable": true,
       "sha512": "sha512-Bl6KYfbFSIW3QIRHAp931iR5h01qHjKghdpAtncwbzNUs0+IUZ+XfwkIU0sQsR33ufGvi3u4dZMIYYFysjpHAA=="
     },
-    "Microsoft.EntityFrameworkCore/1.1.0": {
+    "Microsoft.EntityFrameworkCore/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-S00vr6pLeoCMbm1PsXNZIceCAA/TUX83W3f2PcLFLGrx2QnGo5aqhtYjHvBhOVKJXZmt52EKEdORoTZVZ/swww=="
+      "sha512": "sha512-Vqg/v0cXRQZQH0gY3VHHqt0Bt5WZEkDReVpI1sNYKHVbVtnMYFKPp5SiNygosUJYrJk1rSGb8UVkplDNNUkEgg=="
     },
     "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
       "type": "package",
@@ -6092,7 +6096,7 @@
       "serviceable": true,
       "sha512": "sha512-PFMjB4pLdMT0lIGySbP5NVWPriqdA3ZqvLzpHTc/60VkCIAin2dZJIb6A+km9pe3At0rl7ngj4eq06t69YEJXQ=="
     },
-    "MySql.Data.EntityFrameworkCore/7.0.6-ir31": {
+    "MySql.Data.EntityFrameworkCore/7.0.6-IR31": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-2G/fGusd3MRLalOqH3uveWUBOWxg8MFooKdGqzux2h4fLpGlVGnGjcRzb1exJUFfMXGzsp3U/6oBFN2E8x8+Hg=="
