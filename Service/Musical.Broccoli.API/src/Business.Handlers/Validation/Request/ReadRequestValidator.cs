@@ -17,7 +17,13 @@ namespace Business.Handlers.Validation.Request
         {
             return filters == null || filters.Count <= 0
                 ? ValidationResult.Valid()
-                : filters.Select(x => FilterValidator.All().Validate(x)).Aggregate((x, y) => x + y);
+                : filters.Select(x => FilterValidator.All().Validate(x))
+                    .Aggregate((x, y) => x + y);
+        }
+
+        public static ReadRequestValidator GetValidator()
+        {
+            return new ReadRequestValidator();
         }
     }
 }

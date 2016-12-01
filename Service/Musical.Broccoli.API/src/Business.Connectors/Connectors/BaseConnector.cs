@@ -4,11 +4,11 @@ using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using System;
 using System.Linq.Dynamic.Core;
-using Business.Controllers.Response;
 using System.Collections.Generic;
 using Business.Connectors.Contracts;
+using Business.Connectors.Exceptions;
 using Business.Connectors.Petition;
-using Business.Controllers.Exceptions;
+using Business.Connectors.Response;
 
 namespace Business.Connectors
 {

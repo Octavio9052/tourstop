@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using Business.Connectors.Petition;
-using Business.Controllers.Petition;
-using Business.Controllers.Response;
+using Business.Connectors.Response;
 using Common.DTOs;
 
 namespace Business.Connectors.Contracts

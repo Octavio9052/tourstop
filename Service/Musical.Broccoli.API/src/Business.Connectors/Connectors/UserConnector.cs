@@ -2,8 +2,8 @@
 using DataAccessLayer.Entities;
 using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
 using System.Linq;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
 
 namespace Business.Connectors

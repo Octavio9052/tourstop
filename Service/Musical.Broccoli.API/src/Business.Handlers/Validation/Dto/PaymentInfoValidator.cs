@@ -1,17 +1,17 @@
-﻿using Common.DTOs;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
+using Common.DTOs;
 
-namespace Business.Handlers.Validation
+namespace Business.Handlers.Validation.Dto
 {
-    public class PaymentInfoValidator:BaseValidator<PaymentInfoDTO>
+    public class PaymentInfoValidator : BaseValidator<PaymentInfoDTO>
     {
         public override Func<PaymentInfoDTO, ValidationResult> Validate { get; internal set; }
+
         public PaymentInfoValidator And(PaymentInfoValidator other)
         {
-            return new PaymentInfoValidator() {
+            return new PaymentInfoValidator()
+            {
                 Validate = x => this.Validate(x) + other.Validate(x)
             };
         }
@@ -23,14 +23,16 @@ namespace Business.Handlers.Validation
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
+
         public static PaymentInfoValidator All()
         {
             return All();
         }
+
         public static PaymentInfoValidator All(params PaymentInfoValidator[] validators)
         {
-
-            var validatorsList = validators.ToList(); return validators.Aggregate((x, y) => x.And(y));
+            var validatorsList = validators.ToList();
+            return validators.Aggregate((x, y) => x.And(y));
         }
     }
 }

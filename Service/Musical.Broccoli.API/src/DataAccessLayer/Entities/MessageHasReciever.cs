@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DataAccessLayer.Entities
 {
@@ -10,6 +6,7 @@ namespace DataAccessLayer.Entities
     {
         [Required]
         public int MessageId { get; set; }
+
         [Required]
         public int RecieverId { get; set; }
 

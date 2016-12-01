@@ -14,7 +14,9 @@ namespace Business.Handlers.Validation.Request
         {
             return new ReadWriteRequestValidator<TDto>
             {
-                Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
+                Validate = x => predicate.Invoke(x)
+                    ? ValidationResult.Valid()
+                    : ValidationResult.Invalid(message)
             };
         }
 
@@ -22,7 +24,9 @@ namespace Business.Handlers.Validation.Request
         {
             return new ReadWriteRequestValidator<TDto>
             {
-                Validate = request => request.Data.Select(dto => validator.Validate(dto)).Aggregate((x, y) => x + y)
+                Validate = request => request.Data
+                    .Select(dto => validator.Validate(dto))
+                    .Aggregate((x, y) => x + y)
             };
         }
     }
