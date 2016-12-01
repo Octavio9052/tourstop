@@ -1,24 +1,25 @@
-﻿using System;
-using Business.Contracts;
+﻿using Business.Connectors.Contracts;
+using Business.Handlers.Authentication.contracts;
 using Common.DTOs;
+using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Handlers.Authentication
+namespace Business.Handlers.Authentication
 {
-    public class RequestAuthenticator
+    public class RequestAuthenticator : IRequestAuthenticator
     {
-
         private readonly ISessionConnector _connector;
 
-        public RequestAuthenticator( ISessionConnector connector )
+        public RequestAuthenticator(ISessionConnector connector)
         {
             _connector = connector;
         }
 
 
-        public UserDTO Aunthenticate(string authToken )
+        public UserDTO Authenticate(string authToken)
         {
-            //_connector.
-            throw new NotImplementedException();
+            return string.IsNullOrEmpty(authToken)
+                ? null
+                : _connector.Authenticate(authToken);
         }
     }
 }

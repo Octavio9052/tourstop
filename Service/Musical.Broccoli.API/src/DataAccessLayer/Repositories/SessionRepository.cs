@@ -1,19 +1,33 @@
-﻿using DataAccessLayer.Context;
+﻿using System;
+using System.Linq;
+using DataAccessLayer.Context;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DataAccessLayer.Context;
-using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories
 {
-    public class SessionRepository: BaseRepository<Session>, ISessionRepository
+    public class SessionRepository : BaseRepository<Session>, ISessionRepository
     {
         public SessionRepository(TourStopContext context) : base(context)
         {
+        }
+
+        public Session GetFullSession(int userId)
+        {
+            var session = GetbyKey(userId);
+
+            Context.Entry(session).Reference(x => x.User).Load();
+
+            return session;
+        }
+
+        public Session GetFullSession(Guid authToken)
+        {
+            var session = DbSet.First(x => x.AuthorizationToken.Equals(authToken));
+
+            Context.Entry(session).Reference(x => x.User).Load();
+
+            return session;
         }
     }
 }

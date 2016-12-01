@@ -1,8 +1,8 @@
 ﻿using Common.DTOs;
 using DataAccessLayer.Entities;
 using AutoMapper;
+using Business.Connectors.Contracts;
 using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
 using Business.Connectors.Petition;
 using System.Linq;
 

@@ -3,8 +3,8 @@ using Common.DTOs;
 using Business.Handlers.Request;
 using System;
 using Business.Handlers.Handlers.contracts;
-using Handlers.Exceptions;
 using Business.Handlers.Response;
+using Common.Exceptions;
 
 namespace Musical.Broccoli.API.Controllers
 {

@@ -1,19 +1,18 @@
-﻿using Common.DTOs;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
+using Common.DTOs;
 
-namespace Business.Handlers.Validation
+namespace Business.Handlers.Validation.Dto
 {
     public class UserValidator : BaseValidator<UserDTO>
     {
         public override Func<UserDTO, ValidationResult> Validate { get; internal set; }
+
         public UserValidator And(UserValidator other)
         {
             return new UserValidator()
             {
-                Validate = x => this.Validate( x ) + other.Validate( x )
+                Validate = x => this.Validate(x) + other.Validate(x)
             };
         }
 
@@ -26,40 +25,49 @@ namespace Business.Handlers.Validation
         }
 
         #region Validators
+
         public static UserValidator NameNotEmty()
         {
-            return Holds(x => string.IsNullOrEmpty(x.FirstName) && string.IsNullOrEmpty(x.LastName), "Name is null or empty");
+            return Holds(x => string.IsNullOrEmpty(x.FirstName) && string.IsNullOrEmpty(x.LastName),
+                "Name is null or empty");
         }
+
         public static UserValidator EmailNotEmty()
         {
             return Holds(x => string.IsNullOrEmpty(x.Email), "Email is null or empty");
         }
+
         public static UserValidator EmailFormat()
         {
             return Holds(x => x.Email.Contains("@"), "Email invalid format");
         }
+
         public static UserValidator PhoneNotEmty()
         {
             return Holds(x => string.IsNullOrEmpty(x.Phone), "Phone is null or empty");
         }
+
         public static UserValidator LanguageCodeisValid()
         {
             return Holds(x => x.LanguageCode == 0, "Invalid LanguageCode");
         }
+
         public static UserValidator UserTypeisValid()
         {
             return Holds(x => x.UserType == 0, "User is invalid");
         }
+
         #endregion
 
         public static UserValidator All()
         {
-            return All(NameNotEmty(), EmailNotEmty(), EmailFormat(), PhoneNotEmty(), LanguageCodeisValid(), UserTypeisValid(), UserTypeisValid());
+            return All(NameNotEmty(), EmailNotEmty(), EmailFormat(), PhoneNotEmty(), LanguageCodeisValid(),
+                UserTypeisValid(), UserTypeisValid());
         }
+
         public static UserValidator All(params UserValidator[] validators)
         {
             return validators.Aggregate((x, y) => x.And(y));
         }
-
     }
 }

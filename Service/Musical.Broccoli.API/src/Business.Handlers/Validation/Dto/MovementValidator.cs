@@ -1,19 +1,18 @@
-﻿using Common.DTOs;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
+using Common.DTOs;
 
-namespace Business.Handlers.Validation
+namespace Business.Handlers.Validation.Dto
 {
-    public class MovementValidator:BaseValidator<MovementDTO>
+    public class MovementValidator : BaseValidator<MovementDTO>
     {
         public override Func<MovementDTO, ValidationResult> Validate { get; internal set; }
+
         public MovementValidator And(MovementValidator other)
         {
             return new MovementValidator()
             {
-                Validate = x => this.Validate( x ) + other.Validate( x )
+                Validate = x => this.Validate(x) + other.Validate(x)
             };
         }
 
@@ -26,28 +25,32 @@ namespace Business.Handlers.Validation
         }
 
         #region Validators
+
         public static MovementValidator MovementTypeIsValid()
         {
             return Holds(x => x.MovementType == 0, "Invalid MovementType");
         }
+
         public static MovementValidator ReservationIdIsValid()
         {
             return Holds(x => x.ReservationId == 0, "Invalid Reservation");
         }
+
         public static MovementValidator OrderIdIsValid()
         {
             return Holds(x => x.OrderId == 0, "Invalid Order");
         }
+
         #endregion
 
         public static MovementValidator All()
         {
             return All(MovementTypeIsValid(), ReservationIdIsValid(), OrderIdIsValid());
         }
+
         public static MovementValidator All(params MovementValidator[] validators)
         {
             return validators.Aggregate((x, y) => x.And(y));
         }
-
     }
 }

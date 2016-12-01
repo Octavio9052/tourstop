@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Business.Controllers.Exceptions
+﻿namespace Business.Connectors.Exceptions
 {
-    public class InternalServerException:System.Exception
+    public class InternalServerException : System.Exception
     {
-        public InternalServerException(string message):base(message)
+        public InternalServerException(string message) : base(message)
         {
-            
         }
     }
 }

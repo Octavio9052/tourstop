@@ -5,7 +5,6 @@ using DataAccessLayer.Context;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace DataAccessLayer.Repositories
 {
@@ -32,9 +31,9 @@ namespace DataAccessLayer.Repositories
             return Context.Set<T>().ToList();
         }
 
-        public T GetbyKey(Func<T, bool> predicate)
+        public T GetbyKey(object key)
         {
-            return DbSet.FirstOrDefault(predicate);
+            return DbSet.Find(key);
         }
 
         public ICollection<T> Search(Func<T, bool> predicate)

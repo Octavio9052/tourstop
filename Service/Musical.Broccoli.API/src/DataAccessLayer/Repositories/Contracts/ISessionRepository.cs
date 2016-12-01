@@ -1,12 +1,12 @@
-﻿using DataAccessLayer.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using DataAccessLayer.Entities;
 
 namespace DataAccessLayer.Repositories.Contracts
 {
     public interface ISessionRepository : IBaseRepository<Session>
     {
+        Session GetFullSession(int userId);
+
+        Session GetFullSession(Guid authToken);
     }
 }

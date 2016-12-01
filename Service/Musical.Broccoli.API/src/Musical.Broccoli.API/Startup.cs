@@ -1,21 +1,22 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using AutoMapper;
+﻿using AutoMapper;
 using Business.Connectors;
+using Business.Connectors.Contracts;
 using Business.Connectors.Helpers;
-using Business.Contracts;
+using Business.Handlers.Authentication;
+using Business.Handlers.Authentication.contracts;
 using Business.Handlers.Handlers;
 using Business.Handlers.Handlers.contracts;
-using Business.Handlers.Validation;
-using Common.AppSettings;
+using Business.Handlers.Validation.Dto;
 using DataAccessLayer.Context;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MySQL.Data.EntityFrameworkCore.Extensions;
+
 
 namespace Musical.Broccoli.API
 {
@@ -27,13 +28,13 @@ namespace Musical.Broccoli.API
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
 
             if (env.IsEnvironment("Development"))
             {
                 // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
+                builder.AddApplicationInsightsSettings(true);
             }
 
             builder.AddEnvironmentVariables();
@@ -63,26 +64,30 @@ namespace Musical.Broccoli.API
 
             #endregion
 
+            //RequestAuthenticatorAuthenticator
+            services.AddTransient<IRequestAuthenticator, RequestAuthenticator>();
+
             #region Validators
 
-            services.AddScoped(x => MessageValidator.All());
-            services.AddScoped(x => OrderValidator.All());
-            services.AddScoped(x => TourValidator.All());
-            services.AddScoped(x => UserValidator.All());
+            services.AddTransient(x => MessageValidator.All());
+            services.AddTransient(x => OrderValidator.All());
+            services.AddTransient(x => TourValidator.All());
+            services.AddTransient(x => UserValidator.All());
 
             #endregion
 
             #region Connectors
 
-            services.AddTransient<IAddressConnector, AddressConnector>();
-            services.AddTransient<ICheckPointConnector, CheckPointConnector>();
-            services.AddTransient<IMessageConnector, MessageConnector>();
-            services.AddTransient<IMovementConnector, MovementConnector>();
-            services.AddTransient<IOrderConnector, OrderConnector>();
-            services.AddTransient<IPaymentInfoConnector, PaymentInfoConnector>();
-            services.AddTransient<IRatingConnector, RatingConnector>();
-            services.AddTransient<ITourConnector, TourConnector>();
-            services.AddTransient<IUserConnector, UserConnector>();
+            services.AddScoped<IAddressConnector, AddressConnector>();
+            services.AddScoped<ICheckPointConnector, CheckPointConnector>();
+            services.AddScoped<IMessageConnector, MessageConnector>();
+            services.AddScoped<IMovementConnector, MovementConnector>();
+            services.AddScoped<IOrderConnector, OrderConnector>();
+            services.AddScoped<IPaymentInfoConnector, PaymentInfoConnector>();
+            services.AddScoped<IRatingConnector, RatingConnector>();
+            services.AddScoped<ISessionConnector, SessionConnector>();
+            services.AddScoped<ITourConnector, TourConnector>();
+            services.AddScoped<IUserConnector, UserConnector>();
 
             #endregion
 
@@ -108,8 +113,9 @@ namespace Musical.Broccoli.API
 
             #endregion
 
+            //DbContext
             services.AddDbContext<TourStopContext>(
-                options => options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+                options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

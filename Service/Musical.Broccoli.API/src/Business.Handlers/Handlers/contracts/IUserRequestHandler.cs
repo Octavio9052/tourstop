@@ -1,5 +1,4 @@
-﻿using Business.Handlers.Response;
-using Common.DTOs;
+﻿using Common.DTOs;
 
 namespace Business.Handlers.Handlers.contracts
 {

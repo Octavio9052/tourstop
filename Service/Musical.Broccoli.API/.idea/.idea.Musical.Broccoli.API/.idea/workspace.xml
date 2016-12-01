@@ -2,21 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd10812e-26ae-4f65-b606-51d1c0407007" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.vs/Musical.Broccoli.API/v14/.suo" afterPath="$PROJECT_DIR$/../../.vs/Musical.Broccoli.API/v14/.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Musical.Broccoli.API.sln" afterPath="$PROJECT_DIR$/../../Musical.Broccoli.API.sln" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IBaseRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IBaseRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IMessageRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IMessageRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IOrderRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IOrderRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/ITourRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/ITourRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/.IncrementalCache" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/.IncrementalCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/BaseController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/BaseController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/MessageController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/MessageController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/OrderController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/OrderController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/TourController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/TourController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.lock.json" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
     </list>
     <ignored path="Musical.Broccoli.API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,30 +33,29 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="hideWarnings" value="true" />
-    <option name="HIDE_WARNINGS" value="true" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Musical.Broccoli.API" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserController.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs">
+      <file leaf-file-name="BaseHandler_Tests.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+            <state relative-caret-position="34">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
               <folding>
-                <marker date="1480452894664" expanded="false" signature="6:202" ph="..." />
-                <marker date="1480452894664" expanded="false" signature="246:2835" ph="{...}" />
-                <marker date="1480452894664" expanded="false" signature="351:2833" ph="{...}" />
-                <marker date="1480452894664" expanded="false" signature="486:552" ph="{...}" />
-                <marker date="1480452894664" expanded="false" signature="636:1224" ph="{...}" />
-                <marker date="1480452894664" expanded="false" signature="1324:1796" ph="{...}" />
-                <marker date="1480452894664" expanded="false" signature="1894:2310" ph="{...}" />
-                <marker date="1480452894664" expanded="false" signature="2414:2827" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="6:384" ph="..." />
+                <marker date="1480588022871" expanded="true" signature="419:2348" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="456:2346" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="562:1316" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="879:1210" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="940:1159" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="993:1141" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="1408:2338" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="1971:2277" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="2032:2263" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="2085:2245" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -68,48 +69,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../test/Business.Connectors.Tests/UserConnector_Tests.cs" />
-        <option value="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadWriteBusinessPetition.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Petition/BusinessPetition.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Petition/PetitionAction.cs" />
-        <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/PetitionValidators/PetitionValidation.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/PetitionValidators/PetitionValidator.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IBaseConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/CheckPointConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/AddressConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/BaseConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MessageConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/OrderConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PaymentInfoConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/TourConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadBusinessPetition.cs" />
-        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/Repository_Tests.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MovementConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PromotionConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/RatingConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/UserConnector.cs" />
-        <option value="$PROJECT_DIR$/../../test/Business.Connectors.Tests/ConnectorsTests/UserConnector_Tests.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs" />
-        <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IUserRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/RequestValidator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/RequestValidationResult.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/MessageValidator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/CheckPointValidator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/FilterValidator.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IBaseRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/BaseController.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IMessageRequestHandler.cs" />
@@ -119,13 +91,43 @@
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/ITourRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/TourController.cs" />
         <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/DataAccess.Tests.xproj" />
+        <option value="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json" />
+        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests2/Tests.cs" />
+        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests2/project.json" />
+        <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs" />
+        <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs" />
+        <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/SessionRepository.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Response/BusinessResponse.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Response/Response.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs" />
+        <option value="$PROJECT_DIR$/../../test/Business.Connectors.Tests/ConnectorsTests/UserConnector_Tests.cs" />
+        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/project.json" />
+        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/Repository_Tests.cs" />
+        <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" />
+        <option value="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" />
+        <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
+        <option value="$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="680" />
-    <option name="width" value="680" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1376" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -134,10 +136,13 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>General</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>General</id>
+            <id>LongLine</id>
           </State>
         </selected-state>
       </profile-state>
@@ -176,7 +181,11 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -186,37 +195,15 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API" />
-              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="Business.Handlers.Tests" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -226,11 +213,39 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business.Connectors.Tests" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,8 +256,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/DataAccess.Tests/DataAccess.Tests.xproj" />
   </component>
   <component name="RunManager" selected=".NET Project.Default">
     <configuration default="true" type="DotNetProject" factoryName=".NET Project">
@@ -296,11 +312,18 @@
       <workItem from="1479970568143" duration="2874000" />
       <workItem from="1480404042782" duration="21831000" />
       <workItem from="1480450708325" duration="2199000" />
+      <workItem from="1480490355629" duration="1363000" />
+      <workItem from="1480492778199" duration="3235000" />
+      <workItem from="1480555828272" duration="4349000" />
+      <workItem from="1480560292379" duration="584000" />
+      <workItem from="1480564175937" duration="5159000" />
+      <workItem from="1480575402849" duration="73000" />
+      <workItem from="1480582362675" duration="5401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40954000" />
+    <option name="totallyTimeSpent" value="61118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,30 +335,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="680" y="0" width="680" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1376" height="784" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6310241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32823366" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5029412" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24343015" sideWeight="0.49117646" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780084" sideWeight="0.5029412" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UnitTesting" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.4970588" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.87966806" sideWeight="0.4970588" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5943953" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4329184" sideWeight="0.4970588" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780084" sideWeight="0.5029412" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -366,152 +390,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs</url>
+          <line>65</line>
+          <properties startOffset="2524" endOffset="2597" documentPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/Filter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Petition/BusinessPetition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadWriteBusinessPetition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Petition/PetitionAction.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/PetitionValidators/PetitionValidator.cs" />
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IBaseConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="77" selection-start-line="13" selection-start-column="77" selection-end-line="13" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/AddressConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/BaseConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MessageConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/CheckPointConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/OrderConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PaymentInfoConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/TourConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/PaymentInfoRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadBusinessPetition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/Repository_Tests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MovementConnector.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -540,62 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/ConnectorsTests/UserConnector_Tests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="379" column="14" selection-start-line="379" selection-start-column="14" selection-end-line="379" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="92" selection-start-line="11" selection-start-column="92" selection-end-line="11" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/MessageValidator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -611,13 +446,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/RequestValidationResult.cs" />
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/FilterValidator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -625,50 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IUserRequestHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-          <folding>
-            <marker date="1480420910950" expanded="true" signature="6:52" ph="..." />
-            <marker date="1480420910950" expanded="true" signature="174:186" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <marker date="1480451546873" expanded="true" signature="6:124" ph="..." />
-            <marker date="1480451546873" expanded="true" signature="162:429" ph="{...}" />
-            <marker date="1480451546873" expanded="true" signature="260:427" ph="{...}" />
-            <marker date="1480451546873" expanded="true" signature="401:421" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-          <folding>
-            <marker date="1480451624370" expanded="true" signature="6:242" ph="..." />
-            <marker date="1480451624370" expanded="true" signature="280:1114" ph="{...}" />
-            <marker date="1480451624370" expanded="true" signature="373:1112" ph="{...}" />
-            <marker date="1480451624370" expanded="true" signature="583:675" ph="{...}" />
-            <marker date="1480451624370" expanded="true" signature="742:811" ph="{...}" />
-            <marker date="1480451624370" expanded="true" signature="891:960" ph="{...}" />
-            <marker date="1480451624370" expanded="true" signature="1037:1106" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,11 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
-          <folding>
-            <marker date="1480451671513" expanded="true" signature="6:85" ph="..." />
-            <marker date="1480451671513" expanded="true" signature="133:416" ph="{...}" />
-            <marker date="1480451671513" expanded="true" signature="197:414" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -688,11 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <marker date="1480452238096" expanded="true" signature="6:131" ph="..." />
-            <marker date="1480452238096" expanded="true" signature="175:516" ph="{...}" />
-            <marker date="1480452238096" expanded="true" signature="235:514" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,10 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1480452326672" expanded="true" signature="66:160" ph="{...}" />
-            <marker date="1480452326672" expanded="true" signature="146:158" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -711,16 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1480452441818" expanded="true" signature="6:202" ph="..." />
-            <marker date="1480452441818" expanded="true" signature="246:2865" ph="{...}" />
-            <marker date="1480452441818" expanded="true" signature="357:2863" ph="{...}" />
-            <marker date="1480452441818" expanded="true" signature="501:567" ph="{...}" />
-            <marker date="1480452441818" expanded="false" signature="651:1242" ph="{...}" />
-            <marker date="1480452441818" expanded="false" signature="1345:1820" ph="{...}" />
-            <marker date="1480452441818" expanded="false" signature="1921:2337" ph="{...}" />
-            <marker date="1480452441818" expanded="false" signature="2444:2857" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,10 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1480452539417" expanded="true" signature="66:156" ph="{...}" />
-            <marker date="1480452539417" expanded="true" signature="142:154" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,16 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding>
-            <marker date="1480452692909" expanded="false" signature="6:202" ph="..." />
-            <marker date="1480452692909" expanded="false" signature="246:2814" ph="{...}" />
-            <marker date="1480452692909" expanded="false" signature="321:2812" ph="{...}" />
-            <marker date="1480452692909" expanded="false" signature="459:525" ph="{...}" />
-            <marker date="1480452692909" expanded="false" signature="610:1199" ph="{...}" />
-            <marker date="1480452692909" expanded="false" signature="1300:1773" ph="{...}" />
-            <marker date="1480452692909" expanded="false" signature="1872:2288" ph="{...}" />
-            <marker date="1480452692909" expanded="false" signature="2393:2806" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,10 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-          <folding>
-            <marker date="1480452773440" expanded="true" signature="66:154" ph="{...}" />
-            <marker date="1480452773440" expanded="true" signature="140:152" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -767,32 +513,322 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding>
-            <marker date="1480452812446" expanded="true" signature="6:202" ph="..." />
-            <marker date="1480452812446" expanded="true" signature="246:2835" ph="{...}" />
-            <marker date="1480452812446" expanded="true" signature="351:2833" ph="{...}" />
-            <marker date="1480452812446" expanded="true" signature="486:552" ph="{...}" />
-            <marker date="1480452812446" expanded="true" signature="636:1224" ph="{...}" />
-            <marker date="1480452812446" expanded="true" signature="1324:1796" ph="{...}" />
-            <marker date="1480452812446" expanded="true" signature="1894:2310" ph="{...}" />
-            <marker date="1480452812446" expanded="true" signature="2414:2827" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/DataAccess.Tests.xproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests2/Tests.cs" />
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests2/project.json" />
+    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="49" column="100" selection-start-line="49" selection-start-column="100" selection-end-line="49" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/SessionRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ISessionRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ISessionConnector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IBaseConnector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Response/Response.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Response/BusinessResponse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/ConnectorsTests/UserConnector_Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="34" column="25" selection-start-line="32" selection-start-column="12" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding>
-            <marker date="1480452894664" expanded="false" signature="6:202" ph="..." />
-            <marker date="1480452894664" expanded="false" signature="246:2835" ph="{...}" />
-            <marker date="1480452894664" expanded="false" signature="351:2833" ph="{...}" />
-            <marker date="1480452894664" expanded="false" signature="486:552" ph="{...}" />
-            <marker date="1480452894664" expanded="false" signature="636:1224" ph="{...}" />
-            <marker date="1480452894664" expanded="false" signature="1324:1796" ph="{...}" />
-            <marker date="1480452894664" expanded="false" signature="1894:2310" ph="{...}" />
-            <marker date="1480452894664" expanded="false" signature="2414:2827" ph="{...}" />
+            <marker date="1480581567880" expanded="false" signature="6:13" ph="..." />
+            <marker date="1480581567880" expanded="true" signature="6:187" ph="..." />
+            <marker date="1480581567880" expanded="true" signature="215:4409" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="255:4407" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="329:1401" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="682:1053" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="1468:2455" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="2517:3665" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="3729:4400" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="4401:4407" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480560080269" expanded="true" signature="0:744" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="48:87" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="109:359" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="406:742" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="433:736" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="463:618" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="506:604" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="643:726" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1480583384318" expanded="true" signature="0:730" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="48:87" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="109:345" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="392:728" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="419:722" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="449:604" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="492:590" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="629:712" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <marker date="1480560080190" expanded="true" signature="6:225" ph="..." />
+            <marker date="1480560080190" expanded="true" signature="263:600" ph="{...}" />
+            <marker date="1480560080190" expanded="true" signature="361:598" ph="{...}" />
+            <marker date="1480560080190" expanded="true" signature="572:592" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+          <folding>
+            <marker date="1480583733718" expanded="false" signature="6:672" ph="..." />
+            <marker date="1480583733718" expanded="true" signature="705:5391" ph="{...}" />
+            <marker date="1480583733718" expanded="true" signature="732:5389" ph="{...}" />
+            <marker date="1480583733718" expanded="false" signature="854:1599" ph="{...}" />
+            <marker date="1480583733718" expanded="true" signature="1825:4886" ph="{...}" />
+            <marker date="1480583733718" expanded="true" signature="1989:4697" ph="Dependency Injection" />
+            <marker date="1480583733718" expanded="false" signature="2031:2388" ph="Request Handlers" />
+            <marker date="1480583733718" expanded="false" signature="2533:2824" ph="Validators" />
+            <marker date="1480583733718" expanded="false" signature="2838:3589" ph="Connectors" />
+            <marker date="1480583733718" expanded="false" signature="3603:4570" ph="Repositories" />
+            <marker date="1480583733718" expanded="false" signature="5103:5383" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Authentication/contracts/IRequestAuthenticator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1480489375868" expanded="true" signature="72:179" ph="{...}" />
+            <marker date="1480489375868" expanded="true" signature="117:177" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <marker date="1480584624260" expanded="true" signature="6:153" ph="..." />
+            <marker date="1480584624260" expanded="true" signature="197:656" ph="{...}" />
+            <marker date="1480584624260" expanded="true" signature="261:654" ph="{...}" />
+            <marker date="1480584624260" expanded="true" signature="388:444" ph="{...}" />
+            <marker date="1480584624260" expanded="true" signature="500:648" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/2F66D17B-4E11-4947-9D26-9F0C32173882/7b/a30dd1dd/Convert.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <marker date="1480587907829" expanded="true" signature="72:306" ph="{...}" />
+            <marker date="1480587907829" expanded="true" signature="108:304" ph="{...}" />
+            <marker date="1480587907829" expanded="true" signature="235:298" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <marker date="1480587977727" expanded="false" signature="6:371" ph="..." />
+            <marker date="1480587977727" expanded="true" signature="410:2644" ph="{...}" />
+            <marker date="1480587977727" expanded="true" signature="503:2642" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="825:961" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="1028:1336" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="1416:1752" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="1829:2167" ph="{...}" />
+            <marker date="1480587977727" expanded="true" signature="2361:2636" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <folding>
+            <marker date="1480588022871" expanded="true" signature="6:384" ph="..." />
+            <marker date="1480588022871" expanded="true" signature="419:2348" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="456:2346" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="562:1316" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="879:1210" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="940:1159" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="993:1141" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="1408:2338" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="1971:2277" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="2032:2263" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="2085:2245" ph="{...}" />
           </folding>
         </state>
       </provider>
