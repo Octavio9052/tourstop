@@ -1,6 +1,7 @@
 ﻿using Business.Connectors.Contracts;
 using Business.Handlers.Authentication.contracts;
 using Common.DTOs;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Business.Handlers.Authentication
 {
@@ -16,7 +17,9 @@ namespace Business.Handlers.Authentication
 
         public UserDTO Authenticate(string authToken)
         {
-            return _connector.Authenticate(authToken);
+            return string.IsNullOrEmpty(authToken)
+                ? null
+                : _connector.Authenticate(authToken);
         }
     }
 }

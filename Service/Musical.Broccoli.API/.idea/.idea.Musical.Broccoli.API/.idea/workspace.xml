@@ -2,230 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd10812e-26ae-4f65-b606-51d1c0407007" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.ApplicationInsights.AspNetCore.1.0.0/Microsoft.ApplicationInsights.AspNetCore.1.0.0.nupkg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.ApplicationInsights.AspNetCore.1.0.0/lib/net451/Microsoft.ApplicationInsights.AspNetCore.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.ApplicationInsights.AspNetCore.1.0.0/lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.EntityFrameworkCore.1.1.0/Microsoft.EntityFrameworkCore.1.1.0.nupkg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.EntityFrameworkCore.1.1.0/lib/net451/Microsoft.EntityFrameworkCore.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.EntityFrameworkCore.1.1.0/lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/MySql.Data.EntityFrameworkCore.7.0.6-IR31.nupkg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/lib/net451/MySql.Data.EntityFrameworkCore.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/SapientGuardian.EntityFrameworkCore.MySql.7.1.14/SapientGuardian.EntityFrameworkCore.MySql.7.1.14.nupkg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/SapientGuardian.EntityFrameworkCore.MySql.7.1.14/lib/netstandard1.3/SapientGuardian.EntityFrameworkCore.MySql.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.EntityFrameworkCore.1.1.0/lib/net451/Microsoft.EntityFrameworkCore.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/Microsoft.EntityFrameworkCore.1.1.0/lib/netstandard1.3/Microsoft.EntityFrameworkCore.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/Content/ReleaseNotes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/lib/net451/MySql.Data.EntityFrameworkCore.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../packages/MySql.Data.EntityFrameworkCore.7.0.6-IR31/lib/netstandard1.6/MySql.Data.EntityFrameworkCore.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/contracts/IRequestAuthenticator.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../src/Common/Exceptions/AuthenticationException.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../src/Common/Exceptions/InternalServerErrorException.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../src/Common/Exceptions/InvalidRequestException.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.1/.IncrementalCache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.1/.SDKVersion" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.1/dotnet-compile-csc.rsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.1/dotnet-compile.assemblyinfo.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.1/dotnet-compile.rsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests2/DataAccess.Tests2.xproj.user" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests2/project.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests2/project.lock.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Exceptions/InvalidRequestException.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Exceptions/UnauthorizedRequestException.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/Tests.cs" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/Repository_Tests.cs" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.vs/Musical.Broccoli.API/v14/.suo" afterPath="$PROJECT_DIR$/../../.vs/Musical.Broccoli.API/v14/.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.vs/restore.dg" afterPath="$PROJECT_DIR$/../../.vs/restore.dg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Musical.Broccoli.API.sln" afterPath="$PROJECT_DIR$/../../Musical.Broccoli.API.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../global.json" afterPath="$PROJECT_DIR$/../../global.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/AddressConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/AddressConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/BaseConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/BaseConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/CheckPointConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/CheckPointConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IAddressConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IAddressConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IBaseConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IBaseConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ICheckPointConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ICheckPointConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IMessageConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IMessageConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IMovementConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IMovementConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IOrderConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IOrderConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IPaymentInfoConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IPaymentInfoConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IPromotionConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IPromotionConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IRatingConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IRatingConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IReservationConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IReservationConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ISessionConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ISessionConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ITourConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/ITourConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IUserConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/Contracts/IUserConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MessageConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MessageConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MovementConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MovementConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/OrderConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/OrderConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PaymentInfoConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PaymentInfoConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PromotionConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PromotionConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/RatingConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/RatingConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/TourConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/TourConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/UserConnector.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/UserConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Exceptions/InternalServerException.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Exceptions/InternalServerException.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Helpers/AutoMapperConfiguration.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Helpers/AutoMapperConfiguration.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Helpers/AutoMapperFactory.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Helpers/AutoMapperFactory.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Petition/BusinessPetition.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Petition/BusinessPetition.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Petition/PetitionAction.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Petition/PetitionAction.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadBusinessPetition.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadBusinessPetition.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/Response/BusinessResponse.cs" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/Response/BusinessResponse.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/obj/Debug/netstandard1.6/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/project.json" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Connectors/project.lock.json" afterPath="$PROJECT_DIR$/../../src/Business.Connectors/project.lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IUserRequestHandler.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IUserRequestHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Request/Filter.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Request/Filter.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Response/Response.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Response/Response.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/CheckPointValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/CheckPointValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/MessageValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/MessageValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/MovementValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/MovementValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/OrderValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/OrderValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/PaymentInfoValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/PaymentInfoValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/PromotionValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/PromotionValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/RatingValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/RatingValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/ReservationValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/ReservationValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/TourValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/TourValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/UserValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Dto/UserValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/ValidationResult.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Validation/ValidationResult.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/.IncrementalCache" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/.IncrementalCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/obj/Debug/netstandard1.6/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/project.json" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/project.lock.json" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/AppSettings/AppSettings.cs" afterPath="$PROJECT_DIR$/../../src/Common/AppSettings/AppSettings.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/AddressDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/AddressDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/BaseDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/BaseDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/CheckPointDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/CheckPointDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/MessageDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/MessageDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/MovementDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/MovementDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/OrderDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/OrderDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/PaymentInfoDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/PaymentInfoDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/PromotionDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/PromotionDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/SessionDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/SessionDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/DTOs/TourDTO.cs" afterPath="$PROJECT_DIR$/../../src/Common/DTOs/TourDTO.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Enums/CountryCode.cs" afterPath="$PROJECT_DIR$/../../src/Common/Enums/CountryCode.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Enums/LanguageCode.cs" afterPath="$PROJECT_DIR$/../../src/Common/Enums/LanguageCode.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Enums/MovementType.cs" afterPath="$PROJECT_DIR$/../../src/Common/Enums/MovementType.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Enums/PaymentType.cs" afterPath="$PROJECT_DIR$/../../src/Common/Enums/PaymentType.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Enums/PromoType.cs" afterPath="$PROJECT_DIR$/../../src/Common/Enums/PromoType.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Enums/UserType.cs" afterPath="$PROJECT_DIR$/../../src/Common/Enums/UserType.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../src/Common/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/obj/Debug/netstandard1.6/.IncrementalCache" afterPath="$PROJECT_DIR$/../../src/Common/obj/Debug/netstandard1.6/.IncrementalCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/Common/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/Common/obj/Debug/netstandard1.6/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/project.json" afterPath="$PROJECT_DIR$/../../src/Common/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Common/project.lock.json" afterPath="$PROJECT_DIR$/../../src/Common/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Context/TourStopContext.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Context/TourStopContext.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Address.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Address.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/BaseEntity.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/BaseEntity.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/CheckPoint.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/CheckPoint.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Message.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Message.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/MessageHasReciever.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/MessageHasReciever.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Movement.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Movement.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Order.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Order.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/PaymentInfo.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/PaymentInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Promotion.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Promotion.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Rating.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Rating.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Reservation.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Reservation.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Session.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Session.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Tour.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/Tour.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/User.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Entities/User.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Factories/TourStopContextFactory.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Factories/TourStopContextFactory.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/AddressRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/AddressRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/CheckPointRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/CheckPointRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IAddressRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IAddressRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ICheckPointRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ICheckPointRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IMessageRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IMessageRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IMovementRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IMovementRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IOrderRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IOrderRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IPaymentInfoRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IPaymentInfoRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IPromotionRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IPromotionRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IRatingRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IRatingRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IReservationRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IReservationRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ISessionRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ISessionRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ITourRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/ITourRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IUserRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IUserRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/MessageRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/MessageRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/MovementRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/MovementRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/OrderRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/OrderRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/PaymentInfoRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/PaymentInfoRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/PromotionRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/PromotionRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/RatingRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/RatingRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/ReservationRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/ReservationRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/SessionRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/SessionRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/TourRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/TourRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/UserRepository.cs" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/UserRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/obj/Debug/netstandard1.6/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/project.json" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/DataAccessLayer/project.lock.json" afterPath="$PROJECT_DIR$/../../src/DataAccessLayer/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Infrastructure/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../src/Infrastructure/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Infrastructure/project.json" afterPath="$PROJECT_DIR$/../../src/Infrastructure/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Infrastructure/project.lock.json" afterPath="$PROJECT_DIR$/../../src/Infrastructure/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/BaseController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/BaseController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/MessageController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/MessageController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/OrderController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/OrderController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/TourController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/TourController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Program.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Program.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Properties/launchSettings.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Properties/launchSettings.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Service References/Application Insights/ConnectedService.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Service References/Application Insights/ConnectedService.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" afterPath="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/.SDKVersion" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/.SDKVersion" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/Musical.Broccoli.APIdotnet-compile.deps.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/Musical.Broccoli.APIdotnet-compile.deps.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/.IncrementalCache" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/.IncrementalCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/Musical.Broccoli.APIdotnet-compile.deps.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/Musical.Broccoli.APIdotnet-compile.deps.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/obj/Debug/netcoreapp1.1/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/project.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/project.lock.json" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/web.config" afterPath="$PROJECT_DIR$/../../src/Musical.Broccoli.API/web.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/ConnectorsTests/UserConnector_Tests.cs" afterPath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/ConnectorsTests/UserConnector_Tests.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json" afterPath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.lock.json" afterPath="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/Tests.cs" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/Tests.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.lock.json" afterPath="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/Repositories/AddressRepository_Tests.cs" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/Repositories/AddressRepository_Tests.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/project.json" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/project.lock.json" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/project.lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/Properties/AssemblyInfo.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/Tests.cs" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/Tests.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" afterPath="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/.IncrementalCache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile-csc.rsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/obj/Debug/netcoreapp1.0/dotnet-compile.rsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/project.json" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../test/TourStop.API.Tests/project.lock.json" afterPath="$PROJECT_DIR$/../../test/TourStop.API.Tests/project.lock.json" />
     </list>
     <ignored path="Musical.Broccoli.API.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -246,43 +39,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseRepository_Tests.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs">
+      <file leaf-file-name="BaseHandler_Tests.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="138" column="12" selection-start-line="138" selection-start-column="12" selection-end-line="138" selection-end-column="27" />
+            <state relative-caret-position="34">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
               <folding>
-                <marker date="1480575479954" expanded="false" signature="6:357" ph="..." />
-                <marker date="1480575479954" expanded="true" signature="385:10557" ph="{...}" />
-                <marker date="1480575479954" expanded="true" signature="425:10555" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="552:828" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="872:3147" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="934:3028" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="977:1350" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="1393:1766" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="1809:2182" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="2225:2598" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="2641:3014" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="3224:3990" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="3339:3674" ph="{...}" />
-                <marker date="1480575479954" expanded="true" signature="4055:4798" ph="{...}" />
-                <marker date="1480575479954" expanded="true" signature="4112:4450" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="4862:7464" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="5142:7236" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="5185:5558" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="5601:5974" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="6017:6390" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="6433:6806" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="6849:7222" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="7526:7985" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="8057:10549" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="8119:10275" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="8162:8833" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="8356:8631" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="8876:9547" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="9070:9345" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="9590:10261" ph="{...}" />
-                <marker date="1480575479954" expanded="false" signature="9784:10059" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="6:384" ph="..." />
+                <marker date="1480588022871" expanded="true" signature="419:2348" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="456:2346" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="562:1316" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="879:1210" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="940:1159" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="993:1141" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="1408:2338" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="1971:2277" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="2032:2263" ph="{...}" />
+                <marker date="1480588022871" expanded="true" signature="2085:2245" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -296,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/OrderConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PaymentInfoConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/TourConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadBusinessPetition.cs" />
@@ -304,7 +76,6 @@
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/PromotionConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/RatingConnector.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/UserConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/contracts/IUserRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/RequestValidator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/RequestValidationResult.cs" />
@@ -322,23 +93,19 @@
         <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/DataAccess.Tests.xproj" />
         <option value="$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json" />
-        <option value="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" />
         <option value="$PROJECT_DIR$/../../test/DataAccess.Tests2/Tests.cs" />
         <option value="$PROJECT_DIR$/../../test/DataAccess.Tests2/project.json" />
         <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs" />
         <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/BaseRepository.cs" />
         <option value="$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/SessionRepository.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Connectors/SessionConnector.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadRequest.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadWriteRequestValidator.cs" />
-        <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Validation/Request/ReadRequestValidator.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/ReadWriteRequest.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Connectors/Response/BusinessResponse.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Response/Response.cs" />
-        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/UserRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/OrderRequestHandler.cs" />
         <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs" />
@@ -347,6 +114,12 @@
         <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/project.json" />
         <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/Repository_Tests.cs" />
         <option value="$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs" />
+        <option value="$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json" />
+        <option value="$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs" />
+        <option value="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
+        <option value="$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs" />
       </list>
     </option>
   </component>
@@ -408,7 +181,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -422,7 +195,43 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business.Handlers.Tests" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Business.Connectors.Tests" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -436,7 +245,7 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Musical.Broccoli.API (10 projects)" />
+              <option name="myItemId" value="Musical.Broccoli.API (9 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,11 +318,12 @@
       <workItem from="1480560292379" duration="584000" />
       <workItem from="1480564175937" duration="5159000" />
       <workItem from="1480575402849" duration="73000" />
+      <workItem from="1480582362675" duration="5401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55717000" />
+    <option name="totallyTimeSpent" value="61118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,17 +339,17 @@
     <editor active="false" />
     <layout>
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6970588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18529412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24469161" sideWeight="0.49117646" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24343015" sideWeight="0.49117646" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780084" sideWeight="0.5029412" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.87966806" sideWeight="0.4970588" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.87966806" sideWeight="0.4970588" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43382353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780084" sideWeight="0.5088235" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4329184" sideWeight="0.4970588" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780084" sideWeight="0.5029412" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -580,32 +390,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs</url>
+          <line>65</line>
+          <properties startOffset="2524" endOffset="2597" documentPath="$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/TourConnector.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/PaymentInfoRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Petition/ReadBusinessPetition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Connectors/Connectors/MovementConnector.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -631,13 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -740,34 +530,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests2/Tests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests2/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests2/Tests.cs" />
+    <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests2/project.json" />
     <entry file="file://$PROJECT_DIR$/../../src/DataAccessLayer/Repositories/Contracts/IBaseRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -824,20 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Validation/BaseValidator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -880,20 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/TourRequestHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -931,40 +667,168 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../test/DataAccess.Tests/BaseRepository_Tests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="138" column="12" selection-start-line="138" selection-start-column="12" selection-end-line="138" selection-end-column="27" />
+        <state relative-caret-position="176">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding>
-            <marker date="1480575479954" expanded="false" signature="6:357" ph="..." />
-            <marker date="1480575479954" expanded="true" signature="385:10557" ph="{...}" />
-            <marker date="1480575479954" expanded="true" signature="425:10555" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="552:828" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="872:3147" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="934:3028" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="977:1350" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="1393:1766" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="1809:2182" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="2225:2598" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="2641:3014" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="3224:3990" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="3339:3674" ph="{...}" />
-            <marker date="1480575479954" expanded="true" signature="4055:4798" ph="{...}" />
-            <marker date="1480575479954" expanded="true" signature="4112:4450" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="4862:7464" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="5142:7236" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="5185:5558" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="5601:5974" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="6017:6390" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="6433:6806" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="6849:7222" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="7526:7985" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="8057:10549" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="8119:10275" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="8162:8833" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="8356:8631" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="8876:9547" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="9070:9345" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="9590:10261" ph="{...}" />
-            <marker date="1480575479954" expanded="false" signature="9784:10059" ph="{...}" />
+            <marker date="1480581567880" expanded="false" signature="6:13" ph="..." />
+            <marker date="1480581567880" expanded="true" signature="6:187" ph="..." />
+            <marker date="1480581567880" expanded="true" signature="215:4409" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="255:4407" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="329:1401" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="682:1053" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="1468:2455" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="2517:3665" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="3729:4400" ph="{...}" />
+            <marker date="1480581567880" expanded="true" signature="4401:4407" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Connectors.Tests/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480560080269" expanded="true" signature="0:744" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="48:87" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="109:359" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="406:742" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="433:736" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="463:618" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="506:604" ph="{...}" />
+            <marker date="1480560080269" expanded="true" signature="643:726" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1480583384318" expanded="true" signature="0:730" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="48:87" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="109:345" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="392:728" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="419:722" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="449:604" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="492:590" ph="{...}" />
+            <marker date="1480583384318" expanded="true" signature="629:712" ph="[...]" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/MessageRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <marker date="1480560080190" expanded="true" signature="6:225" ph="..." />
+            <marker date="1480560080190" expanded="true" signature="263:600" ph="{...}" />
+            <marker date="1480560080190" expanded="true" signature="361:598" ph="{...}" />
+            <marker date="1480560080190" expanded="true" signature="572:592" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Musical.Broccoli.API/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+          <folding>
+            <marker date="1480583733718" expanded="false" signature="6:672" ph="..." />
+            <marker date="1480583733718" expanded="true" signature="705:5391" ph="{...}" />
+            <marker date="1480583733718" expanded="true" signature="732:5389" ph="{...}" />
+            <marker date="1480583733718" expanded="false" signature="854:1599" ph="{...}" />
+            <marker date="1480583733718" expanded="true" signature="1825:4886" ph="{...}" />
+            <marker date="1480583733718" expanded="true" signature="1989:4697" ph="Dependency Injection" />
+            <marker date="1480583733718" expanded="false" signature="2031:2388" ph="Request Handlers" />
+            <marker date="1480583733718" expanded="false" signature="2533:2824" ph="Validators" />
+            <marker date="1480583733718" expanded="false" signature="2838:3589" ph="Connectors" />
+            <marker date="1480583733718" expanded="false" signature="3603:4570" ph="Repositories" />
+            <marker date="1480583733718" expanded="false" signature="5103:5383" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Authentication/contracts/IRequestAuthenticator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1480489375868" expanded="true" signature="72:179" ph="{...}" />
+            <marker date="1480489375868" expanded="true" signature="117:177" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Authentication/RequestAuthenticator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <marker date="1480584624260" expanded="true" signature="6:153" ph="..." />
+            <marker date="1480584624260" expanded="true" signature="197:656" ph="{...}" />
+            <marker date="1480584624260" expanded="true" signature="261:654" ph="{...}" />
+            <marker date="1480584624260" expanded="true" signature="388:444" ph="{...}" />
+            <marker date="1480584624260" expanded="true" signature="500:648" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/2F66D17B-4E11-4947-9D26-9F0C32173882/7b/a30dd1dd/Convert.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Request/Request.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <marker date="1480587907829" expanded="true" signature="72:306" ph="{...}" />
+            <marker date="1480587907829" expanded="true" signature="108:304" ph="{...}" />
+            <marker date="1480587907829" expanded="true" signature="235:298" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/Business.Handlers/Handlers/BaseRequestHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <marker date="1480587977727" expanded="false" signature="6:371" ph="..." />
+            <marker date="1480587977727" expanded="true" signature="410:2644" ph="{...}" />
+            <marker date="1480587977727" expanded="true" signature="503:2642" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="825:961" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="1028:1336" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="1416:1752" ph="{...}" />
+            <marker date="1480587977727" expanded="false" signature="1829:2167" ph="{...}" />
+            <marker date="1480587977727" expanded="true" signature="2361:2636" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/Business.Handlers.Tests/BaseHandler_Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <folding>
+            <marker date="1480588022871" expanded="true" signature="6:384" ph="..." />
+            <marker date="1480588022871" expanded="true" signature="419:2348" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="456:2346" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="562:1316" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="879:1210" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="940:1159" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="993:1141" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="1408:2338" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="1971:2277" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="2032:2263" ph="{...}" />
+            <marker date="1480588022871" expanded="true" signature="2085:2245" ph="{...}" />
           </folding>
         </state>
       </provider>

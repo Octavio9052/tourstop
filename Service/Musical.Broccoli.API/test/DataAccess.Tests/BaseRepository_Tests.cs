@@ -1,15 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
+﻿using System.Linq;
 using Common.Enums;
 using DataAccessLayer.Context;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories;
-using DataAccessLayer.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
-using Xunit.Abstractions;
-using Xunit.Sdk;
 
 namespace DataAccess.Tests
 {

@@ -105,5 +105,4 @@
 -r:"C:\Users\lucia.beltran\.nuget\packages\xunit.extensibility.execution\2.2.0-beta4-build3444\lib\netstandard1.0\xunit.execution.dotnet.dll"
 -r:"C:\Users\lucia.beltran\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.reporters.dotnet.dll"
 -r:"C:\Users\lucia.beltran\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll"
-"C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\TourStop.API.Tests\Tests.cs"
 "C:\Users\lucia.beltran\Desktop\Picho\Projects\Skul\tourstop\Service\Musical.Broccoli.API\test\TourStop.API.Tests\Properties\AssemblyInfo.cs"

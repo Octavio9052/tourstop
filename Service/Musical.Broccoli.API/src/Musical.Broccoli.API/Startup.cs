@@ -2,6 +2,8 @@
 using Business.Connectors;
 using Business.Connectors.Contracts;
 using Business.Connectors.Helpers;
+using Business.Handlers.Authentication;
+using Business.Handlers.Authentication.contracts;
 using Business.Handlers.Handlers;
 using Business.Handlers.Handlers.contracts;
 using Business.Handlers.Validation.Dto;
@@ -61,6 +63,9 @@ namespace Musical.Broccoli.API
             services.AddScoped<IUserRequestHandler, UserRequestHandler>();
 
             #endregion
+
+            //RequestAuthenticatorAuthenticator
+            services.AddTransient<IRequestAuthenticator, RequestAuthenticator>();
 
             #region Validators
 

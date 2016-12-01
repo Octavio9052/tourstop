@@ -1,4 +1,5 @@
-﻿using Business.Connectors.Contracts;
+﻿using System;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
 using Business.Handlers.Authentication.contracts;
 using Business.Handlers.Response;
@@ -28,12 +29,8 @@ namespace Business.Handlers.Handlers
 
         public Response<T> HandleReadRequest(ReadRequest request)
         {
-            var requestValidator = ReadRequestValidator.GetValidator();
-            if (!requestValidator.Validate(request).IsValid) throw new InvalidRequestException();
-
-            var petition = (ReadBusinessPetition) request;
-            petition.Action = PetitionAction.ReadWrite;
-            petition.RequestingUser = _authenticator.Authenticate(request.AuthToken);
+            var petition = ParseRequest<ReadBusinessPetition, ReadRequest>(request,
+                ReadRequestValidator.GetValidator());
 
             var businessResponse = _connector.Get(petition);
             var response = (Response<T>) businessResponse;
@@ -42,12 +39,8 @@ namespace Business.Handlers.Handlers
 
         public Response<T> HandleReadWriteRequest(ReadWriteRequest<T> request)
         {
-            var requestValidator = ReadWriteRequestValidator<T>.Build(_validator);
-            if (!requestValidator.Validate(request).IsValid) throw new AuthenticationException();
-
-            var petition = (ReadWriteBusinessPetition<T>) request;
-            petition.Action = PetitionAction.ReadWrite;
-            petition.RequestingUser = _authenticator.Authenticate(request.AuthToken);
+            var petition = ParseRequest<ReadWriteBusinessPetition<T>, ReadWriteRequest<T>>(request,
+                ReadWriteRequestValidator<T>.Build(_validator));
 
             var businessResponse = _connector.Save(petition);
             var response = (Response<T>) businessResponse;
@@ -56,16 +49,22 @@ namespace Business.Handlers.Handlers
 
         public Response<T> HandleDeleteRequest(ReadWriteRequest<T> request)
         {
-            var requestValidator = ReadWriteRequestValidator<T>.Build(_validator);
-            if (!requestValidator.Validate(request).IsValid) throw new AuthenticationException();
-
-            var petition = (ReadWriteBusinessPetition<T>) request;
-            petition.Action = PetitionAction.Delete;
-            petition.RequestingUser = _authenticator.Authenticate(request.AuthToken);
+            var petition = ParseRequest<ReadWriteBusinessPetition<T>, ReadWriteRequest<T>>(request,
+                ReadWriteRequestValidator<T>.Build(_validator));
 
             var businessResponse = _connector.Delete(petition);
             var response = (Response<T>) businessResponse;
             return response;
+        }
+
+        private TPetition ParseRequest<TPetition, TRequest>(TRequest request, BaseValidator<TRequest> validator)
+            where TPetition : BusinessPetition where TRequest : Request.Request
+        {
+            if (!validator.Validate(request).IsValid) throw new AuthenticationException();
+
+            var petition = (TPetition) request;
+            petition.RequestingUser = _authenticator.Authenticate(request.AuthToken);
+            return petition;
         }
     }
 }
