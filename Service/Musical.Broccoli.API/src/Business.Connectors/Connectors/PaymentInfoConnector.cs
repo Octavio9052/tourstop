@@ -4,6 +4,7 @@ using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Contracts;
 using Business.Connectors.Petition;
+using System.Linq;
 
 namespace Business.Connectors
 {
