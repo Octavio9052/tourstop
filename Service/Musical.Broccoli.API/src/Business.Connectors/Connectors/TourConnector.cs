@@ -24,7 +24,7 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<TourDTO> petition)
         {
-            return petition.RequestingUser.UserType == UserType.Promotor;
+            return petition.RequestingUser.UserType == UserType.Promoter;
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<TourDTO> petition)

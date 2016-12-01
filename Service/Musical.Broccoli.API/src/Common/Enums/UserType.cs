@@ -3,6 +3,6 @@
     public enum UserType
     {
         User,
-        Promotor
+        Promoter
     }
 }
