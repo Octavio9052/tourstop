@@ -4,7 +4,7 @@
     {
         private string _expressionString;
         public string PropertyName { get; set; }
-        public string Relatioship { get; set; }
+        public string Relationship { get; set; }
         public string Value { get; set; }
 
 
@@ -13,7 +13,7 @@
             get
             {
                 return _expressionString ??
-                       (_expressionString = string.Format(@"{0}{1}{2}", PropertyName, Relatioship, Value));
+                       (_expressionString = string.Format(@"{0}{1}{2}", PropertyName, Relationship, Value));
             }
             set { _expressionString = value; }
         }

@@ -26,7 +26,7 @@ namespace Business.Handlers.Validation.Request
             {
                 Validate = request => request.Data
                     .Select(dto => validator.Validate(dto))
-                    .Aggregate((x, y) => x + y)
+                    .Aggregate(ValidationResult.Valid(), (x, y) => x + y)
             };
         }
     }

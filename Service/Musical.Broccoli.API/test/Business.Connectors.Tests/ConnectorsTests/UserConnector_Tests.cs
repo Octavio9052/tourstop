@@ -32,15 +32,15 @@ namespace Business.Connectors.Tests.ConnectorsTests
         public UserConnector_Tests()
         {
             var options = new DbContextOptionsBuilder<TourStopContext>()
-                .UseInMemoryDatabase( "TourStop_Test_Db" )
+                .UseInMemoryDatabase("TourStop_Test_Db")
                 .Options;
 
-            _repository = new UserRepository( new TourStopContext( options ) );
+            _repository = new UserRepository(new TourStopContext(options));
 
-            var mapper = new MapperConfiguration( x =>
-                     x.AddProfile( new AutoMapperConfiguration() ) ).CreateMapper();
+            var mapper = new MapperConfiguration(x =>
+                    x.AddProfile(new AutoMapperConfiguration())).CreateMapper();
 
-            _connector = new UserConnector( _repository, mapper );
+            _connector = new UserConnector(_repository, mapper);
 
             BootstrapDbInformation();
         }
@@ -146,11 +146,12 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 }
             };
 
-            users.ForEach( x => _repository.AddOrUpdate( x ) );
+            users.ForEach(x => _repository.AddOrUpdate(x));
             _repository.SaveChanges();
         }
 
         #region Get
+
         [Fact]
         public void Get_NoFiltersNoUser_ThrowsAuthenticationException()
         {
@@ -159,7 +160,7 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 Action = PetitionAction.Read
             };
 
-            Assert.Throws<AuthenticationException>( () => _connector.Get( petition ) );
+            Assert.Throws<AuthenticationException>(() => _connector.Get(petition));
         }
 
         [Fact]
@@ -175,13 +176,15 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 }
             };
 
-            var result = _connector.Get( petition ).Data;
+            var result = _connector.Get(petition).Data;
 
-            Assert.All( result, x => Assert.Equal( x.Email, "foo1@bar.com" ) );
+            Assert.All(result, x => Assert.Equal(x.Email, "foo1@bar.com"));
         }
+
         #endregion
 
         #region Save
+
         [Fact]
         public void Save_ValidDataNoUser_NoException()
         {
@@ -189,34 +192,34 @@ namespace Business.Connectors.Tests.ConnectorsTests
             {
                 Action = PetitionAction.ReadWrite,
                 Data = new List<UserDTO>
-                            {
-                                new UserDTO
-                                {
-                                    FirstName = "FirstName",
-                                    LastName = "LastName",
-                                    Email = "fooSaveValid@bar.com",
-                                    Address = new AddressDTO
-                                    {
-                                        Street1 = "St1",
-                                        City = "City",
-                                        CountryCode = CountryCode.MX,
-                                        PostalCode = 2284,
-                                        State = "State",
-                                        Name = ""
-                                    },
-                                    LanguageCode = LanguageCode.EN,
-                                    Password = "passwod",
-                                    Phone = "6461235898",
-                                    UserType = UserType.Promoter
-                                }
-                            }
+                {
+                    new UserDTO
+                    {
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooSaveValid@bar.com",
+                        Address = new AddressDTO
+                        {
+                            Street1 = "St1",
+                            City = "City",
+                            CountryCode = CountryCode.MX,
+                            PostalCode = 2284,
+                            State = "State",
+                            Name = ""
+                        },
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promoter
+                    }
+                }
             };
 
-            _connector.Save( petition );
+            _connector.Save(petition);
 
-            var savedUser = _repository.GetQueryable().Where( x => x.Email == "fooSaveValid@bar.com" );
+            var savedUser = _repository.GetQueryable().Where(x => x.Email == "fooSaveValid@bar.com");
 
-            Assert.NotEmpty( savedUser );
+            Assert.NotEmpty(savedUser);
         }
 
         [Fact]
@@ -226,39 +229,39 @@ namespace Business.Connectors.Tests.ConnectorsTests
             {
                 Action = PetitionAction.ReadWrite,
                 Data = new List<UserDTO>
-                            {
-                                new UserDTO
-                                {
-                                    Id = 2,
-                                    FirstName = "FirstName",
-                                    LastName = "LastName",
-                                    Email = "fooUpdateValid@bar.com",
-                                    Address = new AddressDTO
-                                    {
-                                        Street1 = "St1",
-                                        City = "City",
-                                        CountryCode = CountryCode.MX,
-                                        PostalCode = 2284,
-                                        State = "State",
-                                        Name = ""
-                                    },
-                                    LanguageCode = LanguageCode.EN,
-                                    Password = "passwod",
-                                    Phone = "6461235898",
-                                    UserType = UserType.Promoter
-                                }
-                            },
+                {
+                    new UserDTO
+                    {
+                        Id = 2,
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooUpdateValid@bar.com",
+                        Address = new AddressDTO
+                        {
+                            Street1 = "St1",
+                            City = "City",
+                            CountryCode = CountryCode.MX,
+                            PostalCode = 2284,
+                            State = "State",
+                            Name = ""
+                        },
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promoter
+                    }
+                },
                 RequestingUser = new UserDTO
                 {
                     Id = 2
                 }
             };
 
-            _connector.Save( petition );
+            _connector.Save(petition);
 
-            var savedUser = _repository.GetQueryable().Where( x => x.Email == "fooUpdateValid@bar.com" );
+            var savedUser = _repository.GetQueryable().Where(x => x.Email == "fooUpdateValid@bar.com");
 
-            Assert.NotEmpty( savedUser );
+            Assert.NotEmpty(savedUser);
         }
 
         [Fact]
@@ -268,31 +271,31 @@ namespace Business.Connectors.Tests.ConnectorsTests
             {
                 Action = PetitionAction.ReadWrite,
                 Data = new List<UserDTO>
-                            {
-                                new UserDTO
-                                {
-                                    Id = 1,
-                                    FirstName = "FirstName",
-                                    LastName = "LastName",
-                                    Email = "fooUpdateValid@bar.com",
-                                    Address = new AddressDTO
-                                    {
-                                        Street1 = "St1",
-                                        City = "City",
-                                        CountryCode = CountryCode.MX,
-                                        PostalCode = 2284,
-                                        State = "State",
-                                        Name = ""
-                                    },
-                                    LanguageCode = LanguageCode.EN,
-                                    Password = "passwod",
-                                    Phone = "6461235898",
-                                    UserType = UserType.Promoter
-                                }
-                            }
+                {
+                    new UserDTO
+                    {
+                        Id = 1,
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooUpdateValid@bar.com",
+                        Address = new AddressDTO
+                        {
+                            Street1 = "St1",
+                            City = "City",
+                            CountryCode = CountryCode.MX,
+                            PostalCode = 2284,
+                            State = "State",
+                            Name = ""
+                        },
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promoter
+                    }
+                }
             };
 
-            Assert.Throws<AuthenticationException>( () => _connector.Save( petition ) );
+            Assert.Throws<AuthenticationException>(() => _connector.Save(petition));
         }
 
         [Fact]
@@ -302,36 +305,37 @@ namespace Business.Connectors.Tests.ConnectorsTests
             {
                 Action = PetitionAction.ReadWrite,
                 Data = new List<UserDTO>
-                            {
-                                new UserDTO
-                                {
-                                    Id = 1,
-                                    FirstName = "FirstName",
-                                    LastName = "LastName",
-                                    Email = "fooUpdateValid@bar.com",
-                                    Address = new AddressDTO
-                                    {
-                                        Street1 = "St1",
-                                        City = "City",
-                                        CountryCode = CountryCode.MX,
-                                        PostalCode = 2284,
-                                        State = "State",
-                                        Name = ""
-                                    },
-                                    LanguageCode = LanguageCode.EN,
-                                    Password = "passwod",
-                                    Phone = "6461235898",
-                                    UserType = UserType.Promoter
-                                }
-                            },
+                {
+                    new UserDTO
+                    {
+                        Id = 1,
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooUpdateValid@bar.com",
+                        Address = new AddressDTO
+                        {
+                            Street1 = "St1",
+                            City = "City",
+                            CountryCode = CountryCode.MX,
+                            PostalCode = 2284,
+                            State = "State",
+                            Name = ""
+                        },
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promoter
+                    }
+                },
                 RequestingUser = new UserDTO
                 {
                     Id = 2
                 }
             };
 
-            Assert.Throws<AuthenticationException>( () => _connector.Save( petition ) );
+            Assert.Throws<AuthenticationException>(() => _connector.Save(petition));
         }
+
         #endregion
 
         #region Delete
@@ -344,13 +348,14 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 Action = PetitionAction.Delete,
                 Data = new List<UserDTO>
                 {
-                    new UserDTO {
+                    new UserDTO
+                    {
                         Id = 2
                     }
                 }
             };
 
-            Assert.Throws<AuthenticationException>( () => _connector.Delete( petition ) );
+            Assert.Throws<AuthenticationException>(() => _connector.Delete(petition));
         }
 
         [Fact]
@@ -360,39 +365,39 @@ namespace Business.Connectors.Tests.ConnectorsTests
             {
                 Action = PetitionAction.ReadWrite,
                 Data = new List<UserDTO>
-                            {
-                                new UserDTO
-                                {
-                                    Id = 2,
-                                    FirstName = "FirstName",
-                                    LastName = "LastName",
-                                    Email = "fooUpdateValid@bar.com",
-                                    Address = new AddressDTO
-                                    {
-                                        Street1 = "St1",
-                                        City = "City",
-                                        CountryCode = CountryCode.MX,
-                                        PostalCode = 2284,
-                                        State = "State",
-                                        Name = ""
-                                    },
-                                    LanguageCode = LanguageCode.EN,
-                                    Password = "passwod",
-                                    Phone = "6461235898",
-                                    UserType = UserType.Promoter
-                                }
-                            },
+                {
+                    new UserDTO
+                    {
+                        Id = 2,
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooUpdateValid@bar.com",
+                        Address = new AddressDTO
+                        {
+                            Street1 = "St1",
+                            City = "City",
+                            CountryCode = CountryCode.MX,
+                            PostalCode = 2284,
+                            State = "State",
+                            Name = ""
+                        },
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promoter
+                    }
+                },
                 RequestingUser = new UserDTO
                 {
                     Id = 2
                 }
             };
 
-            _connector.Delete( petition );
+            _connector.Delete(petition);
 
             var allRegistries = _repository.GetAll();
 
-            Assert.All( allRegistries, x => Assert.NotEqual( x.Id, 2 ) );
+            Assert.All(allRegistries, x => Assert.NotEqual(x.Id, 2));
         }
 
         [Fact]
@@ -402,27 +407,27 @@ namespace Business.Connectors.Tests.ConnectorsTests
             {
                 Action = PetitionAction.Delete,
                 Data = new List<UserDTO>
-                            {
-                                new UserDTO
-                                {
-                                    Id = 2,
-                                    FirstName = "firstname",
-                                    LastName = "lastname",
-                                    Email = "fooupdatevalid@bar.com",
-                                    AddressId = 1,
-                                    LanguageCode = LanguageCode.EN,
-                                    Password = "passwod",
-                                    Phone = "6461235898",
-                                    UserType = UserType.Promoter
-                                }
-                            },
+                {
+                    new UserDTO
+                    {
+                        Id = 2,
+                        FirstName = "firstname",
+                        LastName = "lastname",
+                        Email = "fooupdatevalid@bar.com",
+                        AddressId = 1,
+                        LanguageCode = LanguageCode.EN,
+                        Password = "passwod",
+                        Phone = "6461235898",
+                        UserType = UserType.Promoter
+                    }
+                },
                 RequestingUser = new UserDTO
                 {
                     Id = 3
                 }
             };
 
-            Assert.Throws<AuthenticationException>( () => _connector.Delete( petition ) );
+            Assert.Throws<AuthenticationException>(() => _connector.Delete(petition));
         }
 
 
@@ -438,7 +443,7 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 }
             };
 
-            Assert.Throws<AuthenticationException>( () => _connector.Delete( petition ) );
+            Assert.Throws<AuthenticationException>(() => _connector.Delete(petition));
         }
 
         #endregion

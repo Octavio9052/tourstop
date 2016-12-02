@@ -1,5 +1,4 @@
-﻿using System;
-using Business.Connectors.Contracts;
+﻿using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
 using Business.Handlers.Authentication.contracts;
 using Business.Handlers.Response;
@@ -27,10 +26,13 @@ namespace Business.Handlers.Handlers
             _authenticator = authenticator;
         }
 
+        #region Handle Methods
+
         public Response<T> HandleReadRequest(ReadRequest request)
         {
-            var petition = ParseRequest<ReadBusinessPetition, ReadRequest>(request,
-                ReadRequestValidator.GetValidator());
+            ValidateRequest(request, ReadRequestValidator.GetValidator());
+
+            var petition = ParseReadRequest(request);
 
             var businessResponse = _connector.Get(petition);
             var response = (Response<T>) businessResponse;
@@ -39,8 +41,9 @@ namespace Business.Handlers.Handlers
 
         public Response<T> HandleReadWriteRequest(ReadWriteRequest<T> request)
         {
-            var petition = ParseRequest<ReadWriteBusinessPetition<T>, ReadWriteRequest<T>>(request,
-                ReadWriteRequestValidator<T>.Build(_validator));
+            ValidateRequest(request, ReadWriteRequestValidator<T>.Build(_validator));
+
+            var petition = ParseReadWriteRequest(request);
 
             var businessResponse = _connector.Save(petition);
             var response = (Response<T>) businessResponse;
@@ -49,20 +52,32 @@ namespace Business.Handlers.Handlers
 
         public Response<T> HandleDeleteRequest(ReadWriteRequest<T> request)
         {
-            var petition = ParseRequest<ReadWriteBusinessPetition<T>, ReadWriteRequest<T>>(request,
-                ReadWriteRequestValidator<T>.Build(_validator));
+            ValidateRequest(request, ReadWriteRequestValidator<T>.Build(_validator));
+
+            var petition = ParseReadWriteRequest(request);
 
             var businessResponse = _connector.Delete(petition);
             var response = (Response<T>) businessResponse;
             return response;
         }
 
-        private TPetition ParseRequest<TPetition, TRequest>(TRequest request, BaseValidator<TRequest> validator)
-            where TPetition : BusinessPetition where TRequest : Request.Request
-        {
-            if (!validator.Validate(request).IsValid) throw new AuthenticationException();
+        #endregion
 
-            var petition = (TPetition) request;
+        private static void ValidateRequest<TRequest>(TRequest request, BaseValidator<TRequest> validator)
+        {
+            if (!validator.Validate(request).IsValid) throw new InvalidRequestException();
+        }
+
+        private ReadBusinessPetition ParseReadRequest(ReadRequest request)
+        {
+            var petition = (ReadBusinessPetition) request;
+            petition.RequestingUser = _authenticator.Authenticate(request.AuthToken);
+            return petition;
+        }
+
+        private ReadWriteBusinessPetition<T> ParseReadWriteRequest(ReadWriteRequest<T> request)
+        {
+            var petition = (ReadWriteBusinessPetition<T>) request;
             petition.RequestingUser = _authenticator.Authenticate(request.AuthToken);
             return petition;
         }

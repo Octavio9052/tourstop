@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Business.Connectors.Contracts;
-using Business.Connectors.Petition;
 using Business.Connectors.Response;
 using Business.Handlers.Authentication.contracts;
 using Business.Handlers.Handlers;
@@ -10,12 +9,13 @@ using Common.DTOs;
 using Common.Exceptions;
 using Moq;
 using Xunit;
-using Xunit.Sdk;
 
 namespace Business.Handlers.Tests
 {
     public class BaseHandler_Tests
     {
+        #region Read Request
+
         [Fact]
         public void HandleReadRequest_InvalidFilters_ThrowsInvalidRequestException()
         {
@@ -31,7 +31,7 @@ namespace Business.Handlers.Tests
                     new Filter
                     {
                         PropertyName = "Hello",
-                        Relatioship = "",
+                        Relationship = "",
                         Value = ""
                     }
                 },
@@ -48,10 +48,10 @@ namespace Business.Handlers.Tests
             var connectorMock = new Mock<IUserConnector>();
             var authenticatorMock = new Mock<IRequestAuthenticator>();
 
-            connectorMock.Setup(x => x.Get(It.IsAny<ReadBusinessPetition>())).Returns(new BusinessResponse<UserDTO>());
+            connectorMock.SetupGet(x => x.Get).Returns(x => new BusinessResponse<UserDTO>());
             authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
 
-            var handler = new UserRequestHandler(connectorMock.Object,UserValidator.All(),authenticatorMock.Object );
+            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
 
             var request = new ReadRequest
             {
@@ -60,16 +60,63 @@ namespace Business.Handlers.Tests
                     new Filter
                     {
                         PropertyName = "Email",
-                        Relatioship = "=",
+                        Relationship = "=",
                         Value = "foo@bar.com"
                     }
                 }
             };
 
             handler.HandleReadRequest(request);
-
         }
 
+        [Fact]
+        public void HandleReadRequest_NoFiltersNoAuthToken_NoException()
+        {
+            //Mock Setup
+            var connectorMock = new Mock<IUserConnector>();
+            var authenticatorMock = new Mock<IRequestAuthenticator>();
 
+            connectorMock.SetupGet(x => x.Get).Returns(x => new BusinessResponse<UserDTO>());
+            authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
+
+            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
+
+            var request = new ReadRequest();
+
+            handler.HandleReadRequest(request);
+        }
+
+        #endregion
+
+        #region ReadWriteRequest
+
+        [Fact]
+        public void HandleReadWriteRequest_InvalidData_ThrowsInvalidRequestException()
+        {
+            //Mock Setup
+            var connectorMock = new Mock<IUserConnector>();
+            var authenticatorMock = new Mock<IRequestAuthenticator>();
+
+            connectorMock.SetupGet(x => x.Save).Returns(x => new BusinessResponse<UserDTO>());
+            authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
+
+            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
+
+            var request = new ReadWriteRequest<UserDTO>
+            {
+                Data = new List<UserDTO>
+                {
+                    new UserDTO()
+                }
+            };
+
+            Assert.Throws<InvalidRequestException>(() => handler.HandleReadWriteRequest(request));
+        }
+
+        #endregion
+
+        #region DeleteRequest
+
+        #endregion
     }
 }

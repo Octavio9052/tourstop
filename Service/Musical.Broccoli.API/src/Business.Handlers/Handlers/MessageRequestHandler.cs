@@ -3,7 +3,6 @@ using Business.Handlers.Authentication.contracts;
 using Common.DTOs;
 using Business.Handlers.Handlers.contracts;
 using Business.Handlers.Validation;
-using Business.Handlers.Validation.Dto;
 
 namespace Business.Handlers.Handlers
 {

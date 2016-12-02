@@ -12,7 +12,7 @@ namespace Business.Handlers.Request
         {
             return new ReadBusinessPetition
             {
-                FilterString = request.Filters.OrderBy(x => x.PropertyName).Aggregate((x, y) => x + y).ExpressionString
+                FilterString = request.Filters?.OrderBy(x => x.PropertyName).Aggregate((x, y) => x + y).ExpressionString
             };
         }
     }

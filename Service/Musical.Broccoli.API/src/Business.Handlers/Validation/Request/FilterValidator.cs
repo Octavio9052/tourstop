@@ -38,7 +38,7 @@ namespace Business.Handlers.Validation.Request
 
         public static FilterValidator RelationshipIsNotNullOrEmpty()
         {
-            return Holds(x => string.IsNullOrEmpty(x.Relatioship), "Relationship is not valid");
+            return Holds(x => !string.IsNullOrEmpty(x.Relationship), "Relationship is not valid");
         }
 
         #endregion
