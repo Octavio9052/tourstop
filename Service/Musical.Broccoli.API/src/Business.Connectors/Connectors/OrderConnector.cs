@@ -18,7 +18,7 @@ namespace Business.Connectors
 
         protected override bool ValidateGet(ReadBusinessPetition petition)
         {
-            return petition.RequestingUser != null; //TODO: Really only the owner user can see the Order THINK MY FRIEND
+            return petition.RequestingUser != null ; //TODO: Really only the owner user can see the Order THINK MY FRIEND
         }
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<OrderDTO> petition)

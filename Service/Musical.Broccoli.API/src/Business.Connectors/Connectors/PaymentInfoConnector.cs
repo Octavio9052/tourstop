@@ -23,12 +23,12 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<PaymentInfoDTO> petition)
         {
-            return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id)) || (String.IsNullOrEmpty(petition.FilterString));
+            return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id));
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<PaymentInfoDTO> petition)
         {
-            return true; //TODO: Bro you have to think
+            return true; //TODO: Bro you have to think THIS SHIT IS NOT READY YET
         }
 
         #endregion

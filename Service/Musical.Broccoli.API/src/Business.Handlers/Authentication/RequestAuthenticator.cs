@@ -1,7 +1,6 @@
 ﻿using Business.Connectors.Contracts;
 using Business.Handlers.Authentication.contracts;
 using Common.DTOs;
-using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Business.Handlers.Authentication
 {
