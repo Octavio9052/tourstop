@@ -93,5 +93,6 @@
     <string name="hint_last_name">Enter last name</string>
     <string name="field_date">Date:</string>
     <string name="field_date_range">To date:</string>
+    <string name="assign_checkpoints">Assign Checkpoints</string>
 </resources>
 

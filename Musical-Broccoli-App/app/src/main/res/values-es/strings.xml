@@ -80,4 +80,5 @@
     <string name="special_requirements">Requerimientos especiales</string>
     <string name="stops">Paradas</string>
     <string name="title_activity_login">Iniciar sesión</string>
+    <string name="assign_checkpoints">Asignar paradas</string>
 </resources>

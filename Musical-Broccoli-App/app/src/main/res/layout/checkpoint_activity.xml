@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/header_cover_image"
@@ -236,7 +236,7 @@
                     android:textSize="20dp"/>
 
                 <EditText
-                    android:id="@+id/editText7"
+                    android:id="@+id/seatsAvailable_editText"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
                     android:layout_alignStart="@+id/textView7"
@@ -249,8 +249,8 @@
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/editText7"
-                    android:layout_below="@+id/editText7"
+                    android:layout_alignEnd="@+id/seatsAvailable_editText"
+                    android:layout_below="@+id/seatsAvailable_editText"
                     android:layout_marginTop="50dp"
                     android:background="@android:drawable/toast_frame"
                     android:text="Confirm"
