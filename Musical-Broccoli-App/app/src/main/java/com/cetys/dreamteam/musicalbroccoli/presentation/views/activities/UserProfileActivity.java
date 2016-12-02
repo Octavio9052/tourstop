@@ -55,4 +55,9 @@ public class UserProfileActivity extends BaseActivity {
         Intent intent = new Intent(UserProfileActivity.this, MessagesActivity.class);
         UserProfileActivity.this.startActivity(intent);
     }
+
+    public void goToCreateTour(View view) {
+        Intent intent = new Intent(UserProfileActivity.this, CreateTourActivity.class);
+        UserProfileActivity.this.startActivity(intent);
+    }
 }
