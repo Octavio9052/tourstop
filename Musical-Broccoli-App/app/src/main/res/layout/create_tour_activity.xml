@@ -308,6 +308,19 @@ enter requirements = -->
                     android:textAlignment="center"
                     android:textSize="12sp"/>
 
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Assign Checkpoints"
+                    android:textColor="@color/darkblue"
+                    android:id="@+id/textView17"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/editText10"
+                    android:layout_alignStart="@+id/textView10" />
+
             </RelativeLayout>
 
         </RelativeLayout>
