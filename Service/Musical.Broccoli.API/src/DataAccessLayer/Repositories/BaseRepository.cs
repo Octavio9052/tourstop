@@ -52,7 +52,12 @@ namespace DataAccessLayer.Repositories
 
         public void Remove(T entity)
         {
-            DbSet.Remove(entity);
+            Context.Entry(entity).State = EntityState.Deleted;
+        }
+        public void Remove(int id)
+        {
+            var entity = DbSet.Find(id);
+            Context.Entry(entity).State = EntityState.Deleted;
         }
 
         public void SaveChanges()

@@ -28,7 +28,7 @@ namespace Business.Connectors
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<UserDTO> petition)
         {
-            return petition.Data.All(x => x.Id == petition.RequestingUser.Id);
+            return petition.RequestingUser != null && petition.Data != null && petition.Data.All(x => x.Id == petition.RequestingUser.Id);
         }
 
         #endregion
