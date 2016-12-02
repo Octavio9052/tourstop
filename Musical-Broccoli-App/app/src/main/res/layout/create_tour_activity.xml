@@ -210,7 +210,7 @@ enter requirements = -->
 
                 <!-- Seats available for the tour -->
                 <EditText
-                    android:id="@+id/editText7"
+                    android:id="@+id/seatsAvailable_editText"
                     android:layout_width="340dp"
                     android:layout_height="35dp"
                     android:layout_alignStart="@+id/phone_textView"
@@ -225,7 +225,7 @@ enter requirements = -->
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/editText7"
+                    android:layout_below="@+id/seatsAvailable_editText"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="28dp"
                     android:text="@string/field_promotion"
@@ -313,13 +313,13 @@ enter requirements = -->
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Assign Checkpoints"
+                    android:text="@string/assign_checkpoints"
                     android:textColor="@color/darkblue"
                     android:id="@+id/textView17"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_below="@+id/editText10"
-                    android:layout_alignStart="@+id/textView10" />
+                    android:layout_alignStart="@+id/editText10" />
 
             </RelativeLayout>
 
