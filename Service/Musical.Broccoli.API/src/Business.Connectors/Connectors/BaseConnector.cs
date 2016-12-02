@@ -9,6 +9,7 @@ using Business.Connectors.Contracts;
 using Business.Connectors.Exceptions;
 using Business.Connectors.Petition;
 using Business.Connectors.Response;
+using Common.Exceptions;
 
 namespace Business.Connectors
 {
@@ -40,7 +41,10 @@ namespace Business.Connectors
 
         private BusinessResponse<TDto> ProcessGet(ReadBusinessPetition petition)
         {
-            Validate(petition, ValidateGet);
+            if (!Validate(petition, ValidateGet))
+            {
+                throw new AuthenticationException();
+            }
             var businessResponse = new BusinessResponse<TDto>();
             try
             {
@@ -58,6 +62,10 @@ namespace Business.Connectors
 
         private BusinessResponse<TDto> ProcessSave(ReadWriteBusinessPetition<TDto> petition)
         {
+            if (!Validate(petition, ValidateSave))
+            {
+                throw new AuthenticationException();
+            }
             var businessResponse = new BusinessResponse<TDto>();
             try
             {
@@ -76,11 +84,15 @@ namespace Business.Connectors
 
         private BusinessResponse<TDto> ProcessDelete(ReadWriteBusinessPetition<TDto> petition)
         {
+            if(!Validate(petition, ValidateDelete))
+            {
+                throw new AuthenticationException();
+            }
             var businessResponse = new BusinessResponse<TDto>();
             try
             {
-                var data = Mapper.Map<List<TEntity>>(petition.Data);
-                data.ForEach(x => Repository.Remove(x));
+
+                petition.Data.ForEach(x => Repository.Remove(x.Id));
                 Repository.SaveChanges();
                 businessResponse.IsSuccessful = true;
             }

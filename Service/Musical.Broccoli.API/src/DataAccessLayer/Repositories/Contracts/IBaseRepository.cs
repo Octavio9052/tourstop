@@ -12,6 +12,7 @@ namespace DataAccessLayer.Repositories.Contracts
         IQueryable<T> GetQueryable();
         void AddOrUpdate(T entity);
         void Remove(T entity);
+        void Remove(int id);
         void SaveChanges();
     }
 }
