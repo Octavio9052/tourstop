@@ -4,7 +4,7 @@ namespace Common.DTOs
 {
     public class PromotionDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public float Value { get; set; }
         public string Description { get; set; }
         public PromoType PromoType { get; set; }

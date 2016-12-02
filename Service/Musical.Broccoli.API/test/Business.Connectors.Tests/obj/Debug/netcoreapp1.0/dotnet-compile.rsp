@@ -14,6 +14,7 @@
 --informational-version:1.0.0
 --target-framework:.NETCoreApp,Version=v1.0
 --reference:C:\Users\lucia.beltran\.nuget\packages\AutoMapper\5.2.0\lib\netstandard1.3\AutoMapper.dll
+--reference:C:\Users\lucia.beltran\.nuget\packages\Castle.Core\4.0.0-beta001\lib\netstandard1.3\Castle.Core.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\dotnet-test-xunit\2.2.0-preview2-build1029\lib\netcoreapp1.0\dotnet-test-xunit.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\Microsoft.CSharp\4.3.0\ref\netstandard1.0\Microsoft.CSharp.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\Microsoft.DiaSymReader\1.0.8\lib\netstandard1.1\Microsoft.DiaSymReader.dll
@@ -34,6 +35,7 @@
 --reference:C:\Users\lucia.beltran\.nuget\packages\Microsoft.Extensions.Testing.Abstractions\1.0.0-preview2-003121\lib\netstandard1.6\Microsoft.Extensions.Testing.Abstractions.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\Microsoft.VisualBasic\10.0.1\ref\netstandard1.1\Microsoft.VisualBasic.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\Microsoft.Win32.Primitives\4.3.0\ref\netstandard1.3\Microsoft.Win32.Primitives.dll
+--reference:C:\Users\lucia.beltran\.nuget\packages\Moq\4.6.38-alpha\lib\netstandard1.3\Moq.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\MySqlConnector\0.7.3\lib\netstandard1.3\MySqlConnector.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\Newtonsoft.Json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\NuGet.Common\3.5.0-beta2-1484\lib\netstandard1.3\NuGet.Common.dll
@@ -96,6 +98,7 @@
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.DispatchProxy\4.0.1\ref\netstandard1.3\System.Reflection.DispatchProxy.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.Emit\4.3.0\ref\netstandard1.1\System.Reflection.Emit.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.Emit.ILGeneration\4.3.0\ref\netstandard1.0\System.Reflection.Emit.ILGeneration.dll
+--reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.Emit.Lightweight\4.3.0\ref\netstandard1.0\System.Reflection.Emit.Lightweight.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.Extensions\4.3.0\ref\netstandard1.0\System.Reflection.Extensions.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.Metadata\1.3.0\lib\netstandard1.1\System.Reflection.Metadata.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Reflection.Primitives\4.3.0\ref\netstandard1.0\System.Reflection.Primitives.dll
@@ -129,6 +132,8 @@
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
+--reference:C:\Users\lucia.beltran\.nuget\packages\System.Xml.XmlDocument\4.0.1\ref\netstandard1.3\System.Xml.XmlDocument.dll
+--reference:C:\Users\lucia.beltran\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\xunit.abstractions\2.0.1-rc2\lib\netstandard1.0\xunit.abstractions.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\xunit.assert\2.1.0\lib\dotnet\xunit.assert.dll
 --reference:C:\Users\lucia.beltran\.nuget\packages\xunit.extensibility.core\2.1.0\lib\dotnet\xunit.core.dll

@@ -5,7 +5,7 @@ namespace Common.DTOs
 {
     public class UserDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

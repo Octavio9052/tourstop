@@ -1,6 +1,6 @@
-﻿using Common.DTOs;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Business.Connectors.Response;
+using Common.DTOs;
 
 namespace Business.Handlers.Response
 {

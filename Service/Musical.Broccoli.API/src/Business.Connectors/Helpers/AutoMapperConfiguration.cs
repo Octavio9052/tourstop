@@ -1,8 +1,7 @@
-﻿using AutoMapper;
-using System;
+﻿using System;
+using AutoMapper;
 using Common.DTOs;
 using DataAccessLayer.Entities;
-
 
 namespace Business.Connectors.Helpers
 {

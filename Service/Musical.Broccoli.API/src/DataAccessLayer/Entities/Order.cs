@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using Common.Enums;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Common.Enums;
 
 namespace DataAccessLayer.Entities
 {

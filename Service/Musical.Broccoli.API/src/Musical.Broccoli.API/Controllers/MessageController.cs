@@ -6,7 +6,6 @@ using Common.DTOs;
 using Common.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace Musical.Broccoli.API.Controllers
 {
     [Route("api/[controller]")]

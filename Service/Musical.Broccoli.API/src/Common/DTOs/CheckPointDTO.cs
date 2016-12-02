@@ -4,7 +4,7 @@ namespace Common.DTOs
 {
     public class CheckPointDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public int AddressId { get; set; }

@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using Business.Connectors.Contracts;
 using Business.Connectors.Helpers;
 using Business.Connectors.Petition;
 using Common.DTOs;
-using Common.Enums;
 using Common.Exceptions;
 using DataAccessLayer.Context;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using Xunit;
 
 namespace Business.Connectors.Tests.ConnectorsTests
@@ -26,159 +26,65 @@ namespace Business.Connectors.Tests.ConnectorsTests
 
     public class UserConnector_Tests
     {
-        private readonly IUserRepository _repository;
-        private readonly IUserConnector _connector;
-
-        public UserConnector_Tests()
-        {
-            var options = new DbContextOptionsBuilder<TourStopContext>()
-                .UseInMemoryDatabase("TourStop_Test_Db")
-                .Options;
-
-            _repository = new UserRepository(new TourStopContext(options));
-
-            var mapper = new MapperConfiguration(x =>
-                    x.AddProfile(new AutoMapperConfiguration())).CreateMapper();
-
-            _connector = new UserConnector(_repository, mapper);
-
-            BootstrapDbInformation();
-        }
-
-        private void BootstrapDbInformation()
-        {
-            var users = new List<User>
-            {
-                new User
-                {
-                    FirstName = "FirstName",
-                    LastName = "LastName",
-                    Email = "foo1@bar.com",
-                    Address = new Address
-                    {
-                        Street1 = "St1",
-                        City = "City",
-                        CountryCode = CountryCode.MX,
-                        PostalCode = 2284,
-                        State = "State",
-                        Name = ""
-                    },
-                    LanguageCode = LanguageCode.EN,
-                    Password = "passwod",
-                    Phone = "6461235856",
-                    UserType = UserType.Promoter
-                },
-                new User
-                {
-                    FirstName = "FirstName",
-                    LastName = "LastName",
-                    Email = "foo2@bar.com",
-                    Address = new Address
-                    {
-                        Street1 = "St1",
-                        City = "City",
-                        CountryCode = CountryCode.MX,
-                        PostalCode = 2284,
-                        State = "State",
-                        Name = ""
-                    },
-                    LanguageCode = LanguageCode.EN,
-                    Password = "passwod",
-                    Phone = "6461235896",
-                    UserType = UserType.Promoter
-                },
-                new User
-                {
-                    FirstName = "FirstName",
-                    LastName = "LastName",
-                    Email = "foo3@bar.com",
-                    Address = new Address
-                    {
-                        Street1 = "St1",
-                        City = "City",
-                        CountryCode = CountryCode.MX,
-                        PostalCode = 2284,
-                        State = "State",
-                        Name = ""
-                    },
-                    LanguageCode = LanguageCode.EN,
-                    Password = "passwod",
-                    Phone = "6461235898",
-                    UserType = UserType.Promoter
-                },
-                new User
-                {
-                    FirstName = "FirstName",
-                    LastName = "LastName",
-                    Email = "foo4@bar.com",
-                    Address = new Address
-                    {
-                        Street1 = "St1",
-                        City = "City",
-                        CountryCode = CountryCode.MX,
-                        PostalCode = 2284,
-                        State = "State",
-                        Name = ""
-                    },
-                    LanguageCode = LanguageCode.EN,
-                    Password = "passwod",
-                    Phone = "6461235896",
-                    UserType = UserType.Promoter
-                },
-                new User
-                {
-                    FirstName = "FirstName",
-                    LastName = "LastName",
-                    Email = "foo5@bar.com",
-                    Address = new Address
-                    {
-                        Street1 = "St1",
-                        City = "City",
-                        CountryCode = CountryCode.MX,
-                        PostalCode = 2284,
-                        State = "State",
-                        Name = ""
-                    },
-                    LanguageCode = LanguageCode.EN,
-                    Password = "passwod",
-                    Phone = "6461235898",
-                    UserType = UserType.Promoter
-                }
-            };
-
-            users.ForEach(x => _repository.AddOrUpdate(x));
-            _repository.SaveChanges();
-        }
-
         #region Get
 
         [Fact]
         public void Get_NoFiltersNoUser_ThrowsAuthenticationException()
         {
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var repositoryMock = new Mock<IUserRepository>();
+
+            var connector = new UserConnector(repositoryMock.Object, mapper);
+
             var petition = new ReadBusinessPetition
             {
                 Action = PetitionAction.Read
             };
 
-            Assert.Throws<AuthenticationException>(() => _connector.Get(petition));
+            Assert.Throws<AuthenticationException>(() => connector.Get(petition));
         }
 
         [Fact]
         public void Get_FilteredValidUser_FilteredUsers()
         {
-            var petition = new ReadBusinessPetition
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var options = new DbContextOptionsBuilder<TourStopContext>()
+                .UseInMemoryDatabase("Get_TourStop_Db")
+                .Options;
+
+            //Add some Registries
+            using (var context = new TourStopContext(options))
             {
-                Action = PetitionAction.Read,
-                FilterString = "email = foo1@bar.com",
-                RequestingUser = new UserDTO
+                context.Add(new User {Email = "foo1@bar.com"});
+                context.Add(new User {Email = "foo2@bar.com"});
+                context.Add(new User {Email = "foo3@bar.com"});
+                context.SaveChanges();
+            }
+
+            //Get Registries
+            using (var context = new TourStopContext(options))
+            {
+                var repository = new UserRepository(context);
+
+                var connector = new UserConnector(repository, mapper);
+
+                var petition = new ReadBusinessPetition
                 {
-                    Id = 1
-                }
-            };
+                    Action = PetitionAction.Read,
+                    FilterString = "email = \"foo1@bar.com\"",
+                    RequestingUser = new UserDTO
+                    {
+                        Id = 1
+                    }
+                };
 
-            var result = _connector.Get(petition).Data;
+                var result = connector.Get(petition).Data;
 
-            Assert.All(result, x => Assert.Equal(x.Email, "foo1@bar.com"));
+                Assert.Equal(1, result.Count);
+                Assert.All(result, x => Assert.Equal(x.Email, "foo1@bar.com"));
+            }
         }
 
         #endregion
@@ -188,152 +94,165 @@ namespace Business.Connectors.Tests.ConnectorsTests
         [Fact]
         public void Save_ValidDataNoUser_NoException()
         {
-            var petition = new ReadWriteBusinessPetition<UserDTO>
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var options = new DbContextOptionsBuilder<TourStopContext>()
+                .UseInMemoryDatabase("SaveNoUser_TourStop_Db")
+                .Options;
+
+            using (var context = new TourStopContext(options))
             {
-                Action = PetitionAction.ReadWrite,
-                Data = new List<UserDTO>
+                var repository = new UserRepository(context);
+                var connector = new UserConnector(repository, mapper);
+
+                var petition = new ReadWriteBusinessPetition<UserDTO>
                 {
-                    new UserDTO
+                    Action = PetitionAction.ReadWrite,
+                    Data = new List<UserDTO>
                     {
-                        FirstName = "FirstName",
-                        LastName = "LastName",
-                        Email = "fooSaveValid@bar.com",
-                        Address = new AddressDTO
-                        {
-                            Street1 = "St1",
-                            City = "City",
-                            CountryCode = CountryCode.MX,
-                            PostalCode = 2284,
-                            State = "State",
-                            Name = ""
-                        },
-                        LanguageCode = LanguageCode.EN,
-                        Password = "passwod",
-                        Phone = "6461235898",
-                        UserType = UserType.Promoter
+                        new UserDTO {Email = "fooSaveValid@bar.com"}
                     }
-                }
-            };
+                };
 
-            _connector.Save(petition);
+                connector.Save(petition);
+            }
 
-            var savedUser = _repository.GetQueryable().Where(x => x.Email == "fooSaveValid@bar.com");
-
-            Assert.NotEmpty(savedUser);
+            using (var context = new TourStopContext(options))
+            {
+                Assert.Equal(1, context.Users.Count());
+                Assert.Equal("fooSaveValid@bar.com", context.Users.Single().Email);
+            }
         }
 
         [Fact]
         public void Update_ValidDataValidUser_NoException()
         {
-            var petition = new ReadWriteBusinessPetition<UserDTO>
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var options = new DbContextOptionsBuilder<TourStopContext>()
+                .UseInMemoryDatabase("UpdateValid_TourStop_Db")
+                .Options;
+
+            User originalEntity;
+
+            //Add some Registries
+            using (var context = new TourStopContext(options))
             {
-                Action = PetitionAction.ReadWrite,
-                Data = new List<UserDTO>
+                originalEntity = context.Add(new User {Email = "fooUpdate1@bar.com"}).Entity;
+                context.Add(new User {Email = "fooUpdate2@bar.com"});
+                context.Add(new User {Email = "fooUpdate3@bar.com"});
+                context.SaveChanges();
+            }
+
+            var mappedDto = mapper.Map<UserDTO>(originalEntity);
+            mappedDto.FirstName = "UpdatedName";
+
+            using (var context = new TourStopContext(options))
+            {
+                var repository = new UserRepository(context);
+                var connector = new UserConnector(repository, mapper);
+
+                var petition = new ReadWriteBusinessPetition<UserDTO>
                 {
-                    new UserDTO
+                    Data = new List<UserDTO>
                     {
-                        Id = 2,
-                        FirstName = "FirstName",
-                        LastName = "LastName",
-                        Email = "fooUpdateValid@bar.com",
-                        Address = new AddressDTO
-                        {
-                            Street1 = "St1",
-                            City = "City",
-                            CountryCode = CountryCode.MX,
-                            PostalCode = 2284,
-                            State = "State",
-                            Name = ""
-                        },
-                        LanguageCode = LanguageCode.EN,
-                        Password = "passwod",
-                        Phone = "6461235898",
-                        UserType = UserType.Promoter
-                    }
-                },
-                RequestingUser = new UserDTO
-                {
-                    Id = 2
-                }
-            };
+                        mappedDto
+                    },
+                    RequestingUser = mappedDto
+                };
 
-            _connector.Save(petition);
+                connector.Save(petition);
+            }
 
-            var savedUser = _repository.GetQueryable().Where(x => x.Email == "fooUpdateValid@bar.com");
-
-            Assert.NotEmpty(savedUser);
+            using (var context = new TourStopContext(options))
+            {
+                Assert.Equal(3, context.Users.Count());
+                Assert.Equal(mappedDto.FirstName, context.Users.Single(x => x.Email == "fooUpdate1@bar.com").FirstName);
+            }
         }
 
         [Fact]
         public void Update_ValidDataNoUser_ThrowsAuthenticationException()
         {
-            var petition = new ReadWriteBusinessPetition<UserDTO>
-            {
-                Action = PetitionAction.ReadWrite,
-                Data = new List<UserDTO>
-                {
-                    new UserDTO
-                    {
-                        Id = 1,
-                        FirstName = "FirstName",
-                        LastName = "LastName",
-                        Email = "fooUpdateValid@bar.com",
-                        Address = new AddressDTO
-                        {
-                            Street1 = "St1",
-                            City = "City",
-                            CountryCode = CountryCode.MX,
-                            PostalCode = 2284,
-                            State = "State",
-                            Name = ""
-                        },
-                        LanguageCode = LanguageCode.EN,
-                        Password = "passwod",
-                        Phone = "6461235898",
-                        UserType = UserType.Promoter
-                    }
-                }
-            };
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var options = new DbContextOptionsBuilder<TourStopContext>()
+                .UseInMemoryDatabase("UpdateInvalidUser_TourStop_Db")
+                .Options;
 
-            Assert.Throws<AuthenticationException>(() => _connector.Save(petition));
+            User originalEntity;
+
+            //Add some Registries
+            using (var context = new TourStopContext(options))
+            {
+                originalEntity = context.Add(new User {Email = "fooUpdateNoValidUser1@bar.com"}).Entity;
+                context.Add(new User {Email = "fooUpdateNoValidUser2@bar.com"});
+                context.Add(new User {Email = "fooUpdateNoValidUser3@bar.com"});
+                context.SaveChanges();
+            }
+
+            var mappedDto = mapper.Map<UserDTO>(originalEntity);
+            mappedDto.FirstName = "UpdatedName";
+
+            using (var context = new TourStopContext(options))
+            {
+                var repository = new UserRepository(context);
+                var connector = new UserConnector(repository, mapper);
+
+                var petition = new ReadWriteBusinessPetition<UserDTO>
+                {
+                    Data = new List<UserDTO>
+                    {
+                        mappedDto
+                    }
+                };
+
+                Assert.Throws<AuthenticationException>(() => connector.Save(petition));
+            }
         }
 
         [Fact]
         public void Update_ValidDataNoCorrespondingUser_ThrowsAuthenticationException()
         {
-            var petition = new ReadWriteBusinessPetition<UserDTO>
-            {
-                Action = PetitionAction.ReadWrite,
-                Data = new List<UserDTO>
-                {
-                    new UserDTO
-                    {
-                        Id = 1,
-                        FirstName = "FirstName",
-                        LastName = "LastName",
-                        Email = "fooUpdateValid@bar.com",
-                        Address = new AddressDTO
-                        {
-                            Street1 = "St1",
-                            City = "City",
-                            CountryCode = CountryCode.MX,
-                            PostalCode = 2284,
-                            State = "State",
-                            Name = ""
-                        },
-                        LanguageCode = LanguageCode.EN,
-                        Password = "passwod",
-                        Phone = "6461235898",
-                        UserType = UserType.Promoter
-                    }
-                },
-                RequestingUser = new UserDTO
-                {
-                    Id = 2
-                }
-            };
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var options = new DbContextOptionsBuilder<TourStopContext>()
+                .UseInMemoryDatabase("UpdateNoCorrespondingUser_TourStop_Db")
+                .Options;
 
-            Assert.Throws<AuthenticationException>(() => _connector.Save(petition));
+            User originalEntity;
+
+            //Add some Registries
+            using (var context = new TourStopContext(options))
+            {
+                originalEntity = context.Add(new User {Email = "fooUpdateNoValidUser1@bar.com"}).Entity;
+                context.Add(new User {Email = "fooUpdateNoValidUser2@bar.com"});
+                context.Add(new User {Email = "fooUpdateNoValidUser3@bar.com"});
+                context.SaveChanges();
+            }
+
+            var mappedDto = mapper.Map<UserDTO>(originalEntity);
+            mappedDto.FirstName = "UpdatedName";
+
+            using (var context = new TourStopContext(options))
+            {
+                var repository = new UserRepository(context);
+                var connector = new UserConnector(repository, mapper);
+
+                var petition = new ReadWriteBusinessPetition<UserDTO>
+                {
+                    Data = new List<UserDTO>
+                    {
+                        mappedDto
+                    },
+                    RequestingUser = new UserDTO
+                    {
+                        Id = new Random().Next()
+                    }
+                };
+
+                Assert.Throws<AuthenticationException>(() => connector.Save(petition));
+            }
         }
 
         #endregion
@@ -341,8 +260,14 @@ namespace Business.Connectors.Tests.ConnectorsTests
         #region Delete
 
         [Fact]
-        public void Delete_FilteredNoUser_ThrowAuthenticationException()
+        public void Delete_ValidDataNoUser_ThrowAuthenticationException()
         {
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+
+            var repository = new Mock<IUserRepository>().Object;
+            var connector = new UserConnector(repository, mapper);
+
             var petition = new ReadWriteBusinessPetition<UserDTO>
             {
                 Action = PetitionAction.Delete,
@@ -350,59 +275,73 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 {
                     new UserDTO
                     {
-                        Id = 2
+                        Id = 1
                     }
                 }
             };
 
-            Assert.Throws<AuthenticationException>(() => _connector.Delete(petition));
+            Assert.Throws<AuthenticationException>(() => connector.Delete(petition));
         }
 
         [Fact]
         public void Delete_ValidDataValidUser_NoException()
         {
-            var petition = new ReadWriteBusinessPetition<UserDTO>
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+            var options = new DbContextOptionsBuilder<TourStopContext>()
+                .UseInMemoryDatabase("DeleteValidUser_TourStop_Db")
+                .Options;
+
+            int entityId;
+
+            //Add some Registries
+            using (var context = new TourStopContext(options))
             {
-                Action = PetitionAction.ReadWrite,
-                Data = new List<UserDTO>
+                entityId = context.Add(new User {Email = "fooDelete1@bar.com"}).Entity.Id;
+                context.Add(new User {Email = "fooDelete2@bar.com"});
+                context.Add(new User {Email = "fooDelete3@bar.com"});
+                context.SaveChanges();
+            }
+            using (var context = new TourStopContext(options))
+            {
+                var repository = new UserRepository(context);
+                var connector = new UserConnector(repository, mapper);
+
+                var petition = new ReadWriteBusinessPetition<UserDTO>
                 {
-                    new UserDTO
+                    Action = PetitionAction.Delete,
+                    Data = new List<UserDTO>
                     {
-                        Id = 2,
-                        FirstName = "FirstName",
-                        LastName = "LastName",
-                        Email = "fooUpdateValid@bar.com",
-                        Address = new AddressDTO
+                        new UserDTO
                         {
-                            Street1 = "St1",
-                            City = "City",
-                            CountryCode = CountryCode.MX,
-                            PostalCode = 2284,
-                            State = "State",
-                            Name = ""
-                        },
-                        LanguageCode = LanguageCode.EN,
-                        Password = "passwod",
-                        Phone = "6461235898",
-                        UserType = UserType.Promoter
+                            Id = entityId
+                        }
+                    },
+                    RequestingUser = new UserDTO
+                    {
+                        Id = entityId
                     }
-                },
-                RequestingUser = new UserDTO
-                {
-                    Id = 2
-                }
-            };
+                };
 
-            _connector.Delete(petition);
+                connector.Delete(petition);
+            }
 
-            var allRegistries = _repository.GetAll();
-
-            Assert.All(allRegistries, x => Assert.NotEqual(x.Id, 2));
+            using (var context = new TourStopContext(options))
+            {
+                Assert.Equal(2, context.Users.Count());
+                Assert.All(context.Users, x => Assert.NotEqual("fooDelete1@bar.com", x.Email));
+            }
         }
 
         [Fact]
         public void Delete_ValidDataNoCorrespondingUser_ThrowsAuthenticationException()
         {
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+
+            var repository = new Mock<IUserRepository>().Object;
+            var connector = new UserConnector(repository, mapper);
+
             var petition = new ReadWriteBusinessPetition<UserDTO>
             {
                 Action = PetitionAction.Delete,
@@ -410,40 +349,37 @@ namespace Business.Connectors.Tests.ConnectorsTests
                 {
                     new UserDTO
                     {
-                        Id = 2,
-                        FirstName = "firstname",
-                        LastName = "lastname",
-                        Email = "fooupdatevalid@bar.com",
-                        AddressId = 1,
-                        LanguageCode = LanguageCode.EN,
-                        Password = "passwod",
-                        Phone = "6461235898",
-                        UserType = UserType.Promoter
+                        Id = 1
                     }
                 },
-                RequestingUser = new UserDTO
-                {
-                    Id = 3
-                }
-            };
-
-            Assert.Throws<AuthenticationException>(() => _connector.Delete(petition));
-        }
-
-
-        [Fact]
-        public void Delete_NoDataValidUser_ThrowsAuthenticationException()
-        {
-            var petition = new ReadWriteBusinessPetition<UserDTO>
-            {
-                Action = PetitionAction.Delete,
                 RequestingUser = new UserDTO
                 {
                     Id = 2
                 }
             };
 
-            Assert.Throws<AuthenticationException>(() => _connector.Delete(petition));
+            Assert.Throws<AuthenticationException>(() => connector.Delete(petition));
+        }
+
+        [Fact]
+        public void Delete_NoDataValidUser_ThrowsAuthenticationException()
+        {
+            var mapperConfiguration = new MapperConfiguration(x => x.AddProfile(new AutoMapperConfiguration()));
+            var mapper = mapperConfiguration.CreateMapper();
+
+            var repository = new Mock<IUserRepository>().Object;
+            var connector = new UserConnector(repository, mapper);
+
+            var petition = new ReadWriteBusinessPetition<UserDTO>
+            {
+                Action = PetitionAction.Delete,
+                RequestingUser = new UserDTO
+                {
+                    Id = 1
+                }
+            };
+
+            Assert.Throws<AuthenticationException>(() => connector.Delete(petition));
         }
 
         #endregion

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Common.DTOs;
 using AutoMapper;
 using Business.Connectors.Contracts;
+using Common.DTOs;
 using Common.Exceptions;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;

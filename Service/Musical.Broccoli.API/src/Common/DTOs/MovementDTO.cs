@@ -5,7 +5,7 @@ namespace Common.DTOs
 {
     public class MovementDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public MovementType MovementType { get; set; }
         public DateTime DateCreated { get; set; }
         public int OrderId { get; set; }

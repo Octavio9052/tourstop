@@ -6,7 +6,6 @@ using Business.Handlers.Authentication;
 using Business.Handlers.Authentication.contracts;
 using Business.Handlers.Handlers;
 using Business.Handlers.Handlers.contracts;
-using Business.Handlers.Validation.Dto;
 using DataAccessLayer.Context;
 using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.Contracts;
@@ -16,7 +15,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
 
 namespace Musical.Broccoli.API
 {
@@ -64,17 +62,8 @@ namespace Musical.Broccoli.API
 
             #endregion
 
-            //RequestAuthenticatorAuthenticator
+            //RequestAuthenticator
             services.AddTransient<IRequestAuthenticator, RequestAuthenticator>();
-
-            #region Validators
-
-            services.AddTransient(x => MessageValidator.All());
-            services.AddTransient(x => OrderValidator.All());
-            services.AddTransient(x => TourValidator.All());
-            services.AddTransient(x => UserValidator.All());
-
-            #endregion
 
             #region Connectors
 

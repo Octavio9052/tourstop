@@ -18,7 +18,7 @@ namespace Business.Handlers.Validation.Request
 
         public static FilterValidator Holds(Predicate<Filter> predicate, string message)
         {
-            return new FilterValidator()
+            return new FilterValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

@@ -1,4 +1,6 @@
-﻿namespace Business.Handlers.Validation
+﻿using System;
+
+namespace Business.Handlers.Validation
 {
     public class ValidationResult
     {
@@ -26,8 +28,8 @@
         {
             return new ValidationResult
             {
-                Reason = string.Format(@"{0}, {1}", r1.Reason, r2.Reason),
-                IsValid = r1.IsValid && r2.IsValid
+                IsValid = r1.IsValid && r2.IsValid,
+                Reason = r1.IsValid && r2.IsValid ? string.Empty : string.Format(@"{0}, {1}", r1.Reason, r2.Reason)
             };
         }
     }

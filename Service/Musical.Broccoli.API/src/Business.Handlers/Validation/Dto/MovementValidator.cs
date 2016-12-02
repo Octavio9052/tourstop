@@ -10,15 +10,15 @@ namespace Business.Handlers.Validation.Dto
 
         public MovementValidator And(MovementValidator other)
         {
-            return new MovementValidator()
+            return new MovementValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static MovementValidator Holds(Predicate<MovementDTO> predicate, string message)
         {
-            return new MovementValidator()
+            return new MovementValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

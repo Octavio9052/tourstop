@@ -54,6 +54,7 @@ namespace DataAccessLayer.Repositories
         {
             Context.Entry(entity).State = EntityState.Deleted;
         }
+
         public void Remove(int id)
         {
             var entity = DbSet.Find(id);

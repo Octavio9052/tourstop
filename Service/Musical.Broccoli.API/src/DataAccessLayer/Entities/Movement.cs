@@ -1,6 +1,6 @@
 ﻿using System;
-using Common.Enums;
 using System.ComponentModel.DataAnnotations;
+using Common.Enums;
 
 namespace DataAccessLayer.Entities
 {

@@ -1,6 +1,6 @@
-﻿using Common.DTOs;
+﻿using Business.Handlers.Request;
+using Common.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using Business.Handlers.Request;
 
 namespace Musical.Broccoli.API.Controllers
 {

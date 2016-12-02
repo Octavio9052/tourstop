@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Common.DTOs;
 
 namespace Business.Handlers.Validation.Dto
@@ -10,21 +11,26 @@ namespace Business.Handlers.Validation.Dto
 
         public OrderValidator And(OrderValidator other)
         {
-            return new OrderValidator()
+            return new OrderValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static OrderValidator Holds(Predicate<OrderDTO> predicate, string message)
         {
-            return new OrderValidator()
+            return new OrderValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
 
         #region Validator
+
+        public static OrderValidator HasId()
+        {
+            return Holds(x => x.Id > 0, "Invalid Id");
+        }
 
         public static OrderValidator UserIsValid()
         {

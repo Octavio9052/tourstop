@@ -10,15 +10,15 @@ namespace Business.Handlers.Validation.Dto
 
         public RatingValidator And(RatingValidator other)
         {
-            return new RatingValidator()
+            return new RatingValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static RatingValidator Holds(Predicate<RatingDTO> predicate, string message)
         {
-            return new RatingValidator()
+            return new RatingValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

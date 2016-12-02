@@ -10,15 +10,15 @@ namespace Business.Handlers.Validation.Dto
 
         public ReservationValidator And(ReservationValidator other)
         {
-            return new ReservationValidator()
+            return new ReservationValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static ReservationValidator Holds(Predicate<ReservationDTO> predicate, string message)
         {
-            return new ReservationValidator()
+            return new ReservationValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

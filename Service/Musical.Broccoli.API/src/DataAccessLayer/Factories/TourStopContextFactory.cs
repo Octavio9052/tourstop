@@ -1,6 +1,6 @@
-﻿using DataAccessLayer.Context;
+﻿using Common.AppSettings;
+using DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
-using Common.AppSettings;
 
 namespace DataAccessLayer.Factories
 {

@@ -13,7 +13,7 @@
             get
             {
                 return _expressionString ??
-                       (_expressionString = string.Format(@"{0}{1}{2}", PropertyName, Relationship, Value));
+                       (_expressionString = string.Format(@"{0}{1}""{2}""", PropertyName, Relationship, Value));
             }
             set { _expressionString = value; }
         }

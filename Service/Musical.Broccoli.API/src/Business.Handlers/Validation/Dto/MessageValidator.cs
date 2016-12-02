@@ -10,21 +10,26 @@ namespace Business.Handlers.Validation.Dto
 
         public MessageValidator And(MessageValidator other)
         {
-            return new MessageValidator()
+            return new MessageValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static MessageValidator Holds(Predicate<MessageDTO> predicate, string message)
         {
-            return new MessageValidator()
+            return new MessageValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
 
         #region Validators
+
+        public static MessageValidator HasId()
+        {
+            return Holds(x => x.Id > 0, "Invalid Id");
+        }
 
         public static MessageValidator ContentIsNotEmpty()
         {

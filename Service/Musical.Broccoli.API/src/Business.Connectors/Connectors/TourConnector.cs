@@ -1,11 +1,11 @@
-﻿using Common.DTOs;
-using Common.Enums;
-using DataAccessLayer.Entities;
+﻿using System.Linq;
 using AutoMapper;
-using DataAccessLayer.Repositories.Contracts;
-using System.Linq;
 using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
+using Common.DTOs;
+using Common.Enums;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Business.Connectors
 {

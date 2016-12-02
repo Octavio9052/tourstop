@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Common.DTOs;
 
 namespace Business.Handlers.Validation.Dto
@@ -10,21 +11,26 @@ namespace Business.Handlers.Validation.Dto
 
         public TourValidator And(TourValidator other)
         {
-            return new TourValidator()
+            return new TourValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static TourValidator Holds(Predicate<TourDTO> predicate, string message)
         {
-            return new TourValidator()
+            return new TourValidator
             {
                 Validate = tour => predicate.Invoke(tour) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
         }
 
         #region Validators
+
+        public static TourValidator HasId()
+        {
+            return Holds(x => x.Id > 0, "Invalid Id");
+        }
 
         public static TourValidator NameNotEmpty()
         {

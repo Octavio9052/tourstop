@@ -5,6 +5,7 @@
     },
     "dependencies": {
         "xunit": "2.1.0",
+        "Moq": "4.6.38-alpha",
         "dotnet-test-xunit": "2.2.0-preview2-build1029",
         "Microsoft.EntityFrameworkCore.InMemory": "1.1.0",
         "Business.Connectors": "1.0.0-*",

@@ -6,6 +6,7 @@ using Business.Handlers.Handlers;
 using Business.Handlers.Request;
 using Business.Handlers.Validation.Dto;
 using Common.DTOs;
+using Common.Enums;
 using Common.Exceptions;
 using Moq;
 using Xunit;
@@ -22,7 +23,7 @@ namespace Business.Handlers.Tests
             var connectorMock = new Mock<IUserConnector>();
             var authenticatorMock = new Mock<IRequestAuthenticator>();
 
-            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
 
             var request = new ReadRequest
             {
@@ -51,7 +52,7 @@ namespace Business.Handlers.Tests
             connectorMock.SetupGet(x => x.Get).Returns(x => new BusinessResponse<UserDTO>());
             authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
 
-            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
 
             var request = new ReadRequest
             {
@@ -79,7 +80,7 @@ namespace Business.Handlers.Tests
             connectorMock.SetupGet(x => x.Get).Returns(x => new BusinessResponse<UserDTO>());
             authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
 
-            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
 
             var request = new ReadRequest();
 
@@ -100,7 +101,7 @@ namespace Business.Handlers.Tests
             connectorMock.SetupGet(x => x.Save).Returns(x => new BusinessResponse<UserDTO>());
             authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
 
-            var handler = new UserRequestHandler(connectorMock.Object, UserValidator.All(), authenticatorMock.Object);
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
 
             var request = new ReadWriteRequest<UserDTO>
             {
@@ -113,9 +114,91 @@ namespace Business.Handlers.Tests
             Assert.Throws<InvalidRequestException>(() => handler.HandleReadWriteRequest(request));
         }
 
+        [Fact]
+        public void HandleReadWriteRequest_ValidData_NoException()
+        {
+            //Mock Setup
+            var connectorMock = new Mock<IUserConnector>();
+            var authenticatorMock = new Mock<IRequestAuthenticator>();
+
+            connectorMock.SetupGet(x => x.Save).Returns(x => new BusinessResponse<UserDTO>());
+            authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
+
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
+
+            var request = new ReadWriteRequest<UserDTO>
+            {
+                Data = new List<UserDTO>
+                {
+                    new UserDTO
+                    {
+                        FirstName = "FirstName",
+                        LastName = "LastName",
+                        Email = "fooReadWrite@bar.com",
+                        Password = "password",
+                        Phone = "6461234567",
+                        AddressId = 1,
+                        LanguageCode = LanguageCode.EN,
+                        UserType = UserType.User
+                    }
+                }
+            };
+
+            handler.HandleReadWriteRequest(request);
+        }
+
         #endregion
 
         #region DeleteRequest
+
+        [Fact]
+        public void HandleDelete_InvalidData_ThrowsInvalidRequestException()
+        {
+            //Mock Setup
+            var connectorMock = new Mock<IUserConnector>();
+            var authenticatorMock = new Mock<IRequestAuthenticator>();
+
+            connectorMock.SetupGet(x => x.Delete).Returns(x => new BusinessResponse<UserDTO>());
+            authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
+
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
+
+            var request = new ReadWriteRequest<UserDTO>
+            {
+                Data = new List<UserDTO>
+                {
+                    new UserDTO()
+                }
+            };
+
+            Assert.Throws<InvalidRequestException>(() => handler.HandleReadWriteRequest(request));
+        }
+
+        [Fact]
+        public void HandleDelete_ValidData_NoException()
+        {
+            //Mock Setup
+            var connectorMock = new Mock<IUserConnector>();
+            var authenticatorMock = new Mock<IRequestAuthenticator>();
+
+            connectorMock.SetupGet(x => x.Delete).Returns(x => new BusinessResponse<UserDTO>());
+            authenticatorMock.Setup(x => x.Authenticate(It.IsAny<string>())).Returns(new UserDTO());
+
+            var handler = new UserRequestHandler(connectorMock.Object, authenticatorMock.Object);
+
+            var request = new ReadWriteRequest<UserDTO>
+            {
+                Data = new List<UserDTO>
+                {
+                    new UserDTO
+                    {
+                        Id = 1
+                    }
+                }
+            };
+
+            handler.HandleDeleteRequest(request);
+        }
 
         #endregion
     }

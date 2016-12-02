@@ -10,15 +10,15 @@ namespace Business.Handlers.Validation.Dto
 
         public PaymentInfoValidator And(PaymentInfoValidator other)
         {
-            return new PaymentInfoValidator()
+            return new PaymentInfoValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static PaymentInfoValidator Holds(Predicate<PaymentInfoDTO> predicate, string message)
         {
-            return new PaymentInfoValidator()
+            return new PaymentInfoValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

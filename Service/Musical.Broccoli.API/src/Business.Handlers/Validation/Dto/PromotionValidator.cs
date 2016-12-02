@@ -10,15 +10,15 @@ namespace Business.Handlers.Validation.Dto
 
         public PromotionValidator And(PromotionValidator other)
         {
-            return new PromotionValidator()
+            return new PromotionValidator
             {
-                Validate = x => this.Validate(x) + other.Validate(x)
+                Validate = x => Validate(x) + other.Validate(x)
             };
         }
 
         public static PromotionValidator Holds(Predicate<PromotionDTO> predicate, string message)
         {
-            return new PromotionValidator()
+            return new PromotionValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

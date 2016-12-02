@@ -1,7 +1,7 @@
 ﻿namespace Common.DTOs
 {
-    public class BaseDTO
+    public abstract class BaseDTO
     {
-        public virtual int Id { get; set; }
+        public abstract int Id { get; set; }
     }
 }

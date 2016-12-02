@@ -5,7 +5,7 @@ namespace Common.DTOs
 {
     public class MessageDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Content { get; set; }
         public DateTime DateCreated { get; set; }
         public int SenderId { get; set; }
