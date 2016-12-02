@@ -83,7 +83,7 @@ namespace Business.Connectors.Helpers
             #region User
 
             CreateMap<User, UserDTO>();
-            CreateMap<UserDTO, User>().ForMember(x => x.Id, y => y.Ignore());
+            CreateMap<UserDTO, User>();
 
             #endregion
 
