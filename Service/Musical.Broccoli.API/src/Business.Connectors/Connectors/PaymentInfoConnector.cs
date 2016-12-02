@@ -4,6 +4,7 @@ using AutoMapper;
 using Business.Connectors.Contracts;
 using DataAccessLayer.Repositories.Contracts;
 using Business.Connectors.Petition;
+using System.Linq;
 
 namespace Business.Connectors
 {
@@ -22,12 +23,12 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<PaymentInfoDTO> petition)
         {
-            return true;
+            return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id));
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<PaymentInfoDTO> petition)
         {
-            return true; //TODO: Bro you have to think
+            return true; //TODO: Bro you have to think THIS SHIT IS NOT READY YET
         }
 
         #endregion

@@ -22,12 +22,12 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<PromotionDTO> petition)
         {
-            return true; //TODO: Think
+            return petition.RequestingUser.UserType==Common.Enums.UserType.Promoter; //TODO: Think
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<PromotionDTO> petition)
         {
-            return true; //TODO: Think
+            return false; //TODO: Think PromotionCantBeDeleted
         }
 
         #endregion

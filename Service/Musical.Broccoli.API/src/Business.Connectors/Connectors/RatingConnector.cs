@@ -27,7 +27,7 @@ namespace Business.Connectors
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<RatingDTO> petition)
         {
-            return true; //TODO: Think! Can ratings be deleted?
+            return petition.Data.TrueForAll(x=>x.UserId==petition.RequestingUser.Id); //TODO: Think! Can ratings be deleted?
         }
 
         #endregion
