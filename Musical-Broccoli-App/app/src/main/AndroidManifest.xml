@@ -14,10 +14,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.views.activities.UserProfileActivity"
-            android:label="@string/app_name" >
+        <activity
+            android:name=".presentation.views.activities.UserProfileActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,10 +31,12 @@
         <activity android:name=".presentation.views.activities.MessagesActivity" />
         <activity android:name=".presentation.views.activities.MyToursActivity" />
         <activity android:name=".presentation.views.activities.WishlistActivity" />
-        <activity android:name=".presentation.views.activities.CheckpointActivity"/>
-        <activity android:name=".presentation.views.activities.PaymentOptionsActivity"/>
-        <activity android:name=".presentation.views.activities.CardPaymentActivity"/>
-        <activity android:name=".presentation.views.activities.TourProfileActivity"/>
+        <activity android:name=".presentation.views.activities.CheckpointActivity" />
+        <activity android:name=".presentation.views.activities.PaymentOptionsActivity" />
+        <activity android:name=".presentation.views.activities.CardPaymentActivity" />
+        <activity android:name=".presentation.views.activities.TourProfileActivity" />
+        <activity android:name=".presentation.views.activities.CreateUserActivity" />
+        <activity android:name=".presentation.views.activities.SearchResultsActivity"></activity>
     </application>
 
 </manifest>
