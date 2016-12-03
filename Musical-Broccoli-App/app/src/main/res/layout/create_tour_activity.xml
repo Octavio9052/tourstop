@@ -218,7 +218,7 @@ enter requirements = -->
                     android:layout_marginTop="10dp"
                     android:background="@drawable/textfields"
                     android:hint="@string/hint_max_seats"
-                    android:text="@{viewModel.tour.maxReservations}"/>
+                    />
 
                 <TextView
                     android:id="@+id/textView13"
