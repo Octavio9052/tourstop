@@ -20,40 +20,40 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/balboa_park"
+                    android:src="@drawable/guadalupe_valley"
                     />
 
                 <ImageButton
-                    android:id="@+id/tour_profile_photo"
+                    android:id="@+id/order_photo"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_below="@+id/header_cover_image"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="-60dp"
+                    android:background="@drawable/profile_circular_border_imageview"
                     android:backgroundTint="#ffffff"
                     android:elevation="5dp"
                     android:padding="20dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/logotourstop"
-                    />
+                    android:src="@drawable/logotourstop" />
 
                 <RelativeLayout
-                    android:id="@+id/profile_layout"
+                    android:id="@+id/order_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/header_cover_image"
                     android:background="#0033cc"
                     android:elevation="4dp"
-                    android:paddingBottom="24dp">
+                    android:paddingBottom="25dp">
 
 
                     <TextView
-                        android:id="@+id/user_profile_name"
+                        android:id="@+id/your_order_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="76dp"
-                        android:text="Tour Profile"
+                        android:text="Your Order"
                         android:textColor="#fff"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -63,10 +63,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/profile_layout"
+                    android:layout_below="@id/order_layout"
                     android:orientation="vertical">
+
                     <TextView
-                        android:id="@+id/tour_profile_nametag"
+                        android:id="@+id/order_nametag"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -77,7 +78,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tour_profile_name"
+                        android:id="@+id/order_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -87,7 +88,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tour_profile_pricetag"
+                        android:id="@+id/order_pricetag"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -98,7 +99,7 @@
                         android:textSize="24sp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/tour_profile_price"
+                        android:id="@+id/order_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -108,7 +109,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tour_profile_destinytag"
+                        android:id="@+id/order_destinationtag"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -119,127 +120,7 @@
                         android:textSize="24sp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/tour_profile_destination"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_stopstag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/stops"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_stops"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_descriptiontag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="@string/description"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_description"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_seatstag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/seats_available"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_seats"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="#000"
-                        android:layout_marginLeft="15dp"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_promotag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="@string/discount"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_promo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_promotertag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="@string/company"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_promoter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_requirementstag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/special_requirements"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/tour_profile_requirements"
+                        android:id="@+id/order_destination"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -248,12 +129,80 @@
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
+
+                    <TextView
+                        android:id="@+id/order_seatstag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/no_seats"
+                        android:textColor="#000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/order_seats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#000"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                    android:id="@+id/order_requirementstag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/special_requirements"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_requirements"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_promotag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/promo"
+                        android:textColor="#000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/order_promo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+
+
                     <Button
-                        android:id="@+id/tour_profile_reservation_button"
+                        android:id="@+id/order_pay_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
-                        android:text="@string/action_reservation"
+                        android:text="@string/action_pay"
                         android:layout_marginLeft="85dp"
                         android:layout_marginRight="85dp"
                         android:textStyle="bold"
