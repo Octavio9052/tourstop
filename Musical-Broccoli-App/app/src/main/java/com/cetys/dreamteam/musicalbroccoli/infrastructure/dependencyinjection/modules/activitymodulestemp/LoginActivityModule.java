@@ -21,8 +21,7 @@ public class LoginActivityModule {
     private final LoginActivity loginActivity;
 
 
-    public LoginActivityModule(
-            LoginActivity loginActivity ) {
+    public LoginActivityModule(LoginActivity loginActivity ) {
         this.loginActivity = loginActivity;
     }
 

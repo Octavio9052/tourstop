@@ -38,6 +38,7 @@
                 android:paddingTop="60dp">
 
 
+                <!-- Button: Go to User Profile -->
                 <ImageButton
                     android:layout_width="146dp"
                     android:layout_height="wrap_content"
@@ -46,8 +47,10 @@
                     android:id="@+id/user_button_mainpage"
                     android:layout_marginEnd="10dp"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:onClick="@{viewModel::onUserProfileClick}"/>
 
+                <!-- Button: Go to My Tours -->
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -56,8 +59,10 @@
                     android:id="@+id/mytours_button_mainpage"
                     android:paddingLeft="8dp"
                     android:paddingTop="10dp"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:onClick="@{viewModel::onMyToursClick}"/>
 
+                <!-- Button: Go to Messages -->
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -66,8 +71,10 @@
                     android:id="@+id/msg_button_mainpage"
                     android:paddingTop="55dp"
                     android:layout_below="@+id/user_button_mainpage"
-                    android:layout_alignEnd="@+id/mytours_button_mainpage" />
+                    android:layout_alignEnd="@+id/mytours_button_mainpage"
+                    android:onClick="@{viewModel::onMessagesClick}"/>
 
+                <!-- Button: Go to Search -->
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -77,7 +84,8 @@
                     android:layout_marginStart="35dp"
                     android:background="@color/transparent"
                     android:layout_marginTop="30dp"
-                    android:id="@+id/search_button_mainpage" />
+                    android:id="@+id/search_button_mainpage"
+                    android:onClick="@{viewModel::onSearchClick}"/>
 
 
             </RelativeLayout>
