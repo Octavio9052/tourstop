@@ -66,12 +66,18 @@
 
 
                 <RelativeLayout
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/sections_layout"
                     android:layout_below="@+id/profile_layout"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reference_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"/>
 
                     <TextView
                         android:layout_width="160dp"
@@ -85,6 +91,7 @@
                         android:textSize="20sp"
                         android:textAlignment="center"
                         android:id="@+id/textView"
+
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="18dp" />
@@ -101,6 +108,7 @@
                         android:textSize="20sp"
                         android:textAlignment="center"
                         android:id="@+id/textView2"
+
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_above="@+id/textView3"
@@ -118,6 +126,7 @@
                         android:textSize="20sp"
                         android:textAlignment="center"
                         android:id="@+id/textView3"
+
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_below="@+id/textView"
@@ -125,6 +134,7 @@
                         android:layout_marginTop="17dp" />
 
                     <TextView
+                        android:id="@+id/textView4"
                         android:layout_width="175dp"
                         android:layout_height="175dp"
                         android:background="#fff"
@@ -135,11 +145,11 @@
                         android:onClick="goToMessagesActivity"
                         android:textSize="20sp"
                         android:textAlignment="center"
+
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:id="@+id/textView4"
                         android:layout_alignTop="@+id/textView3"
-                        android:layout_toEndOf="@+id/textView" />
+                        android:layout_toEndOf="@+id/textView"/>
 
                 </RelativeLayout>
             </RelativeLayout>
