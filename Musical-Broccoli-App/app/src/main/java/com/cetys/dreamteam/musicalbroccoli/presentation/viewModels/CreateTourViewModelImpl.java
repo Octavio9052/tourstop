@@ -8,7 +8,6 @@ import android.widget.Toast;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CheckpointActivity;
-import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 
 /**
  * Created by Octavio on 2016/11/20.

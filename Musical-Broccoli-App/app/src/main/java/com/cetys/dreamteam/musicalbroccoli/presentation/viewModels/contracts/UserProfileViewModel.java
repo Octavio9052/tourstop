@@ -1,5 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
+import android.view.View;
+
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 
 /**
@@ -9,4 +11,10 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 public interface UserProfileViewModel {
     UserModel getUser();
     void setUser(UserModel user);
+
+    void onEditUserClick(View view);
+    void onMyToursClick(View view);
+    void onWishlistClick(View view);
+    void onMessageClick(View view);
+    void onCreateTourClick(View view);
 }
