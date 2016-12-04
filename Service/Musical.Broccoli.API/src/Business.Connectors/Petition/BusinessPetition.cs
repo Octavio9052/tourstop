@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Business.Controllers.Petition;
-using Common.DTOs;
+﻿using Common.DTOs;
 
 namespace Business.Connectors.Petition
 {

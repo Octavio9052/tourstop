@@ -1,10 +1,10 @@
-﻿using Common.DTOs;
-using DataAccessLayer.Entities;
-using System.Linq;
+﻿using System.Linq;
 using AutoMapper;
-using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
+using Common.DTOs;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Business.Connectors
 {
@@ -18,7 +18,7 @@ namespace Business.Connectors
 
         protected override bool ValidateGet(ReadBusinessPetition petition)
         {
-            return petition.RequestingUser != null; //TODO: Really only the owner user can see the Order THINK MY FRIEND
+            return petition.RequestingUser != null ; //TODO: Really only the owner user can see the Order THINK MY FRIEND
         }
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<OrderDTO> petition)

@@ -3,7 +3,7 @@ using Business.Handlers.Handlers.contracts;
 using Business.Handlers.Request;
 using Business.Handlers.Response;
 using Common.DTOs;
-using Handlers.Exceptions;
+using Common.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Musical.Broccoli.API.Controllers
@@ -26,7 +26,7 @@ namespace Musical.Broccoli.API.Controllers
             {
                 result = _requestHandler.HandleReadRequest(request);
             }
-            catch (UnauthorizedAccessException)
+            catch (AuthenticationException)
             {
                 return new UnauthorizedResult();
             }

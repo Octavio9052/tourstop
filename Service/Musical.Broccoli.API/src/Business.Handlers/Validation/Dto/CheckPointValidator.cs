@@ -1,10 +1,8 @@
-﻿using Common.DTOs;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
+using Common.DTOs;
 
-namespace Business.Handlers.Validation
+namespace Business.Handlers.Validation.Dto
 {
     public class CheckPointValidator : BaseValidator<CheckPointDTO>
     {
@@ -12,7 +10,7 @@ namespace Business.Handlers.Validation
 
         public CheckPointValidator And(CheckPointValidator other)
         {
-            return new CheckPointValidator()
+            return new CheckPointValidator
             {
                 Validate = x => Validate(x) + other.Validate(x)
             };
@@ -20,7 +18,7 @@ namespace Business.Handlers.Validation
 
         public static CheckPointValidator Holds(Predicate<CheckPointDTO> predicate, string message)
         {
-            return new CheckPointValidator()
+            return new CheckPointValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };

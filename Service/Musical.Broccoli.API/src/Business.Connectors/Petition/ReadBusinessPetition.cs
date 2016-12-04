@@ -1,6 +1,4 @@
-﻿using Common.DTOs;
-
-namespace Business.Connectors.Petition
+﻿namespace Business.Connectors.Petition
 {
     public class ReadBusinessPetition : BusinessPetition
     {

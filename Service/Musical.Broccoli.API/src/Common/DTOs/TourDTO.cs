@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Common.DTOs
 {
     public class TourDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Title { get; set; }
         public int MaxReservation { get; set; }
         public float ReservationPrice { get; set; }

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace DataAccessLayer.Entities
+﻿namespace DataAccessLayer.Entities
 {
-    public class BaseEntity
-    { 
-        public virtual int Id { get; set; }
+    public abstract class BaseEntity
+    {
+        public abstract int Id { get; set; }
     }
 }

@@ -1,9 +1,9 @@
-﻿using Common.DTOs;
-using DataAccessLayer.Entities;
-using AutoMapper;
-using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
+﻿using AutoMapper;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
+using Common.DTOs;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Business.Connectors
 {

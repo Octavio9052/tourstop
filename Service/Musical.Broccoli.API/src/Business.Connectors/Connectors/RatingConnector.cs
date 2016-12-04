@@ -1,9 +1,9 @@
-﻿using Common.DTOs;
-using DataAccessLayer.Entities;
-using AutoMapper;
-using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
+﻿using AutoMapper;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
+using Common.DTOs;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Business.Connectors
 {
@@ -27,7 +27,7 @@ namespace Business.Connectors
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<RatingDTO> petition)
         {
-            return true; //TODO: Think! Can ratings be deleted?
+            return petition.Data.TrueForAll(x=>x.UserId==petition.RequestingUser.Id); //TODO: Think! Can ratings be deleted?
         }
 
         #endregion

@@ -18,7 +18,7 @@ namespace Business.Handlers.Validation.Request
 
         public static FilterValidator Holds(Predicate<Filter> predicate, string message)
         {
-            return new FilterValidator()
+            return new FilterValidator
             {
                 Validate = x => predicate.Invoke(x) ? ValidationResult.Valid() : ValidationResult.Invalid(message)
             };
@@ -38,7 +38,7 @@ namespace Business.Handlers.Validation.Request
 
         public static FilterValidator RelationshipIsNotNullOrEmpty()
         {
-            return Holds(x => string.IsNullOrEmpty(x.Relatioship), "Relationship is not valid");
+            return Holds(x => !string.IsNullOrEmpty(x.Relationship), "Relationship is not valid");
         }
 
         #endregion

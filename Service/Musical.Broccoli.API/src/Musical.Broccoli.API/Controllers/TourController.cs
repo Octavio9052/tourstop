@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Common.DTOs;
-using Business.Handlers.Request;
-using System;
+﻿using System;
 using Business.Handlers.Handlers.contracts;
-using Handlers.Exceptions;
+using Business.Handlers.Request;
 using Business.Handlers.Response;
+using Common.DTOs;
+using Common.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Musical.Broccoli.API.Controllers
 {

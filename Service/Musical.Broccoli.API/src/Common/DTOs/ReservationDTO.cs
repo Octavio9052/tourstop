@@ -4,7 +4,7 @@ namespace Common.DTOs
 {
     public class ReservationDTO : BaseDTO
     {
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public string Name { get; set; }
         public DateTime DateCreated { get; set; }
         public bool Status { get; set; }

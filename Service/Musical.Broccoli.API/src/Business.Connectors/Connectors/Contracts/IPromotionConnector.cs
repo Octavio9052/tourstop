@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Connectors.Contracts;
-using Common.DTOs;
-namespace Business.Contracts
+﻿using Common.DTOs;
+
+namespace Business.Connectors.Contracts
 {
-    public interface IPromotionConnector:IBaseConnector<PromotionDTO>
+    public interface IPromotionConnector : IBaseConnector<PromotionDTO>
     {
     }
 }

@@ -1,13 +1,19 @@
-﻿using Common.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business.Connectors.Response;
+using Common.DTOs;
 
 namespace Business.Handlers.Response
 {
-    public class Response<TDto> where TDto : BaseDTO
+    public class Response<T> where T : BaseDTO
     {
-        public ICollection<TDto> Data { get; set; }
+        public ICollection<T> Data { get; set; }
+
+        public static explicit operator Response<T>(BusinessResponse<T> businessResponse)
+        {
+            return new Response<T>
+            {
+                Data = businessResponse.Data
+            };
+        }
     }
 }

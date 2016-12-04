@@ -1,35 +1,56 @@
-﻿using Common.DTOs;
-using DataAccessLayer.Entities;
+﻿using System;
+using System.Linq;
 using AutoMapper;
+using Business.Connectors.Contracts;
+using Common.DTOs;
+using Common.Exceptions;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
-using Business.Connectors.Petition;
 
 namespace Business.Connectors
 {
-    public class SessionConnector : BaseConnector<SessionDTO, Session>, ISessionConnector
+    public class SessionConnector : ISessionConnector
     {
-        public SessionConnector(IBaseRepository<Session> repository, IMapper mapper) : base(repository, mapper)
+        private readonly ISessionRepository _sessionRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
+
+        public SessionConnector(ISessionRepository sessionRepository, IUserRepository userRepository, IMapper mapper)
         {
+            _sessionRepository = sessionRepository;
+            _userRepository = userRepository;
+            _mapper = mapper;
         }
 
-        #region Validate Methods
 
-        protected override bool ValidateGet(ReadBusinessPetition petition)
+        public SessionDTO Create(UserDTO userDto)
         {
-            return petition.RequestingUser != null;
+            var userExists = _userRepository.GetQueryable()
+                .Any(x => x.Email == userDto.Email && x.Password == userDto.Password);
+
+            if (!userExists) throw new AuthenticationException();
+
+            var session = new Session
+            {
+                AuthorizationToken = Guid.NewGuid(),
+                UserID = userDto.Id,
+                DateCreated = DateTime.Now
+            };
+
+            _sessionRepository.AddOrUpdate(session);
+            _sessionRepository.SaveChanges();
+
+            return _mapper.Map<SessionDTO>(session);
         }
 
-        protected override bool ValidateSave(ReadWriteBusinessPetition<SessionDTO> petition)
-        {
-            return true;
-        }
 
-        protected override bool ValidateDelete(ReadWriteBusinessPetition<SessionDTO> petition)
+        public UserDTO Authenticate(string authToken)
         {
-            return true;
-        }
+            var authTokenGuid = Guid.Parse(authToken);
 
-        #endregion
+            var session = _sessionRepository.GetFullSession(authTokenGuid);
+
+            return _mapper.Map<SessionDTO>(session).User;
+        }
     }
 }

@@ -1,9 +1,10 @@
-﻿using Common.DTOs;
-using DataAccessLayer.Entities;
-using AutoMapper;
-using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
+﻿using AutoMapper;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
+using Common.DTOs;
+using Common.Enums;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Business.Connectors
 {
@@ -22,12 +23,12 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<PromotionDTO> petition)
         {
-            return true; //TODO: Think
+            return petition.RequestingUser.UserType==UserType.Promoter; //TODO: Think
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<PromotionDTO> petition)
         {
-            return true; //TODO: Think
+            return false; //TODO: Think PromotionCantBeDeleted
         }
 
         #endregion

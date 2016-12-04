@@ -1,11 +1,11 @@
-﻿using Common.DTOs;
+﻿using System.Linq;
+using AutoMapper;
+using Business.Connectors.Contracts;
+using Business.Connectors.Petition;
+using Common.DTOs;
 using Common.Enums;
 using DataAccessLayer.Entities;
-using AutoMapper;
 using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
-using System.Linq;
-using Business.Connectors.Petition;
 
 namespace Business.Connectors
 {
@@ -24,7 +24,7 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<TourDTO> petition)
         {
-            return petition.RequestingUser.UserType == UserType.Promotor;
+            return petition.RequestingUser.UserType == UserType.Promoter;
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<TourDTO> petition)

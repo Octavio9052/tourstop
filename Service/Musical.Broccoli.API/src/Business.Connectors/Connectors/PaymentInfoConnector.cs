@@ -1,9 +1,10 @@
-﻿using Common.DTOs;
-using DataAccessLayer.Entities;
+﻿using System.Linq;
 using AutoMapper;
-using DataAccessLayer.Repositories.Contracts;
-using Business.Contracts;
+using Business.Connectors.Contracts;
 using Business.Connectors.Petition;
+using Common.DTOs;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories.Contracts;
 
 namespace Business.Connectors
 {
@@ -22,12 +23,12 @@ namespace Business.Connectors
 
         protected override bool ValidateSave(ReadWriteBusinessPetition<PaymentInfoDTO> petition)
         {
-            return true;
+            return (petition.Data != null && petition.Data.All(x => x.UserId == petition.RequestingUser.Id));
         }
 
         protected override bool ValidateDelete(ReadWriteBusinessPetition<PaymentInfoDTO> petition)
         {
-            return true; //TODO: Bro you have to think
+            return true; //TODO: Bro you have to think THIS SHIT IS NOT READY YET
         }
 
         #endregion

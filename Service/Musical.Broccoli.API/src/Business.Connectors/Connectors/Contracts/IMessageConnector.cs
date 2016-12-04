@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Connectors.Contracts;
-using Common.DTOs;
+﻿using Common.DTOs;
 
-namespace Business.Contracts
+namespace Business.Connectors.Contracts
 {
-    public interface IMessageConnector:IBaseConnector<MessageDTO>
+    public interface IMessageConnector : IBaseConnector<MessageDTO>
     {
     }
 }
