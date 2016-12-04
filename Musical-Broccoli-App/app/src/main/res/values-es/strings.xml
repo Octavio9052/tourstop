@@ -41,7 +41,7 @@
     <string name="field_phone">Celular: *</string>
     <string name="field_price">Precio: *</string>
     <string name="field_promoter_name">Nombre del promotor: *</string>
-    <string name="field_promotion">Promoción:</string>
+    <string name="field_promotion">Ingresar promoción:</string>
     <string name="field_stops">Paradas:</string>
     <string name="field_requirements">Requisitos: *</string>
     <string name="field_to">A</string>

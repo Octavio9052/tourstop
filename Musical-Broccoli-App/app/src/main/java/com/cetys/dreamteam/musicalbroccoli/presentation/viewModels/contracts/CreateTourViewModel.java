@@ -14,4 +14,8 @@ public interface CreateTourViewModel {
     void setTour( TourModel tour );
 
     void onSaveClick( View view );
+
+    void onPromotionClick( View view );
+
+    void onCheckpointsClick( View view );
 }

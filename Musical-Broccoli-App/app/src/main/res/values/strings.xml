@@ -61,7 +61,7 @@
     <string name="hint_description">Enter Description</string>
     <string name="field_max_seats">Seats Available: *</string>
     <string name="hint_max_seats">Enter Number of Seats</string>
-    <string name="field_promotion">Promotion:</string>
+    <string name="field_promotion">Enter promotion</string>
     <string name="hint_promotion">Enter Promotion</string>
     <string name="field_promoter_name">Promoter Name: *</string>
     <string name="hint_promoter_name">Enter Promoter Name</string>
