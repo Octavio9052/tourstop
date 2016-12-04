@@ -156,7 +156,7 @@
             android:layout_alignBottom="@id/scrollview_layout"
             android:layout_alignEnd="@id/scrollview_layout"
             android:onClick="goToCreateTour"
-            android:src="@drawable/ic_add_black_24dp" />
+            android:src="@drawable/ic_add" />
 
     </RelativeLayout>
 

@@ -40,11 +40,19 @@
     <string name="discount">Discount</string>
     <string name="company">Company</string>
     <string name="special_requirements">Special requirements</string>
+    <string name="action_reservation">Book now</string>
 
     <!-- Strings related to card payment -->
     <string name="card_number">Card number</string>
     <string name="card_holder">Card holder</string>
     <string name="card_security_code">Security code (CVC)</string>
+
+    <!-- Strings related to order -->
+    <string name="promo">Enter promo code:</string>
+    <string name="action_pay">Proceed to checkout</string>
+    <string name="no_seats">Number of seats:</string>
+    <string name="total">Your total is:</string>
+
 
     <!-- Other -->
     <string name="action_create_new_tour">Create New Tour</string>
@@ -61,7 +69,7 @@
     <string name="hint_description">Enter Description</string>
     <string name="field_max_seats">Seats Available: *</string>
     <string name="hint_max_seats">Enter Number of Seats</string>
-    <string name="field_promotion">Promotion:</string>
+    <string name="field_promotion">Enter promotion</string>
     <string name="hint_promotion">Enter Promotion</string>
     <string name="field_promoter_name">Promoter Name: *</string>
     <string name="hint_promoter_name">Enter Promoter Name</string>
