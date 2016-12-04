@@ -31,9 +31,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
+import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.LoginActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -41,6 +47,11 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
+
+    @Inject
+    LoginActivityBinding binding;
+    @Inject
+    LoginViewModel viewModel;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -95,7 +106,27 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        // initActivityComponent();
+        //initBinding();
     }
+
+    public void tempOnCreateUserClick(View view) {
+        Intent intent = new Intent(LoginActivity.this, CreateUserActivity.class);
+        LoginActivity.this.startActivity(intent);
+    }
+    @Override
+    protected void initActivityComponent() {
+        // TODO: LoginActivity(this).inject???
+        // TourStopApplication.get(this).getAppComponent().plus(new LoginActivityModule(this).inject(this));
+    }
+
+    @Override
+    protected void initBinding() {
+        binding.setViewModel(viewModel);
+    }
+
+    // TODO: Move all the viewModel
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
@@ -282,16 +313,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         mEmailView.setAdapter(adapter);
     }
 
-    @Override
-    protected void initActivityComponent() {
-
-    }
-
-    @Override
-    protected void initBinding() {
-
-    }
-
 
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -325,7 +346,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
                 // Simulate network access.
                 Thread.sleep(2000);
                 // TODO: Temp stuff below
-                Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainPageActivity.class);
                 LoginActivity.this.startActivity(intent);
                 // TODO: Temp stuff above
             } catch (InterruptedException e) {

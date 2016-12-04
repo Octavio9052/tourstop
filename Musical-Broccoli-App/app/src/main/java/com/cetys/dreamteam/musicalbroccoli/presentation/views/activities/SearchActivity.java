@@ -33,7 +33,7 @@ public class SearchActivity extends BaseActivity {
         initActivityComponent();
         initBinding();
         //initializes the calendarview
-        initializeCalendar();
+        //initializeCalendar();
     }
 
     // TODO: FIX THIS ACTIVITY pls
