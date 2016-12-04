@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.views.activities.UserProfileActivity" />
+
+        <activity android:name=".presentation.views.activities.UserProfileActivity"/>
         <activity android:name=".presentation.views.activities.SearchActivity" />
         <activity android:name=".presentation.views.activities.CreateTourActivity"/>
         <activity android:name=".presentation.views.activities.EditUserActivity" />
@@ -34,6 +35,8 @@
         <activity android:name=".presentation.views.activities.TourProfileActivity"/>
         <activity android:name=".presentation.views.activities.OrderActivity" />
         <activity android:name=".presentation.views.activities.MainPageActivity"/>
+        <activity android:name=".presentation.views.activities.CreateUserActivity" />
+        <activity android:name=".presentation.views.activities.SearchResultsActivity"/>
     </application>
 
 </manifest>
