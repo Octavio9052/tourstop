@@ -119,6 +119,16 @@
                             android:textColor="#000"
                             android:textSize="24sp"
                             android:textStyle="bold"/>
+                    <Button
+                        android:id="@+id/tour_profile_reservation_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/action_reservation"
+                        android:layout_marginLeft="85dp"
+                        android:layout_marginRight="85dp"
+                        android:textStyle="bold"
+                        android:background="@android:drawable/toast_frame"/>
 
                         <TextView
                             android:id="@+id/tour_profile_destinytag"
