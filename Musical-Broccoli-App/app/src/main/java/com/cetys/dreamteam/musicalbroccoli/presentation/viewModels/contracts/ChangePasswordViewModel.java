@@ -1,5 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
+import android.view.View;
+
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 
 /**
@@ -9,4 +11,6 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 public interface ChangePasswordViewModel {
     UserModel getUser();
     void setUser(UserModel user);
+
+    void onSaveChangesClick(View view);
 }
