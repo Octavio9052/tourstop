@@ -39,10 +39,4 @@ public class CardPaymentActivity extends BaseActivity {
         binding.setViewModel( viewModel );
     }
 
-    public void doToast( View view ) {
-        Toast.makeText( CardPaymentActivity.this, "You have added a new card successfully",
-                Toast.LENGTH_LONG ).show();
-        Intent intent = new Intent( CardPaymentActivity.this, UserProfileActivity.class );
-        CardPaymentActivity.this.startActivity( intent );
-    }
 }
