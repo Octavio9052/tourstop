@@ -67,7 +67,7 @@
                 android:orientation="vertical">
 
                 <DatePicker
-                    android:id="@+id/datePicker1"
+                    android:id="@+id/startDatePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/textView2"
@@ -78,24 +78,24 @@
                     android:id="@+id/textClock1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/datePicker1"
-                    android:layout_below="@+id/datePicker1"
+                    android:layout_alignStart="@+id/startDatePicker"
+                    android:layout_below="@+id/startDatePicker"
                     android:layout_marginTop="15dp"/>
 
                 <DatePicker
-                    android:id="@+id/datePicker2"
+                    android:id="@+id/endDatePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/button1"
-                    android:layout_alignTop="@+id/datePicker1"
+                    android:layout_alignTop="@+id/startDatePicker"
                     android:layout_marginEnd="32dp"/>
 
                 <TextClock
                     android:id="@+id/textClock11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/datePicker2"
-                    android:layout_below="@+id/datePicker2"
+                    android:layout_alignStart="@+id/endDatePicker"
+                    android:layout_below="@+id/endDatePicker"
                     android:layout_marginTop="15dp"/>
 
                 <TextView

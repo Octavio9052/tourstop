@@ -1,16 +1,12 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
-import android.view.View;
-
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 
 /**
- * Created by Octavio on 2016/11/16.
+ * Created by Octavio on 2016/12/04.
  */
 
-public interface SearchViewModel {
+public interface SearchResultsViewModel {
     TourModel getTour();
     void setTour(TourModel tour);
-
-    void onSearchClick(View view);
 }
