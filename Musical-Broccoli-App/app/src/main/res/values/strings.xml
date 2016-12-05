@@ -53,6 +53,12 @@
     <string name="no_seats">Number of seats:</string>
     <string name="total">Your total is:</string>
 
+    <!--Strings related to promotion -->
+    <string name="promo_code"> Enter promo code</string>
+    <string name="promo_discount"> Enter discount amount </string>
+    <string name="action_save">Save Promo</string>
+    <string name="action_cancel">Cancel</string>
+
 
     <!-- Other -->
     <string name="action_create_new_tour">Create New Tour</string>

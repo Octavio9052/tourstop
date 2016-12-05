@@ -33,7 +33,8 @@
         <activity android:name=".presentation.views.activities.WishlistActivity" />
         <activity android:name=".presentation.views.activities.CheckpointActivity" />
         <activity android:name=".presentation.views.activities.OrderActivity" />
-        <activity android:name=".presentation.views.activities.MainPageActivity"></activity>
+        <activity android:name=".presentation.views.activities.MainPageActivity" />
+        <activity android:name=".presentation.views.activities.CreatePromotionActivity"></activity>
     </application>
 
 </manifest>
