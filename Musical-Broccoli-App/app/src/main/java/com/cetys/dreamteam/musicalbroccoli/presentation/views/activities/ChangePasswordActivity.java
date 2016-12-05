@@ -1,9 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
@@ -40,11 +37,4 @@ public class ChangePasswordActivity extends BaseActivity {
         binding.setViewModel( viewModel );
     }
 
-    // TODO: BORRAR/CAMBIAR ESTO
-    public void doTemporalToastThing( View view ) {
-        Toast.makeText( ChangePasswordActivity.this, "Your password has been changed successfully",
-                Toast.LENGTH_LONG ).show();
-        Intent intent = new Intent( ChangePasswordActivity.this, UserProfileActivity.class );
-        ChangePasswordActivity.this.startActivity( intent );
-    }
 }

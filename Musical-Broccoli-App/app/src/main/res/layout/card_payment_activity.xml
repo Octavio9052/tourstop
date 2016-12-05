@@ -21,15 +21,6 @@
         android:focusableInTouchMode="true">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_marginStart="9dp"
-            android:layout_toEndOf="@+id/imageView"
-            app:srcCompat="@drawable/visa_logo"/>
-
-        <ImageView
             android:id="@+id/imageView"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -41,6 +32,15 @@
             app:srcCompat="@drawable/master_card_logo"/>
 
         <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginStart="9dp"
+            android:layout_toEndOf="@+id/imageView"
+            app:srcCompat="@drawable/visa_logo"/>
+
+        <ImageView
             android:id="@+id/imageView3"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -49,29 +49,48 @@
             android:layout_toEndOf="@+id/imageView2"
             app:srcCompat="@drawable/amex_logo"/>
 
-        <RadioButton
-            android:id="@+id/button_master_card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageView3"
-            android:layout_below="@+id/imageView3"
-            android:layout_marginEnd="22dp"/>
-
-        <RadioButton
-            android:id="@+id/button_visa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RadioGroup
+            android:id="@+id/radio_group_cards"
             android:layout_alignStart="@+id/imageView"
-            android:layout_below="@+id/imageView"
-            android:layout_marginStart="23dp"/>
-
-        <RadioButton
-            android:id="@+id/button_amex"
+            android:layout_alignEnd="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView2"
-            android:layout_marginEnd="19dp"
-            android:layout_toStartOf="@+id/imageView3"/>
+            android:layout_below="@+id/imageView3"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="3"/>
+
+            <RadioButton
+                android:id="@+id/button_master_card"
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:onClick="@{viewModel::onRadioButtonClick}"/>
+
+            <RadioButton
+                android:id="@+id/button_visa"
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="@{viewModel::onRadioButtonClick}"/>
+
+            <RadioButton
+                android:id="@+id/button_amex"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="@{viewModel::onRadioButtonClick}"/>
+
+        </RadioGroup>
 
 
         <EditText
@@ -79,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/button_amex"
+            android:layout_below="@+id/radio_group_cards"
             android:layout_marginTop="34dp"
             android:alpha="1"
             android:background="@drawable/button_round_format"
@@ -94,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/button_amex"
+            android:layout_below="@+id/radio_group_cards"
             android:layout_marginTop="115dp"
             android:alpha="1"
             android:background="@drawable/button_round_format"
@@ -109,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/button_amex"
+            android:layout_below="@+id/radio_group_cards"
             android:layout_marginTop="195dp"
             android:alpha="1"
             android:background="@drawable/button_round_format"
@@ -143,7 +162,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toStartOf="@+id/button_amex"
                 android:ems="20"
-                android:text="MM"/>
+                android:hint="MM"/>
 
             <TextView
                 android:id="@+id/diagonal_exp_date"
@@ -163,7 +182,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toStartOf="@+id/button_amex"
                 android:ems="20"
-                android:text="YY"/>
+                android:hint="YY"/>
 
 
         </LinearLayout>
@@ -175,7 +194,7 @@
             android:layout_below="@id/payment_security_code"
             android:layout_marginTop="10dp"
             android:background="@android:drawable/toast_frame"
-            android:onClick="doToast"
+            android:onClick="@{viewModel::onSaveChangesClick}"
             android:text="@string/action_save_changes"
             android:textAlignment="center"
             android:textSize="12sp"/>

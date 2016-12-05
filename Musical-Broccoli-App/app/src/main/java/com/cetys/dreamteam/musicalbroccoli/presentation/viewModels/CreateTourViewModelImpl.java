@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CheckpointActivity;
+import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
 
 /**
  * Created by Octavio on 2016/11/20.
@@ -32,8 +33,10 @@ public class CreateTourViewModelImpl extends BaseViewModel implements CreateTour
 
     @Override
     public void onSaveClick( View view ) {
-        Toast toast = Toast.makeText( this.context, "Tour Saved", Toast.LENGTH_LONG );
-        toast.show();
+        doTemporalToast();
+        // TODO: Currently redirects to MainPage, may change to the new Tour just created.
+        Intent intent = new Intent(context, MainPageActivity.class);
+        context.startActivity(intent);
     }
 
     @Override
@@ -46,5 +49,9 @@ public class CreateTourViewModelImpl extends BaseViewModel implements CreateTour
     public void onCheckpointsClick(View view) {
         Intent intent = new Intent(context, CheckpointActivity.class);
         context.startActivity(intent);
+    }
+
+    private void doTemporalToast(){
+        Toast.makeText(context, "Tour Saved", Toast.LENGTH_LONG ).show();
     }
 }

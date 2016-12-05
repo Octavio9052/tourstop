@@ -13,4 +13,5 @@ public interface CreateUserViewModel {
     void setUser(UserModel user);
 
     void onSaveChangesClick(View view);
+    void onRadioButtonClick(View view);
 }

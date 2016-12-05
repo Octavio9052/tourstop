@@ -253,6 +253,7 @@
                     android:layout_below="@+id/edit_seatsAvailable_createTour"
                     android:layout_marginTop="50dp"
                     android:background="@android:drawable/toast_frame"
+                    android:onClick="@{viewModel::onConfirmClick}"
                     android:text="Confirm"
                     android:textAlignment="center"
                     android:textSize="10sp"/>

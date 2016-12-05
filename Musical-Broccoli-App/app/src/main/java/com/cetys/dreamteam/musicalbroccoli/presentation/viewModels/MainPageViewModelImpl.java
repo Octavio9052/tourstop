@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MainPageViewModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MessagesActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MyToursActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.SearchActivity;
@@ -53,6 +54,12 @@ public class MainPageViewModelImpl extends BaseViewModel implements MainPageView
     @Override
     public void onSearchClick(View view) {
         Intent intent = new Intent(context, SearchActivity.class);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void onFABClick(View view) {
+        Intent intent = new Intent(context, CreateTourActivity.class);
         context.startActivity(intent);
     }
 }

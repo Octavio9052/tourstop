@@ -235,7 +235,8 @@ enter requirements = -->
                     android:background="@drawable/textfields"
                     android:hint="@string/hint_max_seats"
                     android:nextFocusUp="@id/edit_description_createTour"/>
-                    <!-- android:text="@{viewModel.tour.maxReservations}"/> -->
+                <!--  android:text="@{viewModel.tour.maxReservations}"-->
+            <!-- TODO: This might be failing bacuse of above line -->
 
 
                 <!-- Promotions of tour
