@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CheckpointActivity;
+import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreatePromotionActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
 
 /**
@@ -41,7 +42,7 @@ public class CreateTourViewModelImpl extends BaseViewModel implements CreateTour
 
     @Override
     public void onPromotionClick(View view) {
-        Intent intent = new Intent(context, CheckpointActivity.class);
+        Intent intent = new Intent(context, CreatePromotionActivity.class);
         context.startActivity(intent);
     }
 

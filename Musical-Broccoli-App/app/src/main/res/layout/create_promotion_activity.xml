@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreatePromotionViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/header_cover_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/promotion_image"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/order_photo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/header_cover_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-60dp"
+                        android:background="@drawable/profile_circular_border_imageview"
+                        android:backgroundTint="#ffffff"
+                        android:elevation="5dp"
+                        android:padding="20dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logotourstop" />
+
+                    <RelativeLayout
+                        android:id="@+id/order_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header_cover_image"
+                        android:background="#0033cc"
+                        android:elevation="4dp"
+                        android:paddingBottom="25dp">
+
+
+                        <TextView
+                            android:id="@+id/your_order_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="76dp"
+                            android:text="Create Promo"
+                            android:textColor="#fff"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <EditText
+            android:layout_width="340dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="18dp"
+            android:hint="@string/promo_code"
+            android:paddingLeft="15dp"
+            android:id="@+id/create_promotion_code"
+            android:background="@drawable/round_edit_text"
+            android:layout_marginTop="25dp"/>
+        <EditText
+            android:layout_width="340dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="18dp"
+            android:hint="@string/promo_discount"
+            android:paddingLeft="15dp"
+            android:id="@+id/create_promotion_discount"
+            android:background="@drawable/round_edit_text"
+            android:layout_marginTop="25dp"/>"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/action_cancel"
+                android:textStyle="bold"
+                android:background="@android:drawable/toast_frame"
+                android:layout_weight="0.53"
+                android:enabled="true"
+                android:onClick="@{viewModel::onCancelClick}"/>
+
+            <Button
+                android:id="@+id/promo_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/action_save"
+                android:textStyle="bold"
+                android:enabled="true"
+                android:background="@android:drawable/toast_frame"
+                android:onClick="@{viewModel::onSaveChangesClick}"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

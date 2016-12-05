@@ -37,6 +37,7 @@
         <activity android:name=".presentation.views.activities.MainPageActivity"/>
         <activity android:name=".presentation.views.activities.CreateUserActivity" />
         <activity android:name=".presentation.views.activities.SearchResultsActivity"/>
+        <activity android:name=".presentation.views.activities.CreatePromotionActivity"/>
     </application>
 
 </manifest>
