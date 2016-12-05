@@ -38,9 +38,4 @@ public class CreateTourActivity extends BaseActivity {
         binding.setViewModel(viewModel);
     }
 
-    // TODO: BORRAR/CAMBIAR ESTO
-    public void doTemporalToastThing(View view) {
-        Toast.makeText(CreateTourActivity.this, "A tour has been created successfully",
-                Toast.LENGTH_LONG).show();
-    }
 }
