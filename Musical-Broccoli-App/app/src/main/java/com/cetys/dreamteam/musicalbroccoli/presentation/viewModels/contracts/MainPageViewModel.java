@@ -16,4 +16,5 @@ public interface MainPageViewModel {
     void onMyToursClick(View view);
     void onMessagesClick(View view);
     void onSearchClick(View view);
+    void onFABClick(View view);
 }
