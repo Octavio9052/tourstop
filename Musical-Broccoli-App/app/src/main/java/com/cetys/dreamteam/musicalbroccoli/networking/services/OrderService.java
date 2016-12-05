@@ -16,18 +16,23 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface OrderService {
+public interface OrderService extends BaseService<OrderDto> {
 
+    @Override
     @GET("order/")
-    Call<List<OrderDto>> Get(@Body ReadRequest request);
+    Call<List<OrderDto>> get(@Body ReadRequest request);
 
+    @Override
     @POST("order/")
-    Call<List<OrderDto>> Create(@Body ReadWriteRequest<OrderDto> request);
+    Call<List<OrderDto>> create(@Body ReadWriteRequest<OrderDto> request);
 
+    @Override
     @PUT("order/")
-    Call Update(@Body ReadWriteRequest<OrderDto> request);
+    Call update(@Body ReadWriteRequest<OrderDto> request);
 
+    @Override
     @DELETE("order/")
-    Call Delete(@Body ReadWriteRequest<OrderDto> request);
+    Call delete(@Body ReadWriteRequest<OrderDto> request);
+
 
 }

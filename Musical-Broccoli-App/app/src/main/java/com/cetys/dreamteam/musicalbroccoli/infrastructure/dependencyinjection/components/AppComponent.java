@@ -39,7 +39,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.mo
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.TourProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.UserProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.WishlistActivityModule;
-import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.OrderActivity;
 
 import javax.inject.Singleton;
 
@@ -49,25 +48,43 @@ import dagger.Component;
  * @Author J. Pichardo on 11/11/2016.
  */
 @Singleton
-@Component(modules = { AppModule.class, NetModule.class})
+@Component(modules = {AppModule.class, NetModule.class})
 public interface AppComponent {
     CardPaymentActivitySubcomponent plus(CardPaymentActivityModule module);
+
     ChangePasswordActivitySubcomponent plus(ChangePasswordActivityModule module);
+
     CheckpointActivitySubcomponent plus(CheckpointActivityModule module);
+
     CreatePromotionActivitySubcomponent plus(CreatePromotionActivityModule module);
+
     CreateTourActivitySubcomponent plus(CreateTourActivityModule module);
+
     CreateUserActivitySubcomponent plus(CreateUserActivityModule module);
+
     EditUserActivitySubcomponent plus(EditUserActivityModule module);
+
     LoginActivitySubcomponent plus(LoginActivityModule module);
+
     MainPageActivitySubcomponent plus(MainPageActivityModule module);
+
     MessagesActivitySubcomponent plus(MessagesActivityModule module);
+
     MyToursActivitySubcomponent plus(MyToursActivityModule module);
+
     OrderActivitySubcomponent plus(OrderActivityModule module);
+
     PaymentOptionsActivitySubcomponent plus(PaymentOptionsActivityModule module);
+
     SearchActivitySubcomponent plus(SearchActivityModule module);
+
     SearchResultsActivitySubcomponent plus(SearchResultsActivityModule module);
+
     TourProfileActivitySubcomponent plus(TourProfileActivityModule module);
+
     UserProfileActivitySubcomponent plus(UserProfileActivityModule module);
-    UserSubcomponent plus( UserModule userModule);
+
+    UserSubcomponent plus(UserModule userModule);
+
     WishlistActivitySubcomponent plus(WishlistActivityModule module);
 }

@@ -16,18 +16,23 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface TourService {
+public interface TourService extends BaseService<TourDto> {
 
+    @Override
     @GET("tour/")
-    Call<List<TourDto>> Get(@Body ReadRequest request);
+    Call<List<TourDto>> get(@Body ReadRequest request);
 
+    @Override
     @POST("tour/")
-    Call<List<TourDto>> Create(@Body ReadWriteRequest<TourDto> request);
+    Call<List<TourDto>> create(@Body ReadWriteRequest<TourDto> request);
 
+    @Override
     @PUT("tour/")
-    Call Update(@Body ReadWriteRequest<TourDto> request);
+    Call update(@Body ReadWriteRequest<TourDto> request);
 
+    @Override
     @DELETE("tour/")
-    Call Delete(@Body ReadWriteRequest<TourDto> request);
+    Call delete(@Body ReadWriteRequest<TourDto> request);
+
 
 }

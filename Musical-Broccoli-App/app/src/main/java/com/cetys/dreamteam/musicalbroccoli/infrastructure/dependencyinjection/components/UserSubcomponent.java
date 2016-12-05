@@ -7,7 +7,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.co
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CreateTourActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CreateUserActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.EditUserActivitySubcomponent;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.LoginActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.MainPageActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.MessagesActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.MyToursActivitySubcomponent;
@@ -27,7 +26,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.mo
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreateTourActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreateUserActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.EditUserActivityModule;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.LoginActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.MainPageActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.MessagesActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.MyToursActivityModule;
@@ -38,52 +36,47 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.mo
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.TourProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.UserProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.WishlistActivityModule;
-import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.SearchResultsActivity;
 
 import dagger.Subcomponent;
 
 /**
  * @Author J. Pichardo on 11/11/2016.
  */
-@Subcomponent( modules = { UserModule.class, ServiceModule.class } )
+@Subcomponent(modules = {UserModule.class, ServiceModule.class})
 public interface UserSubcomponent {
 
-    CardPaymentActivitySubcomponent plus( CardPaymentActivityModule module );
+    CardPaymentActivitySubcomponent plus(CardPaymentActivityModule module);
 
-    ChangePasswordActivitySubcomponent plus( ChangePasswordActivityModule module );
+    ChangePasswordActivitySubcomponent plus(ChangePasswordActivityModule module);
 
-    CheckpointActivitySubcomponent plus( CheckpointActivityModule module );
+    CheckpointActivitySubcomponent plus(CheckpointActivityModule module);
 
     CreatePromotionActivitySubcomponent plus(CreatePromotionActivityModule module);
 
-    CreateTourActivitySubcomponent plus( CreateTourActivityModule module );
+    CreateTourActivitySubcomponent plus(CreateTourActivityModule module);
 
-    CreateUserActivitySubcomponent plus(CreateUserActivityModule module );
+    CreateUserActivitySubcomponent plus(CreateUserActivityModule module);
 
-    EditUserActivitySubcomponent plus( EditUserActivityModule module );
+    EditUserActivitySubcomponent plus(EditUserActivityModule module);
 
     MainPageActivitySubcomponent plus(MainPageActivityModule module);
 
-    MessagesActivitySubcomponent plus( MessagesActivityModule module );
+    MessagesActivitySubcomponent plus(MessagesActivityModule module);
 
-    MyToursActivitySubcomponent plus( MyToursActivityModule module );
+    MyToursActivitySubcomponent plus(MyToursActivityModule module);
 
     OrderActivitySubcomponent plus(OrderActivityModule module);
 
-    PaymentOptionsActivitySubcomponent plus( PaymentOptionsActivityModule module );
+    PaymentOptionsActivitySubcomponent plus(PaymentOptionsActivityModule module);
 
-    SearchActivitySubcomponent plus( SearchActivityModule module );
+    SearchActivitySubcomponent plus(SearchActivityModule module);
 
     SearchResultsActivitySubcomponent plus(SearchResultsActivityModule module);
 
-    TourProfileActivitySubcomponent plus( TourProfileActivityModule module );
+    TourProfileActivitySubcomponent plus(TourProfileActivityModule module);
 
-    UserProfileActivitySubcomponent plus( UserProfileActivityModule module );
+    UserProfileActivitySubcomponent plus(UserProfileActivityModule module);
 
-    WishlistActivitySubcomponent plus( WishlistActivityModule module );
-
-    // TODO: LOGIN??
-
-    LoginActivitySubcomponent plus(LoginActivityModule module);
+    WishlistActivitySubcomponent plus(WishlistActivityModule module);
 
 }

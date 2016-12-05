@@ -1,9 +1,14 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules;
 
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
+import com.cetys.dreamteam.musicalbroccoli.networking.services.MessageService;
+import com.cetys.dreamteam.musicalbroccoli.networking.services.OrderService;
+import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
+import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 
 import dagger.Module;
 import dagger.Provides;
+import retrofit2.Retrofit;
 
 /**
  * @Author J. Pichardo on 11/11/2016.
@@ -13,7 +18,25 @@ public class ServiceModule {
 
     @UserScope
     @Provides
-    TourService providesTourService() {
-        return new TourServiceImpl();
+    UserService providesUserService(Retrofit retrofit) {
+        return retrofit.create(UserService.class);
+    }
+
+    @UserScope
+    @Provides
+    TourService providesTourService(Retrofit retrofit) {
+        return retrofit.create(TourService.class);
+    }
+
+    @UserScope
+    @Provides
+    MessageService providesMessageService(Retrofit retrofit) {
+        return retrofit.create(MessageService.class);
+    }
+
+    @UserScope
+    @Provides
+    OrderService providesOrderService(Retrofit retrofit) {
+        return retrofit.create(OrderService.class);
     }
 }

@@ -16,18 +16,22 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface MessageService {
+public interface MessageService extends BaseService<MessageDto> {
 
+    @Override
     @GET("message/")
-    Call<List<MessageDto>> Get(@Body ReadRequest request);
+    Call<List<MessageDto>> get(@Body ReadRequest request);
 
+    @Override
     @POST("message/")
-    Call<List<MessageDto>> Create(@Body ReadWriteRequest<MessageDto> request);
+    Call<List<MessageDto>> create(@Body ReadWriteRequest<MessageDto> request);
 
+    @Override
     @PUT("message/")
-    Call Update(@Body ReadWriteRequest<MessageDto> request);
+    Call update(@Body ReadWriteRequest<MessageDto> request);
 
+    @Override
     @DELETE("message/")
-    Call Delete(@Body ReadWriteRequest<MessageDto> request);
+    Call delete(@Body ReadWriteRequest<MessageDto> request);
 
 }

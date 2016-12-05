@@ -1,5 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.networking.request;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,14 +9,23 @@ import java.util.List;
 
 public class ReadRequest extends BaseRequest {
 
-    private List filters;
+    private List<Filter> filters;
 
+    //<editor-fold desc="Property Accessors" defaulstate="collapsed">
     public List getFilters() {
         return filters;
     }
 
-    public void setFilters(List filters) {
+    public ReadRequest setFilters(List<Filter> filters) {
         this.filters = filters;
+        return this;
+    }
+    //</editor-fold>
+    
+    public ReadRequest addFilter(Filter filter) {
+        if (filters == null) filters = new ArrayList<Filter>();
+        filters.add(filter);
+        return this;
     }
 
 }

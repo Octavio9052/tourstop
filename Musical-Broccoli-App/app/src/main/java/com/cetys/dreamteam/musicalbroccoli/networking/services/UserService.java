@@ -16,18 +16,22 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface UserService {
+public interface UserService extends BaseService<UserDto> {
 
+    @Override
     @GET("user/")
-    Call<List<UserDto>> Get(@Body ReadRequest request);
+    Call<List<UserDto>> get(@Body ReadRequest request);
 
+    @Override
     @POST("user/")
-    Call<List<UserDto>> Create(@Body ReadWriteRequest<UserDto> request);
+    Call<List<UserDto>> create(@Body ReadWriteRequest<UserDto> request);
 
+    @Override
     @PUT("user/")
-    Call Update(@Body ReadWriteRequest<UserDto> request);
+    Call update(@Body ReadWriteRequest<UserDto> request);
 
+    @Override
     @DELETE("user/")
-    Call Delete(@Body ReadWriteRequest<UserDto> request);
+    Call delete(@Body ReadWriteRequest<UserDto> request);
 
 }
