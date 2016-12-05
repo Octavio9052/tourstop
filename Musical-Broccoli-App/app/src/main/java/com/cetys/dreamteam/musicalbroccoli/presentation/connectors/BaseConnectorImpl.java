@@ -3,7 +3,6 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.connectors;
 import android.databinding.ObservableArrayList;
 
 import com.cetys.dreamteam.musicalbroccoli.commons.dtos.BaseDto;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.contracts.BaseService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.contracts.BaseConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.BaseModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.transformer.Transformer;

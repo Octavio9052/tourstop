@@ -1,8 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules;
 
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.TourServiceImpl;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.contracts.TourService;
 
 import dagger.Module;
 import dagger.Provides;

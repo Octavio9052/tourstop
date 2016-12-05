@@ -1,7 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules;
 
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.contracts.TourService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnectorImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.contracts.TourConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.transformer.Transformer;

@@ -10,8 +10,6 @@ import dagger.Subcomponent;
 /**
  * Created by Octavio on 2016/11/21.
  */
-
-// ConnectorModule.class??
 @ActivityScope
 @Subcomponent( modules = { LoginActivityModule.class, ConnectorModule.class } )
 public interface LoginActivitySubcomponent {

@@ -3,8 +3,15 @@ package com.cetys.dreamteam.musicalbroccoli.networking.request;
 /**
  * @Author J. Pichardo on 11/11/2016.
  */
+abstract class BaseRequest {
 
-public class BaseRequest< TModel > {
+    private String authToken;
 
-    private TModel data;
+    public String getAuthToken() {
+        return authToken;
+    }
+
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
+    }
 }
