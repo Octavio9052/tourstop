@@ -38,7 +38,8 @@
         <activity android:name=".presentation.views.activities.CreateUserActivity" />
         <activity android:name=".presentation.views.activities.SearchResultsActivity" />
         <activity android:name=".presentation.views.activities.CreatePromotionActivity" />
-        <activity android:name=".presentation.views.activities.CreateMessageActivity"></activity>
+        <activity android:name=".presentation.views.activities.CreateMessageActivity" />
+        <activity android:name=".presentation.views.activities.CreateReservationActivity"></activity>
     </application>
 
 </manifest>
