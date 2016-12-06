@@ -37,7 +37,7 @@ public class ChangePasswordActivityModule {
 
     @ActivityScope
     @Provides
-    ChangePasswordActivityBinding providesChangePasswordActivityBinding(){
+    ChangePasswordActivityBinding providesChangePasswordActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.change_password_activity);
     }
 }

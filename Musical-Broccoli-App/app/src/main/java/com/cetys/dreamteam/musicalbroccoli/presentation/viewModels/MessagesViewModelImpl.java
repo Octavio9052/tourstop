@@ -17,6 +17,16 @@ public class MessagesViewModelImpl extends BaseViewModel implements MessagesView
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public MessageModel getMessage() {
         return this.message;
     }

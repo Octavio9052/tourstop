@@ -17,8 +17,18 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUse
 public class CardPaymentViewModelImpl extends BaseViewModel implements CardPaymentViewModel {
     boolean master, visa, amex;
 
-    public CardPaymentViewModelImpl( Context context ) {
-        super( context );
+    public CardPaymentViewModelImpl(Context context) {
+        super(context);
+    }
+
+    @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
     }
 
     @Override
@@ -26,7 +36,7 @@ public class CardPaymentViewModelImpl extends BaseViewModel implements CardPayme
         boolean checked = ((RadioButton) view).isChecked();
 
         // Temp solution
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.button_amex:
                 changeStates(checked, !checked, !checked);
                 break;
@@ -39,7 +49,7 @@ public class CardPaymentViewModelImpl extends BaseViewModel implements CardPayme
         }
     }
 
-    private void changeStates(boolean amex, boolean master, boolean visa){
+    private void changeStates(boolean amex, boolean master, boolean visa) {
         this.amex = amex;
         this.master = master;
         this.visa = visa;
@@ -53,7 +63,7 @@ public class CardPaymentViewModelImpl extends BaseViewModel implements CardPayme
 
     }
 
-    private void doTemporalToast(){
+    private void doTemporalToast() {
         Toast.makeText(context, "You have added a new card sucessfully", Toast.LENGTH_LONG).show();
     }
 }

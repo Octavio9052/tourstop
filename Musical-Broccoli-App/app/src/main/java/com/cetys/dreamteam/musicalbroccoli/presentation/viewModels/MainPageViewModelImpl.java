@@ -24,6 +24,16 @@ public class MainPageViewModelImpl extends BaseViewModel implements MainPageView
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public UserModel getUser() {
         return this.user;
     }

@@ -20,6 +20,16 @@ public class SearchViewModelImpl extends BaseViewModel implements SearchViewMode
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public TourModel getTour() {
         return this.tour;
     }

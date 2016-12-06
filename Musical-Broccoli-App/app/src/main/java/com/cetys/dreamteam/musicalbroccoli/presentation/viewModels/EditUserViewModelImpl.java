@@ -23,6 +23,16 @@ public class EditUserViewModelImpl extends BaseViewModel implements EditUserView
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public UserModel getUser() {
         return user;
     }
@@ -51,7 +61,9 @@ public class EditUserViewModelImpl extends BaseViewModel implements EditUserView
         context.startActivity(intent);
     }
 
-    private void doTemporalToast(){
-        Toast.makeText(context, "Your information has been modified successfully",Toast.LENGTH_LONG).show();
+    private void doTemporalToast() {
+        Toast
+                .makeText(context, "Your information has been modified successfully", Toast.LENGTH_LONG)
+                .show();
     }
 }

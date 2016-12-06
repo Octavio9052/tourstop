@@ -40,6 +40,6 @@ public class CheckpointActivityModule {
     @Provides
     CheckpointActivityBinding providesCheckpointActivityBinding() {
         return DataBindingUtil
-                .setContentView( this.checkpointActivity, R.layout.checkpoint_activity );
+                .setContentView(this.checkpointActivity, R.layout.checkpoint_activity);
     }
 }

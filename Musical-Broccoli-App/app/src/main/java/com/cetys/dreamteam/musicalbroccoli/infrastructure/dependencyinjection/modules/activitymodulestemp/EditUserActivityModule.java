@@ -25,19 +25,19 @@ public class EditUserActivityModule {
 
     @ActivityScope
     @Provides
-    EditUserActivity providesEditUserActivity(){
+    EditUserActivity providesEditUserActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    EditUserViewModel providesEditUserViewModel(){
+    EditUserViewModel providesEditUserViewModel() {
         return new EditUserViewModelImpl(this.activity);
     }
 
     @ActivityScope
     @Provides
-    EditUserActivityBinding providesEditUserActivityBinding(){
+    EditUserActivityBinding providesEditUserActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.edit_user_activity);
     }
 }

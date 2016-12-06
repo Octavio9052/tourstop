@@ -20,7 +20,7 @@ public class MyToursActivityModule {
 
     private final MyToursActivity myToursActivity;
 
-    public MyToursActivityModule( MyToursActivity myToursActivity ) {
+    public MyToursActivityModule(MyToursActivity myToursActivity) {
         this.myToursActivity = myToursActivity;
     }
 
@@ -33,12 +33,12 @@ public class MyToursActivityModule {
     @ActivityScope
     @Provides
     MyToursViewModel providesMyToursViewModel() {
-        return new MyToursViewModelImpl( this.myToursActivity );
+        return new MyToursViewModelImpl(this.myToursActivity);
     }
 
     @ActivityScope
     @Provides
     MyToursActivityBinding providesMyToursActivityBinding() {
-        return DataBindingUtil.setContentView( this.myToursActivity, R.layout.my_tours_activity );
+        return DataBindingUtil.setContentView(this.myToursActivity, R.layout.my_tours_activity);
     }
 }

@@ -17,6 +17,16 @@ public class SearchResultsViewModelImpl extends BaseViewModel implements SearchR
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public TourModel getTour() {
         return tour;
     }

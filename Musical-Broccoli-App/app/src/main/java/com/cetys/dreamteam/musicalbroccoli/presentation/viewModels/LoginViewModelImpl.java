@@ -21,6 +21,16 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public UserModel getUser() {
         return user;
     }

@@ -26,19 +26,19 @@ public class MainPageActivityModule {
 
     @ActivityScope
     @Provides
-    MainPageActivity providesMainPageActivity(){
+    MainPageActivity providesMainPageActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    MainPageViewModel providesMainPageViewModel(){
+    MainPageViewModel providesMainPageViewModel() {
         return new MainPageViewModelImpl(this.activity);
     }
 
     @ActivityScope
     @Provides
-    MainPageActivityBinding providesMainPageActivityBinding(){
+    MainPageActivityBinding providesMainPageActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.main_page_activity);
     }
 

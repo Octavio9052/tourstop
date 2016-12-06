@@ -20,7 +20,7 @@ public class PaymentOptionsActivityModule {
 
     private final PaymentOptionsActivity paymentOptionsActivity;
 
-    public PaymentOptionsActivityModule( PaymentOptionsActivity paymentOptionsActivity ) {
+    public PaymentOptionsActivityModule(PaymentOptionsActivity paymentOptionsActivity) {
         this.paymentOptionsActivity = paymentOptionsActivity;
     }
 
@@ -33,7 +33,7 @@ public class PaymentOptionsActivityModule {
     @ActivityScope
     @Provides
     PaymentOptionsViewModel providesPaymentOptionsViewModel() {
-        return new PaymentOptionsViewModelImpl( this.paymentOptionsActivity );
+        return new PaymentOptionsViewModelImpl(this.paymentOptionsActivity);
     }
 
     @ActivityScope

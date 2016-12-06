@@ -1,5 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp;
 
+
 import android.databinding.DataBindingUtil;
 
 import com.cetys.dreamteam.musicalbroccoli.R;

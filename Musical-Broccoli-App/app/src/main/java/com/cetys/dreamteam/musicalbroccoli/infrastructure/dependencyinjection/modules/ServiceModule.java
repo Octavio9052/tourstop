@@ -18,12 +18,6 @@ public class ServiceModule {
 
     @UserScope
     @Provides
-    UserService providesUserService(Retrofit retrofit) {
-        return retrofit.create(UserService.class);
-    }
-
-    @UserScope
-    @Provides
     TourService providesTourService(Retrofit retrofit) {
         return retrofit.create(TourService.class);
     }

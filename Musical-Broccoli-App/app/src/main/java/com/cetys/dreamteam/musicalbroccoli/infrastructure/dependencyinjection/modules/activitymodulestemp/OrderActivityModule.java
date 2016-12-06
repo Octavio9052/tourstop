@@ -38,7 +38,7 @@ public class OrderActivityModule {
 
     @ActivityScope
     @Provides
-    OrderActivityBinding providesOrderActivityBinding(){
+    OrderActivityBinding providesOrderActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.order_activity);
     }
 }

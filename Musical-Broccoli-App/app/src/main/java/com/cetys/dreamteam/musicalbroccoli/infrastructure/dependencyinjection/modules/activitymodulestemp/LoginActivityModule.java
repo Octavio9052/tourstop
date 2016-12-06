@@ -40,6 +40,6 @@ public class LoginActivityModule {
     @ActivityScope
     @Provides
     LoginActivityBinding providesLoginActivityBinding() {
-        return DataBindingUtil.setContentView( this.loginActivity, R.layout.login_activity );
+        return DataBindingUtil.setContentView(this.loginActivity, R.layout.login_activity);
     }
 }

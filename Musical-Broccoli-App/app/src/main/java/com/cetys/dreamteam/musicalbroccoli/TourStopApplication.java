@@ -34,7 +34,7 @@ public class TourStopApplication extends Application {
     }
 
     private void bootstrap() {
-//        this.appComponent = .builder().build();
+//        this.appComponent = DaggerAppComponent.builder().build();
     }
 
     public AppComponent getAppComponent() {

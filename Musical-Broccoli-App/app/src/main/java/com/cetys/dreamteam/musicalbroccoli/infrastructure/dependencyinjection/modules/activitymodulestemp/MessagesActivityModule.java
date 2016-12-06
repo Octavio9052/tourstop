@@ -21,7 +21,7 @@ public class MessagesActivityModule {
     private final MessagesActivity messagesActivity;
 
 
-    public MessagesActivityModule( MessagesActivity messagesActivity ) {
+    public MessagesActivityModule(MessagesActivity messagesActivity) {
         this.messagesActivity = messagesActivity;
     }
 
@@ -34,13 +34,13 @@ public class MessagesActivityModule {
     @ActivityScope
     @Provides
     MessagesViewModel providesMessagesViewModel() {
-        return new MessagesViewModelImpl( this.messagesActivity );
+        return new MessagesViewModelImpl(this.messagesActivity);
     }
 
     @ActivityScope
     @Provides
     MessagesActivityBinding providesMessagesActivityBinding() {
-        return DataBindingUtil.setContentView( this.messagesActivity, R.layout.messages_activity );
+        return DataBindingUtil.setContentView(this.messagesActivity, R.layout.messages_activity);
     }
 
 }

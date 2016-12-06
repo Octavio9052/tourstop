@@ -21,6 +21,16 @@ public class CreatePromotionViewModelImpl extends BaseViewModel implements Creat
     }
 
     @Override
+    protected void load() {
+        
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public PromotionModel getPromotion() {
         return this.promotion;
     }
@@ -43,7 +53,7 @@ public class CreatePromotionViewModelImpl extends BaseViewModel implements Creat
         context.startActivity(intent);
     }
 
-    private void doToast(){
+    private void doToast() {
         Toast.makeText(context, "Promotion created", Toast.LENGTH_LONG).show();
     }
 }

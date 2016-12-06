@@ -20,7 +20,7 @@ public class TourProfileActivityModule {
 
     private final TourProfileActivity tourProfileActivity;
 
-    public TourProfileActivityModule( TourProfileActivity tourProfileActivity ) {
+    public TourProfileActivityModule(TourProfileActivity tourProfileActivity) {
         this.tourProfileActivity = tourProfileActivity;
     }
 
@@ -33,13 +33,13 @@ public class TourProfileActivityModule {
     @ActivityScope
     @Provides
     TourProfileViewModel providesTourProfileViewModel() {
-        return new TourProfileViewModelImpl( this.tourProfileActivity );
+        return new TourProfileViewModelImpl(this.tourProfileActivity);
     }
 
     @ActivityScope
     @Provides
     TourProfileActivityBinding providesTourProfileActivityBinding() {
         return DataBindingUtil
-                .setContentView( this.tourProfileActivity, R.layout.tour_profile_activity );
+                .setContentView(this.tourProfileActivity, R.layout.tour_profile_activity);
     }
 }

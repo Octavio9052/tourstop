@@ -54,7 +54,6 @@ public interface UserSubcomponent {
 
     CreateTourActivitySubcomponent plus(CreateTourActivityModule module);
 
-
     EditUserActivitySubcomponent plus(EditUserActivityModule module);
 
     MainPageActivitySubcomponent plus(MainPageActivityModule module);
@@ -74,8 +73,6 @@ public interface UserSubcomponent {
     TourProfileActivitySubcomponent plus(TourProfileActivityModule module);
 
     UserProfileActivitySubcomponent plus(UserProfileActivityModule module);
-
-    UserSubcomponent plus(UserModule userModule);
 
     WishlistActivitySubcomponent plus(WishlistActivityModule module);
 }

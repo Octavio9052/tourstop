@@ -37,7 +37,7 @@ public class UserProfileActivityModule {
 
     @ActivityScope
     @Provides
-    UserProfileActivityBinding providesUserProfileActivityBinding(){
+    UserProfileActivityBinding providesUserProfileActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.user_profile_activity);
     }
 }

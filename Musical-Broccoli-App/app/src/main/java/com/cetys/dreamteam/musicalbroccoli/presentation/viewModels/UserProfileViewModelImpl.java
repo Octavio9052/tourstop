@@ -25,6 +25,16 @@ public class UserProfileViewModelImpl extends BaseViewModel implements UserProfi
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public UserModel getUser() {
         return this.user;
     }

@@ -17,6 +17,16 @@ public class MyToursViewModelImpl extends BaseViewModel implements MyToursViewMo
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public TourModel getTour() {
         return this.tour;
     }

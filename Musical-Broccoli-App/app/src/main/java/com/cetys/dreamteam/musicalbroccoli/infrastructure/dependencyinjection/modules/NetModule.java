@@ -9,11 +9,12 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -38,10 +39,16 @@ public class NetModule {
 
     @Singleton
     @Provides
-    Cache providesOkHttpCache(Application application) {
-        int cacheSize = 10 * 1024 * 1024; //10 Mib
-        return new Cache(application.getCacheDir(), cacheSize);
+    OkHttpClient providesOkHttpCache(Application application) {
+        final OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+
+        builder.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS)
+                .readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
+
+        return builder.build();
     }
+
 
     @Singleton
     @Provides
@@ -61,9 +68,11 @@ public class NetModule {
                 .build();
     }
 
+    @Singleton
     @Provides
     UserService providesUserService(Retrofit retrofit) {
         return retrofit.create(UserService.class);
     }
+
 
 }

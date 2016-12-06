@@ -37,7 +37,7 @@ public class CreatePromotionActivityModule {
 
     @ActivityScope
     @Provides
-    CreatePromotionActivityBinding providesCreatePromotionActivityBinding(){
+    CreatePromotionActivityBinding providesCreatePromotionActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.create_promotion_activity);
     }
 }

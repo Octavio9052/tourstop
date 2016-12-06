@@ -9,7 +9,17 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Tou
  */
 
 public class TourProfileViewModelImpl extends BaseViewModel implements TourProfileViewModel {
-    public TourProfileViewModelImpl( Context context ) {
-        super( context );
+    public TourProfileViewModelImpl(Context context) {
+        super(context);
+    }
+
+    @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
     }
 }

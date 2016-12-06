@@ -21,6 +21,16 @@ public class ChangePasswordViewModelImpl extends BaseViewModel implements Change
     }
 
     @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
+    }
+
+    @Override
     public UserModel getUser() {
         return this.user;
     }

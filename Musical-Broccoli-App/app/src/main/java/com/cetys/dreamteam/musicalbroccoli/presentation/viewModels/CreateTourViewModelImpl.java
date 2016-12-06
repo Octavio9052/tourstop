@@ -18,8 +18,18 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPag
 public class CreateTourViewModelImpl extends BaseViewModel implements CreateTourViewModel {
     private TourModel tour;
 
-    public CreateTourViewModelImpl( Context context ) {
-        super( context );
+    public CreateTourViewModelImpl(Context context) {
+        super(context);
+    }
+
+    @Override
+    protected void load() {
+
+    }
+
+    @Override
+    protected void initCallbacks() {
+
     }
 
     @Override
@@ -28,12 +38,12 @@ public class CreateTourViewModelImpl extends BaseViewModel implements CreateTour
     }
 
     @Override
-    public void setTour( TourModel tour ) {
+    public void setTour(TourModel tour) {
         this.tour = tour;
     }
 
     @Override
-    public void onSaveClick( View view ) {
+    public void onSaveClick(View view) {
         doTemporalToast();
         // TODO: Currently redirects to MainPage, may change to the new Tour just created.
         Intent intent = new Intent(context, MainPageActivity.class);
@@ -52,7 +62,7 @@ public class CreateTourViewModelImpl extends BaseViewModel implements CreateTour
         context.startActivity(intent);
     }
 
-    private void doTemporalToast(){
-        Toast.makeText(context, "Tour Saved", Toast.LENGTH_LONG ).show();
+    private void doTemporalToast() {
+        Toast.makeText(context, "Tour Saved", Toast.LENGTH_LONG).show();
     }
 }

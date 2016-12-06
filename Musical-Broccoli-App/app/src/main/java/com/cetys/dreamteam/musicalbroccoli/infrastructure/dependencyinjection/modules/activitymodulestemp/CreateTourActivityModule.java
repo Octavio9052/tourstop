@@ -9,8 +9,6 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CreateTourVie
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 
-
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -27,19 +25,19 @@ public class CreateTourActivityModule {
 
     @ActivityScope
     @Provides
-    CreateTourActivity providesCreateTourActivity(){
+    CreateTourActivity providesCreateTourActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    CreateTourViewModel providesCreateTourViewModel(){
+    CreateTourViewModel providesCreateTourViewModel() {
         return new CreateTourViewModelImpl(this.activity);
     }
 
     @ActivityScope
     @Provides
-    CreateTourActivityBinding providesCreateTourActivityBinding(){
+    CreateTourActivityBinding providesCreateTourActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.create_tour_activity);
     }
 }
