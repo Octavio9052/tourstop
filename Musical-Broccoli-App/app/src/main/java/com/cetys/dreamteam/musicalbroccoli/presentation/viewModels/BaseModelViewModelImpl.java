@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.BaseService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.BaseModelViewModel;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import retrofit2.Response;
  * @Author J. Pichardo on 12/5/2016.
  */
 
-public abstract class BaseModelViewModel<T> extends BaseViewModel {
+abstract class BaseModelViewModelImpl<T> extends BaseViewModel implements BaseModelViewModel<T> {
 
     //<editor-fold desc="Instance Properties" defaultstate="collapsed">
     private final BaseService<T> baseService;
@@ -28,13 +29,35 @@ public abstract class BaseModelViewModel<T> extends BaseViewModel {
     private T model;
     //</editor-fold>
 
-    protected BaseModelViewModel(Context context, BaseService<T> baseService) {
+    BaseModelViewModelImpl(Context context, BaseService<T> baseService) {
         super(context);
         this.baseService = baseService;
+        initCallbacks();
     }
 
-    //<editor-fold desc="Service Delegates" defaultstate="collapsed">
-    public void create(T model) {
+    //<editor-fold desc="Init Methods" defaultstate="collapsed">
+
+    @Override
+    protected void initCallbacks() {
+        createCallback = new CreateCallback();
+        updateAndDeleteCallback = new UpdateAndDeleteCallback();
+    }
+
+    //</editor-fold>
+
+    //<editor-fold desc="Property Accessors" defaulstate="collapsed">
+    public T getModel() {
+        return model;
+    }
+
+    public BaseModelViewModelImpl<T> setModel(T model) {
+        this.model = model;
+        return this;
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Service Delegates" defaultstate="collapsed">F
+    public void create() {
 
         ReadWriteRequest<T> request = new ReadWriteRequest<T>()
                 .addModel(model);
@@ -43,7 +66,7 @@ public abstract class BaseModelViewModel<T> extends BaseViewModel {
         call.enqueue(createCallback);
     }
 
-    public void update(T model) {
+    public void update() {
         ReadWriteRequest<T> request = new ReadWriteRequest<T>()
                 .addModel(model);
 
@@ -51,7 +74,7 @@ public abstract class BaseModelViewModel<T> extends BaseViewModel {
         call.enqueue(updateAndDeleteCallback);
     }
 
-    public void delete(T model) {
+    protected void delete() {
         ReadWriteRequest<T> request = new ReadWriteRequest<T>()
                 .addModel(model);
 

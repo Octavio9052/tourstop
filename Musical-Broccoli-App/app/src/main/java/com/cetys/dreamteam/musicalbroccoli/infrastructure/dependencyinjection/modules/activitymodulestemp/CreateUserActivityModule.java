@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.CreateUserActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
+import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CreateUserViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateUserActivity;
@@ -25,19 +26,19 @@ public class CreateUserActivityModule {
 
     @ActivityScope
     @Provides
-    CreateUserActivity providesCreateUserActivity(){
+    CreateUserActivity providesCreateUserActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    CreateUserViewModel providesCreateUserViewModel(){
-        return new CreateUserViewModelImpl(this.activity);
+    CreateUserViewModel providesCreateUserViewModel(UserService service) {
+        return new CreateUserViewModelImpl(this.activity, service);
     }
 
     @ActivityScope
     @Provides
-    CreateUserActivityBinding providesCreateUserActivityBinding(){
+    CreateUserActivityBinding providesCreateUserActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.create_user_activity);
     }
 }

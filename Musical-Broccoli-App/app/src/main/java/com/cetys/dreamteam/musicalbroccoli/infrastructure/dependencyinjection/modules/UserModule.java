@@ -1,5 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules;
 
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+
 import dagger.Module;
 
 /**
@@ -8,4 +10,9 @@ import dagger.Module;
 @Module
 public class UserModule {
 
+    private UserModel user;
+
+    public UserModule(UserModel user) {
+        this.user = user;
+    }
 }

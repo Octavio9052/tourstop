@@ -1,8 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
@@ -30,7 +28,8 @@ public class CreateTourActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new CreateTourActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getUserSubcomponent().plus(new CreateTourActivityModule(this))
+                .inject(this);
     }
 
     @Override

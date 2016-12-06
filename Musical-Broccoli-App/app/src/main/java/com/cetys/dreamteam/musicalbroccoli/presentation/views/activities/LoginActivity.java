@@ -3,22 +3,19 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -31,9 +28,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
-import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.LoginActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
@@ -48,16 +43,10 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends BaseActivity implements LoaderCallbacks<Cursor> {
 
-    @Inject
-    LoginActivityBinding binding;
-    @Inject
-    LoginViewModel viewModel;
-
     /**
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
-
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -65,6 +54,10 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
+    @Inject
+    LoginActivityBinding binding;
+    @Inject
+    LoginViewModel viewModel;
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -111,23 +104,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         //initBinding();
     }
 
-    public void tempOnCreateUserClick(View view) {
-        Intent intent = new Intent(LoginActivity.this, CreateUserActivity.class);
-        LoginActivity.this.startActivity(intent);
-    }
-    @Override
-    protected void initActivityComponent() {
-        // TODO: LoginActivity(this).inject???
-        // TourStopApplication.get(this).getAppComponent().plus(new LoginActivityModule(this).inject(this));
-    }
-
-    @Override
-    protected void initBinding() {
-        binding.setViewModel(viewModel);
-    }
-
-    // TODO: Move all the viewModel
-
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
             return;
@@ -135,42 +111,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         getLoaderManager().initLoader(0, null, this);
     }
-
-    private boolean mayRequestContacts() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            return true;
-        }
-        if (checkSelfPermission(READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        }
-        if (shouldShowRequestPermissionRationale(READ_CONTACTS)) {
-            Snackbar.make(mEmailView, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
-                    .setAction(android.R.string.ok, new View.OnClickListener() {
-                        @Override
-                        @TargetApi(Build.VERSION_CODES.M)
-                        public void onClick(View v) {
-                            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
-                        }
-                    });
-        } else {
-            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
-        }
-        return false;
-    }
-
-    /**
-     * Callback received when a permissions request has been completed.
-     */
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-                                           @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_READ_CONTACTS) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                populateAutoComplete();
-            }
-        }
-    }
-
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -224,14 +164,38 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         }
     }
 
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
+    private boolean mayRequestContacts() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return true;
+        }
+        if (checkSelfPermission(READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        if (shouldShowRequestPermissionRationale(READ_CONTACTS)) {
+            Snackbar.make(mEmailView, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
+                    .setAction(android.R.string.ok, new View.OnClickListener() {
+                        @Override
+                        @TargetApi(Build.VERSION_CODES.M)
+                        public void onClick(View v) {
+                            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+                        }
+                    });
+        } else {
+            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+        }
+        return false;
     }
+
+    // TODO: Move all the viewModel
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         return password.length() > 4;
+    }
+
+    private boolean isEmailValid(String email) {
+        //TODO: Replace this with your own logic
+        return email.contains("@");
     }
 
     /**
@@ -267,6 +231,35 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             // and hide the relevant UI components.
             mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+        }
+    }
+
+    public void tempOnCreateUserClick(View view) {
+        Intent intent = new Intent(LoginActivity.this, CreateUserActivity.class);
+        LoginActivity.this.startActivity(intent);
+    }
+
+    @Override
+    protected void initActivityComponent() {
+        // TODO: LoginActivity(this).inject???
+        // TourStopApplication.get(this).getAppComponent().plus(new LoginActivityModule(this).inject(this));
+    }
+
+    @Override
+    protected void initBinding() {
+        binding.setViewModel(viewModel);
+    }
+
+    /**
+     * Callback received when a permissions request has been completed.
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_READ_CONTACTS) {
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                populateAutoComplete();
+            }
         }
     }
 

@@ -18,9 +18,9 @@ public class MyToursActivity extends BaseActivity {
     MyToursViewModel viewModel;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState ) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.my_tours_activity );
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.my_tours_activity);
 
         initActivityComponent();
         initBinding();
@@ -28,12 +28,13 @@ public class MyToursActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getAppComponent()
-                .plus( new MyToursActivityModule( this ) ).inject( this );
+        TourStopApplication.get(this).getUserSubcomponent()
+                .plus(new MyToursActivityModule(this))
+                .inject(this);
     }
 
     @Override
     protected void initBinding() {
-        binding.setViewModel( viewModel );
+        binding.setViewModel(viewModel);
     }
 }

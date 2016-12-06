@@ -28,7 +28,9 @@ public class SearchResultsActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new SearchResultsActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getUserSubcomponent()
+                .plus(new SearchResultsActivityModule(this))
+                .inject(this);
     }
 
     @Override

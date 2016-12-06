@@ -28,7 +28,8 @@ public class CreateUserActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new CreateUserActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getAppComponent().plus(new CreateUserActivityModule(this))
+                .inject(this);
     }
 
     @Override

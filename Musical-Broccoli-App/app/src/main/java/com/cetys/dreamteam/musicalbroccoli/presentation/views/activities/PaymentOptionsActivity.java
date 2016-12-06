@@ -18,9 +18,9 @@ public class PaymentOptionsActivity extends BaseActivity {
     PaymentOptionsViewModel viewModel;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState ) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.payment_options_activity );
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.payment_options_activity);
 
         initActivityComponent();
         initBinding();
@@ -28,12 +28,14 @@ public class PaymentOptionsActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new PaymentOptionsActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getUserSubcomponent()
+                .plus(new PaymentOptionsActivityModule(this))
+                .inject(this);
     }
 
     @Override
     protected void initBinding() {
-        binding.setViewModel( viewModel );
+        binding.setViewModel(viewModel);
     }
 
 }

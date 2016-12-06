@@ -13,5 +13,7 @@ public abstract class BaseViewModel {
         this.context = context;
     }
 
+    protected abstract void load();
+
     protected abstract void initCallbacks();
 }

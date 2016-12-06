@@ -5,7 +5,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.co
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CheckpointActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CreatePromotionActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CreateTourActivitySubcomponent;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CreateUserActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.EditUserActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.MainPageActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.MessagesActivitySubcomponent;
@@ -24,7 +23,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.mo
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CheckpointActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreatePromotionActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreateTourActivityModule;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreateUserActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.EditUserActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.MainPageActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.MessagesActivityModule;
@@ -36,15 +34,16 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.mo
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.TourProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.UserProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.WishlistActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
 
 import dagger.Subcomponent;
 
 /**
  * @Author J. Pichardo on 11/11/2016.
  */
+@UserScope
 @Subcomponent(modules = {UserModule.class, ServiceModule.class})
 public interface UserSubcomponent {
-
     CardPaymentActivitySubcomponent plus(CardPaymentActivityModule module);
 
     ChangePasswordActivitySubcomponent plus(ChangePasswordActivityModule module);
@@ -55,7 +54,6 @@ public interface UserSubcomponent {
 
     CreateTourActivitySubcomponent plus(CreateTourActivityModule module);
 
-    CreateUserActivitySubcomponent plus(CreateUserActivityModule module);
 
     EditUserActivitySubcomponent plus(EditUserActivityModule module);
 
@@ -77,6 +75,7 @@ public interface UserSubcomponent {
 
     UserProfileActivitySubcomponent plus(UserProfileActivityModule module);
 
-    WishlistActivitySubcomponent plus(WishlistActivityModule module);
+    UserSubcomponent plus(UserModule userModule);
 
+    WishlistActivitySubcomponent plus(WishlistActivityModule module);
 }

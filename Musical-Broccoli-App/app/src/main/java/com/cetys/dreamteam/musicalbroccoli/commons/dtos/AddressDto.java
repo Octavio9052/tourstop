@@ -24,7 +24,7 @@ public class AddressDto {
         return id;
     }
 
-    public void setId( int id ) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -32,7 +32,7 @@ public class AddressDto {
         return name;
     }
 
-    public void setName( String name ) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -40,7 +40,7 @@ public class AddressDto {
         return street1;
     }
 
-    public void setStreet1( String street1 ) {
+    public void setStreet1(String street1) {
         this.street1 = street1;
     }
 
@@ -48,7 +48,7 @@ public class AddressDto {
         return street2;
     }
 
-    public void setStreet2( String street2 ) {
+    public void setStreet2(String street2) {
         this.street2 = street2;
     }
 
@@ -56,7 +56,7 @@ public class AddressDto {
         return city;
     }
 
-    public void setCity( String city ) {
+    public void setCity(String city) {
         this.city = city;
     }
 
@@ -64,7 +64,7 @@ public class AddressDto {
         return state;
     }
 
-    public void setState( String state ) {
+    public void setState(String state) {
         this.state = state;
     }
 
@@ -72,7 +72,7 @@ public class AddressDto {
         return postalCode;
     }
 
-    public void setPostalCode( int postalCode ) {
+    public void setPostalCode(int postalCode) {
         this.postalCode = postalCode;
     }
 
@@ -80,7 +80,7 @@ public class AddressDto {
         return countryCode;
     }
 
-    public void setCountryCode( CountryCode countryCode ) {
+    public void setCountryCode(CountryCode countryCode) {
         this.countryCode = countryCode;
     }
     //</editor-fold>

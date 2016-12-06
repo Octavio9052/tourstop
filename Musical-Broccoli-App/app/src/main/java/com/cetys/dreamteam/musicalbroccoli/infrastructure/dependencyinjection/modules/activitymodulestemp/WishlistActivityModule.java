@@ -20,7 +20,7 @@ public class WishlistActivityModule {
 
     private final WishlistActivity wishlistActivity;
 
-    public WishlistActivityModule( WishlistActivity wishlistActivity ) {
+    public WishlistActivityModule(WishlistActivity wishlistActivity) {
         this.wishlistActivity = wishlistActivity;
     }
 
@@ -33,12 +33,12 @@ public class WishlistActivityModule {
     @ActivityScope
     @Provides
     WishlistViewModel providesWishlistViewModel() {
-        return new WishlistViewModelImpl( this.wishlistActivity );
+        return new WishlistViewModelImpl(this.wishlistActivity);
     }
 
     @ActivityScope
     @Provides
     WishlistActivityBinding providesWishlistActivityBinding() {
-        return DataBindingUtil.setContentView( this.wishlistActivity, R.layout.wishlist_activity );
+        return DataBindingUtil.setContentView(this.wishlistActivity, R.layout.wishlist_activity);
     }
 }

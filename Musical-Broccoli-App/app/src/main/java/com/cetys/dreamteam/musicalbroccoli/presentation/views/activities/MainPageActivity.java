@@ -1,7 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
@@ -30,7 +29,9 @@ public class MainPageActivity extends BaseActivity {
     //TODO: Bindings
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new MainPageActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getUserSubcomponent()
+                .plus(new MainPageActivityModule(this))
+                .inject(this);
     }
 
     @Override

@@ -1,8 +1,8 @@
 package com.cetys.dreamteam.musicalbroccoli.networking.services;
 
-import com.cetys.dreamteam.musicalbroccoli.commons.dtos.UserDto;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 
 import java.util.List;
 
@@ -16,22 +16,22 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface UserService extends BaseService<UserDto> {
+public interface UserService extends BaseService<UserModel> {
 
     @Override
     @GET("user/")
-    Call<List<UserDto>> get(@Body ReadRequest request);
+    Call<List<UserModel>> get(@Body ReadRequest request);
 
     @Override
     @POST("user/")
-    Call<List<UserDto>> create(@Body ReadWriteRequest<UserDto> request);
+    Call<List<UserModel>> create(@Body ReadWriteRequest<UserModel> request);
 
     @Override
     @PUT("user/")
-    Call update(@Body ReadWriteRequest<UserDto> request);
+    Call update(@Body ReadWriteRequest<UserModel> request);
 
     @Override
     @DELETE("user/")
-    Call delete(@Body ReadWriteRequest<UserDto> request);
+    Call delete(@Body ReadWriteRequest<UserModel> request);
 
 }

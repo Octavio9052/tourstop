@@ -21,7 +21,7 @@ public class CardPaymentActivityModule {
     private final CardPaymentActivity cardPaymentActivity;
 
 
-    public CardPaymentActivityModule( CardPaymentActivity cardPaymentActivity ) {
+    public CardPaymentActivityModule(CardPaymentActivity cardPaymentActivity) {
         this.cardPaymentActivity = cardPaymentActivity;
     }
 
@@ -34,13 +34,13 @@ public class CardPaymentActivityModule {
     @ActivityScope
     @Provides
     CardPaymentViewModel providesCardPaymentViewModel() {
-        return new CardPaymentViewModelImpl( this.cardPaymentActivity );
+        return new CardPaymentViewModelImpl(this.cardPaymentActivity);
     }
 
     @ActivityScope
     @Provides
     CardPaymentActivityBinding providesCardPaymentActivityBinding() {
         return DataBindingUtil
-                .setContentView( this.cardPaymentActivity, R.layout.card_payment_activity );
+                .setContentView(this.cardPaymentActivity, R.layout.card_payment_activity);
     }
 }

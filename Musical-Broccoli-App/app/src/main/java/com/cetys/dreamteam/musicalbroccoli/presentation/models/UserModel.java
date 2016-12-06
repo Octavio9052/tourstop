@@ -15,20 +15,21 @@ public class UserModel extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;
-    private ObservableField< String > password;
-    private ObservableField< String > firstName;
-    private ObservableField< String > lastName;
-    private ObservableField< String > email;
-    private ObservableField< String > phone;
+    private ObservableField<String> password;
+    private ObservableField<String> firstName;
+    private ObservableField<String> lastName;
+    private ObservableField<String> email;
+    private ObservableField<String> phone;
     private LanguageCode languageCode;
     private UserType userType;
     private ObservableInt addressId;
 
-    private ObservableArrayList< MessageModel > messages;
-    private ObservableArrayList< TourModel > tours;
-    private ObservableArrayList< OrderModel > orders;
-    private ObservableArrayList< RatingModel > ratings;
-    private ObservableArrayList< ReservationModel > reservations;
+    private AddressModel address;
+    private ObservableArrayList<MessageModel> messages;
+    private ObservableArrayList<TourModel> tours;
+    private ObservableArrayList<OrderModel> orders;
+    private ObservableArrayList<RatingModel> ratings;
+    private ObservableArrayList<ReservationModel> reservations;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
@@ -36,118 +37,124 @@ public class UserModel extends BaseModel {
         return id.get();
     }
 
-    public void setId( int id ) {
-        if ( this.id == null )
-            this.id = new ObservableInt( id );
+    public void setId(int id) {
+        if (this.id == null)
+            this.id = new ObservableInt(id);
         else
-            this.id.set( id );
+            this.id.set(id);
     }
 
     public String getPassword() {
         return password.get();
     }
 
-    public void setPassword( String password ) {
-        if ( this.password == null )
-            this.password = new ObservableField<>( password );
+    public void setPassword(String password) {
+        if (this.password == null)
+            this.password = new ObservableField<>(password);
         else
-            this.password.set( password );
+            this.password.set(password);
     }
 
     public String getFirstName() {
         return firstName.get();
     }
 
-    public void setFirstName( String firstName ) {
-        if ( this.firstName == null )
-            this.firstName = new ObservableField<>( firstName );
+    public void setFirstName(String firstName) {
+        if (this.firstName == null)
+            this.firstName = new ObservableField<>(firstName);
         else
-            this.firstName.set( firstName );
+            this.firstName.set(firstName);
     }
 
     public String getLastName() {
         return lastName.get();
     }
 
-    public void setLastName( String lastName ) {
-        if ( this.lastName == null )
-            this.lastName = new ObservableField<>( lastName );
+    public void setLastName(String lastName) {
+        if (this.lastName == null)
+            this.lastName = new ObservableField<>(lastName);
         else
-            this.lastName.set( lastName );
+            this.lastName.set(lastName);
     }
 
     public String getEmail() {
         return email.get();
     }
 
-    public void setEmail( String email ) {
-        if ( this.email == null )
-            this.email = new ObservableField<>( email );
+    public void setEmail(String email) {
+        if (this.email == null)
+            this.email = new ObservableField<>(email);
         else
-            this.email.set( email );
+            this.email.set(email);
     }
 
     public String getPhone() {
         return phone.get();
     }
 
-    public void setPhone( String phone ) {
-        if ( this.phone == null )
-            this.phone = new ObservableField<>( phone );
+    public void setPhone(String phone) {
+        if (this.phone == null)
+            this.phone = new ObservableField<>(phone);
         else
-            this.phone.set( phone );
+            this.phone.set(phone);
     }
 
     public int getAddressId() {
         return addressId.get();
     }
 
-    public void setAddressId( int addressId ) {
-        if ( this.addressId == null )
-            this.addressId = new ObservableInt( addressId );
+    public void setAddressId(int addressId) {
+        if (this.addressId == null)
+            this.addressId = new ObservableInt(addressId);
         else
-            this.addressId.set( addressId );
+            this.addressId.set(addressId);
     }
 
-    //
+    public AddressModel getAddress() {
+        return address;
+    }
 
-    public ObservableArrayList< ReservationModel > getReservations() {
+    public void setAddress(AddressModel address) {
+        this.address = address;
+    }
+
+    public ObservableArrayList<ReservationModel> getReservations() {
         return reservations;
     }
 
-    public void setReservations( ObservableArrayList< ReservationModel > reservations ) {
+    public void setReservations(ObservableArrayList<ReservationModel> reservations) {
         this.reservations = reservations;
     }
 
-    public ObservableArrayList< RatingModel > getRatings() {
+    public ObservableArrayList<RatingModel> getRatings() {
         return ratings;
     }
 
-    public void setRatings( ObservableArrayList< RatingModel > ratings ) {
+    public void setRatings(ObservableArrayList<RatingModel> ratings) {
         this.ratings = ratings;
     }
 
-    public ObservableArrayList< OrderModel > getOrders() {
+    public ObservableArrayList<OrderModel> getOrders() {
         return orders;
     }
 
-    public void setOrders( ObservableArrayList< OrderModel > orders ) {
+    public void setOrders(ObservableArrayList<OrderModel> orders) {
         this.orders = orders;
     }
 
-    public ObservableArrayList< TourModel > getTours() {
+    public ObservableArrayList<TourModel> getTours() {
         return tours;
     }
 
-    public void setTours( ObservableArrayList< TourModel > tours ) {
+    public void setTours(ObservableArrayList<TourModel> tours) {
         this.tours = tours;
     }
 
-    public ObservableArrayList< MessageModel > getMessages() {
+    public ObservableArrayList<MessageModel> getMessages() {
         return messages;
     }
 
-    public void setMessages( ObservableArrayList< MessageModel > messages ) {
+    public void setMessages(ObservableArrayList<MessageModel> messages) {
         this.messages = messages;
     }
 
@@ -155,7 +162,7 @@ public class UserModel extends BaseModel {
         return userType;
     }
 
-    public void setUserType( UserType userType ) {
+    public void setUserType(UserType userType) {
         this.userType = userType;
     }
 
@@ -163,7 +170,7 @@ public class UserModel extends BaseModel {
         return languageCode;
     }
 
-    public void setLanguageCode( LanguageCode languageCode ) {
+    public void setLanguageCode(LanguageCode languageCode) {
         this.languageCode = languageCode;
     }
     //</editor-fold>
