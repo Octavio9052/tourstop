@@ -10,7 +10,7 @@ import dagger.Subcomponent;
  * @Author J. Pichardo on 11/23/2016.
  */
 @ActivityScope
-@Subcomponent( modules = CheckpointActivityModule.class )
+@Subcomponent(modules = CheckpointActivityModule.class)
 public interface CheckpointActivitySubcomponent {
-    void inject( CheckpointActivity checkpointActivity );
+    void inject(CheckpointActivity checkpointActivity);
 }

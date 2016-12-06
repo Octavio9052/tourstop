@@ -20,7 +20,7 @@ public class SearchActivityModule {
 
     private final SearchActivity searchActivity;
 
-    public SearchActivityModule( SearchActivity searchActivity ) {
+    public SearchActivityModule(SearchActivity searchActivity) {
         this.searchActivity = searchActivity;
     }
 
@@ -33,12 +33,12 @@ public class SearchActivityModule {
     @ActivityScope
     @Provides
     SearchViewModel providesSearchViewModel() {
-        return new SearchViewModelImpl( this.searchActivity );
+        return new SearchViewModelImpl(this.searchActivity);
     }
 
     @ActivityScope
     @Provides
     SearchActivityBinding providesSearchActivityBinding() {
-        return DataBindingUtil.setContentView( this.searchActivity, R.layout.search_activity );
+        return DataBindingUtil.setContentView(this.searchActivity, R.layout.search_activity);
     }
 }

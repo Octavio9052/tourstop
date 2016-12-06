@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.TourProfileActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
+import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.TourProfileViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.TourProfileViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.TourProfileActivity;
@@ -32,8 +33,8 @@ public class TourProfileActivityModule {
 
     @ActivityScope
     @Provides
-    TourProfileViewModel providesTourProfileViewModel() {
-        return new TourProfileViewModelImpl(this.tourProfileActivity);
+    TourProfileViewModel providesTourProfileViewModel(TourService service) {
+        return new TourProfileViewModelImpl(this.tourProfileActivity, service);
     }
 
     @ActivityScope

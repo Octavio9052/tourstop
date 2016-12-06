@@ -4,7 +4,6 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.sc
 import com.cetys.dreamteam.musicalbroccoli.networking.services.MessageService;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.OrderService;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 
 import dagger.Module;
 import dagger.Provides;

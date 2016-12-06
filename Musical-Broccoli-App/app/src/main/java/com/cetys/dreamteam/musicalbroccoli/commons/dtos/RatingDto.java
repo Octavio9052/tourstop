@@ -19,7 +19,7 @@ public class RatingDto {
         return id;
     }
 
-    public void setId( int id ) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -27,7 +27,7 @@ public class RatingDto {
         return ratingValue;
     }
 
-    public void setRatingValue( int ratingValue ) {
+    public void setRatingValue(int ratingValue) {
         this.ratingValue = ratingValue;
     }
 
@@ -35,7 +35,7 @@ public class RatingDto {
         return comment;
     }
 
-    public void setComment( String comment ) {
+    public void setComment(String comment) {
         this.comment = comment;
     }
 
@@ -43,7 +43,7 @@ public class RatingDto {
         return userId;
     }
 
-    public void setUserId( int userId ) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -51,9 +51,9 @@ public class RatingDto {
         return tourId;
     }
 
-    public void setTourId( int tourId ) {
+    public void setTourId(int tourId) {
         this.tourId = tourId;
     }
     //</editor-fold>
-    
+
 }

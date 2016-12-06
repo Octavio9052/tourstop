@@ -22,7 +22,7 @@ public class CreatePromotionViewModelImpl extends BaseViewModel implements Creat
 
     @Override
     protected void load() {
-        
+
     }
 
     @Override

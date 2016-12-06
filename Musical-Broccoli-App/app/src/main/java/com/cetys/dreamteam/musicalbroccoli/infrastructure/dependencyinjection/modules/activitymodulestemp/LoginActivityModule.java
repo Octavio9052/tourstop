@@ -21,7 +21,7 @@ public class LoginActivityModule {
     private final LoginActivity loginActivity;
 
 
-    public LoginActivityModule(LoginActivity loginActivity ) {
+    public LoginActivityModule(LoginActivity loginActivity) {
         this.loginActivity = loginActivity;
     }
 
@@ -34,7 +34,7 @@ public class LoginActivityModule {
     @ActivityScope
     @Provides
     LoginViewModel providesLoginViewModel() {
-        return new LoginViewModelImpl( this.loginActivity );
+        return new LoginViewModelImpl(this.loginActivity);
     }
 
     @ActivityScope

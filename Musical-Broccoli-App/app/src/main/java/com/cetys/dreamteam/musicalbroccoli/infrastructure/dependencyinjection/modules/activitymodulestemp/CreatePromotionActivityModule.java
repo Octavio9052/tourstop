@@ -25,13 +25,13 @@ public class CreatePromotionActivityModule {
 
     @ActivityScope
     @Provides
-    CreatePromotionActivity providesCreatePromotionActivity(){
+    CreatePromotionActivity providesCreatePromotionActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    CreatePromotionViewModel providesCreatePromotionViewModel(){
+    CreatePromotionViewModel providesCreatePromotionViewModel() {
         return new CreatePromotionViewModelImpl(this.activity);
     }
 

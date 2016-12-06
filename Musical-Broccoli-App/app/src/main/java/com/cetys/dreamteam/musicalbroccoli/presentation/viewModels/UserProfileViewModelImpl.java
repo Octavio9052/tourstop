@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
-
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MessagesActivity;
@@ -17,11 +17,10 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.Wishlis
  * Created by Octavio on 2016/11/16.
  */
 
-public class UserProfileViewModelImpl extends BaseViewModel implements UserProfileViewModel{
-    private UserModel user;
+public class UserProfileViewModelImpl extends BaseModelViewModelImpl<UserModel> implements UserProfileViewModel {
 
-    public UserProfileViewModelImpl(Context context) {
-        super(context);
+    public UserProfileViewModelImpl(Context context, UserService baseService) {
+        super(context, baseService);
     }
 
     @Override
@@ -29,21 +28,7 @@ public class UserProfileViewModelImpl extends BaseViewModel implements UserProfi
 
     }
 
-    @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
-    public UserModel getUser() {
-        return this.user;
-    }
-
-    @Override
-    public void setUser(UserModel user) {
-        this.user = user;
-    }
-
+    //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onEditUserClick(View view) {
         Intent intent = new Intent(context, EditUserActivity.class);
@@ -73,4 +58,6 @@ public class UserProfileViewModelImpl extends BaseViewModel implements UserProfi
         Intent intent = new Intent(context, CreateTourActivity.class);
         context.startActivity(intent);
     }
+    //</editor-fold>
+
 }

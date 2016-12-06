@@ -12,7 +12,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MyT
 public class MyToursViewModelImpl extends BaseViewModel implements MyToursViewModel {
     private TourModel tour;
 
-    public MyToursViewModelImpl( Context context) {
+    public MyToursViewModelImpl(Context context) {
         super(context);
     }
 

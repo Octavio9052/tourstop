@@ -20,24 +20,24 @@ public class SearchResultsActivityModule {
     private SearchResultsActivity activity;
 
     public SearchResultsActivityModule(SearchResultsActivity activity) {
-        this.activity =  activity;
+        this.activity = activity;
     }
 
     @ActivityScope
     @Provides
-    SearchResultsActivity providesSearchResultsActivity(){
+    SearchResultsActivity providesSearchResultsActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    SearchResultsViewModel providesSearchResultsViewModel(){
+    SearchResultsViewModel providesSearchResultsViewModel() {
         return new SearchResultsViewModelImpl(this.activity);
     }
 
     @ActivityScope
     @Provides
-    SearchResultsActivityBinding providesSearchResultsActivityBinding(){
+    SearchResultsActivityBinding providesSearchResultsActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.search_results_activity);
     }
 }

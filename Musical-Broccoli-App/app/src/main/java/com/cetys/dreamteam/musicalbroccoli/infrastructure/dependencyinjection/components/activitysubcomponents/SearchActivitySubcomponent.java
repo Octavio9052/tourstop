@@ -10,7 +10,7 @@ import dagger.Subcomponent;
  * @Author J. Pichardo on 11/23/2016.
  */
 @ActivityScope
-@Subcomponent( modules = SearchActivityModule.class )
+@Subcomponent(modules = SearchActivityModule.class)
 public interface SearchActivitySubcomponent {
-    void inject( SearchActivity searchActivity );
+    void inject(SearchActivity searchActivity);
 }

@@ -20,7 +20,7 @@ public class CheckpointActivityModule {
 
     private final CheckpointActivity checkpointActivity;
 
-    public CheckpointActivityModule( CheckpointActivity checkpointActivity ) {
+    public CheckpointActivityModule(CheckpointActivity checkpointActivity) {
         this.checkpointActivity = checkpointActivity;
     }
 
@@ -33,7 +33,7 @@ public class CheckpointActivityModule {
     @ActivityScope
     @Provides
     CheckpointViewModel providesCheckpointViewModel() {
-        return new CheckpointViewModelImpl( this.checkpointActivity );
+        return new CheckpointViewModelImpl(this.checkpointActivity);
     }
 
     @ActivityScope

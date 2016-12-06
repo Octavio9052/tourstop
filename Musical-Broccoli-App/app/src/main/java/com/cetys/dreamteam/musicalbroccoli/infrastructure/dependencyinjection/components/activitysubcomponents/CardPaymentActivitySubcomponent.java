@@ -10,7 +10,7 @@ import dagger.Subcomponent;
  * @Author J. Pichardo on 11/23/2016.
  */
 @ActivityScope
-@Subcomponent( modules = CardPaymentActivityModule.class )
+@Subcomponent(modules = CardPaymentActivityModule.class)
 public interface CardPaymentActivitySubcomponent {
-    void inject( CardPaymentActivity cardPaymentActivity );
+    void inject(CardPaymentActivity cardPaymentActivity);
 }

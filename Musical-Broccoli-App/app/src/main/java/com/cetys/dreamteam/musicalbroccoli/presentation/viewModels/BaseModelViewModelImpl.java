@@ -20,18 +20,16 @@ import retrofit2.Response;
 abstract class BaseModelViewModelImpl<T> extends BaseViewModel implements BaseModelViewModel<T> {
 
     //<editor-fold desc="Instance Properties" defaultstate="collapsed">
-    private final BaseService<T> baseService;
-
+    protected BaseService<T> service;
+    protected T model;
     private Callback<List<T>> getByIdCallback;
     private Callback<List<T>> createCallback;
     private Callback<?> updateAndDeleteCallback;
-
-    private T model;
     //</editor-fold>
 
-    BaseModelViewModelImpl(Context context, BaseService<T> baseService) {
+    BaseModelViewModelImpl(Context context, BaseService<T> service) {
         super(context);
-        this.baseService = baseService;
+        this.service = service;
         initCallbacks();
     }
 
@@ -62,7 +60,7 @@ abstract class BaseModelViewModelImpl<T> extends BaseViewModel implements BaseMo
         ReadWriteRequest<T> request = new ReadWriteRequest<T>()
                 .addModel(model);
 
-        Call<List<T>> call = baseService.create(request);
+        Call<List<T>> call = service.create(request);
         call.enqueue(createCallback);
     }
 
@@ -70,7 +68,7 @@ abstract class BaseModelViewModelImpl<T> extends BaseViewModel implements BaseMo
         ReadWriteRequest<T> request = new ReadWriteRequest<T>()
                 .addModel(model);
 
-        Call call = baseService.update(request);
+        Call call = service.update(request);
         call.enqueue(updateAndDeleteCallback);
     }
 
@@ -78,7 +76,7 @@ abstract class BaseModelViewModelImpl<T> extends BaseViewModel implements BaseMo
         ReadWriteRequest<T> request = new ReadWriteRequest<T>()
                 .addModel(model);
 
-        Call call = baseService.delete(request);
+        Call call = service.delete(request);
         call.enqueue(updateAndDeleteCallback);
     }
     //</editor-fold>

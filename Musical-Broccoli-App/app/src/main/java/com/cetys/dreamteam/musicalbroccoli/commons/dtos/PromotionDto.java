@@ -21,7 +21,7 @@ public class PromotionDto {
         return id;
     }
 
-    public void setId( int id ) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -29,7 +29,7 @@ public class PromotionDto {
         return value;
     }
 
-    public void setValue( float value ) {
+    public void setValue(float value) {
         this.value = value;
     }
 
@@ -37,7 +37,7 @@ public class PromotionDto {
         return description;
     }
 
-    public void setDescription( String description ) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -45,7 +45,7 @@ public class PromotionDto {
         return promotionType;
     }
 
-    public void setPromotionType( PromotionType promotionType ) {
+    public void setPromotionType(PromotionType promotionType) {
         this.promotionType = promotionType;
     }
 
@@ -53,7 +53,7 @@ public class PromotionDto {
         return promoCode;
     }
 
-    public void setPromoCode( String promoCode ) {
+    public void setPromoCode(String promoCode) {
         this.promoCode = promoCode;
     }
     //</editor-fold>

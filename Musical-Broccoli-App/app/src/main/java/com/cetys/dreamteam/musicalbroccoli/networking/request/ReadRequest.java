@@ -21,7 +21,7 @@ public class ReadRequest extends BaseRequest {
         return this;
     }
     //</editor-fold>
-    
+
     public ReadRequest addFilter(Filter filter) {
         if (filters == null) filters = new ArrayList<Filter>();
         filters.add(filter);

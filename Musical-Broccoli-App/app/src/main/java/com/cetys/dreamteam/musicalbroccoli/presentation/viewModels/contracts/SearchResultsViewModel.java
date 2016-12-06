@@ -8,5 +8,6 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 
 public interface SearchResultsViewModel {
     TourModel getTour();
+
     void setTour(TourModel tour);
 }

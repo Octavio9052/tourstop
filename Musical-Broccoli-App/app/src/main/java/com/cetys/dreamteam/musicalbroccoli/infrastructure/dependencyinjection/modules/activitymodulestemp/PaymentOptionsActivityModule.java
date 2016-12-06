@@ -40,6 +40,6 @@ public class PaymentOptionsActivityModule {
     @Provides
     PaymentOptionsActivityBinding providesPaymentOptionsActivityBinding() {
         return DataBindingUtil
-                .setContentView( this.paymentOptionsActivity, R.layout.payment_options_activity );
+                .setContentView(this.paymentOptionsActivity, R.layout.payment_options_activity);
     }
 }

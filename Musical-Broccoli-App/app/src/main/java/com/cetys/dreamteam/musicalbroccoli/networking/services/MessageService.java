@@ -1,6 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.networking.services;
 
-import com.cetys.dreamteam.musicalbroccoli.commons.dtos.MessageDto;
+import com.cetys.dreamteam.musicalbroccoli.commons.dtos.MessageModel;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
 
@@ -16,22 +16,22 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface MessageService extends BaseService<MessageDto> {
+public interface MessageService extends BaseService<MessageModel> {
 
     @Override
     @GET("message/")
-    Call<List<MessageDto>> get(@Body ReadRequest request);
+    Call<List<MessageModel>> get(@Body ReadRequest request);
 
     @Override
     @POST("message/")
-    Call<List<MessageDto>> create(@Body ReadWriteRequest<MessageDto> request);
+    Call<List<MessageModel>> create(@Body ReadWriteRequest<MessageModel> request);
 
     @Override
     @PUT("message/")
-    Call update(@Body ReadWriteRequest<MessageDto> request);
+    Call update(@Body ReadWriteRequest<MessageModel> request);
 
     @Override
     @DELETE("message/")
-    Call delete(@Body ReadWriteRequest<MessageDto> request);
+    Call delete(@Body ReadWriteRequest<MessageModel> request);
 
 }

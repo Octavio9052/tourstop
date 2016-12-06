@@ -10,6 +10,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 
 public interface LoginViewModel {
     UserModel getUser();
+
     void setUser(UserModel user);
 
     void onCreateUserClick(View view);

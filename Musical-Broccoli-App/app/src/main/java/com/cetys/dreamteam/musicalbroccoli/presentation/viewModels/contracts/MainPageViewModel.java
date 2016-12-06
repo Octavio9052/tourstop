@@ -10,11 +10,16 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 
 public interface MainPageViewModel {
     UserModel getUser();
+
     void setUser(UserModel user);
 
     void onUserProfileClick(View view);
+
     void onMyToursClick(View view);
+
     void onMessagesClick(View view);
+
     void onSearchClick(View view);
+
     void onFABClick(View view);
 }

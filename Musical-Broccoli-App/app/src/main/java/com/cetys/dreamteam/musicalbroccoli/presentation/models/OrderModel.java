@@ -24,8 +24,8 @@ public class OrderModel extends BaseModel {
     private ObservableInt userId;
     private ObservableInt paymentInfoId;
 
-    private ObservableArrayList< ReservationModel > reservations;
-    private ObservableArrayList< MovementModel > movements;
+    private ObservableArrayList<ReservationModel> reservations;
+    private ObservableArrayList<MovementModel> movements;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
@@ -33,7 +33,7 @@ public class OrderModel extends BaseModel {
         return dateCreated;
     }
 
-    public void setDateCreated( Date dateCreated ) {
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
 
@@ -41,7 +41,7 @@ public class OrderModel extends BaseModel {
         return paymentType;
     }
 
-    public void setPaymentType( PaymentType paymentType ) {
+    public void setPaymentType(PaymentType paymentType) {
         this.paymentType = paymentType;
     }
 
@@ -49,72 +49,72 @@ public class OrderModel extends BaseModel {
         return id.get();
     }
 
-    public void setId( int id ) {
-        if ( this.id == null )
-            this.id = new ObservableInt( id );
+    public void setId(int id) {
+        if (this.id == null)
+            this.id = new ObservableInt(id);
         else
-            this.id.set( id );
+            this.id.set(id);
     }
 
     public float getFloatAmount() {
         return floatAmount.get();
     }
 
-    public void setFloatAmount( float floatAmount ) {
-        if ( this.floatAmount == null )
-            this.floatAmount = new ObservableFloat( floatAmount );
+    public void setFloatAmount(float floatAmount) {
+        if (this.floatAmount == null)
+            this.floatAmount = new ObservableFloat(floatAmount);
         else
-            this.floatAmount.set( floatAmount );
+            this.floatAmount.set(floatAmount);
     }
 
     public boolean getPaymentStatus() {
         return paymentStatus.get();
     }
 
-    public void setPaymentStatus( boolean paymentStatus ) {
-        if ( this.paymentStatus == null )
-            this.paymentStatus = new ObservableBoolean( paymentStatus );
+    public void setPaymentStatus(boolean paymentStatus) {
+        if (this.paymentStatus == null)
+            this.paymentStatus = new ObservableBoolean(paymentStatus);
         else
-            this.paymentStatus.set( paymentStatus );
+            this.paymentStatus.set(paymentStatus);
     }
 
     public int getUserId() {
         return userId.get();
     }
 
-    public void setUserId( int userId ) {
-        if ( this.userId == null )
-            this.userId = new ObservableInt( userId );
+    public void setUserId(int userId) {
+        if (this.userId == null)
+            this.userId = new ObservableInt(userId);
         else
-            this.userId.set( userId );
+            this.userId.set(userId);
     }
 
     public int getPaymentInfoId() {
         return paymentInfoId.get();
     }
 
-    public void setPaymentInfoId( int paymentInfoId ) {
-        if ( this.paymentInfoId == null )
-            this.paymentInfoId = new ObservableInt( paymentInfoId );
+    public void setPaymentInfoId(int paymentInfoId) {
+        if (this.paymentInfoId == null)
+            this.paymentInfoId = new ObservableInt(paymentInfoId);
         else
-            this.paymentInfoId.set( paymentInfoId );
+            this.paymentInfoId.set(paymentInfoId);
     }
 
     //
 
-    public ObservableArrayList< MovementModel > getMovements() {
+    public ObservableArrayList<MovementModel> getMovements() {
         return movements;
     }
 
-    public void setMovements( ObservableArrayList< MovementModel > movements ) {
+    public void setMovements(ObservableArrayList<MovementModel> movements) {
         this.movements = movements;
     }
 
-    public ObservableArrayList< ReservationModel > getReservations() {
+    public ObservableArrayList<ReservationModel> getReservations() {
         return reservations;
     }
 
-    public void setReservations( ObservableArrayList< ReservationModel > reservations ) {
+    public void setReservations(ObservableArrayList<ReservationModel> reservations) {
         this.reservations = reservations;
     }
     //</editor-fold>

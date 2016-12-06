@@ -24,7 +24,7 @@ public class MovementModel extends BaseModel {
         return movementType;
     }
 
-    public void setMovementType( MovementType movementType ) {
+    public void setMovementType(MovementType movementType) {
         this.movementType = movementType;
     }
 
@@ -32,7 +32,7 @@ public class MovementModel extends BaseModel {
         return dateCreated;
     }
 
-    public void setDateCreated( Date dateCreated ) {
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
 
@@ -40,34 +40,34 @@ public class MovementModel extends BaseModel {
         return id.get();
     }
 
-    public void setId( int id ) {
-        if ( this.id == null )
-            this.id = new ObservableInt( id );
+    public void setId(int id) {
+        if (this.id == null)
+            this.id = new ObservableInt(id);
         else
-            this.id.set( id );
+            this.id.set(id);
     }
 
     public int getTourId() {
         return tourId.get();
     }
 
-    public void setTourId( int tourId ) {
-        if ( this.tourId == null )
-            this.tourId = new ObservableInt( tourId );
+    public void setTourId(int tourId) {
+        if (this.tourId == null)
+            this.tourId = new ObservableInt(tourId);
         else
-            this.tourId.set( tourId );
+            this.tourId.set(tourId);
     }
 
     public int getReservationId() {
         return reservationId.get();
     }
 
-    public void setReservationId( int reservationId ) {
-        if ( this.reservationId == null )
-            this.reservationId = new ObservableInt( reservationId );
+    public void setReservationId(int reservationId) {
+        if (this.reservationId == null)
+            this.reservationId = new ObservableInt(reservationId);
         else
-            this.reservationId.set( reservationId );
+            this.reservationId.set(reservationId);
     }
     //</editor-fold>
-    
+
 }

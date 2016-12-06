@@ -10,6 +10,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 
 public interface SearchViewModel {
     TourModel getTour();
+
     void setTour(TourModel tour);
 
     void onSearchClick(View view);

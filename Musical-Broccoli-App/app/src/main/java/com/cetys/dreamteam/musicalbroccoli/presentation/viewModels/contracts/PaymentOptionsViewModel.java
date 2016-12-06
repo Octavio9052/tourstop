@@ -8,5 +8,6 @@ import android.view.View;
 
 public interface PaymentOptionsViewModel {
     void onProceedClick(View view);
+
     void onRadioButtonClicked(View view);
 }

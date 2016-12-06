@@ -10,7 +10,10 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.PromotionModel;
 
 public interface CreatePromotionViewModel {
     PromotionModel getPromotion();
+
     void setPromotion(PromotionModel promotion);
+
     void onSaveChangesClick(View view);
+
     void onCancelClick(View view);
 }

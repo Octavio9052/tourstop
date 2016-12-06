@@ -10,7 +10,7 @@ import dagger.Subcomponent;
  * @Author J. Pichardo on 11/23/2016.
  */
 @ActivityScope
-@Subcomponent( modules = WishlistActivityModule.class )
+@Subcomponent(modules = WishlistActivityModule.class)
 public interface WishlistActivitySubcomponent {
-    void inject( WishlistActivity wishlistActivity );
+    void inject(WishlistActivity wishlistActivity);
 }

@@ -19,7 +19,7 @@ public class PaymentInfoDto {
         return id;
     }
 
-    public void setId( int id ) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -27,7 +27,7 @@ public class PaymentInfoDto {
         return cardNumber;
     }
 
-    public void setCardNumber( String cardNumber ) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
@@ -35,7 +35,7 @@ public class PaymentInfoDto {
         return typeOfCard;
     }
 
-    public void setTypeOfCard( int typeOfCard ) {
+    public void setTypeOfCard(int typeOfCard) {
         this.typeOfCard = typeOfCard;
     }
 
@@ -43,7 +43,7 @@ public class PaymentInfoDto {
         return cardHolderName;
     }
 
-    public void setCardHolderName( String cardHolderName ) {
+    public void setCardHolderName(String cardHolderName) {
         this.cardHolderName = cardHolderName;
     }
 
@@ -51,7 +51,7 @@ public class PaymentInfoDto {
         return expirationDate;
     }
 
-    public void setExpirationDate( int expirationDate ) {
+    public void setExpirationDate(int expirationDate) {
         this.expirationDate = expirationDate;
     }
     //</editor-fold>

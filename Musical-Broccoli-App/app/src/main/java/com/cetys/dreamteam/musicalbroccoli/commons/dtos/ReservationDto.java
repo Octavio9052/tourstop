@@ -23,7 +23,7 @@ public class ReservationDto {
         return id;
     }
 
-    public void setId( int id ) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,7 +31,7 @@ public class ReservationDto {
         return name;
     }
 
-    public void setName( String name ) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -39,7 +39,7 @@ public class ReservationDto {
         return dateCreated;
     }
 
-    public void setDateCreated( Date dateCreated ) {
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
 
@@ -47,7 +47,7 @@ public class ReservationDto {
         return userId;
     }
 
-    public void setUserId( int userId ) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -55,7 +55,7 @@ public class ReservationDto {
         return tourId;
     }
 
-    public void setTourId( int tourId ) {
+    public void setTourId(int tourId) {
         this.tourId = tourId;
     }
 
@@ -63,7 +63,7 @@ public class ReservationDto {
         return orderId;
     }
 
-    public void setOrderId( int orderId ) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 
@@ -71,7 +71,7 @@ public class ReservationDto {
         return status;
     }
 
-    public void setStatus( boolean status ) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
     //</editor-fold>

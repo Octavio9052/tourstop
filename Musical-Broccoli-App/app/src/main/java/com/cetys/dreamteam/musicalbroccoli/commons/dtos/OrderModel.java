@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Octavio on 2016/11/12.
  */
 
-public class OrderDto {
+public class OrderModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;
@@ -20,8 +20,8 @@ public class OrderDto {
     private int userId;
     private int paymentInfoId;
 
-    private List< ReservationDto > reservations;
-    private List< MovementDto > movements;
+    private List<ReservationDto> reservations;
+    private List<MovementDto> movements;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
@@ -29,7 +29,7 @@ public class OrderDto {
         return id;
     }
 
-    public void setId( int id ) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -37,7 +37,7 @@ public class OrderDto {
         return dateCreated;
     }
 
-    public void setDateCreated( Date dateCreated ) {
+    public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
 
@@ -45,7 +45,7 @@ public class OrderDto {
         return totalAmount;
     }
 
-    public void setTotalAmount( float totalAmount ) {
+    public void setTotalAmount(float totalAmount) {
         this.totalAmount = totalAmount;
     }
 
@@ -53,7 +53,7 @@ public class OrderDto {
         return paymentType;
     }
 
-    public void setPaymentType( PaymentType paymentType ) {
+    public void setPaymentType(PaymentType paymentType) {
         this.paymentType = paymentType;
     }
 
@@ -61,7 +61,7 @@ public class OrderDto {
         return paymentStatus;
     }
 
-    public void setPaymentStatus( boolean paymentStatus ) {
+    public void setPaymentStatus(boolean paymentStatus) {
         this.paymentStatus = paymentStatus;
     }
 
@@ -69,7 +69,7 @@ public class OrderDto {
         return userId;
     }
 
-    public void setUserId( int userId ) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -77,23 +77,23 @@ public class OrderDto {
         return paymentInfoId;
     }
 
-    public void setPaymentInfoId( int paymentInfoId ) {
+    public void setPaymentInfoId(int paymentInfoId) {
         this.paymentInfoId = paymentInfoId;
     }
 
-    public List< ReservationDto > getReservations() {
+    public List<ReservationDto> getReservations() {
         return reservations;
     }
 
-    public void setReservations( List< ReservationDto > reservations ) {
+    public void setReservations(List<ReservationDto> reservations) {
         this.reservations = reservations;
     }
 
-    public List< MovementDto > getMovements() {
+    public List<MovementDto> getMovements() {
         return movements;
     }
 
-    public void setMovements( List< MovementDto > movements ) {
+    public void setMovements(List<MovementDto> movements) {
         this.movements = movements;
     }
     //</editor-fold>

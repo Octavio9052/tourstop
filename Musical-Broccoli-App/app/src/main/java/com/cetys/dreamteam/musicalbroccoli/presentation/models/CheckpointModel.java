@@ -22,7 +22,7 @@ public class CheckpointModel extends BaseModel {
         return startTime;
     }
 
-    public void setStartTime( Date startTime ) {
+    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 
@@ -30,7 +30,7 @@ public class CheckpointModel extends BaseModel {
         return endTime;
     }
 
-    public void setEndTime( Date endTime ) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
 
@@ -38,33 +38,33 @@ public class CheckpointModel extends BaseModel {
         return id.get();
     }
 
-    public void setId( int id ) {
-        if ( this.id == null )
-            this.id = new ObservableInt( id );
+    public void setId(int id) {
+        if (this.id == null)
+            this.id = new ObservableInt(id);
         else
-            this.id.set( id );
+            this.id.set(id);
     }
 
     public int getAddressId() {
         return addressId.get();
     }
 
-    public void setAddressId( int addressId ) {
-        if ( this.addressId == null )
-            this.addressId = new ObservableInt( addressId );
+    public void setAddressId(int addressId) {
+        if (this.addressId == null)
+            this.addressId = new ObservableInt(addressId);
         else
-            this.addressId.set( addressId );
+            this.addressId.set(addressId);
     }
 
     public int getTourId() {
         return tourId.get();
     }
 
-    public void setTourId( int tourId ) {
-        if ( this.tourId == null )
-            this.tourId = new ObservableInt( tourId );
+    public void setTourId(int tourId) {
+        if (this.tourId == null)
+            this.tourId = new ObservableInt(tourId);
         else
-            this.tourId.set( tourId );
+            this.tourId.set(tourId);
     }
     //</editor-fold>
 

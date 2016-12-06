@@ -26,13 +26,13 @@ public class OrderActivityModule {
 
     @ActivityScope
     @Provides
-    OrderActivity providesOrderActivity(){
+    OrderActivity providesOrderActivity() {
         return this.activity;
     }
 
     @ActivityScope
     @Provides
-    OrderViewModel providesOrderViewModel(){
+    OrderViewModel providesOrderViewModel() {
         return new OrderViewModelImpl(this.activity);
     }
 

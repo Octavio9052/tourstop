@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
@@ -15,33 +16,13 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserPro
  * Created by Octavio on 2016/11/20.
  */
 
-public class EditUserViewModelImpl extends BaseViewModel implements EditUserViewModel {
-    private UserModel user;
+public class EditUserViewModelImpl extends BaseModelViewModelImpl<UserModel> implements EditUserViewModel {
 
-    public EditUserViewModelImpl(Context context) {
-        super(context);
+    public EditUserViewModelImpl(Context context, UserService service) {
+        super(context, service);
     }
 
-    @Override
-    protected void load() {
-
-    }
-
-    @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
-    public UserModel getUser() {
-        return user;
-    }
-
-    @Override
-    public void setUser(UserModel user) {
-        this.user = user;
-    }
-
+    //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onChangePasswordClick(View view) {
         Intent intent = new Intent(context, ChangePasswordActivity.class);
@@ -56,14 +37,20 @@ public class EditUserViewModelImpl extends BaseViewModel implements EditUserView
 
     @Override
     public void onSaveChangesClick(View view) {
-        doTemporalToast();
+        update();
         Intent intent = new Intent(context, UserProfileActivity.class);
         context.startActivity(intent);
     }
+    //</editor-fold>
 
     private void doTemporalToast() {
         Toast
                 .makeText(context, "Your information has been modified successfully", Toast.LENGTH_LONG)
                 .show();
+    }
+
+    @Override
+    protected void load() {
+
     }
 }

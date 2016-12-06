@@ -8,5 +8,6 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.models.MessageModel;
 
 public interface MessagesViewModel {
     MessageModel getMessage();
+
     void setMessage(MessageModel message);
 }
