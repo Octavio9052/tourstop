@@ -17,27 +17,29 @@
         <activity android:name=".presentation.views.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".presentation.views.activities.UserProfileActivity"/>
+        <activity android:name=".presentation.views.activities.UserProfileActivity" />
         <activity android:name=".presentation.views.activities.SearchActivity" />
-        <activity android:name=".presentation.views.activities.CreateTourActivity"/>
+        <activity android:name=".presentation.views.activities.CreateTourActivity" />
         <activity android:name=".presentation.views.activities.EditUserActivity" />
         <activity android:name=".presentation.views.activities.ChangePasswordActivity" />
         <activity android:name=".presentation.views.activities.MessagesActivity" />
         <activity android:name=".presentation.views.activities.MyToursActivity" />
         <activity android:name=".presentation.views.activities.WishlistActivity" />
-        <activity android:name=".presentation.views.activities.CheckpointActivity"/>
-        <activity android:name=".presentation.views.activities.PaymentOptionsActivity"/>
-        <activity android:name=".presentation.views.activities.CardPaymentActivity"/>
-        <activity android:name=".presentation.views.activities.TourProfileActivity"/>
+        <activity android:name=".presentation.views.activities.CheckpointActivity" />
+        <activity android:name=".presentation.views.activities.PaymentOptionsActivity" />
+        <activity android:name=".presentation.views.activities.CardPaymentActivity" />
+        <activity android:name=".presentation.views.activities.TourProfileActivity" />
         <activity android:name=".presentation.views.activities.OrderActivity" />
-        <activity android:name=".presentation.views.activities.MainPageActivity"/>
+        <activity android:name=".presentation.views.activities.MainPageActivity" />
         <activity android:name=".presentation.views.activities.CreateUserActivity" />
-        <activity android:name=".presentation.views.activities.SearchResultsActivity"/>
-        <activity android:name=".presentation.views.activities.CreatePromotionActivity"/>
+        <activity android:name=".presentation.views.activities.SearchResultsActivity" />
+        <activity android:name=".presentation.views.activities.CreatePromotionActivity" />
+        <activity android:name=".presentation.views.activities.CreateMessageActivity" />
+        <activity android:name=".presentation.views.activities.CreateReservationActivity"></activity>
     </application>
 
 </manifest>

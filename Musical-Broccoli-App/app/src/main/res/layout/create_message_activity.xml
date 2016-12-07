@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <!-- Tour Banner -->
+            <ImageView
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/cta_header_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/messages"/>
+
+            <ImageButton
+                android:id="@+id/user_profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/header_cover_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-60dp"
+                android:background="@drawable/profile_circular_border_imageview"
+                android:backgroundTint="#ffffff"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logotourstop"
+                android:contentDescription="logo of the tour" />
+            <!-- End Tour Banner -->
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_cover_image"
+                android:background="#0033cc"
+                android:elevation="4dp"
+                android:paddingBottom="24dp">
+
+
+                <TextView
+                    android:id="@+id/user_profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="76dp"
+                    android:text="Contact Us"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="328dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Your Email: *"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="340dp"
+                    android:layout_height="35dp"
+                    android:layout_alignStart="@+id/textView"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/textfields"
+                    android:hint="Enter Your Email" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_alignStart="@id/editText"
+                    android:layout_below="@id/editText"
+                    android:text="Message: *"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="340dp"
+                    android:layout_height="180dp"
+                    android:layout_alignStart="@+id/textView1"
+                    android:layout_below="@+id/textView1"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/textfields"
+                    android:hint="Message Goes Here" />
+
+                <Button
+                    android:id="@+id/sendMessage_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/toast_frame"
+                    android:layout_below="@id/editText1"
+                    android:layout_marginTop="30dp"
+                    android:text="Send"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignEnd="@+id/editText1" />
+
+                <TextView
+                    android:id="@+id/tv_annotation"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statement_mandatory"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignEnd="@+id/textView1" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</layout>
