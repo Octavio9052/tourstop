@@ -24,7 +24,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presentation.views.activities.UserProfileActivity"/>
+        <activity
+            android:name=".presentation.views.activities.UserProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".presentation.views.activities.SearchActivity"/>
         <activity android:name=".presentation.views.activities.CreateTourActivity"/>
         <activity android:name=".presentation.views.activities.EditUserActivity"/>

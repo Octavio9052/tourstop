@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.ChangePasswordActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.ChangePasswordActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.ChangePasswordActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.ChangePasswordViewModel;
 
 import javax.inject.Inject;
@@ -28,7 +28,7 @@ public class ChangePasswordActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getUserSubcomponent()
+        TourStopApplication.get(this).getSessionSubcomponent()
                 .plus(new ChangePasswordActivityModule(this))
                 .inject(this);
     }

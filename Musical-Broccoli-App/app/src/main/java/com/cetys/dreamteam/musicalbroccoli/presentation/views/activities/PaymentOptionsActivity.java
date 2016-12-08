@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.PaymentOptionsActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.PaymentOptionsActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.PaymentOptionsActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.PaymentOptionsViewModel;
 
 import javax.inject.Inject;
@@ -28,7 +28,7 @@ public class PaymentOptionsActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getUserSubcomponent()
+        TourStopApplication.get(this).getSessionSubcomponent()
                 .plus(new PaymentOptionsActivityModule(this))
                 .inject(this);
     }

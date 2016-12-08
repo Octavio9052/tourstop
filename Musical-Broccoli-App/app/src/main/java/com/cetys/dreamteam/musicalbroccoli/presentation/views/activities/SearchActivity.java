@@ -8,7 +8,7 @@ import android.widget.Toast;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.SearchActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.SearchActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.SearchActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.SearchViewModel;
 
 import javax.inject.Inject;
@@ -38,7 +38,7 @@ public class SearchActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getUserSubcomponent()
+        TourStopApplication.get(this).getSessionSubcomponent()
                 .plus(new SearchActivityModule(this))
                 .inject(this);
     }

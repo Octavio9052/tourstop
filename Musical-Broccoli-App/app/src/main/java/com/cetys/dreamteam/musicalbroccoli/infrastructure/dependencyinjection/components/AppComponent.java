@@ -1,12 +1,8 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components;
 
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.CreateUserActivitySubcomponent;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.activitysubcomponents.LoginActivitySubcomponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.AppModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.NetModule;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.UserModule;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreateUserActivityModule;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.LoginActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.SessionModule;
 
 import javax.inject.Singleton;
 
@@ -19,7 +15,7 @@ import dagger.Component;
 @Component(modules = {AppModule.class, NetModule.class})
 public interface AppComponent {
 
-    UserSubcomponent plus(UserModule module);
+    SessionSubcomponent plus(SessionModule module);
 
 
 

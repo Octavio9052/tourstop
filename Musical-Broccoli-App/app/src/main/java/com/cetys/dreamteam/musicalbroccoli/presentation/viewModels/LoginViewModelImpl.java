@@ -4,7 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateUserActivity;
 
@@ -14,11 +15,13 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateU
 public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel {
 
     //<editor-fold desc="Instance Properties" defaultstate="collapsed">
+    private final UserConnector connector;
     private User user;
     //</editor-fold>
 
-    public LoginViewModelImpl(Context context) {
+    public LoginViewModelImpl(Context context, UserConnector connector) {
         super(context);
+        this.connector = connector;
     }
 
     @Override

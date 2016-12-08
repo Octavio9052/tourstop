@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.CreateUserActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CreateUserActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.CreateUserActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
 
 import javax.inject.Inject;
@@ -28,7 +28,7 @@ public class CreateUserActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getUserSubcomponent().plus(new CreateUserActivityModule(this))
+        TourStopApplication.get(this).getSessionSubcomponent().plus(new CreateUserActivityModule(this))
                 .inject(this);
     }
 

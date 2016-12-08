@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Message;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Message;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MessagesViewModel;
 
 /**

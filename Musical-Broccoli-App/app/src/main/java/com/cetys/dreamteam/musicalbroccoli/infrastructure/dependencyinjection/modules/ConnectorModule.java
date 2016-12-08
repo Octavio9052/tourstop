@@ -1,17 +1,22 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules;
 
+import android.app.Application;
+
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.OrderConnectorImpl;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.TourConnectorImpl;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.UserConnectorImpl;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.OrderConnector;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.TourConnector;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Order;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
-import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadRequestBuilder;
-import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadWriteRequestBuilder;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.OrderService;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.OrderConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Order;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.request.builders.ReadRequestBuilder;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.request.builders.ReadWriteRequestBuilder;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.services.OrderService;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.services.TourService;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.services.UserService;
 
 import dagger.Module;
 import dagger.Provides;
@@ -24,20 +29,29 @@ public class ConnectorModule {
 
     @UserScope
     @Provides
-    public UserConnector providesUserConnector(UserService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<User> readWriteRequestBuilder) {
-        return new UserConnector(readWriteRequestBuilder, readRequestBuilder, service);
+    public UserConnector providesUserConnector(Application application, UserService service,
+                                               ReadRequestBuilder readRequestBuilder,
+                                               ReadWriteRequestBuilder<User> readWriteRequestBuilder) {
+        return new UserConnectorImpl(application, readWriteRequestBuilder, readRequestBuilder,
+                service);
     }
 
     @UserScope
     @Provides
-    public TourConnector providesTourConnector(TourService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<Tour> readWriteRequestBuilder) {
-        return new com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector(readWriteRequestBuilder, readRequestBuilder, service);
+    public TourConnector providesTourConnector(Application application, TourService service,
+                                               ReadRequestBuilder readRequestBuilder,
+                                               ReadWriteRequestBuilder<Tour> readWriteRequestBuilder) {
+        return new TourConnectorImpl(application, readWriteRequestBuilder, readRequestBuilder,
+                service);
     }
 
     @UserScope
     @Provides
-    public OrderConnector providesOrderConnector(OrderService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<Order> readWriteRequestBuilder) {
-        return new OrderConnector(readWriteRequestBuilder, readRequestBuilder, service);
+    public OrderConnector providesOrderConnector(Application application, OrderService service,
+                                                 ReadRequestBuilder readRequestBuilder,
+                                                 ReadWriteRequestBuilder<Order> readWriteRequestBuilder) {
+        return new OrderConnectorImpl(application, readWriteRequestBuilder, readRequestBuilder,
+                service);
     }
 
 }

@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.PaymentOptionsActivity;

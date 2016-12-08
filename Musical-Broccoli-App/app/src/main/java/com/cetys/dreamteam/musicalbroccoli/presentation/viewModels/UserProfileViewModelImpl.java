@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
@@ -16,13 +16,12 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.Wishlis
 /**
  * Created by Octavio on 2016/11/16.
  */
-
 public class UserProfileViewModelImpl extends BaseViewModel implements UserProfileViewModel {
 
     //<editor-fold desc="Instance Properties" defaultstate="collapsed">
     private final UserConnector connector;
     //</editor-fold>
-    
+
     public UserProfileViewModelImpl(Context context, UserConnector connector) {
         super(context);
 

@@ -1,13 +1,14 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
+
+import java.util.List;
 
 /**
  * Created by Octavio on 2016/11/20.
  */
-
 public interface MyToursViewModel {
-    Tour getTour();
+    List<Tour> getTours();
 
-    void setTour(Tour tour);
+    void setTours(List<Tour> tours);
 }

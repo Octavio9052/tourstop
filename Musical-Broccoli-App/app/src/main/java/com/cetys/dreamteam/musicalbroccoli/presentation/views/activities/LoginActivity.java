@@ -28,7 +28,7 @@ import android.widget.TextView;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.LoginActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.LoginActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
@@ -242,7 +242,7 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     @Override
     protected void initActivityComponent() {
         //TODO: LoginActivity(this).inject???
-        TourStopApplication.get(this).getUserSubcomponent()
+        TourStopApplication.get(this).getSessionSubcomponent()
                 .plus(new LoginActivityModule(this)).inject(this);
     }
 

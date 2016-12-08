@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.TourConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CheckpointActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreatePromotionActivity;

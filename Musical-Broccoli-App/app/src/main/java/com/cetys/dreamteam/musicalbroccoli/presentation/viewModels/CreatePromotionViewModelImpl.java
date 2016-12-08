@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Promotion;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Promotion;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreatePromotionViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 

@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
-import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
-import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
-import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.enums.CountryCode;
+import com.cetys.dreamteam.musicalbroccoli.core.enums.UserType;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
 

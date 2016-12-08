@@ -2,8 +2,8 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.core.enums.CountryCode;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 
 /**
  * Created by Octavio on 2016/12/03.

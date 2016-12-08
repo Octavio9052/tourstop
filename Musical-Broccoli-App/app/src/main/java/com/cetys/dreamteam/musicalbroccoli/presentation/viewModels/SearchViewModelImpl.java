@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.SearchViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.SearchResultsActivity;
 

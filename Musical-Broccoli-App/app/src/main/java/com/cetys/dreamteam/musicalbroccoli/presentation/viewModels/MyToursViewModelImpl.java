@@ -2,15 +2,17 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MyToursViewModel;
+
+import java.util.List;
 
 /**
  * Created by Octavio on 2016/11/20.
  */
 
 public class MyToursViewModelImpl extends BaseViewModel implements MyToursViewModel {
-    private Tour tour;
+    private List<Tour> tours;
 
     public MyToursViewModelImpl(Context context) {
         super(context);
@@ -22,12 +24,12 @@ public class MyToursViewModelImpl extends BaseViewModel implements MyToursViewMo
     }
 
     @Override
-    public Tour getTour() {
-        return this.tour;
+    public List<Tour> getTours() {
+        return this.tours;
     }
 
     @Override
-    public void setTour(Tour tour) {
-        this.tour = tour;
+    public void setTours(List<Tour> tours) {
+        this.tours = tours;
     }
 }
