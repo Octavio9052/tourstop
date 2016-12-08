@@ -22,11 +22,13 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
     public LoginViewModelImpl(Context context, UserConnector connector) {
         super(context);
         this.connector = connector;
+
+        load();
     }
 
     @Override
     protected void load() {
-
+        user = new User();
     }
 
     //<editor-fold desc="Property Accessors" defaultstate="collapsed">
@@ -42,6 +44,11 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
     //</editor-fold>
 
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
+    @Override
+    public void onLoginClick(View view) {
+        connector.login(user);
+    }
+
     @Override
     public void onCreateUserClick(View view) {
         Intent intent = new Intent(context, CreateUserActivity.class);

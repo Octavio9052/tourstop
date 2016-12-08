@@ -1,6 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.business.connectors;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.BaseConnector;
 import com.cetys.dreamteam.musicalbroccoli.core.models.BaseModel;
@@ -29,5 +30,9 @@ public abstract class BaseConnectorImpl<T extends BaseModel> implements BaseConn
     }
 
     protected abstract void initCallbacks();
+
+    protected void showServerErrorToast() {
+        Toast.makeText(context, "An unexpected error occurred", Toast.LENGTH_LONG).show();
+    }
 
 }

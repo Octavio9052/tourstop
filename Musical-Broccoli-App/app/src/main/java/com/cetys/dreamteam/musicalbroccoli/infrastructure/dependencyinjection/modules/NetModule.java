@@ -38,7 +38,6 @@ public class NetModule {
     OkHttpClient providesOkHttpCache(Application application) {
         final OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
-
         builder.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS)
                 .readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
 
@@ -48,7 +47,7 @@ public class NetModule {
     @Singleton
     @Provides
     Gson providesGson() {
-        GsonBuilder gsonBuilder = new GsonBuilder();
+        final GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
         return gsonBuilder.create();
     }

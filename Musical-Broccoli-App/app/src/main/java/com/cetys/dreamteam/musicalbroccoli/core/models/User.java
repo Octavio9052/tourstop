@@ -14,15 +14,15 @@ import com.cetys.dreamteam.musicalbroccoli.core.enums.UserType;
 public class User extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
-    private ObservableInt id;
-    private ObservableField<String> password;
-    private ObservableField<String> firstName;
-    private ObservableField<String> lastName;
-    private ObservableField<String> email;
-    private ObservableField<String> phone;
+    private int id;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phone;
     private LanguageCode languageCode;
     private UserType userType;
-    private ObservableInt addressId;
+    private int addressId;
 
     private Address address;
     private ObservableArrayList<Message> messages;
@@ -34,80 +34,60 @@ public class User extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public int getId() {
-        return id.get();
+        return id;
     }
 
     public void setId(int id) {
-        if (this.id == null)
-            this.id = new ObservableInt(id);
-        else
-            this.id.set(id);
+        this.id = id;
     }
 
     public String getPassword() {
-        return password.get();
+        return password;
     }
 
     public void setPassword(String password) {
-        if (this.password == null)
-            this.password = new ObservableField<>(password);
-        else
-            this.password.set(password);
+            this.password = password;
     }
 
     public String getFirstName() {
-        return firstName.get();
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        if (this.firstName == null)
-            this.firstName = new ObservableField<>(firstName);
-        else
-            this.firstName.set(firstName);
+            this.firstName = firstName;
     }
 
     public String getLastName() {
-        return lastName.get();
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        if (this.lastName == null)
-            this.lastName = new ObservableField<>(lastName);
-        else
-            this.lastName.set(lastName);
+            this.lastName = lastName;
     }
 
     public String getEmail() {
-        return email.get();
+        return email;
     }
 
     public void setEmail(String email) {
-        if (this.email == null)
-            this.email = new ObservableField<>(email);
-        else
-            this.email.set(email);
+            this.email = email;
     }
 
     public String getPhone() {
-        return phone.get();
+        return phone;
     }
 
     public void setPhone(String phone) {
-        if (this.phone == null)
-            this.phone = new ObservableField<>(phone);
-        else
-            this.phone.set(phone);
+            this.phone = phone;
     }
 
     public int getAddressId() {
-        return addressId.get();
+        return addressId;
     }
 
     public void setAddressId(int addressId) {
-        if (this.addressId == null)
-            this.addressId = new ObservableInt(addressId);
-        else
-            this.addressId.set(addressId);
+
+            this.addressId = addressId;
     }
 
     public Address getAddress() {

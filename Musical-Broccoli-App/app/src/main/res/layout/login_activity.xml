@@ -63,7 +63,6 @@
 
                     <!-- Email field -->
                     <AutoCompleteTextView
-
                         android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="57dp"
@@ -73,8 +72,7 @@
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:padding="20dp"
-                        android:singleLine="true"
-                        android:text="@{viewModel.user.email}"
+                        android:text="@={viewModel.user.email}"
                         android:textAlignment="center"
                         />
 
@@ -99,7 +97,7 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:padding="20dp"
-                        android:singleLine="true"
+                        android:text="@={viewModel.user.password}"
                         android:textAlignment="center"/>
 
                 </android.support.design.widget.TextInputLayout>
@@ -113,7 +111,7 @@
                     android:layout_marginRight="50dp"
                     android:layout_marginTop="16dp"
                     android:background="@android:drawable/toast_frame"
-                    android:onClick="@{viewModel::onCreateUserClick}"
+                    android:onClick="@{viewModel::onLoginClick}"
                     android:text="@string/action_sign_in"
                     android:textStyle="bold"/>
 
@@ -125,7 +123,7 @@
                     android:layout_marginBottom="24dp"
                     android:layout_marginTop="25dp"
                     android:gravity="center"
-                    android:onClick="tempOnCreateUserClick"
+                    android:onClick="@{viewModel::onCreateUserClick}"
                     android:text="@string/sign_up"
                     android:textSize="16dip"/>
             </LinearLayout>

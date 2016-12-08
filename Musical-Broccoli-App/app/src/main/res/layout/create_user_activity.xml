@@ -95,7 +95,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter First Name"
-                    android:text="@{viewModel.user.firstName}"/>
+                    android:text="@={viewModel.user.firstName}"/>
 
                 <!--User LastName-->
                 <TextView
@@ -117,7 +117,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter Last Name"
-                    android:text="@{viewModel.user.lastName}"/>
+                    android:text="@={viewModel.user.lastName}"/>
 
                 <!--User Email-->
                 <TextView
@@ -139,7 +139,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter Email"
-                    android:text="@{viewModel.user.email}"/>
+                    android:text="@={viewModel.user.email}"/>
 
                 <!--User Password-->
                 <TextView
@@ -161,7 +161,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter Password"
-                    android:text="@{viewModel.user.password}"/>
+                    android:text="@={viewModel.user.password}"/>
 
                 <!--User Phone-->
                 <TextView
@@ -227,7 +227,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter Street 1"
-                    android:text="@{viewModel.user.address.street1}"/>
+                    android:text="@={viewModel.user.address.street1}"/>
 
                 <!--User Address Street2-->
                 <TextView
@@ -248,7 +248,8 @@
                     android:layout_below="@+id/textView8"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
-                    android:hint="Enter Street 2"/>
+                    android:hint="Enter Street 2"
+                    android:text="@={viewModel.user.address.street2}"/>
 
                 <!--User Address City-->
                 <TextView
@@ -270,7 +271,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter City"
-                    android:text="@{viewModel.user.address.city}"/>
+                    android:text="@={viewModel.user.address.city}"/>
 
                 <!--User Address State-->
                 <TextView
@@ -292,7 +293,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter State"
-                    android:text="@{viewModel.user.address.state}"/>
+                    android:text="@={viewModel.user.address.state}"/>
 
                 <!--Postal Code-->
                 <TextView
@@ -314,7 +315,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter Zipcode"
-                    android:text="@{String.valueOf(viewModel.user.address.postalCode)}"/>
+                    android:text="@={String.valueOf(viewModel.user.address.postalCode)}"/>
 
                 <!--User Address Country-->
                 <TextView
@@ -336,7 +337,7 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/textfields"
                     android:hint="Enter Country Code"
-                    app:items="@{viewModel.countryCodes}"/>
+                    app:items="@={viewModel.countryCodes}"/>
 
                 <!--User User Type-->
                 <TextView

@@ -1,7 +1,9 @@
 package com.cetys.dreamteam.musicalbroccoli.business.connectors;
 
 import android.content.Context;
+import android.widget.Toast;
 
+import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.core.models.Session;
 import com.cetys.dreamteam.musicalbroccoli.core.models.User;
@@ -112,12 +114,17 @@ public class UserConnectorImpl extends BaseConnectorImpl<User> implements UserCo
 
         @Override
         public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+            if (response.isSuccessful()) {
+                Toast.makeText(context, "Se Armo", Toast.LENGTH_SHORT).show();
 
+            } else {
+                Toast.makeText(context, "No Se Armo", Toast.LENGTH_SHORT).show();
+            }
         }
 
         @Override
         public void onFailure(Call<List<User>> call, Throwable t) {
-
+            showServerErrorToast();
         }
     }
 
@@ -130,7 +137,7 @@ public class UserConnectorImpl extends BaseConnectorImpl<User> implements UserCo
 
         @Override
         public void onFailure(Call<Boolean> call, Throwable t) {
-
+            showServerErrorToast();
         }
     }
 
@@ -139,16 +146,18 @@ public class UserConnectorImpl extends BaseConnectorImpl<User> implements UserCo
         @Override
         public void onResponse(Call<List<Session>> call, Response<List<Session>> response) {
             if (response.isSuccessful()) {
-
+                TourStopApplication.get(context).createUserComponent(response.body().get(0));
             } else {
-                //TODO: Wassup
+                Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }
         }
 
         @Override
         public void onFailure(Call<List<Session>> call, Throwable t) {
-//TODO: Wassup
+            showServerErrorToast();
+            Toast.makeText(context, t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
     }
     //</editor-fold>
+
 }

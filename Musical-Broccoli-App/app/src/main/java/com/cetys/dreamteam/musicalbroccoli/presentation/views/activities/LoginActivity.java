@@ -100,8 +100,8 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
 
-        // initActivityComponent();
-        //initBinding();
+        initActivityComponent();
+        initBinding();
     }
 
     private void populateAutoComplete() {
@@ -164,6 +164,15 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         }
     }
 
+    @Override
+    protected void initActivityComponent() {
+        //TODO: LoginActivity(this).inject???
+        TourStopApplication.get(this).getSessionSubcomponent()
+                .plus(new LoginActivityModule(this)).inject(this);
+    }
+
+    // TODO: Move all the viewModel
+
     private boolean mayRequestContacts() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
@@ -185,8 +194,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         }
         return false;
     }
-
-    // TODO: Move all the viewModel
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
@@ -234,21 +241,14 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
         }
     }
 
-    public void tempOnCreateUserClick(View view) {
-        Intent intent = new Intent(LoginActivity.this, CreateUserActivity.class);
-        LoginActivity.this.startActivity(intent);
-    }
-
-    @Override
-    protected void initActivityComponent() {
-        //TODO: LoginActivity(this).inject???
-        TourStopApplication.get(this).getSessionSubcomponent()
-                .plus(new LoginActivityModule(this)).inject(this);
-    }
-
     @Override
     protected void initBinding() {
         binding.setViewModel(viewModel);
+    }
+
+    public void tempOnCreateUserClick(View view) {
+        Intent intent = new Intent(LoginActivity.this, CreateUserActivity.class);
+        LoginActivity.this.startActivity(intent);
     }
 
     /**
