@@ -4,9 +4,12 @@ import android.app.Application;
 import android.content.Context;
 
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.AppComponent;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.DaggerAppComponent;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.components.UserSubcomponent;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.AppModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.NetModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.UserModule;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.SessionModel;
 
 /**
  * @Author J. Pichardo on 11/11/2016.
@@ -21,10 +24,10 @@ public class TourStopApplication extends Application {
         return (TourStopApplication) context.getApplicationContext();
     }
 
-    public void createUserComponent(UserModel userModel) {
-        userSubcomponent = this.appComponent.plus(new UserModule(userModel));
+    public void createUserComponent(SessionModel session) {
+        userSubcomponent = this.appComponent.plus(new UserModule(session));
     }
-
+git add
     @Override
     public void onCreate() {
         super.onCreate();
@@ -34,7 +37,10 @@ public class TourStopApplication extends Application {
     }
 
     private void bootstrap() {
-//        this.appComponent = DaggerAppComponent.builder().build();
+        this.appComponent = DaggerAppComponent.builder()
+                .appModule(new AppModule(this))
+                .netModule(new NetModule())
+                .build();
     }
 
     public AppComponent getAppComponent() {

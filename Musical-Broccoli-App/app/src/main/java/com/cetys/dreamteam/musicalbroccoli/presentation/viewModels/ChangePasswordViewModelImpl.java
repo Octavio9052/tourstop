@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.cetys.dreamteam.musicalbroccoli.networking.services.BaseService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.ChangePasswordViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserProfileActivity;
@@ -13,17 +13,17 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserPro
 /**
  * Created by Octavio on 2016/11/20.
  */
-
 public class ChangePasswordViewModelImpl extends BaseModelViewModelImpl<UserModel> implements ChangePasswordViewModel {
 
-    public ChangePasswordViewModelImpl(Context context, BaseService<UserModel> baseService) {
-        super(context, baseService);
+    public ChangePasswordViewModelImpl(Context context, UserConnector connector) {
+        super(context, connector);
     }
 
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onSaveChangesClick(View view) {
-        doTemporalToastThing();
+        connector.update(model);
+
         Intent intent = new Intent(context, UserProfileActivity.class);
         context.startActivity(intent);
     }

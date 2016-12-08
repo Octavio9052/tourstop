@@ -1,8 +1,8 @@
 package com.cetys.dreamteam.musicalbroccoli.networking.services;
 
-import com.cetys.dreamteam.musicalbroccoli.commons.dtos.OrderModel;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.OrderModel;
 
 import java.util.List;
 
@@ -28,11 +28,11 @@ public interface OrderService extends BaseService<OrderModel> {
 
     @Override
     @PUT("order/")
-    Call update(@Body ReadWriteRequest<OrderModel> request);
+    Call<Boolean> update(@Body ReadWriteRequest<OrderModel> request);
 
     @Override
     @DELETE("order/")
-    Call delete(@Body ReadWriteRequest<OrderModel> request);
+    Call<Boolean> delete(@Body ReadWriteRequest<OrderModel> request);
 
 
 }

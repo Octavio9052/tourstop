@@ -3,7 +3,7 @@ package com.cetys.dreamteam.musicalbroccoli.networking.request;
 /**
  * @Author J. Pichardo on 11/11/2016.
  */
-abstract class BaseRequest {
+public abstract class BaseRequest {
 
     private String authToken;
 

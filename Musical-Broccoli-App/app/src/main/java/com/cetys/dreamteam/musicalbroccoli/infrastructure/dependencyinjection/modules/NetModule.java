@@ -25,11 +25,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class NetModule {
 
-    private String baseUrl;
-
-    public NetModule(String baseUrl) {
-        this.baseUrl = baseUrl;
-    }
+    private String baseUrl = "http://localhost:5000/api/";
 
     @Singleton
     @Provides
@@ -48,7 +44,6 @@ public class NetModule {
 
         return builder.build();
     }
-
 
     @Singleton
     @Provides

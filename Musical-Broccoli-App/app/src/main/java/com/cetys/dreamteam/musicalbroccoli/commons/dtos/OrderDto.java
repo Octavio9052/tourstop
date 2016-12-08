@@ -1,6 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.commons.dtos;
 
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.PaymentType;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.BaseModel;
 
 import java.util.Date;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  * Created by Octavio on 2016/11/12.
  */
 
-public class OrderModel {
+public class OrderDto extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private int id;

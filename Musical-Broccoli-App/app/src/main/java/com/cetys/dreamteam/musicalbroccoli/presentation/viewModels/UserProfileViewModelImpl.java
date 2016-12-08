@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
@@ -19,7 +20,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.Wishlis
 
 public class UserProfileViewModelImpl extends BaseModelViewModelImpl<UserModel> implements UserProfileViewModel {
 
-    public UserProfileViewModelImpl(Context context, UserService baseService) {
+    public UserProfileViewModelImpl(Context context, UserConnector baseService) {
         super(context, baseService);
     }
 

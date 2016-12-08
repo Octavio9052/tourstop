@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CheckpointActivity;
@@ -19,14 +19,14 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPag
 public class CreateTourViewModelImpl extends BaseModelViewModelImpl<TourModel> implements CreateTourViewModel {
 
 
-    public CreateTourViewModelImpl(Context context, TourService service) {
+    public CreateTourViewModelImpl(Context context, TourConnector service) {
         super(context, service);
     }
 
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onSaveClick(View view) {
-        create();
+        connector.create(model);
         // TODO: Currently redirects to MainPage, may change to the new Tour just created.
         Intent intent = new Intent(context, MainPageActivity.class);
         context.startActivity(intent);

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateUserActivity;
@@ -26,11 +27,6 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
     public UserModel getUser() {
         return user;
     }
@@ -42,6 +38,9 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
 
     @Override
     public void onCreateUserClick(View view) {
+
+        TourStopApplication.get(context).createUserComponent(user);
+
         Intent intent = new Intent(context, CreateUserActivity.class);
         context.startActivity(intent);
     }

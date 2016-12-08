@@ -24,7 +24,7 @@ public class UserDto extends BaseDto {
 
     private List<MessageModel> messages;
     private List<TourDto> tours;
-    private List<OrderModel> orders;
+    private List<OrderDto> orders;
     private List<RatingDto> ratings;
     private List<ReservationDto> reservations;
     //</editor-fold>
@@ -110,11 +110,11 @@ public class UserDto extends BaseDto {
         this.tours = tours;
     }
 
-    public List<OrderModel> getOrders() {
+    public List<OrderDto> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<OrderModel> orders) {
+    public void setOrders(List<OrderDto> orders) {
         this.orders = orders;
     }
 

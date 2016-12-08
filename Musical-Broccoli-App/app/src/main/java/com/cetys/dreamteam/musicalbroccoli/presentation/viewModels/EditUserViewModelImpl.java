@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
@@ -18,8 +18,8 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserPro
 
 public class EditUserViewModelImpl extends BaseModelViewModelImpl<UserModel> implements EditUserViewModel {
 
-    public EditUserViewModelImpl(Context context, UserService service) {
-        super(context, service);
+    public EditUserViewModelImpl(Context context, UserConnector connector) {
+        super(context, connector);
     }
 
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
@@ -37,7 +37,7 @@ public class EditUserViewModelImpl extends BaseModelViewModelImpl<UserModel> imp
 
     @Override
     public void onSaveChangesClick(View view) {
-        update();
+        connector.update(model);
         Intent intent = new Intent(context, UserProfileActivity.class);
         context.startActivity(intent);
     }

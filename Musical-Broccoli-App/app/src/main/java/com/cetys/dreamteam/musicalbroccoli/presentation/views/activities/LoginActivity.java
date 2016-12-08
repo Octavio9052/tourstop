@@ -89,13 +89,13 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
+//        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+//        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                attemptLogin();
+//            }
+//        });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
@@ -333,14 +333,13 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
+            // TODO: attempt authentication against a network connector.
 
             try {
                 // Simulate network access.
                 Thread.sleep(2000);
                 // TODO: Temp stuff below
-                Intent intent = new Intent(LoginActivity.this, MainPageActivity.class);
-                LoginActivity.this.startActivity(intent);
+//                viewModel.onCreateUserClick(this);
                 // TODO: Temp stuff above
             } catch (InterruptedException e) {
                 return false;

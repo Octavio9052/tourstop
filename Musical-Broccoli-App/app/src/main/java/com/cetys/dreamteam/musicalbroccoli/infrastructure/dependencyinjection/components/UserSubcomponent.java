@@ -44,6 +44,7 @@ import dagger.Subcomponent;
 @UserScope
 @Subcomponent(modules = {UserModule.class, ServiceModule.class})
 public interface UserSubcomponent {
+
     CardPaymentActivitySubcomponent plus(CardPaymentActivityModule module);
 
     ChangePasswordActivitySubcomponent plus(ChangePasswordActivityModule module);

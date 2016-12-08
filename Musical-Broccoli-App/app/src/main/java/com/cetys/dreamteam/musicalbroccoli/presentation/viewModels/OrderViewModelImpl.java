@@ -19,9 +19,4 @@ public class OrderViewModelImpl extends BaseViewModel implements OrderViewModel 
 
     }
 
-    @Override
-    protected void initCallbacks() {
-
-    }
-
 }

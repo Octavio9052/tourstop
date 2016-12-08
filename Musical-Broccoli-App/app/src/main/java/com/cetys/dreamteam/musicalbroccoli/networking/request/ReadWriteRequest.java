@@ -1,6 +1,5 @@
 package com.cetys.dreamteam.musicalbroccoli.networking.request;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,12 +20,5 @@ public class ReadWriteRequest<T> extends BaseRequest {
         return this;
     }
     //</editor-fold>
-
-    public ReadWriteRequest<T> addModel(T model) {
-        if (data == null) data = new ArrayList<>();
-        data.add(model);
-
-        return this;
-    }
 
 }

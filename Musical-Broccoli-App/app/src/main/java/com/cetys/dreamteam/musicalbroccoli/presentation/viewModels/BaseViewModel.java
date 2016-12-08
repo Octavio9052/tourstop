@@ -15,5 +15,4 @@ public abstract class BaseViewModel {
 
     protected abstract void load();
 
-    protected abstract void initCallbacks();
 }

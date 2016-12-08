@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
-import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
@@ -27,8 +27,8 @@ public class CreateUserViewModelImpl extends BaseModelViewModelImpl<UserModel> i
     private List<CountryCode> countryCodes;
     //</editor-fold>
 
-    public CreateUserViewModelImpl(Context context, UserService baseService) {
-        super(context, baseService);
+    public CreateUserViewModelImpl(Context context, UserConnector connector) {
+        super(context, connector);
 
         load();
     }
@@ -53,7 +53,7 @@ public class CreateUserViewModelImpl extends BaseModelViewModelImpl<UserModel> i
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onSaveChangesClick(View view) {
-        create();
+        connector.create(model);
         Intent intent = new Intent(context, MainPageActivity.class);
         context.startActivity(intent);
     }

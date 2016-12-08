@@ -1,6 +1,5 @@
 package com.cetys.dreamteam.musicalbroccoli.networking.request;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +11,7 @@ public class ReadRequest extends BaseRequest {
     private List<Filter> filters;
 
     //<editor-fold desc="Property Accessors" defaulstate="collapsed">
-    public List getFilters() {
+    public List<Filter> getFilters() {
         return filters;
     }
 
@@ -21,11 +20,5 @@ public class ReadRequest extends BaseRequest {
         return this;
     }
     //</editor-fold>
-
-    public ReadRequest addFilter(Filter filter) {
-        if (filters == null) filters = new ArrayList<Filter>();
-        filters.add(filter);
-        return this;
-    }
 
 }

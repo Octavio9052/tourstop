@@ -26,11 +26,6 @@ public class CreatePromotionViewModelImpl extends BaseViewModel implements Creat
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
     public PromotionModel getPromotion() {
         return this.promotion;
     }
