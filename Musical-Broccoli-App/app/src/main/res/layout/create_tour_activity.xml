@@ -112,7 +112,7 @@ enter requirements = -->
                     android:maxLines="1"
                     android:nextFocusDown="@id/edit_price_createTour"
                     android:nextFocusUp="@id/edit_name_createTour"
-                    android:text="@{viewModel.model.title}"/>
+                    android:text="@{viewModel.tour.title}"/>
 
                 <TextView
                     android:id="@+id/tv_price_createTour"
@@ -139,7 +139,7 @@ enter requirements = -->
                     android:maxLines="1"
                     android:nextFocusDown="@id/edit_destination_createTour"
                     android:nextFocusUp="@id/edit_name_createTour"
-                    android:text="@{Float.toString(viewModel.model.pricePerReservation)}"/>
+                    android:text="@{Float.toString(viewModel.tour.pricePerReservation)}"/>
 
                 <TextView
                     android:id="@+id/tv_destination_createTour"
@@ -236,9 +236,8 @@ enter requirements = -->
                     android:background="@drawable/textfields"
                     android:hint="@string/hint_max_seats"
                     android:maxLines="1"
-                    android:nextFocusUp="@id/edit_description_createTour"/>
-                <!--  android:text="@{viewModel.model.maxReservations}"-->
-                <!-- TODO: This might be failing bacuse of above line -->
+                    android:nextFocusUp="@id/edit_description_createTour"
+                    android:text="@{String.valueOf(viewModel.tour.maxReservations)}"/>
 
 
                 <!-- Promotions of tour

@@ -6,14 +6,14 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.ChangePasswordViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserProfileActivity;
 
 /**
  * Created by Octavio on 2016/11/20.
  */
-public class ChangePasswordViewModelImpl extends BaseModelViewModelImpl<UserModel> implements ChangePasswordViewModel {
+public class ChangePasswordViewModelImpl extends BaseModelViewModelImpl<User> implements ChangePasswordViewModel {
 
     public ChangePasswordViewModelImpl(Context context, UserConnector connector) {
         super(context, connector);

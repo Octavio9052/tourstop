@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Created by Octavio on 2016/11/12.
  */
-public class MessageModel extends BaseModel {
+public class Message extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;

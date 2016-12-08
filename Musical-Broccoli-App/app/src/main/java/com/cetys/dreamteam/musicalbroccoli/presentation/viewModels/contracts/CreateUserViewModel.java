@@ -3,7 +3,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 import android.view.View;
 
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 
 import java.util.List;
 
@@ -11,7 +11,11 @@ import java.util.List;
  * Created by Octavio on 2016/12/04.
  */
 
-public interface CreateUserViewModel extends BaseModelViewModel<UserModel> {
+public interface CreateUserViewModel {
+
+    User getUser();
+
+    void setUser(User user);
 
     List<CountryCode> getCountryCodes();
 

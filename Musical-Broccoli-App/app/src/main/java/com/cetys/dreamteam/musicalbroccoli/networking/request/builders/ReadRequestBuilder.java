@@ -3,7 +3,7 @@ package com.cetys.dreamteam.musicalbroccoli.networking.request.builders;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.Filter;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadRequest;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.SessionModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Session;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import javax.inject.Inject;
 @UserScope
 public class ReadRequestBuilder extends RequestBuilder<ReadRequest> {
     @Inject
-    public ReadRequestBuilder(SessionModel session) {
+    public ReadRequestBuilder(Session session) {
         super(session);
     }
 

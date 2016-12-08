@@ -6,7 +6,7 @@ import android.databinding.ObservableInt;
 /**
  * Created by Octavio on 2016/11/12.
  */
-public class RatingModel extends BaseModel {
+public class Rating extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;

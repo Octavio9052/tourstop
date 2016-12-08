@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.PromotionModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Promotion;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreatePromotionViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 
@@ -14,7 +14,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateT
  */
 
 public class CreatePromotionViewModelImpl extends BaseViewModel implements CreatePromotionViewModel {
-    private PromotionModel promotion;
+    private Promotion promotion;
 
     public CreatePromotionViewModelImpl(Context context) {
         super(context);
@@ -26,12 +26,12 @@ public class CreatePromotionViewModelImpl extends BaseViewModel implements Creat
     }
 
     @Override
-    public PromotionModel getPromotion() {
+    public Promotion getPromotion() {
         return this.promotion;
     }
 
     @Override
-    public void setPromotion(PromotionModel promotion) {
+    public void setPromotion(Promotion promotion) {
         this.promotion = promotion;
     }
 

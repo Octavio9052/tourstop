@@ -6,6 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.EditUserActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.EditUserViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
@@ -32,7 +33,7 @@ public class EditUserActivityModule {
 
     @ActivityScope
     @Provides
-    EditUserViewModel providesEditUserViewModel(UserService service) {
+    EditUserViewModel providesEditUserViewModel(UserConnector service) {
         return new EditUserViewModelImpl(this.activity, service);
     }
 

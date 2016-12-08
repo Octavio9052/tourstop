@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.networking.services;
 
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
 
 import java.util.List;
 
@@ -16,23 +16,18 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface TourService extends BaseService<TourModel> {
+public interface TourService {
 
-    @Override
     @GET("tour/")
-    Call<List<TourModel>> get(@Body ReadRequest request);
+    Call<List<Tour>> get(@Body ReadRequest request);
 
-    @Override
     @POST("tour/")
-    Call<List<TourModel>> create(@Body ReadWriteRequest<TourModel> request);
+    Call<List<Tour>> create(@Body ReadWriteRequest<Tour> request);
 
-    @Override
     @PUT("tour/")
-    Call update(@Body ReadWriteRequest<TourModel> request);
+    Call update(@Body ReadWriteRequest<Tour> request);
 
-    @Override
     @DELETE("tour/")
-    Call delete(@Body ReadWriteRequest<TourModel> request);
-
+    Call delete(@Body ReadWriteRequest<Tour> request);
 
 }

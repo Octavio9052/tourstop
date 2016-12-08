@@ -11,7 +11,7 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
  * Created by Octavio on 2016/11/12.
  */
 
-public class UserModel extends BaseModel {
+public class User extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;
@@ -24,12 +24,12 @@ public class UserModel extends BaseModel {
     private UserType userType;
     private ObservableInt addressId;
 
-    private AddressModel address;
-    private ObservableArrayList<MessageModel> messages;
-    private ObservableArrayList<TourModel> tours;
-    private ObservableArrayList<OrderModel> orders;
-    private ObservableArrayList<RatingModel> ratings;
-    private ObservableArrayList<ReservationModel> reservations;
+    private Address address;
+    private ObservableArrayList<Message> messages;
+    private ObservableArrayList<Tour> tours;
+    private ObservableArrayList<Order> orders;
+    private ObservableArrayList<Rating> ratings;
+    private ObservableArrayList<Reservation> reservations;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
@@ -110,51 +110,51 @@ public class UserModel extends BaseModel {
             this.addressId.set(addressId);
     }
 
-    public AddressModel getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(AddressModel address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public ObservableArrayList<ReservationModel> getReservations() {
+    public ObservableArrayList<Reservation> getReservations() {
         return reservations;
     }
 
-    public void setReservations(ObservableArrayList<ReservationModel> reservations) {
+    public void setReservations(ObservableArrayList<Reservation> reservations) {
         this.reservations = reservations;
     }
 
-    public ObservableArrayList<RatingModel> getRatings() {
+    public ObservableArrayList<Rating> getRatings() {
         return ratings;
     }
 
-    public void setRatings(ObservableArrayList<RatingModel> ratings) {
+    public void setRatings(ObservableArrayList<Rating> ratings) {
         this.ratings = ratings;
     }
 
-    public ObservableArrayList<OrderModel> getOrders() {
+    public ObservableArrayList<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(ObservableArrayList<OrderModel> orders) {
+    public void setOrders(ObservableArrayList<Order> orders) {
         this.orders = orders;
     }
 
-    public ObservableArrayList<TourModel> getTours() {
+    public ObservableArrayList<Tour> getTours() {
         return tours;
     }
 
-    public void setTours(ObservableArrayList<TourModel> tours) {
+    public void setTours(ObservableArrayList<Tour> tours) {
         this.tours = tours;
     }
 
-    public ObservableArrayList<MessageModel> getMessages() {
+    public ObservableArrayList<Message> getMessages() {
         return messages;
     }
 
-    public void setMessages(ObservableArrayList<MessageModel> messages) {
+    public void setMessages(ObservableArrayList<Message> messages) {
         this.messages = messages;
     }
 

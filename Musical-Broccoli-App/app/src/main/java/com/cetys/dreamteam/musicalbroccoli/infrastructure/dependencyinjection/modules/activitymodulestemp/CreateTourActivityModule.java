@@ -6,6 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.CreateTourActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CreateTourViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateTourViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
@@ -32,7 +33,7 @@ public class CreateTourActivityModule {
 
     @ActivityScope
     @Provides
-    CreateTourViewModel providesCreateTourViewModel(TourService service) {
+    CreateTourViewModel providesCreateTourViewModel(TourConnector service) {
         return new CreateTourViewModelImpl(this.activity, service);
     }
 

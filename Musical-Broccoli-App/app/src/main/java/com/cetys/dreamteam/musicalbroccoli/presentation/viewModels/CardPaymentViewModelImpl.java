@@ -27,11 +27,6 @@ public class CardPaymentViewModelImpl extends BaseViewModel implements CardPayme
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
     public void onRadioButtonClick(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 

@@ -18,8 +18,4 @@ public class WishlistViewModelImpl extends BaseViewModel implements WishlistView
 
     }
 
-    @Override
-    protected void initCallbacks() {
-
-    }
 }

@@ -23,11 +23,6 @@ public class CheckpointViewModelImpl extends BaseViewModel implements Checkpoint
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
     public void onConfirmClick(View view) {
         doTemporalToastThing();
         Intent intent = new Intent(context, CreateTourActivity.class);

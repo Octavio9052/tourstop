@@ -4,9 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
@@ -18,16 +17,34 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.Wishlis
  * Created by Octavio on 2016/11/16.
  */
 
-public class UserProfileViewModelImpl extends BaseModelViewModelImpl<UserModel> implements UserProfileViewModel {
+public class UserProfileViewModelImpl extends BaseViewModel implements UserProfileViewModel {
 
-    public UserProfileViewModelImpl(Context context, UserConnector baseService) {
-        super(context, baseService);
+    //<editor-fold desc="Instance Properties" defaultstate="collapsed">
+    private final UserConnector connector;
+    //</editor-fold>
+    
+    public UserProfileViewModelImpl(Context context, UserConnector connector) {
+        super(context);
+
+        this.connector = connector;
     }
 
     @Override
     protected void load() {
 
     }
+
+    //<editor-fold desc="Property Accessors" defaultstate="collapsed">
+    @Override
+    public User getUser() {
+        return null;
+    }
+
+    @Override
+    public void setUser(User user) {
+
+    }
+    //</editor-fold>
 
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override

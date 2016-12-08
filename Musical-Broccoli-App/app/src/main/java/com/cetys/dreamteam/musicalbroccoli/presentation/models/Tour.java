@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * Created by Octavio on 2016/11/12.
  */
-public class TourModel extends BaseModel {
+public class Tour extends BaseModel {
 
     //<editor-fold desc="Instance Properties" defaulstate="collapsed">
     private ObservableInt id;
@@ -25,9 +25,9 @@ public class TourModel extends BaseModel {
     private ObservableField<String> description;
 
 
-    private ObservableArrayList<ReservationModel> reservations;
+    private ObservableArrayList<Reservation> reservations;
 
-    private ObservableArrayList<RatingModel> ratings;
+    private ObservableArrayList<Rating> ratings;
 
     //</editor-fold>
 
@@ -125,19 +125,19 @@ public class TourModel extends BaseModel {
         this.dateModified = dateModified;
     }
 
-    public ObservableArrayList<RatingModel> getRatings() {
+    public ObservableArrayList<Rating> getRatings() {
         return ratings;
     }
 
-    public void setRatings(ObservableArrayList<RatingModel> ratings) {
+    public void setRatings(ObservableArrayList<Rating> ratings) {
         this.ratings = ratings;
     }
 
-    public ObservableArrayList<ReservationModel> getReservations() {
+    public ObservableArrayList<Reservation> getReservations() {
         return reservations;
     }
 
-    public void setReservations(ObservableArrayList<ReservationModel> reservations) {
+    public void setReservations(ObservableArrayList<Reservation> reservations) {
         this.reservations = reservations;
     }
     //</editor-fold>

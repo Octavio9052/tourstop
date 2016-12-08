@@ -1,6 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules;
 
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadWriteRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.OrderService;
@@ -9,10 +9,9 @@ import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.OrderConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.OrderModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.SessionModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Order;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 
 import dagger.Module;
 import dagger.Provides;
@@ -23,46 +22,22 @@ import dagger.Provides;
 @Module
 public class ConnectorModule {
 
-    @ActivityScope
+    @UserScope
     @Provides
-    public UserConnector providesUserConnector(UserService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<UserModel> readWriteRequestBuilder) {
+    public UserConnector providesUserConnector(UserService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<User> readWriteRequestBuilder) {
         return new UserConnector(readWriteRequestBuilder, readRequestBuilder, service);
     }
 
-    @ActivityScope
+    @UserScope
     @Provides
-    public TourConnector providesTourConnector(TourService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<TourModel> readWriteRequestBuilder) {
+    public TourConnector providesTourConnector(TourService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<Tour> readWriteRequestBuilder) {
         return new com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector(readWriteRequestBuilder, readRequestBuilder, service);
     }
 
-    @ActivityScope
+    @UserScope
     @Provides
-    public OrderConnector providesOrderConnector(OrderService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<OrderModel> readWriteRequestBuilder) {
+    public OrderConnector providesOrderConnector(OrderService service, ReadRequestBuilder readRequestBuilder, ReadWriteRequestBuilder<Order> readWriteRequestBuilder) {
         return new OrderConnector(readWriteRequestBuilder, readRequestBuilder, service);
-    }
-
-    @ActivityScope
-    @Provides
-    public ReadRequestBuilder providesReadRequestBuilder(SessionModel session) {
-        return new ReadRequestBuilder(session);
-    }
-
-    @ActivityScope
-    @Provides
-    public ReadWriteRequestBuilder<UserModel> providesUserReadWriteRequestBuilder(SessionModel session) {
-        return new ReadWriteRequestBuilder<>(session);
-    }
-
-    @ActivityScope
-    @Provides
-    public ReadWriteRequestBuilder<TourModel> providesTourReadWriteRequestBuilder(SessionModel session) {
-        return new ReadWriteRequestBuilder<>(session);
-    }
-
-    @ActivityScope
-    @Provides
-    public ReadWriteRequestBuilder<OrderModel> providesOrderReadWriteRequestBuilder(SessionModel session) {
-        return new ReadWriteRequestBuilder<>(session);
     }
 
 }

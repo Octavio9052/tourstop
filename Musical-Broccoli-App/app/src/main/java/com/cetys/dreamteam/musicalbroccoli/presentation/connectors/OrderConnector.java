@@ -6,7 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadWriteRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.OrderService;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.OrderModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Order;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,13 +20,13 @@ import retrofit2.Response;
  * @Author J. Pichardo on 12/7/2016.
  */
 
-public class OrderConnector extends BaseConnector<OrderModel> {
+public class OrderConnector extends BaseConnector<Order> {
 
     private final OrderService service;
-    private Callback<List<OrderModel>> createCallback;
+    private Callback<List<Order>> createCallback;
     private Callback<Boolean> updateDeleteCallback;
 
-    public OrderConnector(ReadWriteRequestBuilder<OrderModel> readWriteRequestBuilder,
+    public OrderConnector(ReadWriteRequestBuilder<Order> readWriteRequestBuilder,
                           ReadRequestBuilder readRequestBuilder, OrderService service) {
         super(readWriteRequestBuilder, readRequestBuilder);
         this.service = service;
@@ -39,12 +39,12 @@ public class OrderConnector extends BaseConnector<OrderModel> {
     }
 
     @Override
-    public List<OrderModel> getAll() throws IOException {
+    public List<Order> getAll() throws IOException {
         return getByFilters(new ArrayList<Filter>());
     }
 
     @Override
-    public OrderModel getById(int id) throws IOException {
+    public Order getById(int id) throws IOException {
         Filter idFilter = new Filter()
                 .setPropertyName("id")
                 .setRelationship("=")
@@ -57,11 +57,11 @@ public class OrderConnector extends BaseConnector<OrderModel> {
     }
 
     @Override
-    public List<OrderModel> getByFilters(List<Filter> filters) throws IOException {
+    public List<Order> getByFilters(List<Filter> filters) throws IOException {
         ReadRequest request = readRequestBuilder.addFilters(filters).build();
 
-        Call<List<OrderModel>> call = service.get(request);
-        Response<List<OrderModel>> response = call.execute();
+        Call<List<Order>> call = service.get(request);
+        Response<List<Order>> response = call.execute();
         if (response.isSuccessful()) {
             return response.body();
         } else {
@@ -70,35 +70,35 @@ public class OrderConnector extends BaseConnector<OrderModel> {
     }
 
     @Override
-    public void create(OrderModel model) {
-        ReadWriteRequest<OrderModel> request = readWriteRequestBuilder.addData(model).build();
+    public void create(Order model) {
+        ReadWriteRequest<Order> request = readWriteRequestBuilder.addData(model).build();
 
         service.create(request).enqueue(createCallback);
     }
 
     @Override
-    public void update(OrderModel model) {
-        ReadWriteRequest<OrderModel> request = readWriteRequestBuilder.addData(model).build();
+    public void update(Order model) {
+        ReadWriteRequest<Order> request = readWriteRequestBuilder.addData(model).build();
 
         service.update(request).enqueue(updateDeleteCallback);
     }
 
     @Override
-    public void delete(OrderModel model) {
-        ReadWriteRequest<OrderModel> request = readWriteRequestBuilder.addData(model).build();
+    public void delete(Order model) {
+        ReadWriteRequest<Order> request = readWriteRequestBuilder.addData(model).build();
 
         service.delete(request).enqueue(updateDeleteCallback);
     }
 
-    private class CreateCallback implements Callback<List<OrderModel>> {
+    private class CreateCallback implements Callback<List<Order>> {
 
         @Override
-        public void onResponse(Call<List<OrderModel>> call, Response<List<OrderModel>> response) {
+        public void onResponse(Call<List<Order>> call, Response<List<Order>> response) {
 
         }
 
         @Override
-        public void onFailure(Call<List<OrderModel>> call, Throwable t) {
+        public void onFailure(Call<List<Order>> call, Throwable t) {
 
         }
     }

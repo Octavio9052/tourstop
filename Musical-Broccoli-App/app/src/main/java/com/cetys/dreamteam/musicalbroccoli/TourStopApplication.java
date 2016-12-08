@@ -9,7 +9,7 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.co
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.AppModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.NetModule;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.UserModule;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.SessionModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Session;
 
 /**
  * @Author J. Pichardo on 11/11/2016.
@@ -24,10 +24,10 @@ public class TourStopApplication extends Application {
         return (TourStopApplication) context.getApplicationContext();
     }
 
-    public void createUserComponent(SessionModel session) {
+    public void createUserComponent(Session session) {
         userSubcomponent = this.appComponent.plus(new UserModule(session));
     }
-git add
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -41,6 +41,7 @@ git add
                 .appModule(new AppModule(this))
                 .netModule(new NetModule())
                 .build();
+        this.userSubcomponent = appComponent.plus(new UserModule(new Session()));
     }
 
     public AppComponent getAppComponent() {

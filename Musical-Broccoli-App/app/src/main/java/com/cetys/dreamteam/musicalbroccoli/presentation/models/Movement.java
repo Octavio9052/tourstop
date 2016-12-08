@@ -2,36 +2,38 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.models;
 
 import android.databinding.ObservableInt;
 
+import com.cetys.dreamteam.musicalbroccoli.commons.enums.MovementType;
+
 import java.util.Date;
 
 /**
  * Created by Octavio on 2016/11/12.
  */
-public class CheckpointModel extends BaseModel {
+public class Movement extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;
-    private Date startTime;
-    private Date endTime;
-    private ObservableInt addressId;
+    private MovementType movementType;
+    private Date dateCreated;
     private ObservableInt tourId;
+    private ObservableInt reservationId;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
-    public Date getStartTime() {
-        return startTime;
+    public MovementType getMovementType() {
+        return movementType;
     }
 
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+    public void setMovementType(MovementType movementType) {
+        this.movementType = movementType;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getDateCreated() {
+        return dateCreated;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
     public int getId() {
@@ -45,17 +47,6 @@ public class CheckpointModel extends BaseModel {
             this.id.set(id);
     }
 
-    public int getAddressId() {
-        return addressId.get();
-    }
-
-    public void setAddressId(int addressId) {
-        if (this.addressId == null)
-            this.addressId = new ObservableInt(addressId);
-        else
-            this.addressId.set(addressId);
-    }
-
     public int getTourId() {
         return tourId.get();
     }
@@ -65,6 +56,17 @@ public class CheckpointModel extends BaseModel {
             this.tourId = new ObservableInt(tourId);
         else
             this.tourId.set(tourId);
+    }
+
+    public int getReservationId() {
+        return reservationId.get();
+    }
+
+    public void setReservationId(int reservationId) {
+        if (this.reservationId == null)
+            this.reservationId = new ObservableInt(reservationId);
+        else
+            this.reservationId.set(reservationId);
     }
     //</editor-fold>
 

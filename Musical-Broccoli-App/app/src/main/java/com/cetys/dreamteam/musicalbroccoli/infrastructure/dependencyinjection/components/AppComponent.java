@@ -21,8 +21,6 @@ public interface AppComponent {
 
     UserSubcomponent plus(UserModule module);
 
-    LoginActivitySubcomponent plus(LoginActivityModule module);
 
-    CreateUserActivitySubcomponent plus(CreateUserActivityModule module);
 
 }

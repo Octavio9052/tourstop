@@ -19,16 +19,16 @@ import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.LoginActivityBinding;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.LoginActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.LoginViewModel;
 
 import java.util.ArrayList;
@@ -241,8 +241,9 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
     @Override
     protected void initActivityComponent() {
-        // TODO: LoginActivity(this).inject???
-        // TourStopApplication.get(this).getAppComponent().plus(new LoginActivityModule(this).inject(this));
+        //TODO: LoginActivity(this).inject???
+        TourStopApplication.get(this).getUserSubcomponent()
+                .plus(new LoginActivityModule(this)).inject(this);
     }
 
     @Override

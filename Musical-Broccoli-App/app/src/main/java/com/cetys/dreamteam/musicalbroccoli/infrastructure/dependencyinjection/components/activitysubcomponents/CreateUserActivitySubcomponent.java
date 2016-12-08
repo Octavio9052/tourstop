@@ -11,7 +11,7 @@ import dagger.Subcomponent;
  * Created by Octavio on 2016/12/04.
  */
 @ActivityScope
-@Subcomponent(modules = {CreateUserActivityModule.class, ConnectorModule.class})
+@Subcomponent(modules = CreateUserActivityModule.class)
 public interface CreateUserActivitySubcomponent {
     void inject(CreateUserActivity createUserActivity);
 }

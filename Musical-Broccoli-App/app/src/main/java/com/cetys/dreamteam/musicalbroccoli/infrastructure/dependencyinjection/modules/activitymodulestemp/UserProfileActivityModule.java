@@ -6,6 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.UserProfileActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.UserProfileViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserProfileActivity;
@@ -32,7 +33,7 @@ public class UserProfileActivityModule {
 
     @ActivityScope
     @Provides
-    UserProfileViewModel providesUserProfileViewModel(UserService service) {
+    UserProfileViewModel providesUserProfileViewModel(UserConnector service) {
         return new UserProfileViewModelImpl(this.activity, service);
     }
 

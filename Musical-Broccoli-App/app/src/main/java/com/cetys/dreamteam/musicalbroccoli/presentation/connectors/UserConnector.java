@@ -6,7 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadWriteRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,13 +20,13 @@ import retrofit2.Response;
  * @Author J. Pichardo on 12/7/2016.
  */
 
-public class UserConnector extends BaseConnector<UserModel> {
+public class UserConnector extends BaseConnector<User> {
 
     private final UserService service;
-    private Callback<List<UserModel>> createCallback;
+    private Callback<List<User>> createCallback;
     private Callback<Boolean> updateDeleteCallback;
 
-    public UserConnector(ReadWriteRequestBuilder<UserModel> readWriteRequestBuilder,
+    public UserConnector(ReadWriteRequestBuilder<User> readWriteRequestBuilder,
                          ReadRequestBuilder readRequestBuilder, UserService service) {
         super(readWriteRequestBuilder, readRequestBuilder);
         this.service = service;
@@ -40,12 +40,12 @@ public class UserConnector extends BaseConnector<UserModel> {
     }
 
     @Override
-    public List<UserModel> getAll() throws IOException {
+    public List<User> getAll() throws IOException {
         return getByFilters(new ArrayList<Filter>());
     }
 
     @Override
-    public UserModel getById(int id) throws IOException {
+    public User getById(int id) throws IOException {
         Filter idFilter = new Filter()
                 .setPropertyName("id")
                 .setRelationship("=")
@@ -58,11 +58,11 @@ public class UserConnector extends BaseConnector<UserModel> {
     }
 
     @Override
-    public List<UserModel> getByFilters(List<Filter> filters) throws IOException {
+    public List<User> getByFilters(List<Filter> filters) throws IOException {
         ReadRequest request = readRequestBuilder.addFilters(filters).build();
 
-        Call<List<UserModel>> call = service.get(request);
-        Response<List<UserModel>> response = call.execute();
+        Call<List<User>> call = service.get(request);
+        Response<List<User>> response = call.execute();
         if (response.isSuccessful()) {
             return response.body();
         } else {
@@ -71,35 +71,35 @@ public class UserConnector extends BaseConnector<UserModel> {
     }
 
     @Override
-    public void create(UserModel model) {
-        ReadWriteRequest<UserModel> request = readWriteRequestBuilder.addData(model).build();
+    public void create(User model) {
+        ReadWriteRequest<User> request = readWriteRequestBuilder.addData(model).build();
 
         service.create(request).enqueue(createCallback);
     }
 
     @Override
-    public void update(UserModel model) {
-        ReadWriteRequest<UserModel> request = readWriteRequestBuilder.addData(model).build();
+    public void update(User model) {
+        ReadWriteRequest<User> request = readWriteRequestBuilder.addData(model).build();
 
         service.update(request).enqueue(updateDeleteCallback);
     }
 
     @Override
-    public void delete(UserModel model) {
-        ReadWriteRequest<UserModel> request = readWriteRequestBuilder.addData(model).build();
+    public void delete(User model) {
+        ReadWriteRequest<User> request = readWriteRequestBuilder.addData(model).build();
 
         service.delete(request).enqueue(updateDeleteCallback);
     }
 
-    private class CreateCallback implements Callback<List<UserModel>> {
+    private class CreateCallback implements Callback<List<User>> {
 
         @Override
-        public void onResponse(Call<List<UserModel>> call, Response<List<UserModel>> response) {
+        public void onResponse(Call<List<User>> call, Response<List<User>> response) {
 
         }
 
         @Override
-        public void onFailure(Call<List<UserModel>> call, Throwable t) {
+        public void onFailure(Call<List<User>> call, Throwable t) {
 
         }
     }

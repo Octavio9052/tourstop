@@ -3,10 +3,10 @@ package com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.m
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadWriteRequestBuilder;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.OrderModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.SessionModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Order;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Session;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 
 import dagger.Module;
 import dagger.Provides;
@@ -17,41 +17,41 @@ import dagger.Provides;
 @Module
 public class UserModule {
 
-    private SessionModel session;
+    private final Session session;
 
-    public UserModule(SessionModel session) {
+    public UserModule(Session session) {
         this.session = session;
     }
 
     @UserScope
     @Provides
-    public SessionModel providesSession() {
+    public Session providesSession() {
         return this.session;
     }
 
-//    @UserScope
-//    @Provides
-//    public ReadRequestBuilder providesReadRequestBuilder() {
-//        return new ReadRequestBuilder(session);
-//    }
-//
-//    @UserScope
-//    @Provides
-//    public ReadWriteRequestBuilder<UserModel> providesUserReadWriteRequestBuilder() {
-//        return new ReadWriteRequestBuilder<>(session);
-//    }
-//
-//    @UserScope
-//    @Provides
-//    public ReadWriteRequestBuilder<TourModel> providesTourReadWriteRequestBuilder() {
-//        return new ReadWriteRequestBuilder<>(session);
-//    }
-//
-//    @UserScope
-//    @Provides
-//    public ReadWriteRequestBuilder<OrderModel> providesOrderReadWriteRequestBuilder() {
-//        return new ReadWriteRequestBuilder<>(session);
-//    }
+    @UserScope
+    @Provides
+    public ReadRequestBuilder providesReadRequestBuilder() {
+        return new ReadRequestBuilder(session);
+    }
+
+    @UserScope
+    @Provides
+    public ReadWriteRequestBuilder<User> providesUserReadWriteRequestBuilder() {
+        return new ReadWriteRequestBuilder<>(session);
+    }
+
+    @UserScope
+    @Provides
+    public ReadWriteRequestBuilder<Tour> providesTourReadWriteRequestBuilder() {
+        return new ReadWriteRequestBuilder<>(session);
+    }
+
+    @UserScope
+    @Provides
+    public ReadWriteRequestBuilder<Order> providesOrderReadWriteRequestBuilder() {
+        return new ReadWriteRequestBuilder<>(session);
+    }
 
 
 }

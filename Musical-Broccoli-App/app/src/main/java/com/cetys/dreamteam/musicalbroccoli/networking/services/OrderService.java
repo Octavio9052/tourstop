@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.networking.services;
 
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.OrderModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Order;
 
 import java.util.List;
 
@@ -16,23 +16,18 @@ import retrofit2.http.PUT;
 /**
  * @Author J. Pichardo on 12/4/2016.
  */
-public interface OrderService extends BaseService<OrderModel> {
+public interface OrderService {
 
-    @Override
     @GET("order/")
-    Call<List<OrderModel>> get(@Body ReadRequest request);
+    Call<List<Order>> get(@Body ReadRequest request);
 
-    @Override
     @POST("order/")
-    Call<List<OrderModel>> create(@Body ReadWriteRequest<OrderModel> request);
+    Call<List<Order>> create(@Body ReadWriteRequest<Order> request);
 
-    @Override
     @PUT("order/")
-    Call<Boolean> update(@Body ReadWriteRequest<OrderModel> request);
+    Call<Boolean> update(@Body ReadWriteRequest<Order> request);
 
-    @Override
     @DELETE("order/")
-    Call<Boolean> delete(@Body ReadWriteRequest<OrderModel> request);
-
+    Call<Boolean> delete(@Body ReadWriteRequest<Order> request);
 
 }

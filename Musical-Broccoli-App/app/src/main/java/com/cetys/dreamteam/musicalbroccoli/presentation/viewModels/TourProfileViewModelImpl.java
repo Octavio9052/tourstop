@@ -3,18 +3,23 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 import android.content.Context;
 
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.TourConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.TourProfileViewModel;
 
 /**
  * @Author J. Pichardo on 11/23/2016.
  */
 
-public class TourProfileViewModelImpl extends BaseModelViewModelImpl<TourModel> implements TourProfileViewModel {
+public class TourProfileViewModelImpl extends BaseViewModel implements TourProfileViewModel {
 
-
+    //<editor-fold desc="Instance Properties" defaultstate="collapsed">
+    private final TourConnector connector;
+    private Tour tour;
+    //</editor-fold>
+    
     public TourProfileViewModelImpl(Context context, TourConnector connector) {
-        super(context, connector);
+        super(context);
+        this.connector = connector;
     }
 
     @Override
@@ -22,4 +27,15 @@ public class TourProfileViewModelImpl extends BaseModelViewModelImpl<TourModel> 
 
     }
 
+    //<editor-fold desc="Property Accessors" defaultstate="collapsed">
+    @Override
+    public Tour getTour() {
+        return this.tour;
+    }
+
+    @Override
+    public void setTour(Tour tour) {
+        this.tour = tour;
+    }
+    //</editor-fold>s
 }

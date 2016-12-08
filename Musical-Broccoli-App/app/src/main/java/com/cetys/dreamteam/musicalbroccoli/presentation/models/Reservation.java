@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Created by Octavio on 2016/11/12.
  */
-public class ReservationModel extends BaseModel {
+public class Reservation extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;

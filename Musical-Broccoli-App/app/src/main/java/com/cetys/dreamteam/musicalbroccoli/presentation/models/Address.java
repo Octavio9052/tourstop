@@ -8,7 +8,7 @@ import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
 /**
  * Created by Octavio on 2016/11/12.
  */
-public class AddressModel extends BaseModel {
+public class Address extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;

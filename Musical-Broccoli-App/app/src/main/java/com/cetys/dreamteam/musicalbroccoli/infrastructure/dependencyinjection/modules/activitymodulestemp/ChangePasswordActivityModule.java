@@ -6,6 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.databinding.ChangePasswordActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.ChangePasswordViewModelImpl;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.ChangePasswordViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
@@ -32,7 +33,7 @@ public class ChangePasswordActivityModule {
 
     @ActivityScope
     @Provides
-    ChangePasswordViewModel providesChangePasswordViewModel(UserService service) {
+    ChangePasswordViewModel providesChangePasswordViewModel(UserConnector service) {
         return new ChangePasswordViewModelImpl(this.activity, service);
     }
 

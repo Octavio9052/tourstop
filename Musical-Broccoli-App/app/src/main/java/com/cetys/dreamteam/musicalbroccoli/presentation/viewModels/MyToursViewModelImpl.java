@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MyToursViewModel;
 
 /**
@@ -10,7 +10,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MyT
  */
 
 public class MyToursViewModelImpl extends BaseViewModel implements MyToursViewModel {
-    private TourModel tour;
+    private Tour tour;
 
     public MyToursViewModelImpl(Context context) {
         super(context);
@@ -22,17 +22,12 @@ public class MyToursViewModelImpl extends BaseViewModel implements MyToursViewMo
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
-    public TourModel getTour() {
+    public Tour getTour() {
         return this.tour;
     }
 
     @Override
-    public void setTour(TourModel tour) {
+    public void setTour(Tour tour) {
         this.tour = tour;
     }
 }

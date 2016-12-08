@@ -2,15 +2,15 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts;
 
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 
 /**
  * Created by Octavio on 2016/11/16.
  */
 public interface LoginViewModel {
-    UserModel getUser();
+    User getUser();
 
-    void setUser(UserModel user);
+    void setUser(User user);
 
     void onCreateUserClick(View view);
 }

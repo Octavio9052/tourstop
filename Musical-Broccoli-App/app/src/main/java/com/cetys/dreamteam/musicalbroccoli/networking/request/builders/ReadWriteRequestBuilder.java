@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.networking.request.builders;
 
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.UserScope;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.SessionModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Session;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import javax.inject.Inject;
 public class ReadWriteRequestBuilder<T> extends RequestBuilder<ReadWriteRequest<T>> {
 
     @Inject
-    public ReadWriteRequestBuilder(SessionModel session) {
+    public ReadWriteRequestBuilder(Session session) {
         super(session);
     }
 

@@ -29,11 +29,6 @@ public class PaymentOptionsViewModelImpl extends BaseViewModel implements Paymen
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
     public void onProceedClick(View view) {
         if (isCreditCardPaymentSelected) {
             Intent intent = new Intent(context, CardPaymentActivity.class);

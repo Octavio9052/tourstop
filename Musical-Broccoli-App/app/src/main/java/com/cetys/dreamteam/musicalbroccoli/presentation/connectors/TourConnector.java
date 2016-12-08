@@ -6,7 +6,7 @@ import com.cetys.dreamteam.musicalbroccoli.networking.request.ReadWriteRequest;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.request.builders.ReadWriteRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.networking.services.TourService;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Tour;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,13 +20,13 @@ import retrofit2.Response;
  * @Author J. Pichardo on 12/7/2016.
  */
 
-public class TourConnector extends BaseConnector<TourModel> {
+public class TourConnector extends BaseConnector<Tour> {
 
     private final TourService service;
-    private Callback<List<TourModel>> createCallback;
+    private Callback<List<Tour>> createCallback;
     private Callback<Boolean> updateDeleteCallback;
 
-    public TourConnector(ReadWriteRequestBuilder<TourModel> readWriteRequestBuilder,
+    public TourConnector(ReadWriteRequestBuilder<Tour> readWriteRequestBuilder,
                          ReadRequestBuilder readRequestBuilder, TourService service) {
         super(readWriteRequestBuilder, readRequestBuilder);
         this.service = service;
@@ -39,12 +39,12 @@ public class TourConnector extends BaseConnector<TourModel> {
     }
 
     @Override
-    public List<TourModel> getAll() throws IOException {
+    public List<Tour> getAll() throws IOException {
         return getByFilters(new ArrayList<Filter>());
     }
 
     @Override
-    public TourModel getById(int id) throws IOException {
+    public Tour getById(int id) throws IOException {
         Filter idFilter = new Filter()
                 .setPropertyName("id")
                 .setRelationship("=")
@@ -57,11 +57,11 @@ public class TourConnector extends BaseConnector<TourModel> {
     }
 
     @Override
-    public List<TourModel> getByFilters(List<Filter> filters) throws IOException {
+    public List<Tour> getByFilters(List<Filter> filters) throws IOException {
         ReadRequest request = readRequestBuilder.addFilters(filters).build();
 
-        Call<List<TourModel>> call = service.get(request);
-        Response<List<TourModel>> response = call.execute();
+        Call<List<Tour>> call = service.get(request);
+        Response<List<Tour>> response = call.execute();
         if (response.isSuccessful()) {
             return response.body();
         } else {
@@ -70,35 +70,35 @@ public class TourConnector extends BaseConnector<TourModel> {
     }
 
     @Override
-    public void create(TourModel model) {
-        ReadWriteRequest<TourModel> request = readWriteRequestBuilder.addData(model).build();
+    public void create(Tour model) {
+        ReadWriteRequest<Tour> request = readWriteRequestBuilder.addData(model).build();
 
         service.create(request).enqueue(createCallback);
     }
 
     @Override
-    public void update(TourModel model) {
-        ReadWriteRequest<TourModel> request = readWriteRequestBuilder.addData(model).build();
+    public void update(Tour model) {
+        ReadWriteRequest<Tour> request = readWriteRequestBuilder.addData(model).build();
 
         service.update(request).enqueue(updateDeleteCallback);
     }
 
     @Override
-    public void delete(TourModel model) {
-        ReadWriteRequest<TourModel> request = readWriteRequestBuilder.addData(model).build();
+    public void delete(Tour model) {
+        ReadWriteRequest<Tour> request = readWriteRequestBuilder.addData(model).build();
 
         service.delete(request).enqueue(updateDeleteCallback);
     }
 
-    private class CreateCallback implements Callback<List<TourModel>> {
+    private class CreateCallback implements Callback<List<Tour>> {
 
         @Override
-        public void onResponse(Call<List<TourModel>> call, Response<List<TourModel>> response) {
+        public void onResponse(Call<List<Tour>> call, Response<List<Tour>> response) {
 
         }
 
         @Override
-        public void onFailure(Call<List<TourModel>> call, Throwable t) {
+        public void onFailure(Call<List<Tour>> call, Throwable t) {
 
         }
     }

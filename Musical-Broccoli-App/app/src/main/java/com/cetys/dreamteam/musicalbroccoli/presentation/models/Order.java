@@ -13,7 +13,7 @@ import java.util.Date;
  * Created by Octavio on 2016/11/12.
  */
 
-public class OrderModel extends BaseModel {
+public class Order extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
     private ObservableInt id;
@@ -24,8 +24,8 @@ public class OrderModel extends BaseModel {
     private ObservableInt userId;
     private ObservableInt paymentInfoId;
 
-    private ObservableArrayList<ReservationModel> reservations;
-    private ObservableArrayList<MovementModel> movements;
+    private ObservableArrayList<Reservation> reservations;
+    private ObservableArrayList<Movement> movements;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
@@ -102,19 +102,19 @@ public class OrderModel extends BaseModel {
 
     //
 
-    public ObservableArrayList<MovementModel> getMovements() {
+    public ObservableArrayList<Movement> getMovements() {
         return movements;
     }
 
-    public void setMovements(ObservableArrayList<MovementModel> movements) {
+    public void setMovements(ObservableArrayList<Movement> movements) {
         this.movements = movements;
     }
 
-    public ObservableArrayList<ReservationModel> getReservations() {
+    public ObservableArrayList<Reservation> getReservations() {
         return reservations;
     }
 
-    public void setReservations(ObservableArrayList<ReservationModel> reservations) {
+    public void setReservations(ObservableArrayList<Reservation> reservations) {
         this.reservations = reservations;
     }
     //</editor-fold>

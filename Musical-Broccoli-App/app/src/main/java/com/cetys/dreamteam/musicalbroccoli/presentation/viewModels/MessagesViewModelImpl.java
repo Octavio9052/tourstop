@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.MessageModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.Message;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MessagesViewModel;
 
 /**
@@ -10,7 +10,7 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Mes
  */
 
 public class MessagesViewModelImpl extends BaseViewModel implements MessagesViewModel {
-    private MessageModel message;
+    private Message message;
 
     public MessagesViewModelImpl(Context context) {
         super(context);
@@ -22,17 +22,12 @@ public class MessagesViewModelImpl extends BaseViewModel implements MessagesView
     }
 
     @Override
-    protected void initCallbacks() {
-
-    }
-
-    @Override
-    public MessageModel getMessage() {
+    public Message getMessage() {
         return this.message;
     }
 
     @Override
-    public void setMessage(MessageModel message) {
+    public void setMessage(Message message) {
         this.message = message;
     }
 }

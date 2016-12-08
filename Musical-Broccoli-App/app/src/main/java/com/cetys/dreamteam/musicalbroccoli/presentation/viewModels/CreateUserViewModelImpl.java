@@ -4,13 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.CountryCode;
 import com.cetys.dreamteam.musicalbroccoli.commons.enums.UserType;
 import com.cetys.dreamteam.musicalbroccoli.presentation.connectors.UserConnector;
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.presentation.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
 
@@ -21,15 +20,17 @@ import java.util.List;
  * Created by Octavio on 2016/12/04.
  */
 
-public class CreateUserViewModelImpl extends BaseModelViewModelImpl<UserModel> implements CreateUserViewModel {
+public class CreateUserViewModelImpl extends BaseViewModel implements CreateUserViewModel {
 
     //<editor-fold desc="Instance Properties" defaulstate="collapsed">
+    private final UserConnector connector;
+    private User user;
     private List<CountryCode> countryCodes;
     //</editor-fold>
 
     public CreateUserViewModelImpl(Context context, UserConnector connector) {
-        super(context, connector);
-
+        super(context);
+        this.connector = connector;
         load();
     }
 
@@ -39,6 +40,16 @@ public class CreateUserViewModelImpl extends BaseModelViewModelImpl<UserModel> i
     }
 
     //<editor-fold desc="Property Accessors" defaultstate="collapse">
+    @Override
+    public User getUser() {
+        return this.user;
+    }
+
+    @Override
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public List<CountryCode> getCountryCodes() {
         return countryCodes;
@@ -53,11 +64,11 @@ public class CreateUserViewModelImpl extends BaseModelViewModelImpl<UserModel> i
     //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onSaveChangesClick(View view) {
-        connector.create(model);
+        connector.create(user);
+
         Intent intent = new Intent(context, MainPageActivity.class);
         context.startActivity(intent);
     }
-    //</editor-fold>
 
     @Override
     public void onRadioButtonClick(View view) {
@@ -65,16 +76,14 @@ public class CreateUserViewModelImpl extends BaseModelViewModelImpl<UserModel> i
 
         switch (view.getId()) {
             case R.id.type_promoter:
-                getModel().setUserType(UserType.TOUR_ADMINISTRATOR);
+                getUser().setUserType(UserType.TOUR_ADMINISTRATOR);
                 break;
             case R.id.type_user:
-                getModel().setUserType(UserType.TOUR_CUSTOMER);
+                getUser().setUserType(UserType.TOUR_CUSTOMER);
                 break;
         }
     }
+    //</editor-fold>
 
-    private void doTemporalToast() {
-        Toast.makeText(context, "New user created", Toast.LENGTH_LONG).show();
-    }
 
 }

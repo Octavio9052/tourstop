@@ -6,7 +6,7 @@ import java.util.Date;
  * @Author J. Pichardo on 12/7/2016.
  */
 
-public class SessionModel extends BaseModel {
+public class Session extends BaseModel {
 
     private int userId;
     private String authToken;
