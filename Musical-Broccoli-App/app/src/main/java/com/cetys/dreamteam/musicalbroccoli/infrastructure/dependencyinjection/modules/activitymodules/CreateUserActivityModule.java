@@ -7,6 +7,7 @@ import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserCon
 import com.cetys.dreamteam.musicalbroccoli.databinding.CreateUserActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CreateUserViewModelImpl;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.CreateUserViewModelImplValidator;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateUserActivity;
 
@@ -32,8 +33,8 @@ public class CreateUserActivityModule {
 
     @ActivityScope
     @Provides
-    CreateUserViewModel providesCreateUserViewModel(UserConnector connector) {
-        return new CreateUserViewModelImpl(this.activity, connector);
+    CreateUserViewModel providesCreateUserViewModel(UserConnector connector, CreateUserViewModelImplValidator validator) {
+        return new CreateUserViewModelImpl(this.activity, connector, validator);
     }
 
     @ActivityScope
@@ -42,5 +43,9 @@ public class CreateUserActivityModule {
         return DataBindingUtil.setContentView(this.activity, R.layout.create_user_activity);
     }
 
-
+    @ActivityScope
+    @Provides
+    CreateUserViewModelImplValidator providesCreateUserViewModelValidator(){
+        return new CreateUserViewModelImplValidator(this.activity);
+    }
 }

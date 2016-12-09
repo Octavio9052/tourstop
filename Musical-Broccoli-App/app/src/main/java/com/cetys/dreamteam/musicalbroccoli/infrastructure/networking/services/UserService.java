@@ -26,10 +26,10 @@ public interface UserService {
     Call<List<User>> create(@Body ReadWriteRequest<User> request);
 
     @PUT("user/")
-    Call update(@Body ReadWriteRequest<User> request);
+    Call<Boolean> update(@Body ReadWriteRequest<User> request);
 
     @DELETE("user/")
-    Call delete(@Body ReadWriteRequest<User> request);
+    Call<Boolean> delete(@Body ReadWriteRequest<User> request);
 
     @POST("user/login")
     Call<List<Session>> login(@Body ReadWriteRequest<User> request);
