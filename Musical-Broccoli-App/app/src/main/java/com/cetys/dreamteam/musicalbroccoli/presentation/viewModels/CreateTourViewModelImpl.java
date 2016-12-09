@@ -56,8 +56,8 @@ public class CreateTourViewModelImpl extends BaseViewModel implements CreateTour
 
     @Override
     public void onCheckpointsClick(View view) {
-        Intent intent = new Intent(context, CheckpointActivity.class);
-        context.startActivity(intent);
+        /* Intent intent = new Intent(context, CheckpointActivity.class);
+        context.startActivity(intent);*/
     }
     //</editor-fold>
 

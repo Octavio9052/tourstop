@@ -7,6 +7,7 @@ import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserCon
 import com.cetys.dreamteam.musicalbroccoli.databinding.ChangePasswordActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.ChangePasswordViewModelImpl;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.ChangePasswordViewModelImplValidator;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.ChangePasswordViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
 
@@ -32,13 +33,19 @@ public class ChangePasswordActivityModule {
 
     @ActivityScope
     @Provides
-    ChangePasswordViewModel providesChangePasswordViewModel(UserConnector connector) {
-        return new ChangePasswordViewModelImpl(this.activity, connector);
+    ChangePasswordViewModel providesChangePasswordViewModel(UserConnector connector, ChangePasswordViewModelImplValidator validator) {
+        return new ChangePasswordViewModelImpl(this.activity, connector, validator);
     }
 
     @ActivityScope
     @Provides
     ChangePasswordActivityBinding providesChangePasswordActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.change_password_activity);
+    }
+
+    @ActivityScope
+    @Provides
+    ChangePasswordViewModelImplValidator providesChangePasswordViewModelValidator(){
+        return new ChangePasswordViewModelImplValidator(this.activity);
     }
 }

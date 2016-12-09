@@ -9,10 +9,7 @@
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1"
-        android:descendantFocusability="beforeDescendants"
-        android:focusable="true"
-        android:focusableInTouchMode="true">
+        android:weightSum="1">
 
         <ScrollView
             android:layout_width="wrap_content"

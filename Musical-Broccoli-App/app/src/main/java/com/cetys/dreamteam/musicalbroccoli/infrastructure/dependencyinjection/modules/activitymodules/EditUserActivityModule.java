@@ -7,6 +7,7 @@ import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserCon
 import com.cetys.dreamteam.musicalbroccoli.databinding.EditUserActivityBinding;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.scopes.ActivityScope;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.EditUserViewModelImpl;
+import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.EditUserViewModelImplValidator;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
 
@@ -32,13 +33,19 @@ public class EditUserActivityModule {
 
     @ActivityScope
     @Provides
-    EditUserViewModel providesEditUserViewModel(UserConnector connector) {
-        return new EditUserViewModelImpl(this.activity, connector);
+    EditUserViewModel providesEditUserViewModel(UserConnector connector, EditUserViewModelImplValidator validator) {
+        return new EditUserViewModelImpl(this.activity, connector, validator);
     }
 
     @ActivityScope
     @Provides
     EditUserActivityBinding providesEditUserActivityBinding() {
         return DataBindingUtil.setContentView(this.activity, R.layout.edit_user_activity);
+    }
+
+    @ActivityScope
+    @Provides
+    EditUserViewModelImplValidator providesEditUserViewModelValidator(){
+        return new EditUserViewModelImplValidator(this.activity);
     }
 }

@@ -3,6 +3,10 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Toast;
+
+import com.cetys.dreamteam.musicalbroccoli.R;
+import com.cetys.dreamteam.musicalbroccoli.BR;
 
 import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.core.models.User;
@@ -10,20 +14,29 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Edi
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.ChangePasswordActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.PaymentOptionsActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserProfileActivity;
+import com.wesleyelliott.kubwa.annotation.Email;
+import com.wesleyelliott.kubwa.annotation.NotNull;
 
 /**
  * Created by Octavio on 2016/11/20.
  */
+
+@Email(errorMessage = R.string.error_invalid_email)
+@NotNull(errorMessage = R.string.error_field_required)
 public class EditUserViewModelImpl extends BaseViewModel implements EditUserViewModel {
 
     //<editor-fold desc="Instance Properties" defaultstate="collapsed">
+    private final EditUserViewModelImplValidator validator;
     private final UserConnector connector;
     private User user;
     //</editor-fold>
 
-    public EditUserViewModelImpl(Context context, UserConnector connector) {
+    public EditUserViewModelImpl(Context context, UserConnector connector, EditUserViewModelImplValidator validator) {
         super(context);
         this.connector = connector;
+        this.validator = validator;
+
+        load();
     }
 
     //<editor-fold desc="Property Accessors" defaultstate="collaped">
@@ -53,15 +66,27 @@ public class EditUserViewModelImpl extends BaseViewModel implements EditUserView
 
     @Override
     public void onSaveChangesClick(View view) {
-        connector.update(user);
+        // TODO: Null objet creash (p)
+        validator.validateNotNull(user.getFirstName());
+        validator.validateNotNull(user.getLastName());
+        validator.validateEmail(user.getEmail());
 
-        Intent intent = new Intent(context, UserProfileActivity.class);
-        context.startActivity(intent);
+        notifyPropertyChanged(BR.emailError);
+
+        // TODO: connector opens activity? (p).
+        if(validator.isValid()) {
+            connector.update(user);
+            Intent intent = new Intent(context, UserProfileActivity.class);
+            context.startActivity(intent);
+        }
+        else
+            Toast.makeText(context, R.string.toast_error_input, Toast.LENGTH_LONG).show();
+
     }
     //</editor-fold>
 
     @Override
     protected void load() {
-
+        user = new User();
     }
 }

@@ -9,6 +9,9 @@ import com.cetys.dreamteam.musicalbroccoli.core.models.User;
  */
 
 public interface ChangePasswordViewModel {
+    void setConfirmPassword(String confirmPassword);
+    String getConfirmPassword();
 
     void onSaveChangesClick(View view);
+
 }
