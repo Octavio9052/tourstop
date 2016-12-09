@@ -12,4 +12,7 @@ public abstract class BaseViewModel {
     public BaseViewModel(Context context) {
         this.context = context;
     }
+
+    protected abstract void load();
+
 }

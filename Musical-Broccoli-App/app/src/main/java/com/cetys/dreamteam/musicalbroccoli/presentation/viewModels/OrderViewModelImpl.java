@@ -14,4 +14,9 @@ public class OrderViewModelImpl extends BaseViewModel implements OrderViewModel 
         super(context);
     }
 
+    @Override
+    protected void load() {
+
+    }
+
 }

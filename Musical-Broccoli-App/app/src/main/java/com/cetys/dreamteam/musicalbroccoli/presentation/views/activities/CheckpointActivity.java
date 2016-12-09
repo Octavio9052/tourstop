@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.CheckpointActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.CheckpointActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.CheckpointActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CheckpointViewModel;
 
 import javax.inject.Inject;
@@ -18,9 +18,9 @@ public class CheckpointActivity extends BaseActivity {
     CheckpointViewModel viewModel;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState ) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.checkpoint_activity );
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.checkpoint_activity);
 
         initActivityComponent();
         initBinding();
@@ -28,12 +28,13 @@ public class CheckpointActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getAppComponent()
-                .plus( new CheckpointActivityModule( this ) ).inject( this );
+        TourStopApplication.get(this).getSessionSubcomponent()
+                .plus(new CheckpointActivityModule(this))
+                .inject(this);
     }
 
     @Override
     protected void initBinding() {
-        binding.setViewModel( viewModel );
+        binding.setViewModel(viewModel);
     }
 }

@@ -4,15 +4,17 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.services.UserService;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -23,41 +25,48 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class NetModule {
 
-    private String baseUrl;
+    private String baseUrl = "http://localhost:5000/api/";
 
-    public NetModule( String baseUrl ) {
-        this.baseUrl = baseUrl;
+    @Singleton
+    @Provides
+    SharedPreferences providesSharedPreferences(Application application) {
+        return PreferenceManager.getDefaultSharedPreferences(application);
     }
 
-    @Provides
     @Singleton
-    SharedPreferences providesSharedPreferences( Application application ) {
-        return PreferenceManager.getDefaultSharedPreferences( application );
+    @Provides
+    OkHttpClient providesOkHttpCache(Application application) {
+        final OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+        builder.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS)
+                .readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
+
+        return builder.build();
     }
 
-    @Provides
     @Singleton
-    Cache providesOkHttpCache( Application application ) {
-        int cacheSize = 10 * 1024 * 1024; //10 Mib
-        return new Cache( application.getCacheDir(), cacheSize );
-    }
-
     @Provides
-    @Singleton
     Gson providesGson() {
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        gsonBuilder.setFieldNamingPolicy( FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES );
+        final GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
         return gsonBuilder.create();
     }
 
-    @Provides
     @Singleton
-    Retrofit providesRetrofit( Gson gson, OkHttpClient okHttpClient ) {
+    @Provides
+    Retrofit providesRetrofit(Gson gson, OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
-                .addConverterFactory( GsonConverterFactory.create( gson ) )
-                .baseUrl( baseUrl )
-                .client( okHttpClient )
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl(baseUrl)
+                .client(okHttpClient)
                 .build();
     }
+
+    @Singleton
+    @Provides
+    UserService providesUserService(Retrofit retrofit) {
+        return retrofit.create(UserService.class);
+    }
+
 
 }

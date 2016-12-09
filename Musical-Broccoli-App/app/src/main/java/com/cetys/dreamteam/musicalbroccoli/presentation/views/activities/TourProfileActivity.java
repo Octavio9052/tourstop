@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.TourProfileActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.TourProfileActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.TourProfileActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.TourProfileViewModel;
 
 import javax.inject.Inject;
@@ -18,9 +18,9 @@ public class TourProfileActivity extends BaseActivity {
     TourProfileViewModel viewModel;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState ) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.tour_profile_activity );
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.tour_profile_activity);
 
         initActivityComponent();
         initBinding();
@@ -28,12 +28,13 @@ public class TourProfileActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get( this ).getAppComponent()
-                .plus( new TourProfileActivityModule( this ) ).inject( this );
+        TourStopApplication.get(this).getSessionSubcomponent()
+                .plus(new TourProfileActivityModule(this))
+                .inject(this);
     }
 
     @Override
     protected void initBinding() {
-        binding.setViewModel( viewModel );
+        binding.setViewModel(viewModel);
     }
 }

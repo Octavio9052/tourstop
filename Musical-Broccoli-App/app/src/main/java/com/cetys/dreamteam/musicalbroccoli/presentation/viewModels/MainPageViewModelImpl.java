@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.MainPageViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MessagesActivity;
@@ -17,19 +17,24 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.UserPro
  */
 
 public class MainPageViewModelImpl extends BaseViewModel implements MainPageViewModel {
-    private UserModel user;
+    private User user;
 
     public MainPageViewModelImpl(Context context) {
         super(context);
     }
 
     @Override
-    public UserModel getUser() {
+    protected void load() {
+
+    }
+
+    @Override
+    public User getUser() {
         return this.user;
     }
 
     @Override
-    public void setUser(UserModel user) {
+    public void setUser(User user) {
         this.user = user;
     }
 

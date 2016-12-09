@@ -12,4 +12,10 @@ public class WishlistViewModelImpl extends BaseViewModel implements WishlistView
     public WishlistViewModelImpl(Context context) {
         super(context);
     }
+
+    @Override
+    protected void load() {
+
+    }
+
 }

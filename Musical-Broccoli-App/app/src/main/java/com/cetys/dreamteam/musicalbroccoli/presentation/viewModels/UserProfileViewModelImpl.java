@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.UserModel;
+import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
+import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.UserProfileViewModel;
-
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateTourActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.EditUserActivity;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MessagesActivity;
@@ -16,24 +16,36 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.Wishlis
 /**
  * Created by Octavio on 2016/11/16.
  */
+public class UserProfileViewModelImpl extends BaseViewModel implements UserProfileViewModel {
 
-public class UserProfileViewModelImpl extends BaseViewModel implements UserProfileViewModel{
-    private UserModel user;
+    //<editor-fold desc="Instance Properties" defaultstate="collapsed">
+    private final UserConnector connector;
+    //</editor-fold>
 
-    public UserProfileViewModelImpl(Context context) {
+    public UserProfileViewModelImpl(Context context, UserConnector connector) {
         super(context);
+
+        this.connector = connector;
     }
 
     @Override
-    public UserModel getUser() {
-        return this.user;
+    protected void load() {
+
+    }
+
+    //<editor-fold desc="Property Accessors" defaultstate="collapsed">
+    @Override
+    public User getUser() {
+        return null;
     }
 
     @Override
-    public void setUser(UserModel user) {
-        this.user = user;
-    }
+    public void setUser(User user) {
 
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="On-Click Listeners" defaultstate="collapsed">
     @Override
     public void onEditUserClick(View view) {
         Intent intent = new Intent(context, EditUserActivity.class);
@@ -63,4 +75,6 @@ public class UserProfileViewModelImpl extends BaseViewModel implements UserProfi
         Intent intent = new Intent(context, CreateTourActivity.class);
         context.startActivity(intent);
     }
+    //</editor-fold>
+
 }

@@ -1,14 +1,11 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.EditUserActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.EditUserActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.EditUserActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.EditUserViewModel;
 
 import javax.inject.Inject;
@@ -31,7 +28,9 @@ public class EditUserActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new EditUserActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getSessionSubcomponent()
+                .plus(new EditUserActivityModule(this))
+                .inject(this);
     }
 
     @Override

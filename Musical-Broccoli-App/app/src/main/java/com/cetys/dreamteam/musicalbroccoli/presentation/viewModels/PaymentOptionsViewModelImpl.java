@@ -19,13 +19,18 @@ public class PaymentOptionsViewModelImpl extends BaseViewModel implements Paymen
     boolean isCreditCardPaymentSelected;
     boolean isPromoterPaymentSelected;
 
-    public PaymentOptionsViewModelImpl( Context context ) {
-        super( context );
+    public PaymentOptionsViewModelImpl(Context context) {
+        super(context);
+    }
+
+    @Override
+    protected void load() {
+
     }
 
     @Override
     public void onProceedClick(View view) {
-        if(isCreditCardPaymentSelected){
+        if (isCreditCardPaymentSelected) {
             Intent intent = new Intent(context, CardPaymentActivity.class);
             context.startActivity(intent);
         } else {
@@ -39,7 +44,7 @@ public class PaymentOptionsViewModelImpl extends BaseViewModel implements Paymen
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.creditCardPaymentButton:
                 isCreditCardPaymentSelected = checked;
                 isPromoterPaymentSelected = !checked;
@@ -51,7 +56,8 @@ public class PaymentOptionsViewModelImpl extends BaseViewModel implements Paymen
         }
     }
 
-    public void doToastTemporalThing(){
-        Toast.makeText(context, "Your changes has been registered successfully", Toast.LENGTH_LONG).show();
+    public void doToastTemporalThing() {
+        Toast.makeText(context, "Your changes has been registered successfully", Toast.LENGTH_LONG)
+                .show();
     }
 }

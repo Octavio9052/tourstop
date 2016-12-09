@@ -13,8 +13,13 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.CreateT
  */
 
 public class CheckpointViewModelImpl extends BaseViewModel implements CheckpointViewModel {
-    public CheckpointViewModelImpl( Context context ) {
-        super( context );
+    public CheckpointViewModelImpl(Context context) {
+        super(context);
+    }
+
+    @Override
+    protected void load() {
+
     }
 
     @Override
@@ -24,7 +29,7 @@ public class CheckpointViewModelImpl extends BaseViewModel implements Checkpoint
         context.startActivity(intent);
     }
 
-    private void doTemporalToastThing(){
+    private void doTemporalToastThing() {
         Toast.makeText(context, "Your checkpoint has been saved", Toast.LENGTH_LONG).show();
     }
 }

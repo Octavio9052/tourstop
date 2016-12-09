@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.SearchViewModel;
 import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.SearchResultsActivity;
 
@@ -13,19 +13,25 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.SearchR
  */
 
 public class SearchViewModelImpl extends BaseViewModel implements SearchViewModel {
-    private TourModel tour;
+    private Tour tour;
 
     public SearchViewModelImpl(Context context) {
         super(context);
     }
 
     @Override
-    public TourModel getTour() {
+    protected void load() {
+
+    }
+
+
+    @Override
+    public Tour getTour() {
         return this.tour;
     }
 
     @Override
-    public void setTour(TourModel tour) {
+    public void setTour(Tour tour) {
         this.tour = tour;
     }
 

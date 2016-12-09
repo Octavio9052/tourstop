@@ -2,7 +2,7 @@ package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
 
-import com.cetys.dreamteam.musicalbroccoli.presentation.models.TourModel;
+import com.cetys.dreamteam.musicalbroccoli.core.models.Tour;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.SearchResultsViewModel;
 
 /**
@@ -10,19 +10,24 @@ import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.Sea
  */
 
 public class SearchResultsViewModelImpl extends BaseViewModel implements SearchResultsViewModel {
-    private TourModel tour;
+    private Tour tour;
 
     public SearchResultsViewModelImpl(Context context) {
         super(context);
     }
 
     @Override
-    public TourModel getTour() {
+    protected void load() {
+
+    }
+
+    @Override
+    public Tour getTour() {
         return tour;
     }
 
     @Override
-    public void setTour(TourModel tour) {
+    public void setTour(Tour tour) {
         this.tour = tour;
     }
 }

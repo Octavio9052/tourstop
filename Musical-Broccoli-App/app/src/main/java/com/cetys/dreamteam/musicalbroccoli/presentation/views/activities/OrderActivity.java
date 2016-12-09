@@ -1,12 +1,12 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.views.activities;
 
+import android.os.Bundle;
+
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
 import com.cetys.dreamteam.musicalbroccoli.databinding.OrderActivityBinding;
-import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodulestemp.OrderActivityModule;
+import com.cetys.dreamteam.musicalbroccoli.infrastructure.dependencyinjection.modules.activitymodules.OrderActivityModule;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.OrderViewModel;
-
-import android.os.Bundle;
 
 import javax.inject.Inject;
 
@@ -28,7 +28,9 @@ public class OrderActivity extends BaseActivity {
 
     @Override
     protected void initActivityComponent() {
-        TourStopApplication.get(this).getAppComponent().plus(new OrderActivityModule(this)).inject(this);
+        TourStopApplication.get(this).getSessionSubcomponent()
+                .plus(new OrderActivityModule(this))
+                .inject(this);
     }
 
     @Override
