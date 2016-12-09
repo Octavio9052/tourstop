@@ -325,10 +325,11 @@ enter requirements = -->
 
                 <TextView
                     android:id="@+id/tv_annotation"
-                    android:layout_width="70dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/edit_description_createTour"
                     android:layout_marginTop="6dp"
+                    android:layout_below="@+id/edit_seatsAvailable_createTour"
                     android:text="@string/statement_mandatory"
                     android:textAlignment="center"
                     android:textSize="12sp"/>
@@ -340,6 +341,7 @@ enter requirements = -->
                     android:layout_below="@+id/tv_annotation"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
                     android:background="@android:drawable/toast_frame"
                     android:onClick="@{viewModel::onSaveClick}"
                     android:text="@string/action_create_new_tour"/>

@@ -91,4 +91,5 @@
     <string name="promo_code">Ingresar codigo de promocion</string>
     <string name="promo_discount">Ingresar cantidad de descuento</string>
     <string name="total">Tu total es:</string>
+    <string name="toast_error_input">Entrada invalida, checar datos</string>
 </resources>
