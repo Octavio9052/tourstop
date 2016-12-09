@@ -8,13 +8,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
@@ -62,27 +59,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
-        // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-
-        mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    return true;
-                }
-                return false;
-            }
-        });
-
-//        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-//        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                attemptLogin();
-//            }
-//        });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
@@ -93,7 +69,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
 
     @Override
     protected void initActivityComponent() {
-        //TODO: LoginActivity(this).inject???
         TourStopApplication.get(this).getSessionSubcomponent()
                 .plus(new LoginActivityModule(this)).inject(this);
     }
@@ -101,8 +76,6 @@ public class LoginActivity extends BaseActivity implements LoaderCallbacks<Curso
     @Override
     protected void initBinding() {
         binding.setViewModel(viewModel);
-        binding.email.setError(viewModel.getEmailError());
-        binding.password.setError(viewModel.getPasswordError());
     }
 
     @Override

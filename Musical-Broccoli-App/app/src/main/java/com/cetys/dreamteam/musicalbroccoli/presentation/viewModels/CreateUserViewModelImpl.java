@@ -1,7 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -92,10 +91,6 @@ public class CreateUserViewModelImpl extends BaseViewModel implements CreateUser
             connector.create(user);
         else
             Toast.makeText(context, R.string.toast_error_input, Toast.LENGTH_LONG).show();
-
-
-        Intent intent = new Intent(context, MainPageActivity.class);
-        context.startActivity(intent);
     }
 
     @Override

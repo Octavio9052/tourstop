@@ -64,7 +64,7 @@
 
 
                     <!-- Email field -->
-                    <AutoCompleteTextView
+                    <EditText
                         android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="57dp"
@@ -74,9 +74,9 @@
                         android:maxLines="1"
                         android:textColor="@color/white"
                         android:padding="20dp"
-                        android:text="@{viewModel.emailError}"
+                        android:text="@={viewModel.user.email}"
                         android:textAlignment="center"
-                        app:error="@{viewModel.emailError}"/>
+                        app:errorText="@{viewModel.emailError}"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -100,9 +100,9 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:padding="20dp"
-                        android:text="@{viewModel.passwordError}"
+                        android:text="@={viewModel.user.password}"
                         android:textAlignment="center"
-                        app:error="@{viewModel.passwordError}"/>
+                        app:errorText="@{viewModel.passwordError}"/>
 
                 </android.support.design.widget.TextInputLayout>
 

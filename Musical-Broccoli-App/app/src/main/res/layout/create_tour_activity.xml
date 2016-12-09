@@ -135,7 +135,7 @@ enter requirements = -->
                     android:layout_marginTop="10dp"
                     android:background="@drawable/textfields"
                     android:hint="@string/hint_price"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:nextFocusDown="@id/edit_destination_createTour"
                     android:nextFocusUp="@id/edit_name_createTour"
@@ -235,6 +235,7 @@ enter requirements = -->
                     android:layout_marginTop="10dp"
                     android:background="@drawable/textfields"
                     android:hint="@string/hint_max_seats"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:nextFocusUp="@id/edit_description_createTour"
                     android:text="@{String.valueOf(viewModel.tour.maxReservations)}"/>
@@ -277,51 +278,51 @@ enter requirements = -->
                      -->
 
                 <!--<TextView-->
-                    <!--android:id="@+id/tv_requirements_createTour"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignParentStart="true"-->
-                    <!--android:layout_below="@+id/edit_seatsAvailable_createTour"-->
-                    <!--android:layout_marginStart="10dp"-->
-                    <!--android:layout_marginTop="28dp"-->
-                    <!--android:text="@string/field_requirements"-->
-                    <!--android:textSize="20sp"/>-->
+                <!--android:id="@+id/tv_requirements_createTour"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@+id/edit_seatsAvailable_createTour"-->
+                <!--android:layout_marginStart="10dp"-->
+                <!--android:layout_marginTop="28dp"-->
+                <!--android:text="@string/field_requirements"-->
+                <!--android:textSize="20sp"/>-->
 
                 <!--&lt;!&ndash; Requirements? of tour &ndash;&gt;-->
                 <!--<EditText-->
-                    <!--android:id="@+id/edit_requirements"-->
-                    <!--android:layout_width="340dp"-->
-                    <!--android:layout_height="35dp"-->
-                    <!--android:layout_alignStart="@+id/tv_destination_createTour"-->
-                    <!--android:layout_below="@+id/tv_requirements_createTour"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:background="@drawable/textfields"-->
-                    <!--android:hint="@string/hint_requirements"-->
-                    <!--android:maxLines="1"-->
-                    <!--android:nextFocusUp="@id/edit_seatsAvailable_createTour"-->
-                    <!--android:text="@={viewModel.tour.requirements}"/>-->
+                <!--android:id="@+id/edit_requirements"-->
+                <!--android:layout_width="340dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_alignStart="@+id/tv_destination_createTour"-->
+                <!--android:layout_below="@+id/tv_requirements_createTour"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@drawable/textfields"-->
+                <!--android:hint="@string/hint_requirements"-->
+                <!--android:maxLines="1"-->
+                <!--android:nextFocusUp="@id/edit_seatsAvailable_createTour"-->
+                <!--android:text="@={viewModel.tour.requirements}"/>-->
 
                 <!--<TextView-->
-                    <!--android:id="@+id/tvButton_assignCheckpoints_createTour"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:onClick="@{viewModel::onCheckpointsClick}"-->
-                    <!--android:text="@string/assign_checkpoints"-->
-                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
-                    <!--android:textColor="@color/darkblue"/>-->
+                <!--android:id="@+id/tvButton_assignCheckpoints_createTour"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:onClick="@{viewModel::onCheckpointsClick}"-->
+                <!--android:text="@string/assign_checkpoints"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:textColor="@color/darkblue"/>-->
 
                 <!--<TextView-->
-                    <!--android:id="@+id/tv_promotion_createTour"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignStart="@+id/tvButton_assignCheckpoints_createTour"-->
-                    <!--android:layout_below="@+id/tvButton_assignCheckpoints_createTour"-->
-                    <!--android:layout_marginTop="10dp"-->
-                    <!--android:onClick="@{viewModel::onPromotionClick}"-->
-                    <!--android:text="@string/field_promotion"-->
-                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
-                    <!--android:textColor="@color/darkblue"/>-->
+                <!--android:id="@+id/tv_promotion_createTour"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignStart="@+id/tvButton_assignCheckpoints_createTour"-->
+                <!--android:layout_below="@+id/tvButton_assignCheckpoints_createTour"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:onClick="@{viewModel::onPromotionClick}"-->
+                <!--android:text="@string/field_promotion"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:textColor="@color/darkblue"/>-->
 
                 <TextView
                     android:id="@+id/tv_annotation"

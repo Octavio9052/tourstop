@@ -6,7 +6,6 @@ import android.databinding.Bindable;
 import android.view.View;
 import android.widget.Toast;
 
-import com.cetys.dreamteam.musicalbroccoli.BR;
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
 import com.cetys.dreamteam.musicalbroccoli.core.models.User;
@@ -62,9 +61,7 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
         validator.validateEmail(user.getEmail());
         validator.validatePassword(user.getPassword());
 
-        notifyPropertyChanged(BR.passwordError);
-        notifyPropertyChanged(BR.emailError);
-
+        notifyChange();
         // TODO: Always FALSE doesn't open new activity. (p)
         if (validator.isValid())
             connector.login(user);
@@ -79,7 +76,7 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
     }
     //</editor-fold>
 
-    //<editor-fold desc="Validators" defaultstate="collapsed">
+    //<editor-fold desc="Validators" defaultstate="colla4psed">
     @Bindable
     @Override
     public String getEmailError() {

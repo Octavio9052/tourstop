@@ -11,92 +11,71 @@ import com.cetys.dreamteam.musicalbroccoli.core.enums.CountryCode;
 public class Address extends BaseModel {
 
     //<editor-fold defaultstate="collapsed" desc="Instance Properties">
-    private ObservableInt id;
-    private ObservableField<String> name;
-    private ObservableField<String> street1;
-    private ObservableField<String> street2;
-    private ObservableField<String> city;
-    private ObservableField<String> state;
-    private ObservableInt postalCode;
+    private int id;
+    private String name;
+    private String street1;
+    private String street2;
+    private String city;
+    private String state;
+    private int postalCode;
     private CountryCode countryCode;
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Property Accessors">
     public String getName() {
-        return name.get();
+        return name;
     }
 
     public void setName(String name) {
-        if (this.name == null)
-            this.name = new ObservableField<>(name);
-        else
-            this.name.set(name);
+            this.name = name;
     }
 
     public int getId() {
-        return id.get();
+        return id;
     }
 
     public void setId(int id) {
-        if (this.id == null)
-            this.id = new ObservableInt(id);
-        else
-            this.id.set(id);
+            this.id = id;
     }
 
     public String getStreet1() {
-        return street1.get();
+        return street1;
     }
 
     public void setStreet1(String street1) {
-        if (this.street1 == null)
-            this.street1 = new ObservableField<>(street1);
-        else
-            this.street1.set(street1);
+            this.street1 = street1;
     }
 
     public String getStreet2() {
-        return street2.get();
+        return street2;
     }
 
     public void setStreet2(String street2) {
-        if (this.street2 == null)
-            this.street2 = new ObservableField<>(street2);
-        else
-            this.street2.set(street2);
+            this.street2 = street2;
     }
 
     public String getCity() {
-        return city.get();
+        return city;
     }
 
     public void setCity(String city) {
-        if (this.city == null)
-            this.city = new ObservableField<>(city);
-        else
-            this.city.set(city);
+            this.city = city;
     }
 
     public String getState() {
-        return state.get();
+        return state;
     }
 
     public void setState(String state) {
-        if (this.state == null)
-            this.state = new ObservableField<>(state);
-        else
-            this.state.set(state);
+            this.state = state;
     }
 
     public int getPostalCode() {
-        return postalCode.get();
+        return postalCode;
     }
 
     public void setPostalCode(int postalCode) {
-        if (this.postalCode == null)
-            this.postalCode = new ObservableInt(postalCode);
-        else
-            this.postalCode.set(postalCode);
+            this.postalCode = postalCode;
     }
 
     public CountryCode getCountryCode() {
