@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.databinding.Bindable;
 import android.view.View;
+import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.R;
 import com.cetys.dreamteam.musicalbroccoli.business.connectors.contracts.UserConnector;
@@ -23,15 +24,15 @@ import com.wesleyelliott.kubwa.rule.PasswordRule;
 public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel {
 
     //<editor-fold desc="Instance Properties" defaultstate="collapsed">
+    private final LoginViewModelImplValidator validator;
     private final UserConnector connector;
-    private LoginViewModelImplValidator validator;
     private User user;
     //</editor-fold>
 
-    public LoginViewModelImpl(Context context, UserConnector connector) {
+    public LoginViewModelImpl(Context context, UserConnector connector, LoginViewModelImplValidator validator) {
         super(context);
         this.connector = connector;
-        validator = new LoginViewModelImplValidator(context);
+        this.validator = validator;
 
         load();
     }
@@ -61,8 +62,11 @@ public class LoginViewModelImpl extends BaseViewModel implements LoginViewModel 
         validator.validatePassword(user.getPassword());
 
         notifyChange();
-
-        if (validator.isValid()) connector.login(user);
+        // TODO: Always FALSE doesn't open new activity. (p)
+        if (validator.isValid())
+            connector.login(user);
+        else
+            Toast.makeText(context, R.string.toast_error_input, Toast.LENGTH_LONG).show();
     }
 
     @Override

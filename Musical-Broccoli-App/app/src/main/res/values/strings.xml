@@ -108,5 +108,6 @@
     <string name="field_date">Date:</string>
     <string name="field_date_range">To date:</string>
     <string name="assign_checkpoints">Assign Checkpoints</string>
+    <string name="toast_error_input">Invalid input, please check again</string>
 </resources>
 
