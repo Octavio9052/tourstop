@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -72,12 +72,11 @@
                         android:background="@drawable/loginfield"
                         android:hint="@string/prompt_email"
                         android:inputType="textEmailAddress"
-                        app:error="@{viewModel.emailError}"
                         android:maxLines="1"
                         android:padding="20dp"
-                        android:text="@={viewModel.user.email}"
+                        android:text="@{viewModel.emailError}"
                         android:textAlignment="center"
-                        />
+                        app:error="@{viewModel.emailError}"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -100,8 +99,9 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:padding="20dp"
-                        android:text="@={viewModel.user.password}"
-                        android:textAlignment="center"/>
+                        android:text="@{viewModel.passwordError}"
+                        android:textAlignment="center"
+                        app:error="@{viewModel.passwordError}"/>
 
                 </android.support.design.widget.TextInputLayout>
 

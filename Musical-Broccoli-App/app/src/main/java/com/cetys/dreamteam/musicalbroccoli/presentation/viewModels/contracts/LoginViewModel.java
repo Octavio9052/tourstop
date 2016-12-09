@@ -15,4 +15,8 @@ public interface LoginViewModel {
     public void onLoginClick(View view);
 
     public void onCreateUserClick(View view);
+
+    String getEmailError();
+
+    String getPasswordError();
 }
