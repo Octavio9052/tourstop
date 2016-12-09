@@ -112,7 +112,7 @@ enter requirements = -->
                     android:maxLines="1"
                     android:nextFocusDown="@id/edit_price_createTour"
                     android:nextFocusUp="@id/edit_name_createTour"
-                    android:text="@{viewModel.tour.title}"/>
+                    android:text="@={viewModel.tour.title}"/>
 
                 <TextView
                     android:id="@+id/tv_price_createTour"
@@ -210,9 +210,9 @@ enter requirements = -->
                     android:layout_marginTop="10dp"
                     android:background="@drawable/textfields"
                     android:hint="@string/hint_description"
-                    android:maxLines="1"
                     android:nextFocusDown="@id/edit_seatsAvailable_createTour"
-                    android:nextFocusUp="@id/edit_destination_createTour"/>
+                    android:nextFocusUp="@id/edit_destination_createTour"
+                    android:text="@={viewModel.tour.description}"/>
 
                 <TextView
                     android:id="@+id/tv_seats_createTour"
@@ -276,61 +276,58 @@ enter requirements = -->
                     android:hint="@string/hint_promoter_name"/>
                      -->
 
-                <TextView
-                    android:id="@+id/tv_requirements_createTour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/edit_seatsAvailable_createTour"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="28dp"
-                    android:text="@string/field_requirements"
-                    android:textSize="20sp"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_requirements_createTour"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_below="@+id/edit_seatsAvailable_createTour"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--android:layout_marginTop="28dp"-->
+                    <!--android:text="@string/field_requirements"-->
+                    <!--android:textSize="20sp"/>-->
 
-                <!-- Requirements? of tour -->
-                <EditText
-                    android:id="@+id/edit_requirements"
-                    android:layout_width="340dp"
-                    android:layout_height="35dp"
-                    android:layout_alignStart="@+id/tv_destination_createTour"
-                    android:layout_below="@+id/tv_requirements_createTour"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/textfields"
-                    android:hint="@string/hint_requirements"
-                    android:maxLines="1"
-                    android:nextFocusUp="@id/edit_seatsAvailable_createTour"/>
+                <!--&lt;!&ndash; Requirements? of tour &ndash;&gt;-->
+                <!--<EditText-->
+                    <!--android:id="@+id/edit_requirements"-->
+                    <!--android:layout_width="340dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_alignStart="@+id/tv_destination_createTour"-->
+                    <!--android:layout_below="@+id/tv_requirements_createTour"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="@drawable/textfields"-->
+                    <!--android:hint="@string/hint_requirements"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:nextFocusUp="@id/edit_seatsAvailable_createTour"-->
+                    <!--android:text="@={viewModel.tour.requirements}"/>-->
 
-                <TextView
-                    android:id="@+id/tvButton_assignCheckpoints_createTour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/edit_requirements"
-                    android:layout_below="@+id/edit_requirements"
-                    android:layout_marginTop="10dp"
-                    android:onClick="@{viewModel::onCheckpointsClick}"
-                    android:text="@string/assign_checkpoints"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/darkblue"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/tvButton_assignCheckpoints_createTour"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:onClick="@{viewModel::onCheckpointsClick}"-->
+                    <!--android:text="@string/assign_checkpoints"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                    <!--android:textColor="@color/darkblue"/>-->
 
-                <TextView
-                    android:id="@+id/tv_promotion_createTour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/tvButton_assignCheckpoints_createTour"
-                    android:layout_below="@+id/tvButton_assignCheckpoints_createTour"
-                    android:layout_marginTop="10dp"
-                    android:onClick="@{viewModel::onPromotionClick}"
-                    android:text="@string/field_promotion"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/darkblue"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_promotion_createTour"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignStart="@+id/tvButton_assignCheckpoints_createTour"-->
+                    <!--android:layout_below="@+id/tvButton_assignCheckpoints_createTour"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:onClick="@{viewModel::onPromotionClick}"-->
+                    <!--android:text="@string/field_promotion"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                    <!--android:textColor="@color/darkblue"/>-->
 
                 <TextView
                     android:id="@+id/tv_annotation"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/edit_description_createTour"
-                    android:layout_alignStart="@+id/tv_promotion_createTour"
-                    android:layout_below="@+id/tv_promotion_createTour"
                     android:layout_marginTop="6dp"
                     android:text="@string/statement_mandatory"
                     android:textAlignment="center"
@@ -340,7 +337,6 @@ enter requirements = -->
                     android:id="@+id/saveChanges_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/edit_requirements"
                     android:layout_below="@+id/tv_annotation"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
