@@ -1,6 +1,7 @@
 package com.cetys.dreamteam.musicalbroccoli.business.connectors;
 
 import android.content.Context;
+import android.content.Intent;
 import android.widget.Toast;
 
 import com.cetys.dreamteam.musicalbroccoli.TourStopApplication;
@@ -13,6 +14,7 @@ import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.request.Rea
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.request.builders.ReadRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.request.builders.ReadWriteRequestBuilder;
 import com.cetys.dreamteam.musicalbroccoli.infrastructure.networking.services.UserService;
+import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -106,6 +108,9 @@ public class UserConnectorImpl extends BaseConnectorImpl<User> implements UserCo
         ReadWriteRequest<User> request = readWriteRequestBuilder.addData(user).build();
         service.login(request).enqueue(loginCallback);
 
+        Intent intent = new Intent(context, MainPageActivity.class);
+        context.startActivity(intent);
+
     }
     //</editor-fold>
 
@@ -116,7 +121,7 @@ public class UserConnectorImpl extends BaseConnectorImpl<User> implements UserCo
         public void onResponse(Call<List<User>> call, Response<List<User>> response) {
             if (response.isSuccessful()) {
                 Toast.makeText(context, "Se Armo", Toast.LENGTH_SHORT).show();
-
+                login(response.body().get(0));
             } else {
                 Toast.makeText(context, "No Se Armo", Toast.LENGTH_SHORT).show();
             }
@@ -147,9 +152,12 @@ public class UserConnectorImpl extends BaseConnectorImpl<User> implements UserCo
         public void onResponse(Call<List<Session>> call, Response<List<Session>> response) {
             if (response.isSuccessful()) {
                 TourStopApplication.get(context).createUserComponent(response.body().get(0));
+
             } else {
                 Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }
+
+
         }
 
         @Override

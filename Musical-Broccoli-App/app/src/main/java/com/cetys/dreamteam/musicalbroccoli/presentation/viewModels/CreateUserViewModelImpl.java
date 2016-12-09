@@ -1,7 +1,6 @@
 package com.cetys.dreamteam.musicalbroccoli.presentation.viewModels;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -11,7 +10,10 @@ import com.cetys.dreamteam.musicalbroccoli.core.enums.CountryCode;
 import com.cetys.dreamteam.musicalbroccoli.core.enums.UserType;
 import com.cetys.dreamteam.musicalbroccoli.core.models.User;
 import com.cetys.dreamteam.musicalbroccoli.presentation.viewModels.contracts.CreateUserViewModel;
-import com.cetys.dreamteam.musicalbroccoli.presentation.views.activities.MainPageActivity;
+import com.wesleyelliott.kubwa.annotation.Email;
+import com.wesleyelliott.kubwa.annotation.NotNull;
+import com.wesleyelliott.kubwa.annotation.Password;
+import com.wesleyelliott.kubwa.rule.PasswordRule;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +21,19 @@ import java.util.List;
 /**
  * Created by Octavio on 2016/12/04.
  */
+@Email(errorMessage = R.string.error_invalid_email)
+@Password(errorMessage = R.string.error_invalid_password, scheme = PasswordRule.Scheme.ALPHA_NUMERIC)
+@NotNull.List({
+        @NotNull(errorMessage = R.string.error_field_required, name = "firstNameError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "streetOneError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "cityError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "stateError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "cityError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "addressNameError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "postalCodeError"),
+        @NotNull(errorMessage = R.string.error_field_required, name = "countryCodeError"),
 
+})
 public class CreateUserViewModelImpl extends BaseViewModel implements CreateUserViewModel {
 
     //<editor-fold desc="Instance Properties" defaulstate="collapsed">
@@ -37,6 +51,7 @@ public class CreateUserViewModelImpl extends BaseViewModel implements CreateUser
     @Override
     protected void load() {
         countryCodes = Arrays.asList(CountryCode.values());
+        user = new User();
     }
 
     //<editor-fold desc="Property Accessors" defaultstate="collapse">
@@ -65,9 +80,6 @@ public class CreateUserViewModelImpl extends BaseViewModel implements CreateUser
     @Override
     public void onSaveChangesClick(View view) {
         connector.create(user);
-
-        Intent intent = new Intent(context, MainPageActivity.class);
-        context.startActivity(intent);
     }
 
     @Override
