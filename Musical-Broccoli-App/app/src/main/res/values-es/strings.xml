@@ -81,4 +81,14 @@
     <string name="stops">Paradas</string>
     <string name="title_activity_login">Iniciar sesión</string>
     <string name="assign_checkpoints">Asignar paradas</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_pay">Proceder a pagar</string>
+    <string name="action_reservation">Reservar ahora</string>
+    <string name="action_save">Guardar promoción</string>
+    <string name="name">Nombre</string>
+    <string name="no_seats">Numero de asientos:</string>
+    <string name="promo">Ingresar codigo de promocion:</string>
+    <string name="promo_code">Ingresar codigo de promocion</string>
+    <string name="promo_discount">Ingresar cantidad de descuento</string>
+    <string name="total">Tu total es:</string>
 </resources>
